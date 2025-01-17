@@ -1,0 +1,32 @@
+
+Ayyy!
+So,
+I've put a pair of Autoloads in here meant to make your life easier.
+Search for "ProjectUISoundController.tscn" and "ProjectMusicController.tscn"
+
+The Music Controller is just something to be called so you can adjust music globally.
+The UI sound controller is similar, but also has plug-and-play export variables to house all of the various sounds.
+
+Essentially these will act as the default audio handlers, provided we don't override them.
+----
+
+Feel free to look through the Components directory in the ToyBox. Pretty much all of these guys are meant to added as child
+nodes the same you would with any other default Godot Node (i.e, just use Ctrl+A to access the component's class-name).
+
+---
+
+There are a handful of Helper scripts floating around the project. They include:
+	SINGLETONS
+	TimeWizard // You can call `TimeWizard.wait(seconds: float)` to quickly create a timer among other things
+	DiceWizard // Handy methods include `roll_dice`, `flip_coin`, and `force_roll`
+	SignalTown // Want to make a signal Global, but don't have a good spot for it? Welcome to SignalTown!
+
+	STATIC MODULES
+	ArrayWizard // Handy array logic. Highlights include `remove_duplicates` and `intersected_values`
+	StringWizard // `pretty_number` and `generate_random_string` standout, but more worth exploring
+	TextureWizard // Used for getting texture/sprite dimensions
+	MathWizard // Holds a lot of constants such as PI as well as holding handy mathematical formula
+	NodeRemover // `NodeRemover.remove(target_node)` can be called to safely either queue_free or call_deferred the target node
+
+
+There are a few others worth exploring, but these are the ones that will have the most robust use cases in a game jam

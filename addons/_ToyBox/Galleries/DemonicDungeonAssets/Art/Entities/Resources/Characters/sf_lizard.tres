@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dtq5uecr14y3t"]
+
+[ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="1_c7wor"]
+[ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="2_3adqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1vv8"]
+atlas = ExtResource("1_c7wor")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiw5r"]
+atlas = ExtResource("1_c7wor")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyvcu"]
+atlas = ExtResource("1_c7wor")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oche"]
+atlas = ExtResource("2_3adqr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kjet"]
+atlas = ExtResource("2_3adqr")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14p7p"]
+atlas = ExtResource("2_3adqr")
+region = Rect2(32, 32, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1vv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiw5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyvcu")
+}],
+"loop": true,
+"name": &"Frozen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oche")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kjet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14p7p")
+}],
+"loop": true,
+"name": &"Magma",
+"speed": 5.0
+}]

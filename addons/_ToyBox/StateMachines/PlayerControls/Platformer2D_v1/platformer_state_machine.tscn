@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfk8yuio06oli"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/StateMachines/PlayerControls/Platformer2D_v1/Scripts/platformer_state_machine.gd" id="1_nbgoa"]
+[ext_resource type="Script" path="res://addons/_ToyBox/StateMachines/PlayerControls/Platformer2D_v1/Scripts/idle_state.gd" id="2_qamgd"]
+[ext_resource type="Script" path="res://addons/_ToyBox/StateMachines/PlayerControls/Platformer2D_v1/Scripts/move_state.gd" id="3_q236s"]
+[ext_resource type="Script" path="res://addons/_ToyBox/StateMachines/PlayerControls/Platformer2D_v1/Scripts/jump_state.gd" id="4_qei0v"]
+[ext_resource type="Script" path="res://addons/_ToyBox/StateMachines/PlayerControls/Platformer2D_v1/Scripts/falling_state.gd" id="5_5hvth"]
+
+[node name="PlatformerStateMachine" type="LimboHSM"]
+script = ExtResource("1_nbgoa")
+
+[node name="IdleState" type="LimboState" parent="."]
+script = ExtResource("2_qamgd")
+
+[node name="MoveState" type="LimboState" parent="."]
+script = ExtResource("3_q236s")
+
+[node name="FallingState" type="LimboState" parent="."]
+script = ExtResource("5_5hvth")
+
+[node name="JumpState" type="LimboState" parent="."]
+script = ExtResource("4_qei0v")

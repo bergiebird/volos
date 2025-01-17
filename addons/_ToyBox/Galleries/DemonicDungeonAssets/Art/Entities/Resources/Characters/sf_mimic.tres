@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cd0supa82cye7"]
+
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="1_tqbf3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwquy"]
+atlas = ExtResource("1_tqbf3")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uro8u"]
+atlas = ExtResource("1_tqbf3")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuddc"]
+atlas = ExtResource("1_tqbf3")
+region = Rect2(160, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwquy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uro8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuddc")
+}],
+"loop": true,
+"name": &"Original",
+"speed": 5.0
+}]

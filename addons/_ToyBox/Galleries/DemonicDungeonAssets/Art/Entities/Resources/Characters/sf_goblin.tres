@@ -1,0 +1,110 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://b1poa6c4wpx0r"]
+
+[ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="1_aurmm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q24wa"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wftn"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2hsb"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjxj1"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34ltv"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qetj5"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smsef"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xifud"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r36ak"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blw5i"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47jkn"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmexs"]
+atlas = ExtResource("1_aurmm")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q24wa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wftn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2hsb")
+}],
+"loop": true,
+"name": &"Axe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjxj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34ltv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qetj5")
+}],
+"loop": true,
+"name": &"Hammer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smsef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xifud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r36ak")
+}],
+"loop": true,
+"name": &"Pickaxe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blw5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47jkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmexs")
+}],
+"loop": true,
+"name": &"Unarmed",
+"speed": 5.0
+}]

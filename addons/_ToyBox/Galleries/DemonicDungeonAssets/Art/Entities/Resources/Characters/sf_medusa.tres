@@ -1,0 +1,137 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://dcq4pmuqt8glo"]
+
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="1_m5jt7"]
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="2_2n3r6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk6b0"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylo7j"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emc1j"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qj4t"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(128, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p50gu"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(144, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q45n5"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(160, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53lks"]
+atlas = ExtResource("2_2n3r6")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg4jq"]
+atlas = ExtResource("2_2n3r6")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3flo3"]
+atlas = ExtResource("2_2n3r6")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xanbr"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctxmn"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo5nd"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5f2m"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(128, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbujl"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(144, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6etk"]
+atlas = ExtResource("1_m5jt7")
+region = Rect2(160, 80, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk6b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylo7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emc1j")
+}],
+"loop": true,
+"name": &"Green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qj4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p50gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q45n5")
+}],
+"loop": true,
+"name": &"Green_Alt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53lks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg4jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3flo3")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xanbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctxmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo5nd")
+}],
+"loop": true,
+"name": &"Teal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5f2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbujl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6etk")
+}],
+"loop": true,
+"name": &"Teal_Alt",
+"speed": 5.0
+}]

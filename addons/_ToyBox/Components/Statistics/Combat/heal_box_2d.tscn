@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c345s8274ogka"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Statistics/Combat/Scripts/heal_box_2d.gd" id="1_tcetf"]
+
+[node name="HealBox2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 256
+script = ExtResource("1_tcetf")

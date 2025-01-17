@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv4huc2ftqrhy"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Control/Containers/capture_focus.gd" id="2_fahoh"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/VideoOptions/SCRIPTS/video_options_menu.gd" id="2_ni187"]
+[ext_resource type="PackedScene" uid="uid://bsxh6v7j0257h" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/toggle_option_control.tscn" id="3_8ke4a"]
+[ext_resource type="PackedScene" uid="uid://b6bl3n5mp3m1e" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/list_option_control.tscn" id="3_a7o00"]
+[ext_resource type="PackedScene" uid="uid://c01ayjblhcg1t" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/vector_2_list_option_control.tscn" id="4_b8qoj"]
+
+[node name="Video" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 24
+script = ExtResource("2_ni187")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+script = ExtResource("2_fahoh")
+search_depth = 2
+
+[node name="FullscreenControl" parent="VBoxContainer" instance=ExtResource("3_8ke4a")]
+unique_name_in_owner = true
+layout_mode = 2
+option_name = "Fullscreen"
+option_section = 3
+key = "FullscreenEnabled"
+section = "VideoSettings"
+
+[node name="ResolutionControl" parent="VBoxContainer" instance=ExtResource("4_b8qoj")]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Select a screen size"
+option_values = [Vector2i(640, 480), Vector2i(800, 600), Vector2i(960, 720), Vector2i(1024, 768), Vector2i(1280, 960), Vector2i(1400, 1050)]
+option_titles = Array[String](["640 x 480", "800 x 600", "960 x 720", "1024 x 768", "1280 x 960", "1400 x 1050"])
+option_name = "Resolution"
+option_section = 3
+key = "ScreenResolution"
+section = "VideoSettings"
+property_type = 6
+
+[node name="AntiAliasingControl" parent="VBoxContainer" instance=ExtResource("3_a7o00")]
+visible = false
+layout_mode = 2
+lock_titles = true
+option_values = [0, 1, 2, 3]
+option_titles = Array[String](["Disabled (Fastest)", "2x", "4x", "8x (Slowest)"])
+option_name = "Anti-Aliasing"
+option_section = 3
+key = "Anti-aliasing"
+section = "VideoSettings"
+property_type = 2
+default_value = 0
+
+[node name="CameraShakeControl" parent="VBoxContainer" instance=ExtResource("3_a7o00")]
+visible = false
+layout_mode = 2
+lock_titles = true
+option_values = [1.0, 0.75, 0.5, 0.0]
+option_titles = Array[String](["Normal", "Reduced", "Minimal", "None"])
+option_name = "Camera Shake"
+option_section = 3
+key = "CameraShake"
+section = "VideoSettings"
+property_type = 3
+default_value = 1.0
+
+[connection signal="setting_changed" from="VBoxContainer/FullscreenControl" to="." method="_on_fullscreen_control_setting_changed"]
+[connection signal="setting_changed" from="VBoxContainer/ResolutionControl" to="." method="_on_resolution_control_setting_changed"]

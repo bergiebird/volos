@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6tlf00ss2hgh"]
+
+[ext_resource type="Environment" uid="uid://cyq850aar6abc" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Assets/sfxExplosion/resources/destruction_environment.tres" id="1_8wlhe"]
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/WorldEnvironment/destroy_world_environment.gd" id="2_4yblv"]
+
+[node name="DestroyableWorldEnvironment" type="WorldEnvironment"]
+environment = ExtResource("1_8wlhe")
+script = ExtResource("2_4yblv")
+debug = true

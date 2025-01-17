@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://76quj3u6gc34"]
+
+[ext_resource type="Texture2D" uid="uid://d3rcrhmh55dov" path="res://addons/ToyBox/Components/Statistics/HP/ManaBar/Other.png" id="1_s5hxm"]
+
+[resource]
+atlas = ExtResource("1_s5hxm")
+region = Rect2(128, 25, 1, 6)

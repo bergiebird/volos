@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cmvn6ocy4el0s"]
+
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="1_p58mb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihom5"]
+atlas = ExtResource("1_p58mb")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qak7t"]
+atlas = ExtResource("1_p58mb")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo0h0"]
+atlas = ExtResource("1_p58mb")
+region = Rect2(32, 32, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihom5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qak7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo0h0")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}]

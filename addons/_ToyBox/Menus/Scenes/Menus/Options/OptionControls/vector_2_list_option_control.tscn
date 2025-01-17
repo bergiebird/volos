@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c01ayjblhcg1t"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/SCRIPTS/vector_2_list_option_control.gd" id="2_w33vs"]
+
+[node name="OptionControl" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 400.0
+offset_bottom = 40.0
+script = ExtResource("2_w33vs")
+default_value = false
+
+[node name="OptionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = " :"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 2

@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://b78bmtd788c8k"]
+
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="1_45xym"]
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_g3iye"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l67q"]
+atlas = ExtResource("1_45xym")
+region = Rect2(128, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo2ll"]
+atlas = ExtResource("1_45xym")
+region = Rect2(144, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fhbx"]
+atlas = ExtResource("1_45xym")
+region = Rect2(160, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7o2i4"]
+atlas = ExtResource("2_g3iye")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiirx"]
+atlas = ExtResource("2_g3iye")
+region = Rect2(144, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8di6r"]
+atlas = ExtResource("2_g3iye")
+region = Rect2(160, 48, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l67q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo2ll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fhbx")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o2i4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fiirx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8di6r")
+}],
+"loop": true,
+"name": &"Original",
+"speed": 5.0
+}]

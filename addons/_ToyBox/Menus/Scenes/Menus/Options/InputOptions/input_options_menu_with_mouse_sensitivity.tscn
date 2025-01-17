@@ -1,0 +1,177 @@
+[gd_scene load_steps=7 format=3 uid="uid://skcskof6llme"]
+
+[ext_resource type="Texture2D" uid="uid://c1eqf1cse1hch" path="res://addons/_ToyBox/Icons/misc/icon_addition_symbol.png" id="2_hjxwb"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/InputOptions/SCRIPTS/input_options_menu.gd" id="2_xpmba"]
+[ext_resource type="Texture2D" uid="uid://bteq3ica74h30" path="res://addons/_ToyBox/Icons/misc/icon_subtraction_symbol.png" id="3_pe1jk"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Control/Containers/capture_focus.gd" id="4_aq286"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/SCRIPTS/option_control.gd" id="5_peemr"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/InputOptions/SCRIPTS/key_assignment_dialog.gd" id="6_8v8ow"]
+
+[node name="Controls" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 24
+script = ExtResource("2_xpmba")
+input_action_names = Array[StringName]([&"move_forward", &"move_backward", &"move_up", &"move_down", &"move_left", &"move_right", &"interact"])
+readable_action_names = Array[String](["Move Forward", "Move Backward", "Move Up", "Move Down", "Move Left", "Move Right", "Interact"])
+add_button_texture = ExtResource("2_hjxwb")
+remove_button_texture = ExtResource("3_pe1jk")
+show_built_in_actions = true
+action_name_map = {
+"interact": "Interact",
+"move_backward": "Move Backward",
+"move_down": "Move Down",
+"move_forward": "Move Forward",
+"move_left": "Move Left",
+"move_right": "Move Right",
+"move_up": "Move Up"
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+script = ExtResource("4_aq286")
+search_depth = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MouseSensitivityControl" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+script = ExtResource("5_peemr")
+option_name = "Mouse Sensitivity"
+option_section = 1
+key = "MouseSensitivity"
+section = "InputSettings"
+property_type = 3
+default_value = 1.0
+
+[node name="OptionLabel" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mouse Sensitivity :"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/MarginContainer/VBoxContainer/MouseSensitivityControl"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 0.25
+max_value = 2.0
+step = 0.05
+value = 1.0
+tick_count = 8
+ticks_on_borders = true
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="InputMappingContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/InputMappingContainer"]
+layout_mode = 2
+text = "Actions & Inputs"
+horizontal_alignment = 1
+
+[node name="Tree" type="Tree" parent="VBoxContainer/InputMappingContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+hide_root = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/InputMappingContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/InputMappingContainer/HBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
+[node name="KeyAssignmentDialog" type="ConfirmationDialog" parent="."]
+title = "Assign Key"
+size = Vector2i(400, 158)
+dialog_text = "
+
+
+"
+script = ExtResource("6_8v8ow")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="KeyAssignmentDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InputLabel" type="Label" parent="KeyAssignmentDialog/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="InputTextEdit" type="TextEdit" parent="KeyAssignmentDialog/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Focus here to assign inputs."
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+caret_move_on_right_click = false
+
+[node name="DelayTimer" type="Timer" parent="KeyAssignmentDialog"]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[node name="KeyDeletionDialog" type="ConfirmationDialog" parent="."]
+title = "Remove Key"
+size = Vector2i(419, 100)
+dialog_text = "Are you sure you want to remove KEY from ACTION?"
+
+[node name="OneInputMinimumDialog" type="AcceptDialog" parent="."]
+title = "Cannot Remove"
+size = Vector2i(398, 100)
+
+[node name="AlreadyAssignedDialog" type="AcceptDialog" parent="."]
+title = "Already Assigned"
+size = Vector2i(398, 100)
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+dialog_text = "Are you sure you want to reset controls back to the defaults?"
+
+[connection signal="button_clicked" from="VBoxContainer/InputMappingContainer/Tree" to="." method="_on_tree_button_clicked"]
+[connection signal="item_activated" from="VBoxContainer/InputMappingContainer/Tree" to="." method="_on_tree_item_activated"]
+[connection signal="pressed" from="VBoxContainer/InputMappingContainer/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="canceled" from="KeyAssignmentDialog" to="." method="_on_key_assignment_dialog_canceled"]
+[connection signal="confirmed" from="KeyAssignmentDialog" to="." method="_on_key_assignment_dialog_confirmed"]
+[connection signal="visibility_changed" from="KeyAssignmentDialog" to="KeyAssignmentDialog" method="_on_visibility_changed"]
+[connection signal="focus_entered" from="KeyAssignmentDialog/VBoxContainer/InputTextEdit" to="KeyAssignmentDialog" method="_on_text_edit_focus_entered"]
+[connection signal="focus_exited" from="KeyAssignmentDialog/VBoxContainer/InputTextEdit" to="KeyAssignmentDialog" method="_on_input_text_edit_focus_exited"]
+[connection signal="gui_input" from="KeyAssignmentDialog/VBoxContainer/InputTextEdit" to="KeyAssignmentDialog" method="_on_input_text_edit_gui_input"]
+[connection signal="confirmed" from="KeyDeletionDialog" to="." method="_on_key_deletion_dialog_confirmed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

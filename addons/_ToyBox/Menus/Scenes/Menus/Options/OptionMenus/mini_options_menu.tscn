@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://yqucm3a2vc04"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Control/Containers/capture_focus.gd" id="2_2hwar"]
+[ext_resource type="PackedScene" uid="uid://dw87skdylhods" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/AudioOptions/audio_options_menu.tscn" id="2_33614"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionMenus/SCRIPTS/mini_options_menu.gd" id="2_o2677"]
+[ext_resource type="PackedScene" uid="uid://bsxh6v7j0257h" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionControls/toggle_option_control.tscn" id="3_fs006"]
+
+[node name="MiniOptionsMenu" type="VBoxContainer"]
+custom_minimum_size = Vector2(400, 260)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -130.0
+offset_right = 200.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+alignment = 1
+script = ExtResource("2_o2677")
+audio_control_scene = ExtResource("2_33614")
+hide_busses = Array[String](["GrenadeSFX", "If I type the name of an audio bus here, it will be ignored"])
+
+[node name="AudioControlContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+script = ExtResource("2_2hwar")
+search_depth = 2
+
+[node name="MuteControl" parent="." instance=ExtResource("3_fs006")]
+unique_name_in_owner = true
+layout_mode = 2
+option_name = "Mute"
+option_section = 2
+key = "Mute"
+section = "AudioSettings"
+
+[node name="FullscreenControl" parent="." instance=ExtResource("3_fs006")]
+unique_name_in_owner = true
+layout_mode = 2
+option_name = "Fullscreen"
+option_section = 3
+key = "FullscreenEnabled"
+section = "VideoSettings"
+
+[connection signal="setting_changed" from="MuteControl" to="." method="_on_mute_control_setting_changed"]
+[connection signal="setting_changed" from="FullscreenControl" to="." method="_on_fullscreen_control_setting_changed"]

@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cvppxh8uvt7li"]
+
+[ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="1_8h8ux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ime6k"]
+atlas = ExtResource("1_8h8ux")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkqv5"]
+atlas = ExtResource("1_8h8ux")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thnkx"]
+atlas = ExtResource("1_8h8ux")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ime6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkqv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thnkx")
+}],
+"loop": true,
+"name": &"Frozen",
+"speed": 5.0
+}]

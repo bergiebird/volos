@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://b14xyf47jmxci"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/rigid_grenade.gd" id="1_iyn2v"]
+[ext_resource type="Texture2D" uid="uid://gvjhhymxy21v" path="res://Warehouse/VEXED/Chroma/local/Hero/Hero.png" id="2_vo47w"]
+[ext_resource type="Texture2D" uid="uid://4sfaj2j0tubd" path="res://Warehouse/VEXED/Chroma/local/Buildings/arc.png" id="4_jcqcl"]
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/trigger_types.gd" id="5_fqhid"]
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/trigger_detonator.gd" id="5_qw30t"]
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/trigger_fuse.gd" id="6_hat1o"]
+[ext_resource type="AudioStream" uid="uid://w1fkd4ao58gd" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Assets/sfxExplosion/resources/435413__v-ktor__explosion12.wav" id="6_ohl7b"]
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/trigger_impact.gd" id="7_plati"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufe22"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjajn"]
+atlas = ExtResource("2_vo47w")
+region = Rect2(9, 1, 4, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6hmf"]
+atlas = ExtResource("4_jcqcl")
+region = Rect2(24, 176, 15, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ljw2"]
+radius = 8.0
+
+[node name="RigidGrenade" type="Node2D"]
+script = ExtResource("1_iyn2v")
+debug = true
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_ufe22")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_yjajn")
+
+[node name="Collectible" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+texture = SubResource("AtlasTexture_w6hmf")
+
+[node name="Area2D" type="Area2D" parent="Collectible"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectible/Area2D"]
+shape = SubResource("CircleShape2D_8ljw2")
+
+[node name="BoomSFX" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+rotation = 0.0033665
+stream = ExtResource("6_ohl7b")
+bus = &"GrenadeSFX"
+
+[node name="TriggerTypes" type="Node" parent="."]
+script = ExtResource("5_fqhid")
+
+[node name="TriggerDetonator" type="Node" parent="TriggerTypes"]
+unique_name_in_owner = true
+script = ExtResource("5_qw30t")
+
+[node name="TriggerFuse" type="Node" parent="TriggerTypes"]
+unique_name_in_owner = true
+script = ExtResource("6_hat1o")
+
+[node name="TriggerImpact" type="Node" parent="TriggerTypes"]
+unique_name_in_owner = true
+script = ExtResource("7_plati")
+
+[connection signal="sleeping_state_changed" from="RigidBody2D" to="." method="_on_rigid_body_2d_sleeping_state_changed"]
+[connection signal="area_entered" from="Collectible/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Collectible/Area2D" to="." method="_on_area_2d_body_entered"]

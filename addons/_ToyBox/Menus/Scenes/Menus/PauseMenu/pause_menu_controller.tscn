@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3kgl80xvuw4b"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/PauseMenu/SCRIPTS/pause_menu_controller.gd" id="1_mrsab"]
+
+[node name="PauseMenuController" type="Node"]
+script = ExtResource("1_mrsab")

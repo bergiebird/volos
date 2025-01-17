@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CombatAction" load_steps=2 format=3 uid="uid://bfmufqpdkx8ly"]
+
+[ext_resource type="Script" path="res://ProjectName/Debug/Gyms/dd_gallery/gallery/TBC/tbc_actions/combat_action.gd" id="1_jcife"]
+
+[resource]
+script = ExtResource("1_jcife")
+display_name = "Heroic Strike"
+damage = 3
+heal = 3

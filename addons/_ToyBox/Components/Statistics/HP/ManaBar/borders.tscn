@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7sl74y46m5i4"]
+
+[ext_resource type="Texture2D" uid="uid://b4lthwsi32mot" path="res://Warehouse/VEXED/Chroma/local/UI/Frames-and-Banners.png" id="1_bsbq8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm8uu"]
+atlas = ExtResource("1_bsbq8")
+region = Rect2(49, 281, 7, 22)
+
+[node name="Borders" type="Node2D"]
+
+[node name="LeftBorder" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = SubResource("AtlasTexture_vm8uu")
+
+[node name="RightBorder" type="Sprite2D" parent="."]
+rotation = -3.14159
+scale = Vector2(0.1, 0.1)
+texture = SubResource("AtlasTexture_vm8uu")

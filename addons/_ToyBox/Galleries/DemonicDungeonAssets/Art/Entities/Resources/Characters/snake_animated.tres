@@ -1,0 +1,85 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://bmo6cj7nihk0j"]
+
+[ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="1_pu4tw"]
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_gmme3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4ud3"]
+atlas = ExtResource("1_pu4tw")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnex0"]
+atlas = ExtResource("1_pu4tw")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sie8j"]
+atlas = ExtResource("1_pu4tw")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq7f0"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5onmd"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ols5a"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_con82"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15v1i"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cofll"]
+atlas = ExtResource("2_gmme3")
+region = Rect2(96, 64, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4ud3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnex0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sie8j")
+}],
+"loop": true,
+"name": &"Frozen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq7f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5onmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ols5a")
+}],
+"loop": true,
+"name": &"Green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_con82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15v1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cofll")
+}],
+"loop": true,
+"name": &"Pink",
+"speed": 5.0
+}]

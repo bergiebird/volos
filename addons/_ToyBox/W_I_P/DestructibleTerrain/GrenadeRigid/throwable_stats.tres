@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ThrowableStats" load_steps=2 format=3 uid="uid://wot0j3fcra4c"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/GrenadeRigid/throwable_stats.gd" id="1_qrvy2"]
+
+[resource]
+script = ExtResource("1_qrvy2")
+attributes = {
+"NANO": {
+"can_collect": true,
+"fuse_timer": 0.1,
+"size": 2,
+"strength": 2
+}
+}

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CombatAction" load_steps=2 format=3 uid="uid://c3t4r1x5fhq7o"]
+
+[ext_resource type="Script" path="res://ProjectName/Debug/Gyms/dd_gallery/gallery/TBC/tbc_actions/combat_action.gd" id="1_78n6j"]
+
+[resource]
+script = ExtResource("1_78n6j")
+display_name = "Lesser Heal"
+damage = 0
+heal = 5

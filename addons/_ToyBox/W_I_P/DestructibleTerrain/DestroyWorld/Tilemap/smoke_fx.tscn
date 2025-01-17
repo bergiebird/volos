@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c33j6nuac2av8"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Tilemap/smoke_fx.gd" id="1_pvs2j"]
+[ext_resource type="SpriteFrames" uid="uid://by38557hsxcv2" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Assets/sfxExplosion/resources/sf_boom.tres" id="2_ff1kd"]
+[ext_resource type="SpriteFrames" uid="uid://bu7kf7k2ijnsn" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Assets/sfxExplosion/resources/sf_smoke.tres" id="3_xb3vj"]
+[ext_resource type="AudioStream" uid="uid://b3fcdcknhdtpg" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Assets/sfxExplosion/resources/368711__mikes-multimedia__heavy_swallow.wav" id="4_qkiwf"]
+
+[node name="fxExplosion" type="Node2D" node_paths=PackedStringArray("node_boom", "node_smoke", "node_sfx")]
+script = ExtResource("1_pvs2j")
+rate_of_dissipation = 0.005
+node_boom = NodePath("Boom_VFX")
+color_boom = Color(0.972549, 0.45098, 0.894118, 1)
+node_smoke = NodePath("Smoke_VFX")
+color_smoke = Color(0.301961, 0.8, 0.929412, 1)
+node_sfx = NodePath("Smoke_VFX/Boom_SFX")
+
+[node name="Boom_VFX" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = ExtResource("2_ff1kd")
+animation = &"boom_6"
+
+[node name="Smoke_VFX" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = ExtResource("3_xb3vj")
+animation = &"smoke_6"
+frame_progress = 0.43819
+
+[node name="Boom_SFX" type="AudioStreamPlayer2D" parent="Smoke_VFX"]
+unique_name_in_owner = true
+rotation = 0.000901165
+stream = ExtResource("4_qkiwf")
+volume_db = -7.0
+pitch_scale = 0.55
+attenuation = 12.0
+
+[connection signal="animation_finished" from="Boom_VFX" to="." method="_on_boom_vfx_animation_finished"]
+[connection signal="animation_finished" from="Smoke_VFX" to="." method="_on_smoke_vfx_animation_finished"]
+[connection signal="finished" from="Smoke_VFX/Boom_SFX" to="." method="_on_boom_sfx_finished"]
