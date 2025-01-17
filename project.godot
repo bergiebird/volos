@@ -31,6 +31,8 @@ ProjectMusicController="*res://addons/_ToyBox/Utility/Autoloads/AudioControl/pro
 DiceWizard="*res://addons/_ToyBox/Utility/Autoloads/AutoWizards/dice_wizard.gd"
 TimeWizard="*res://addons/_ToyBox/Utility/Autoloads/AutoWizards/time_wizard.gd"
 SceneLoader="*res://addons/_ToyBox/Utility/Autoloads/SceneLoader/scene_loader.tscn"
+GitReminder="*res://addons/_ToyBox/Utility/Autoloads/Tools/git_reminder.gd"
+Taken="*res://addons/_ToyBox/Utility/Autoloads/BergieWhereDoYouWantThese/taken.gd"
 
 [display]
 

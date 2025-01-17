@@ -1,0 +1,183 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcfpmh277ekr2"]
+
+[sub_resource type="GDScript" id="GDScript_4ehut"]
+script/source = "extends LoadingScreen
+
+const QUADMESH_PLACEHOLDER = preload(\"res://addons/_ToyBox/Menus/Scenes/LoadingScreen/loading_screen_with_shader_caching.tscn\")
+
+@export_dir var _spatial_shader_material_dir : String
+@export_file(\"*.tscn\") var _cache_shaders_scene : String
+@export_group(\"Advanced\")
+@export var _matching_extensions : Array[String] = [\".tres\", \".material\", \".res\"]
+@export var _ignore_subfolders : Array[String] = [\".\", \"..\"]
+@export var _shader_delay_timer : float = 0.1
+
+var _loading_shader_cache : bool = false
+
+var _caching_progress : float = 0.0 :
+	set(value):
+		if value <= _caching_progress:
+			return
+		_caching_progress = value
+		update_total_loading_progress()
+		_reset_loading_stage()
+
+func can_load_shader_cache():
+	return not _spatial_shader_material_dir.is_empty() and \\
+	not _cache_shaders_scene.is_empty() and \\
+	SceneLoader.is_loading_scene(_cache_shaders_scene)
+
+func update_total_loading_progress():
+	var partial_total = _scene_loading_progress
+	if can_load_shader_cache():
+		partial_total += _caching_progress
+		partial_total /= 2
+	_total_loading_progress = partial_total
+
+func _try_loading_next_scene():
+	if can_load_shader_cache() and not _loading_shader_cache:
+		_loading_shader_cache = true
+		_show_all_draw_passes_once()
+	if can_load_shader_cache() and _caching_progress < 1.0:
+		return
+	super._try_loading_next_scene()
+
+func _show_all_draw_passes_once():
+	var all_materials = _traverse_folders(_spatial_shader_material_dir)
+	var total_material_count = all_materials.size()
+	var cached_material_count = 0
+	for material_path in all_materials:
+		_load_material(material_path)
+		cached_material_count += 1
+		_caching_progress = float(cached_material_count) / total_material_count
+		if _shader_delay_timer > 0:
+			await(get_tree().create_timer(_shader_delay_timer).timeout)
+
+func _traverse_folders(dir_path:String) -> PackedStringArray:
+	var material_list:PackedStringArray = []
+	if not dir_path.ends_with(\"/\"):
+		dir_path += \"/\"
+	var dir = DirAccess.open(dir_path)
+	if not dir:
+		push_error(\"failed to access the path \", dir_path)
+		return []
+	if dir.list_dir_begin() != OK:
+		push_error(\"failed to access the path \", dir_path)
+		return []
+	var file_name = dir.get_next()
+	while file_name != \"\":
+		if not dir.current_is_dir():
+			var matches : bool = false
+			for extension in _matching_extensions:
+				if file_name.ends_with(extension):
+					matches = true
+					break
+			if matches:
+				material_list.append(dir_path + file_name)
+		else:
+			var subfolder_name = file_name
+			if not subfolder_name in _ignore_subfolders:
+				material_list.append_array(_traverse_folders(dir_path + subfolder_name))
+		file_name = dir.get_next()
+
+	return material_list
+
+func _load_material(path:String):
+	var material_shower = QUADMESH_PLACEHOLDER.instantiate()
+	var material := ResourceLoader.load(path) as Material
+	material_shower.set_surface_override_material(0, material)
+	%SpatialShaderTypeCaches.add_child(material_shower)
+"
+
+[node name="LoadingScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 20
+script = SubResource("GDScript_4ehut")
+_cache_shaders_scene = "res://scenes/game_scene/game_ui.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackPanel" type="Panel" parent="Control"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BackgroundColor" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.501961)
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -23.0
+offset_right = -30.0
+offset_bottom = 98.0
+theme_override_constants/separation = 50
+
+[node name="ProgressLabel" type="Label" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+
+[node name="ErrorMessage" type="AcceptDialog" parent="Control"]
+unique_name_in_owner = true
+title = "Loading Error"
+initial_position = 2
+size = Vector2i(360, 100)
+
+[node name="StalledMessage" type="ConfirmationDialog" parent="Control"]
+unique_name_in_owner = true
+title = "Loading Stalled"
+initial_position = 2
+size = Vector2i(360, 100)
+ok_button_text = "Try Waiting"
+cancel_button_text = "Reload"
+
+[node name="LoadingTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="SpatialShaderTypeCaches" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="SpatialShaderTypeCaches"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.408)
+current = true
+
+[connection signal="confirmed" from="Control/ErrorMessage" to="." method="_on_error_message_confirmed"]
+[connection signal="canceled" from="Control/StalledMessage" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="Control/StalledMessage" to="." method="_on_confirmation_dialog_confirmed"]
+[connection signal="timeout" from="LoadingTimer" to="." method="_on_loading_timer_timeout"]
