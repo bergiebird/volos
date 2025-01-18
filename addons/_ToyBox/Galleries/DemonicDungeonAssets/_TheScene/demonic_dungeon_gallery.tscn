@@ -1,798 +1,798 @@
 [gd_scene load_steps=291 format=3 uid="uid://cr3b3i47dn506"]
 
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/_tscn_scripts/lights.gd" id="1_k3flt"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/_tscn_scripts/editor_dance.gd" id="2_im6vx"]
-[ext_resource type="SpriteFrames" uid="uid://bh2svqsal151c" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_bat.tres" id="3_a7i2m"]
-[ext_resource type="SpriteFrames" uid="uid://dvedwf8cuxy1v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_devil.tres" id="4_7vl14"]
-[ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="5_j31t6"]
-[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="6_5i8cr"]
-[ext_resource type="SpriteFrames" uid="uid://bpw7acdku6yx1" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_golem.tres" id="7_kwhg1"]
-[ext_resource type="SpriteFrames" uid="uid://b78bmtd788c8k" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_bugs.tres" id="8_k8s1i"]
-[ext_resource type="SpriteFrames" uid="uid://dtq5uecr14y3t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_lizard.tres" id="9_37kk7"]
-[ext_resource type="SpriteFrames" uid="uid://dcq4pmuqt8glo" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_medusa.tres" id="10_c76a6"]
-[ext_resource type="SpriteFrames" uid="uid://cd0supa82cye7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_mimic.tres" id="11_pcjaa"]
-[ext_resource type="SpriteFrames" uid="uid://cmvn6ocy4el0s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_pumpkin.tres" id="12_ecyvl"]
-[ext_resource type="SpriteFrames" uid="uid://clvouuic1cr6k" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_rat.tres" id="13_vx7v2"]
-[ext_resource type="SpriteFrames" uid="uid://cmlj65ggds6yk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_grim.tres" id="14_i6nn5"]
-[ext_resource type="SpriteFrames" uid="uid://cr30uyi1bqp5s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/skeleton_animated.tres" id="15_ny0yb"]
-[ext_resource type="SpriteFrames" uid="uid://cvna7f83t27rg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/spider_animated.tres" id="16_xxo7l"]
-[ext_resource type="SpriteFrames" uid="uid://bmo6cj7nihk0j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/snake_animated.tres" id="17_y5pdf"]
-[ext_resource type="SpriteFrames" uid="uid://cvppxh8uvt7li" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/snowman_animated.tres" id="18_uhok2"]
-[ext_resource type="SpriteFrames" uid="uid://bn8mjn7j26fei" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/slime_animated.tres" id="19_8ifln"]
-[ext_resource type="SpriteFrames" uid="uid://cy28j8m3gl4s2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_red.tres" id="20_hf6ti"]
-[ext_resource type="SpriteFrames" uid="uid://dlv5x62rde4a2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_pink.tres" id="21_inbod"]
-[ext_resource type="SpriteFrames" uid="uid://c51b4wnm7kelk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_green.tres" id="22_cn5p5"]
-[ext_resource type="SpriteFrames" uid="uid://du4p2ar5aa7l" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_black.tres" id="23_njl2e"]
-[ext_resource type="Texture2D" uid="uid://yu38a87v1kum" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Monsters-Animated.png" id="24_xs3ia"]
-[ext_resource type="Texture2D" uid="uid://mhapbryeob8u" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Monsters.png" id="25_rlw8m"]
-[ext_resource type="Texture2D" uid="uid://frr4hmx26yoy" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Heroes-Animated.png" id="26_7r1m3"]
-[ext_resource type="Texture2D" uid="uid://5jynlg0fif3p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Heroes.png" id="27_bfm40"]
-[ext_resource type="Texture2D" uid="uid://gbsjb1nvrbb0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_hero_rogue.png" id="28_2k0ns"]
-[ext_resource type="Texture2D" uid="uid://cdarxktcadi0e" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Heroes-Animated.png" id="29_7j1l1"]
-[ext_resource type="Texture2D" uid="uid://cpst0uq6w6eie" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Heroes.png" id="30_moo00"]
-[ext_resource type="Texture2D" uid="uid://bjgrrxxtbaukk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Monsters-Animated.png" id="31_sn2ry"]
-[ext_resource type="Texture2D" uid="uid://ba0ggrlwpq0yl" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Monsters.png" id="32_qb66m"]
-[ext_resource type="Texture2D" uid="uid://cq4drd4byaqw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Monsters.png" id="33_aaxgh"]
-[ext_resource type="Texture2D" uid="uid://cl7vlmr05rsbs" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Monsters-Animated.png" id="34_62ayp"]
-[ext_resource type="Texture2D" uid="uid://dhlbu33dlgqs4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Heroes.png" id="35_pqgxn"]
-[ext_resource type="Texture2D" uid="uid://64k851j7gjhc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Heroes-Animated.png" id="36_mxkqd"]
-[ext_resource type="Texture2D" uid="uid://b5v1v5h7q278h" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Heroes-Animated.png" id="37_hvm7h"]
-[ext_resource type="Texture2D" uid="uid://cf6locyc7kmk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Heroes.png" id="38_qkp3g"]
-[ext_resource type="Texture2D" uid="uid://clxy7fm0rg0s4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Monsters-Animated.png" id="39_rlrni"]
-[ext_resource type="Texture2D" uid="uid://db5f5fomqeqib" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Monsters.png" id="40_al2v5"]
-[ext_resource type="SpriteFrames" uid="uid://bwkda24hfnye4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_dragon.tres" id="41_gcarn"]
-[ext_resource type="Texture2D" uid="uid://3t3vr8gji152" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Items.png" id="41_tjqob"]
-[ext_resource type="SpriteFrames" uid="uid://dwpw257i7pler" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_scarecrow.tres" id="42_e4wki"]
-[ext_resource type="Texture2D" uid="uid://ccec30tjem7gh" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Items.png" id="42_irfn5"]
-[ext_resource type="Texture2D" uid="uid://c1j38pyqfdnig" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Items.png" id="43_uj6gg"]
-[ext_resource type="Texture2D" uid="uid://6f3a0yh8b2dd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Items.png" id="44_tjul6"]
-[ext_resource type="Texture2D" uid="uid://do8mdkr7eskh6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Mini-Map.png" id="44_wtdsf"]
-[ext_resource type="SpriteFrames" uid="uid://7u0rrk5nf1y4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/sf_items.tres" id="45_blfis"]
-[ext_resource type="Texture2D" uid="uid://ot0vclsf38dd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Mini-Map.png" id="45_ckyqj"]
-[ext_resource type="Texture2D" uid="uid://ffe6fu5bjtpm" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Mini-Map.png" id="46_a5mrd"]
-[ext_resource type="Texture2D" uid="uid://bvq2sr3ey3fev" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/Items.png" id="46_a62lp"]
-[ext_resource type="Texture2D" uid="uid://d1go3x1543g4a" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Mini-Map.png" id="47_kaacl"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/ToMiniMap/to_mini_map.gd" id="48_qm424"]
-[ext_resource type="Texture2D" uid="uid://bvcoqqf2c85vh" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Cave-Magma.png" id="51_s3b1r"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="52_23nhg"]
-[ext_resource type="Texture2D" uid="uid://jpc2ljxuvrt5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Cave-Obsidian.png" id="52_uhaog"]
-[ext_resource type="Texture2D" uid="uid://c803drk5ms7yt" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Extras.png" id="53_nnp6g"]
-[ext_resource type="Texture2D" uid="uid://u17pjt8rpg31" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Floor.png" id="54_a2e3t"]
-[ext_resource type="TileSet" uid="uid://dwkk2bvv4olri" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Minimaps/Resources/ts_minimap.tres" id="55_8upof"]
-[ext_resource type="Texture2D" uid="uid://cu5s5036j8sdu" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Dungeon.png" id="55_sjw8n"]
-[ext_resource type="Texture2D" uid="uid://y8qlf17irxex" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Cavern.png" id="56_5n3tf"]
-[ext_resource type="Texture2D" uid="uid://ck5encjom78y3" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Temple.png" id="57_mmcjx"]
-[ext_resource type="Texture2D" uid="uid://cg02u8m8qc4em" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og1.png" id="58_ihlh1"]
-[ext_resource type="Texture2D" uid="uid://8eeapsprexk0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og2.png" id="59_7qt8b"]
-[ext_resource type="Texture2D" uid="uid://bgr6pnyynqxhu" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og3.png" id="60_2kr5l"]
-[ext_resource type="Texture2D" uid="uid://bd5p4rh8e77q4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og4.png" id="61_d243j"]
-[ext_resource type="Texture2D" uid="uid://dkx1qwlnmopee" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og5.png" id="62_jaeuu"]
-[ext_resource type="Texture2D" uid="uid://b32cb17dd3l8b" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen1.png" id="63_uqwmm"]
-[ext_resource type="Texture2D" uid="uid://dc3kqeg0yy6dm" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen2.png" id="64_rdaef"]
-[ext_resource type="Texture2D" uid="uid://c4rfpjqynei6m" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen3.png" id="65_0e5h8"]
-[ext_resource type="Texture2D" uid="uid://c06wjeks5p0fs" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt1.png" id="66_o2rub"]
-[ext_resource type="Texture2D" uid="uid://bufropsvo5w6t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt2.png" id="67_ddrs0"]
-[ext_resource type="Texture2D" uid="uid://dcs0ci3hod6pq" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt3.png" id="68_qn0ua"]
-[ext_resource type="Texture2D" uid="uid://c2hll48va3yf4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma1.png" id="69_wiyjk"]
-[ext_resource type="Texture2D" uid="uid://di4lo3d52ltk7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma2.png" id="70_8me3o"]
-[ext_resource type="Texture2D" uid="uid://dqoccbdlp3hsc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma3.png" id="71_5b3ja"]
-[ext_resource type="Texture2D" uid="uid://c7blvooxcxicf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui1.png" id="72_lgoh4"]
-[ext_resource type="Texture2D" uid="uid://bg151c3d7g4p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui2.png" id="73_wyrns"]
-[ext_resource type="Texture2D" uid="uid://ggupvpov0q" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui3.png" id="74_cp4wf"]
-[ext_resource type="Texture2D" uid="uid://dlrmoofnbkwyb" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui4.png" id="75_j61so"]
-[ext_resource type="Texture2D" uid="uid://c4ctk3dr4x73s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Banners.png" id="77_s7b1c"]
-[ext_resource type="Texture2D" uid="uid://cjxjexb47kxb5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Bars-Sliders-Scrollbars.png" id="78_adit6"]
-[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Cursors.png" id="79_qltvg"]
-[ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="80_fe0kw"]
-[ext_resource type="Texture2D" uid="uid://dvfr3hwrvs7ou" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Icons.png" id="81_d766y"]
-[ext_resource type="Texture2D" uid="uid://cbvvleds2780v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Inputs.png" id="82_3lqv2"]
-[ext_resource type="SpriteFrames" uid="uid://dxu72ctingrre" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Dice/sf_dice.tres" id="83_gylow"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Dice/six_sided_die.gd" id="84_eqm31"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Components/Node2D/PhysicsVFX/scale_sprite.gd" id="85_2akxj"]
-[ext_resource type="Texture2D" uid="uid://bdrfeg8y6ch6t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/UI/PNGs/Icons.png" id="86_8loof"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Volume/toggle_volume.gd" id="87_8erse"]
-[ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/dissolve.gdshader" id="88_f6iik"]
-[ext_resource type="StyleBox" uid="uid://dpqkmimvmthdf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/StyleBox/stylebox_test1.tres" id="89_etyml"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Lock_n_Key/key.gd" id="89_ryhud"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/_tscn_scripts/lights.gd" id="1_pks70"]
+[ext_resource type="Texture2D" uid="uid://yu38a87v1kum" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Monsters-Animated.png" id="2_g4g51"]
+[ext_resource type="Texture2D" uid="uid://mhapbryeob8u" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Monsters.png" id="3_yb11f"]
+[ext_resource type="Texture2D" uid="uid://frr4hmx26yoy" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Heroes-Animated.png" id="4_0x7lf"]
+[ext_resource type="Texture2D" uid="uid://5jynlg0fif3p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Heroes.png" id="5_de4kk"]
+[ext_resource type="Texture2D" uid="uid://gbsjb1nvrbb0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_hero_rogue.png" id="6_pxxyw"]
+[ext_resource type="Texture2D" uid="uid://cdarxktcadi0e" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Heroes-Animated.png" id="7_wtoyh"]
+[ext_resource type="Texture2D" uid="uid://cpst0uq6w6eie" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Heroes.png" id="8_018jt"]
+[ext_resource type="Texture2D" uid="uid://bjgrrxxtbaukk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Monsters-Animated.png" id="9_hlchh"]
+[ext_resource type="Texture2D" uid="uid://ba0ggrlwpq0yl" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Monsters.png" id="10_edkml"]
+[ext_resource type="Texture2D" uid="uid://cq4drd4byaqw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Monsters.png" id="11_7mugt"]
+[ext_resource type="Texture2D" uid="uid://cl7vlmr05rsbs" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Monsters-Animated.png" id="12_mwsr2"]
+[ext_resource type="Texture2D" uid="uid://dhlbu33dlgqs4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Heroes.png" id="13_8qmdy"]
+[ext_resource type="Texture2D" uid="uid://64k851j7gjhc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Heroes-Animated.png" id="14_6hlba"]
+[ext_resource type="Texture2D" uid="uid://b5v1v5h7q278h" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Heroes-Animated.png" id="15_e76hw"]
+[ext_resource type="Texture2D" uid="uid://cf6locyc7kmk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Heroes.png" id="16_4ro7u"]
+[ext_resource type="Texture2D" uid="uid://clxy7fm0rg0s4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Monsters-Animated.png" id="17_j6kuc"]
+[ext_resource type="Texture2D" uid="uid://db5f5fomqeqib" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Monsters.png" id="18_i8lj3"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/_tscn_scripts/editor_dance.gd" id="19_v13xc"]
+[ext_resource type="SpriteFrames" uid="uid://bh2svqsal151c" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_bat.tres" id="20_peyxx"]
+[ext_resource type="SpriteFrames" uid="uid://dvedwf8cuxy1v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_devil.tres" id="21_e7weg"]
+[ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="22_6s1ha"]
+[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="23_bx8pq"]
+[ext_resource type="SpriteFrames" uid="uid://bpw7acdku6yx1" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_golem.tres" id="24_sh6i5"]
+[ext_resource type="SpriteFrames" uid="uid://b78bmtd788c8k" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_bugs.tres" id="25_hjy8u"]
+[ext_resource type="SpriteFrames" uid="uid://dtq5uecr14y3t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_lizard.tres" id="26_bmej1"]
+[ext_resource type="SpriteFrames" uid="uid://dcq4pmuqt8glo" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_medusa.tres" id="27_lpcqr"]
+[ext_resource type="SpriteFrames" uid="uid://cd0supa82cye7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_mimic.tres" id="28_yu5fp"]
+[ext_resource type="SpriteFrames" uid="uid://cmvn6ocy4el0s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_pumpkin.tres" id="29_vqeoh"]
+[ext_resource type="SpriteFrames" uid="uid://clvouuic1cr6k" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_rat.tres" id="30_pvlmp"]
+[ext_resource type="SpriteFrames" uid="uid://cmlj65ggds6yk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_grim.tres" id="31_a3xju"]
+[ext_resource type="SpriteFrames" uid="uid://cr30uyi1bqp5s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/skeleton_animated.tres" id="32_b7bbh"]
+[ext_resource type="SpriteFrames" uid="uid://cvna7f83t27rg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/spider_animated.tres" id="33_ms6uh"]
+[ext_resource type="SpriteFrames" uid="uid://bmo6cj7nihk0j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/snake_animated.tres" id="34_ccl70"]
+[ext_resource type="SpriteFrames" uid="uid://cvppxh8uvt7li" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/snowman_animated.tres" id="35_u28hi"]
+[ext_resource type="SpriteFrames" uid="uid://bn8mjn7j26fei" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/slime_animated.tres" id="36_ief0s"]
+[ext_resource type="SpriteFrames" uid="uid://cy28j8m3gl4s2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_red.tres" id="37_c3tm8"]
+[ext_resource type="SpriteFrames" uid="uid://dlv5x62rde4a2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_pink.tres" id="38_k2stb"]
+[ext_resource type="SpriteFrames" uid="uid://c51b4wnm7kelk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_green.tres" id="39_1rpwm"]
+[ext_resource type="SpriteFrames" uid="uid://du4p2ar5aa7l" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_hero_black.tres" id="40_vw4lk"]
+[ext_resource type="SpriteFrames" uid="uid://bwkda24hfnye4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_dragon.tres" id="41_q5383"]
+[ext_resource type="SpriteFrames" uid="uid://dwpw257i7pler" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_scarecrow.tres" id="42_w3kh3"]
+[ext_resource type="Texture2D" uid="uid://3t3vr8gji152" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Items.png" id="43_aiqj0"]
+[ext_resource type="Texture2D" uid="uid://ccec30tjem7gh" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Items.png" id="44_s8rry"]
+[ext_resource type="Texture2D" uid="uid://c1j38pyqfdnig" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Items.png" id="45_1lhwx"]
+[ext_resource type="Texture2D" uid="uid://6f3a0yh8b2dd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Items.png" id="46_mcrf0"]
+[ext_resource type="SpriteFrames" uid="uid://7u0rrk5nf1y4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/sf_items.tres" id="47_q13kb"]
+[ext_resource type="Texture2D" uid="uid://bvq2sr3ey3fev" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/Items.png" id="48_5ewxc"]
+[ext_resource type="Texture2D" uid="uid://do8mdkr7eskh6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Mini-Map.png" id="49_to51o"]
+[ext_resource type="Texture2D" uid="uid://ot0vclsf38dd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Mini-Map.png" id="50_kdvr6"]
+[ext_resource type="Texture2D" uid="uid://ffe6fu5bjtpm" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Mini-Map.png" id="51_xic6y"]
+[ext_resource type="Texture2D" uid="uid://d1go3x1543g4a" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Mini-Map.png" id="52_gextv"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/ToMiniMap/to_mini_map.gd" id="53_c701l"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="54_ne05t"]
+[ext_resource type="TileSet" uid="uid://dwkk2bvv4olri" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Minimaps/Resources/ts_minimap.tres" id="55_gjpts"]
+[ext_resource type="Texture2D" uid="uid://bvcoqqf2c85vh" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Cave-Magma.png" id="56_dyqqi"]
+[ext_resource type="Texture2D" uid="uid://jpc2ljxuvrt5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Cave-Obsidian.png" id="57_njobe"]
+[ext_resource type="Texture2D" uid="uid://c803drk5ms7yt" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Extras.png" id="58_fd6sc"]
+[ext_resource type="Texture2D" uid="uid://u17pjt8rpg31" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Magma/Floor.png" id="59_nn37u"]
+[ext_resource type="Texture2D" uid="uid://cu5s5036j8sdu" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Original/Dungeon.png" id="60_hvrvf"]
+[ext_resource type="Texture2D" uid="uid://y8qlf17irxex" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Cavern.png" id="61_7kpp2"]
+[ext_resource type="Texture2D" uid="uid://ck5encjom78y3" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Temple.png" id="62_vyn0t"]
+[ext_resource type="Texture2D" uid="uid://cg02u8m8qc4em" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og1.png" id="63_3jnb6"]
+[ext_resource type="Texture2D" uid="uid://8eeapsprexk0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og2.png" id="64_x48g0"]
+[ext_resource type="Texture2D" uid="uid://bgr6pnyynqxhu" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og3.png" id="65_80ct3"]
+[ext_resource type="Texture2D" uid="uid://bd5p4rh8e77q4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og4.png" id="66_2mlw7"]
+[ext_resource type="Texture2D" uid="uid://dkx1qwlnmopee" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og5.png" id="67_duvby"]
+[ext_resource type="Texture2D" uid="uid://b32cb17dd3l8b" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen1.png" id="68_1kaok"]
+[ext_resource type="Texture2D" uid="uid://dc3kqeg0yy6dm" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen2.png" id="69_pbxwd"]
+[ext_resource type="Texture2D" uid="uid://c4rfpjqynei6m" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_frozen3.png" id="70_tv3r7"]
+[ext_resource type="Texture2D" uid="uid://c06wjeks5p0fs" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt1.png" id="71_m2nbs"]
+[ext_resource type="Texture2D" uid="uid://bufropsvo5w6t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt2.png" id="72_blpet"]
+[ext_resource type="Texture2D" uid="uid://dcs0ci3hod6pq" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_haunt3.png" id="73_knmnd"]
+[ext_resource type="Texture2D" uid="uid://c2hll48va3yf4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma1.png" id="74_guefn"]
+[ext_resource type="Texture2D" uid="uid://di4lo3d52ltk7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma2.png" id="75_euq27"]
+[ext_resource type="Texture2D" uid="uid://dqoccbdlp3hsc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_magma3.png" id="76_jggry"]
+[ext_resource type="Texture2D" uid="uid://c7blvooxcxicf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui1.png" id="77_03ef8"]
+[ext_resource type="Texture2D" uid="uid://bg151c3d7g4p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui2.png" id="78_5etn8"]
+[ext_resource type="Texture2D" uid="uid://ggupvpov0q" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui3.png" id="79_bcmlr"]
+[ext_resource type="Texture2D" uid="uid://dlrmoofnbkwyb" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui4.png" id="80_lf7y1"]
+[ext_resource type="Texture2D" uid="uid://c4ctk3dr4x73s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Banners.png" id="81_l5axh"]
+[ext_resource type="Texture2D" uid="uid://cjxjexb47kxb5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Bars-Sliders-Scrollbars.png" id="82_olsss"]
+[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Cursors.png" id="83_f84dp"]
+[ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="84_gu1su"]
+[ext_resource type="Texture2D" uid="uid://dvfr3hwrvs7ou" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Icons.png" id="85_4fp5j"]
+[ext_resource type="Texture2D" uid="uid://cbvvleds2780v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Inputs.png" id="86_ja5ew"]
+[ext_resource type="SpriteFrames" uid="uid://dxu72ctingrre" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Dice/sf_dice.tres" id="87_uylml"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Dice/six_sided_die.gd" id="88_08ygn"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Node2D/PhysicsVFX/scale_sprite.gd" id="89_mkmdk"]
+[ext_resource type="Texture2D" uid="uid://bdrfeg8y6ch6t" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/UI/PNGs/Icons.png" id="90_0bmyw"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Volume/toggle_volume.gd" id="91_6rwda"]
+[ext_resource type="StyleBox" uid="uid://dpqkmimvmthdf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/StyleBox/stylebox_test1.tres" id="92_rg1hb"]
+[ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/dissolve.gdshader" id="93_vw2l2"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Lock_n_Key/key.gd" id="94_widcd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rhtyp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhcte"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5805m"]
-atlas = ExtResource("86_8loof")
+atlas = ExtResource("90_0bmyw")
 region = Rect2(290, 288, 13, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wo4v"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mkv0"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6tgy"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfhn5"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i02il"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gmqi"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfhj3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmp60"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onega"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l12k"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdslu"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxvyk"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nceae"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a2bvx"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5y7ny"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6jsc"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(176, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72pup"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_704p4"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(176, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jr47y"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y5vdi"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dcqih"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjf34"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(256, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsrho"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pd85q"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6lr3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_431ln"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(256, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_811ie"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0o2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wpt5f"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fx7tm"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3lq6"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rj0g2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1g5b"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhko4"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(368, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmhoo"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oli0a"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(368, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8kph8"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ev78t"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_inxbr"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3aa1d"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_squaq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ng6"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pg7p"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvba7"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rc24"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptx0f"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_837fe"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2j8xt"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wrimb"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ue7bf"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rbup"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84pa6"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0ura"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dkjoj"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2xn4"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83lpd"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjqe0"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grk8c"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cf7xo"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md61f"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r4mrw"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_av80d"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qg4j"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc2t8"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ed54i"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohvku"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bg2vo"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8c4v3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngc84"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrbin"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7cki"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mag7j"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbf6r"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isal3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwvyr"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dc6go"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f27de"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(272, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbx52"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84dhw"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3h2w"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(272, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aotmu"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmkgu"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s441q"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8wwn"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_luihn"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k82rb"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_67ju0"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wb07e"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_skdmp"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1pi0"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vdtfd"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h62dq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xmp7x"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp5rl"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eooh"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(144, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70n5t"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_davax"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(176, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xg4vn"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(144, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ea5cw"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gm31"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(176, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7c7ly"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58rso"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tcx5"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggjos"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s24my"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kcdh3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f578r"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(272, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rb8dx"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33n1t"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qgjo"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(272, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gx3jq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yswn1"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rb4nv"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(336, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2gq4"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7xc53"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(368, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsage"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(336, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_476w3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xggj2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(368, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1n75"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p7sy"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1lrv"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6iabj"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c517e"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d60p"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij3sh"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6p83"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2keub"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hiq63"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2ll3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qih6f"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6mek"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(144, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdosj"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vep8"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(144, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5yja"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 224, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cmbfw"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4466d"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u1ib"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fs3b"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 272, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2c0s"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 272, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ywau"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 272, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwali"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgoj7"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7nip"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 272, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oiki6"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 272, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wvjnb"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cont7"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l13r"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pt1ky"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvycg"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rer65"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hd12m"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfluw"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bt1qk"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(144, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ii1e2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 336, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkuee"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rcr3"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qeth"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gl3w"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lunr2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cpid"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3dp6g"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 352, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oblpv"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(16, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1r77o"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(32, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ralib"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(48, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkkxk"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(64, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qewl"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(80, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0xfqq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(96, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjcua"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(208, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i1o8j"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(224, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lk2ue"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(240, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22e8x"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(256, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bsirf"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(272, 304, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fg7k5"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(288, 304, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gwr2p"]
@@ -1519,26 +1519,26 @@ fractal_weighted_strength = 1.0
 noise = SubResource("FastNoiseLite_s48bj")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x7r4c"]
-shader = ExtResource("88_f6iik")
+shader = ExtResource("93_vw2l2")
 shader_parameter/dissolve_value = 1.0
 shader_parameter/burn_size = 0.02
 shader_parameter/burn_color = Color(0.93845, 0.93845, 0.93845, 1)
 shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_cwo46")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74viq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46sxx"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(352, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alntq"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_loo0o"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(160, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ocofk"]
@@ -1577,35 +1577,35 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxvkf"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4k7k"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srjrc"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(304, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sppg"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(320, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dn04k"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jmdr8"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0svf2"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(112, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6x1h1"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(128, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cm1pp"]
@@ -1676,14 +1676,21 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_puc51"]
-atlas = ExtResource("80_fe0kw")
+atlas = ExtResource("84_gu1su")
 region = Rect2(501, 69, 54, 54)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jg0yf"]
-atlas = ExtResource("81_d766y")
+atlas = ExtResource("85_4fp5j")
 region = Rect2(114, 353, 12, 14)
 
 [node name="DemonicDungeon_Gallery" type="Node2D"]
+
+[node name="WhiteForDocumentationDisplay" type="ColorRect" parent="."]
+offset_left = -4854.0
+offset_top = -7286.0
+offset_right = 11037.0
+offset_bottom = 2365.0
+metadata/_edit_lock_ = true
 
 [node name="Cards" type="Control" parent="."]
 layout_mode = 3
@@ -1702,9 +1709,8 @@ offset_left = 98.0
 offset_top = 125.0
 offset_right = 1339.0
 offset_bottom = 788.0
-color = Color(0, 0, 0, 0)
-script = ExtResource("1_k3flt")
-lights_on = true
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pks70")
 metadata/_edit_use_anchors_ = true
 
 [node name="tag_Characters_" type="Label" parent="Cards/CharCard"]
@@ -1724,77 +1730,77 @@ position = Vector2(1235, 662)
 
 [node name="Monsters-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Original"]
 position = Vector2(-208, -480)
-texture = ExtResource("24_xs3ia")
+texture = ExtResource("2_g4g51")
 
 [node name="Monsters" type="Sprite2D" parent="Cards/CharCard/Documentation/Original"]
 position = Vector2(-440, -512)
-texture = ExtResource("25_rlw8m")
+texture = ExtResource("3_yb11f")
 
 [node name="Heroes-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Original"]
 position = Vector2(-872, -504)
-texture = ExtResource("26_7r1m3")
+texture = ExtResource("4_0x7lf")
 
 [node name="Heroes" type="Sprite2D" parent="Cards/CharCard/Documentation/Original"]
 position = Vector2(-1160, -504)
-texture = ExtResource("27_bfm40")
+texture = ExtResource("5_de4kk")
 
 [node name="Rogue ~EXTRA" type="Sprite2D" parent="Cards/CharCard/Documentation/Original"]
 position = Vector2(-1000, -48)
-texture = ExtResource("28_2k0ns")
+texture = ExtResource("6_pxxyw")
 
 [node name="Frozen" type="Node2D" parent="Cards/CharCard/Documentation"]
 
 [node name="Heroes-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Frozen"]
 position = Vector2(-1032, -400)
-texture = ExtResource("29_7j1l1")
+texture = ExtResource("7_wtoyh")
 
 [node name="Heroes" type="Sprite2D" parent="Cards/CharCard/Documentation/Frozen"]
 position = Vector2(-1152, -392)
-texture = ExtResource("30_moo00")
+texture = ExtResource("8_018jt")
 
 [node name="Monsters-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Frozen"]
 position = Vector2(-208, -376)
-texture = ExtResource("31_sn2ry")
+texture = ExtResource("9_hlchh")
 
 [node name="Monsters" type="Sprite2D" parent="Cards/CharCard/Documentation/Frozen"]
 position = Vector2(-424, -384)
-texture = ExtResource("32_qb66m")
+texture = ExtResource("10_edkml")
 
 [node name="Haunted" type="Node2D" parent="Cards/CharCard/Documentation"]
 
 [node name="Monsters" type="Sprite2D" parent="Cards/CharCard/Documentation/Haunted"]
 position = Vector2(-416, -264)
-texture = ExtResource("33_aaxgh")
+texture = ExtResource("11_7mugt")
 
 [node name="Monsters-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Haunted"]
 position = Vector2(-208, -248)
-texture = ExtResource("34_62ayp")
+texture = ExtResource("12_mwsr2")
 
 [node name="Heroes" type="Sprite2D" parent="Cards/CharCard/Documentation/Haunted"]
 position = Vector2(-1152, -312)
-texture = ExtResource("35_pqgxn")
+texture = ExtResource("13_8qmdy")
 
 [node name="Heroes-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Haunted"]
 position = Vector2(-1000, -296)
-texture = ExtResource("36_mxkqd")
+texture = ExtResource("14_6hlba")
 
 [node name="Magma" type="Node2D" parent="Cards/CharCard/Documentation"]
 
 [node name="Heroes-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Magma"]
 position = Vector2(-1000, -168)
-texture = ExtResource("37_hvm7h")
+texture = ExtResource("15_e76hw")
 
 [node name="Heroes" type="Sprite2D" parent="Cards/CharCard/Documentation/Magma"]
 position = Vector2(-1136, -208)
-texture = ExtResource("38_qkp3g")
+texture = ExtResource("16_4ro7u")
 
 [node name="Monsters-animated" type="Sprite2D" parent="Cards/CharCard/Documentation/Magma"]
 position = Vector2(-208, -160)
-texture = ExtResource("39_rlrni")
+texture = ExtResource("17_j6kuc")
 
 [node name="Monsters" type="Sprite2D" parent="Cards/CharCard/Documentation/Magma"]
 position = Vector2(-424, -168)
-texture = ExtResource("40_al2v5")
+texture = ExtResource("18_i8lj3")
 
 [node name="Framing for Animation" type="ColorRect" parent="Cards/CharCard"]
 layout_mode = 0
@@ -1806,150 +1812,150 @@ color = Color(0.312781, 6.59391e-05, 0.312779, 1)
 
 [node name="Animated" type="Node2D" parent="Cards/CharCard/Framing for Animation"]
 position = Vector2(171, 126)
-script = ExtResource("2_im6vx")
+script = ExtResource("19_v13xc")
 dance = true
 
 [node name="Bat" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-136, -110)
-sprite_frames = ExtResource("3_a7i2m")
+sprite_frames = ExtResource("20_peyxx")
 animation = &"Frozen"
 frame_progress = 0.675249
 
 [node name="Devil" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -62)
-sprite_frames = ExtResource("4_7vl14")
+sprite_frames = ExtResource("21_e7weg")
 animation = &"Original"
 autoplay = "Original"
 frame_progress = 0.675249
 
 [node name="Ghost" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-100, -86)
-sprite_frames = ExtResource("5_j31t6")
+sprite_frames = ExtResource("22_6s1ha")
 animation = &"Haunted"
 autoplay = "Haunted"
 frame_progress = 0.675249
 
 [node name="Goblin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-43, -62)
-sprite_frames = ExtResource("6_5i8cr")
+sprite_frames = ExtResource("23_bx8pq")
 animation = &"Pickaxe"
 frame_progress = 0.675249
 
 [node name="Golem" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -87)
-sprite_frames = ExtResource("7_kwhg1")
+sprite_frames = ExtResource("24_sh6i5")
 animation = &"Copper"
 frame_progress = 0.010291
 
 [node name="Flies" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-154, -111)
-sprite_frames = ExtResource("8_k8s1i")
+sprite_frames = ExtResource("25_hjy8u")
 animation = &"Haunted"
 frame_progress = 0.675249
 
 [node name="Lizard" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-40, -109)
-sprite_frames = ExtResource("9_37kk7")
+sprite_frames = ExtResource("26_bmej1")
 animation = &"Frozen"
 frame_progress = 0.675249
 
 [node name="Medusa" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-136, -87)
-sprite_frames = ExtResource("10_c76a6")
+sprite_frames = ExtResource("27_lpcqr")
 animation = &"Teal_Alt"
 frame_progress = 0.675249
 
 [node name="Mimic" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-69, -86)
-sprite_frames = ExtResource("11_pcjaa")
+sprite_frames = ExtResource("28_yu5fp")
 animation = &"Original"
 autoplay = "Original"
 frame_progress = 0.675249
 
 [node name="Pumpkin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-49, -85)
-sprite_frames = ExtResource("12_ecyvl")
+sprite_frames = ExtResource("29_vqeoh")
 animation = &"Haunted"
 autoplay = "Haunted"
 frame_progress = 0.675249
 
 [node name="Rat" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-78, -110)
-sprite_frames = ExtResource("13_vx7v2")
+sprite_frames = ExtResource("30_pvlmp")
 animation = &"Teal"
 frame_progress = 0.675249
 
 [node name="Reaper" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-122, -62)
-sprite_frames = ExtResource("14_i6nn5")
+sprite_frames = ExtResource("31_a3xju")
 animation = &"Haunted"
 autoplay = "Haunted"
 frame_progress = 0.675249
 
 [node name="Skeleton" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-137, -62)
-sprite_frames = ExtResource("15_ny0yb")
+sprite_frames = ExtResource("32_b7bbh")
 animation = &"Black_Sword"
 frame_progress = 0.0920306
 
 [node name="Spider" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-116, -111)
-sprite_frames = ExtResource("16_xxo7l")
+sprite_frames = ExtResource("33_ms6uh")
 animation = &"Teal"
 frame_progress = 0.675249
 
 [node name="Snake" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-96, -110)
-sprite_frames = ExtResource("17_y5pdf")
+sprite_frames = ExtResource("34_ccl70")
 animation = &"Pink"
 frame_progress = 0.675249
 
 [node name="Snowman" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-118, -87)
-sprite_frames = ExtResource("18_uhok2")
+sprite_frames = ExtResource("35_u28hi")
 animation = &"Frozen"
 autoplay = "Frozen"
 frame_progress = 0.675249
 
 [node name="Slime" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-31, -84)
-sprite_frames = ExtResource("19_8ifln")
+sprite_frames = ExtResource("36_ief0s")
 animation = &"Green"
 frame_progress = 0.675249
 
 [node name="Red" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-75, -63)
-sprite_frames = ExtResource("20_hf6ti")
+sprite_frames = ExtResource("37_c3tm8")
 animation = &"Whip"
 frame_progress = 0.675249
 
 [node name="Pink" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-59, -63)
-sprite_frames = ExtResource("21_inbod")
+sprite_frames = ExtResource("38_k2stb")
 animation = &"Axe"
 frame_progress = 0.675249
 
 [node name="Green" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-90, -62)
-sprite_frames = ExtResource("22_cn5p5")
+sprite_frames = ExtResource("39_1rpwm")
 animation = &"Gloves"
 frame_progress = 0.0912806
 
 [node name="Black" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-106, -62)
-sprite_frames = ExtResource("23_njl2e")
+sprite_frames = ExtResource("40_vw4lk")
 animation = &"Axe"
 frame_progress = 0.675249
 
 [node name="Dragon" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-60, -110)
-sprite_frames = ExtResource("41_gcarn")
+sprite_frames = ExtResource("41_q5383")
 animation = &"Pink"
 frame_progress = 0.592803
 
 [node name="Scarecrow" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-86, -86)
-sprite_frames = ExtResource("42_e4wki")
+sprite_frames = ExtResource("42_w3kh3")
 animation = &"Black"
 frame_progress = 0.675249
 
@@ -1964,9 +1970,8 @@ offset_left = 612.0
 offset_top = -169.0
 offset_right = 1308.0
 offset_bottom = 119.0
-color = Color(0, 0, 0, 0)
-script = ExtResource("1_k3flt")
-lights_on = true
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pks70")
 metadata/_edit_use_anchors_ = true
 
 [node name="ItemTag" type="Label" parent="Cards/ItemCard"]
@@ -1986,22 +1991,22 @@ metadata/_edit_use_anchors_ = true
 
 [node name="FrozenItems" type="Sprite2D" parent="Cards/ItemCard/Documentation"]
 position = Vector2(270, 148)
-texture = ExtResource("41_tjqob")
+texture = ExtResource("43_aiqj0")
 
 [node name="MagmaItems" type="Sprite2D" parent="Cards/ItemCard/Documentation"]
 position = Vector2(100, 134)
-texture = ExtResource("42_irfn5")
+texture = ExtResource("44_s8rry")
 
 [node name="HauntedItems" type="Sprite2D" parent="Cards/ItemCard/Documentation"]
 position = Vector2(499, 68)
-texture = ExtResource("43_uj6gg")
+texture = ExtResource("45_1lhwx")
 
 [node name="OriginalItems" type="Sprite2D" parent="Cards/ItemCard/Documentation"]
 position = Vector2(-1305, 452)
 
 [node name="Items" type="Sprite2D" parent="Cards/ItemCard/Documentation"]
 position = Vector2(468, 274)
-texture = ExtResource("44_tjul6")
+texture = ExtResource("46_mcrf0")
 
 [node name="All" type="Node2D" parent="Cards/ItemCard"]
 
@@ -2013,18 +2018,18 @@ offset_bottom = 192.0
 color = Color(0.312781, 6.59391e-05, 0.312779, 1)
 
 [node name="Animated" type="Node2D" parent="Cards/ItemCard/All/Framing for Animation"]
-script = ExtResource("2_im6vx")
+script = ExtResource("19_v13xc")
 
 [node name="Animated" type="AnimatedSprite2D" parent="Cards/ItemCard/All/Framing for Animation/Animated"]
 position = Vector2(10, 10)
-sprite_frames = ExtResource("45_blfis")
+sprite_frames = ExtResource("47_q13kb")
 animation = &"ALL"
 autoplay = "ALL"
 frame_progress = 0.45137
 
 [node name="Static" type="Sprite2D" parent="Cards/ItemCard/All"]
 position = Vector2(1104, 203)
-texture = ExtResource("46_a62lp")
+texture = ExtResource("48_5ewxc")
 
 [node name="MiniMapCard" type="ColorRect" parent="Cards"]
 layout_mode = 1
@@ -2037,9 +2042,8 @@ offset_left = -448.0
 offset_top = -319.0
 offset_right = 80.0
 offset_bottom = -55.0
-color = Color(0, 0, 0, 0)
-script = ExtResource("1_k3flt")
-lights_on = true
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pks70")
 metadata/_edit_use_anchors_ = true
 
 [node name="tag_MiniMaps" type="Label" parent="Cards/MiniMapCard"]
@@ -2055,19 +2059,19 @@ position = Vector2(1808, 272)
 
 [node name="OriginalMinimap" type="Sprite2D" parent="Cards/MiniMapCard/Documentation"]
 position = Vector2(-1736, -144)
-texture = ExtResource("44_wtdsf")
+texture = ExtResource("49_to51o")
 
 [node name="MagmaMiniMap" type="Sprite2D" parent="Cards/MiniMapCard/Documentation"]
 position = Vector2(-1376, -128)
-texture = ExtResource("45_ckyqj")
+texture = ExtResource("50_kdvr6")
 
 [node name="HauntedMiniMap" type="Sprite2D" parent="Cards/MiniMapCard/Documentation"]
 position = Vector2(-1536, -112)
-texture = ExtResource("46_a5mrd")
+texture = ExtResource("51_xic6y")
 
 [node name="FrozenMiniMap" type="Sprite2D" parent="Cards/MiniMapCard/Documentation"]
 position = Vector2(-1632, -112)
-texture = ExtResource("47_kaacl")
+texture = ExtResource("52_gextv")
 
 [node name="EnvCard" type="ColorRect" parent="Cards"]
 layout_mode = 1
@@ -2080,9 +2084,8 @@ offset_left = 524.0
 offset_top = -1361.0
 offset_right = 3500.0
 offset_bottom = -313.0
-color = Color(0, 0, 0, 0)
-script = ExtResource("1_k3flt")
-lights_on = true
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pks70")
 metadata/_edit_use_anchors_ = true
 
 [node name="EnvTag" type="Label" parent="Cards/EnvCard"]
@@ -2137,46 +2140,46 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ToMiniMap" type="Node2D" parent="Cards/EnvCard/DrawingPads/MiniMapPad/DrawHere"]
 position = Vector2(250, 250)
-script = ExtResource("48_qm424")
+script = ExtResource("53_c701l")
 
 [node name="MainMap" type="TileMapLayer" parent="Cards/EnvCard/DrawingPads/MiniMapPad/DrawHere/ToMiniMap"]
-tile_set = ExtResource("52_23nhg")
+tile_set = ExtResource("54_ne05t")
 
 [node name="MiniMap" type="TileMapLayer" parent="Cards/EnvCard/DrawingPads/MiniMapPad/DrawHere/ToMiniMap"]
 texture_filter = 1
 position = Vector2(-250, -250)
-tile_set = ExtResource("55_8upof")
+tile_set = ExtResource("55_gjpts")
 
 [node name="Static" type="Node2D" parent="Cards/EnvCard"]
 position = Vector2(-5661, 516)
 
 [node name="MagmaCaveMagma" type="Sprite2D" parent="Cards/EnvCard/Static"]
 position = Vector2(5997, -36)
-texture = ExtResource("51_s3b1r")
+texture = ExtResource("56_dyqqi")
 
 [node name="MagmaCaveObsidian" type="Sprite2D" parent="Cards/EnvCard/Static"]
 position = Vector2(7469, -204)
-texture = ExtResource("52_uhaog")
+texture = ExtResource("57_njobe")
 
 [node name="MagmaExtras" type="Sprite2D" parent="Cards/EnvCard/Static"]
-position = Vector2(8197, 44)
-texture = ExtResource("53_nnp6g")
+position = Vector2(8166, -14)
+texture = ExtResource("58_fd6sc")
 
 [node name="MagmaFloor" type="Sprite2D" parent="Cards/EnvCard/Static"]
-position = Vector2(8469, -292)
-texture = ExtResource("54_a2e3t")
+position = Vector2(8311, -292)
+texture = ExtResource("59_nn37u")
 
 [node name="OriginalDungeon" type="Sprite2D" parent="Cards/EnvCard/Static"]
 position = Vector2(6109, -356)
-texture = ExtResource("55_sjw8n")
+texture = ExtResource("60_hvrvf")
 
 [node name="FrozenCavern" type="Sprite2D" parent="Cards/EnvCard/Static"]
 position = Vector2(6933, -212)
-texture = ExtResource("56_5n3tf")
+texture = ExtResource("61_7kpp2")
 
 [node name="HauntedTemple" type="Sprite2D" parent="Cards/EnvCard/Static"]
 position = Vector2(6341, -212)
-texture = ExtResource("57_mmcjx")
+texture = ExtResource("62_vyn0t")
 
 [node name="ExamplesCard" type="ColorRect" parent="Cards"]
 layout_mode = 1
@@ -2214,23 +2217,23 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Mockup-1" type="Sprite2D" parent="Cards/ExamplesCard/Original"]
 position = Vector2(150, 200)
-texture = ExtResource("58_ihlh1")
+texture = ExtResource("63_3jnb6")
 
 [node name="Mockup-2" type="Sprite2D" parent="Cards/ExamplesCard/Original"]
 position = Vector2(-150, 200)
-texture = ExtResource("59_7qt8b")
+texture = ExtResource("64_x48g0")
 
 [node name="Mockup-3" type="Sprite2D" parent="Cards/ExamplesCard/Original"]
 position = Vector2(-150, -200)
-texture = ExtResource("60_2kr5l")
+texture = ExtResource("65_80ct3")
 
 [node name="Mockup-4" type="Sprite2D" parent="Cards/ExamplesCard/Original"]
 position = Vector2(150, -200)
-texture = ExtResource("61_d243j")
+texture = ExtResource("66_2mlw7")
 
 [node name="Mockup-5" type="Sprite2D" parent="Cards/ExamplesCard/Original"]
 position = Vector2(150, 0)
-texture = ExtResource("62_jaeuu")
+texture = ExtResource("67_duvby")
 
 [node name="Frozen" type="Node2D" parent="Cards/ExamplesCard"]
 position = Vector2(1338, 119)
@@ -2245,15 +2248,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Mockup-1" type="Sprite2D" parent="Cards/ExamplesCard/Frozen"]
 position = Vector2(0, 200)
-texture = ExtResource("63_uqwmm")
+texture = ExtResource("68_1kaok")
 
 [node name="Mockup-2" type="Sprite2D" parent="Cards/ExamplesCard/Frozen"]
 position = Vector2(-150, 0)
-texture = ExtResource("64_rdaef")
+texture = ExtResource("69_pbxwd")
 
 [node name="Mockup-3" type="Sprite2D" parent="Cards/ExamplesCard/Frozen"]
 position = Vector2(150, 0)
-texture = ExtResource("65_0e5h8")
+texture = ExtResource("70_tv3r7")
 
 [node name="Haunted" type="Node2D" parent="Cards/ExamplesCard"]
 position = Vector2(775, 688)
@@ -2269,15 +2272,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Mockup-1" type="Sprite2D" parent="Cards/ExamplesCard/Haunted"]
 position = Vector2(0, 250)
-texture = ExtResource("66_o2rub")
+texture = ExtResource("71_m2nbs")
 
 [node name="Mockup-2" type="Sprite2D" parent="Cards/ExamplesCard/Haunted"]
 position = Vector2(0, 50)
-texture = ExtResource("67_ddrs0")
+texture = ExtResource("72_blpet")
 
 [node name="Mockup-3" type="Sprite2D" parent="Cards/ExamplesCard/Haunted"]
 position = Vector2(0, -150)
-texture = ExtResource("68_qn0ua")
+texture = ExtResource("73_knmnd")
 
 [node name="Magma" type="Node2D" parent="Cards/ExamplesCard"]
 position = Vector2(755, 314)
@@ -2293,15 +2296,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Mockup-4" type="Sprite2D" parent="Cards/ExamplesCard/Magma"]
 position = Vector2(0, -200)
-texture = ExtResource("69_wiyjk")
+texture = ExtResource("74_guefn")
 
 [node name="Mockup-5" type="Sprite2D" parent="Cards/ExamplesCard/Magma"]
 position = Vector2(-150, 0)
-texture = ExtResource("70_8me3o")
+texture = ExtResource("75_euq27")
 
 [node name="Mockup-6" type="Sprite2D" parent="Cards/ExamplesCard/Magma"]
 position = Vector2(150, 0)
-texture = ExtResource("71_5b3ja")
+texture = ExtResource("76_jggry")
 
 [node name="UI" type="Node2D" parent="Cards/ExamplesCard"]
 position = Vector2(-1517, -148)
@@ -2317,19 +2320,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Mockup-1-alternative" type="Sprite2D" parent="Cards/ExamplesCard/UI"]
 position = Vector2(1717, 1796)
-texture = ExtResource("72_lgoh4")
+texture = ExtResource("77_03ef8")
 
 [node name="Mockup-1" type="Sprite2D" parent="Cards/ExamplesCard/UI"]
 position = Vector2(2073, 1792)
-texture = ExtResource("73_wyrns")
+texture = ExtResource("78_5etn8")
 
 [node name="Mockup-2" type="Sprite2D" parent="Cards/ExamplesCard/UI"]
 position = Vector2(1726, 1486)
-texture = ExtResource("74_cp4wf")
+texture = ExtResource("79_bcmlr")
 
 [node name="Mockup-3" type="Sprite2D" parent="Cards/ExamplesCard/UI"]
 position = Vector2(2457, 1791)
-texture = ExtResource("75_j61so")
+texture = ExtResource("80_lf7y1")
 
 [node name="DdPalette" type="Sprite2D" parent="Cards/ExamplesCard"]
 position = Vector2(1469, 1323)
@@ -2341,9 +2344,8 @@ offset_left = 3400.0
 offset_top = -1983.0
 offset_right = 5188.0
 offset_bottom = -359.0
-color = Color(0, 0, 0, 0)
-script = ExtResource("1_k3flt")
-lights_on = true
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pks70")
 
 [node name="UiTag" type="Label" parent="Cards/UiCard"]
 layout_mode = 1
@@ -2365,27 +2367,27 @@ zoom = Vector2(2.5, 2.5)
 
 [node name="Banners" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(193, 216)
-texture = ExtResource("77_s7b1c")
+texture = ExtResource("81_l5axh")
 
 [node name="Bars-sliders-scrollbars" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(670, 212)
-texture = ExtResource("78_adit6")
+texture = ExtResource("82_olsss")
 
 [node name="Cursors" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(112, 485)
-texture = ExtResource("79_qltvg")
+texture = ExtResource("83_f84dp")
 
 [node name="Frames" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(497, 1078)
-texture = ExtResource("80_fe0kw")
+texture = ExtResource("84_gu1su")
 
 [node name="Icons" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(1378, 819)
-texture = ExtResource("81_d766y")
+texture = ExtResource("85_4fp5j")
 
 [node name="Inputs" type="Sprite2D" parent="Cards/UiCard/Documentation"]
 position = Vector2(1445, 262)
-texture = ExtResource("82_3lqv2")
+texture = ExtResource("86_ja5ew")
 
 [node name="TOYS" type="ColorRect" parent="Cards/UiCard"]
 layout_mode = 0
@@ -2401,16 +2403,16 @@ position = Vector2(357, 172)
 [node name="Dice" type="AnimatedSprite2D" parent="Cards/UiCard/TOYS/DiceToy"]
 material = SubResource("ShaderMaterial_vhcte")
 position = Vector2(0, -9)
-sprite_frames = ExtResource("83_gylow")
+sprite_frames = ExtResource("87_uylml")
 animation = &"B_2"
 autoplay = "B_1"
 speed_scale = 20.0
-script = ExtResource("84_eqm31")
+script = ExtResource("88_08ygn")
 start_roll = true
 is_silver = true
 
 [node name="ScaleSpriteComponent_2" type="Node" parent="Cards/UiCard/TOYS/DiceToy/Dice" node_paths=PackedStringArray("sprite")]
-script = ExtResource("85_2akxj")
+script = ExtResource("89_mkmdk")
 sprite = NodePath("..")
 scale_amount = Vector2(1.1, 1.53)
 scale_duration = 0.2
@@ -2423,10 +2425,10 @@ position = Vector2(196, 88)
 sprite_frames = SubResource("SpriteFrames_gwr2p")
 animation = &"B3G"
 autoplay = "S0G"
-script = ExtResource("87_8erse")
+script = ExtResource("91_6rwda")
 
 [node name="ScaleSpriteComponent" type="Node" parent="Cards/UiCard/TOYS/VolumeToggle" node_paths=PackedStringArray("sprite")]
-script = ExtResource("85_2akxj")
+script = ExtResource("89_mkmdk")
 sprite = NodePath("..")
 scale_amount = Vector2(1.1, 1.5)
 scale_duration = 1.0
@@ -2454,7 +2456,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Panel" type="Panel" parent="Cards/UiCard/TOYS/~WIP/StyleboxTexture/VBoxContainer"]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
-theme_override_styles/panel = ExtResource("89_etyml")
+theme_override_styles/panel = ExtResource("92_rg1hb")
 
 [node name="MarginContainer" type="MarginContainer" parent="Cards/UiCard/TOYS/~WIP/StyleboxTexture/VBoxContainer/Panel"]
 layout_mode = 0
@@ -2478,7 +2480,7 @@ position = Vector2(-51, 13)
 sprite_frames = SubResource("SpriteFrames_ocofk")
 animation = &"SG"
 autoplay = "SG"
-script = ExtResource("89_ryhud")
+script = ExtResource("94_widcd")
 
 [node name="Lock" type="AnimatedSprite2D" parent="Cards/UiCard/TOYS/~WIP/LockNKey"]
 position = Vector2(17, 12)
