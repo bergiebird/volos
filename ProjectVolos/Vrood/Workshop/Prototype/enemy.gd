@@ -1,6 +1,3 @@
-extends Area2D
+extends TileBasedCharacter
 
-@export var tile_size: int = 16
-
-func _ready() -> void:
-	position = position.snapped(Vector2.ONE * tile_size/2) # snap character to grid
+# here is where we can put generic enemy logic if we need it

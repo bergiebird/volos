@@ -116,14 +116,14 @@ animations = [{
 [node name="Strongling" type="Area2D" groups=["Strongling"]]
 script = ExtResource("1_xn6ae")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_aj61q")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -16.0
 offset_top = -16.0
 color = Color(0.46875, 0.180466, 0.152449, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -8)
-shape = SubResource("RectangleShape2D_aj61q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Strongling"]]
 position = Vector2(-8, -8)

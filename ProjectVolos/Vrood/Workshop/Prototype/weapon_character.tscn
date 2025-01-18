@@ -88,8 +88,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5svem"]
 size = Vector2(10, 10)
 
-[node name="WeaponCharacter" type="Area2D" groups=["Strongling"]]
+[node name="WeaponCharacter" type="Area2D" groups=["Characters"]]
 script = ExtResource("1_tmq2h")
+tiles = 100
+move_rate = 15
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -16.0

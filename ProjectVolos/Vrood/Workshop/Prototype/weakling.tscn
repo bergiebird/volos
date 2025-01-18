@@ -9,14 +9,14 @@ size = Vector2(10, 10)
 [node name="Weakling" type="Area2D" groups=["Weakling"]]
 script = ExtResource("1_2iq1h")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_aj61q")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -16.0
 offset_top = -16.0
 color = Color(0.808594, 0.76531, 0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -8)
-shape = SubResource("RectangleShape2D_aj61q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, -8)
