@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxveopck7ha85"]
 
-[ext_resource type="PackedScene" uid="uid://da30prnju1581" path="res://ProjectVolos/Vrood/Workshop/Prototype/weapon_character.tscn" id="1_fhjyx"]
-[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Vrood/Workshop/Prototype/weakling.tscn" id="2_imosn"]
-[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/Vrood/Workshop/Prototype/focus.tscn" id="3_dkey3"]
-[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/Vrood/Workshop/Prototype/camera_man.tscn" id="3_ipjd5"]
-[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/Vrood/Workshop/Prototype/strongling.tscn" id="3_mkgb1"]
-[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Vrood/Workshop/Prototype/wind_character.tscn" id="6_s11i2"]
+[ext_resource type="PackedScene" uid="uid://da30prnju1581" path="res://ProjectVolos/BergieBird/Working/Prototype/weapon_character.tscn" id="1_fhjyx"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/BergieBird/Working/Prototype/weakling.tscn" id="2_imosn"]
+[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/BergieBird/Working/Prototype/focus.tscn" id="3_dkey3"]
+[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/BergieBird/Working/Prototype/camera_man.tscn" id="3_ipjd5"]
+[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/BergieBird/Working/Prototype/strongling.tscn" id="3_mkgb1"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/BergieBird/Working/Prototype/wind_character.tscn" id="6_s11i2"]
 
 [node name="Node2D" type="Node2D"]
 

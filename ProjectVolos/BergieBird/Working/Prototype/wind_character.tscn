@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqwuxyw6vatho"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Vrood/Workshop/Prototype/wind_character.gd" id="1_o6wce"]
-[ext_resource type="SpriteFrames" uid="uid://bwkda24hfnye4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_dragon.tres" id="2_vxwmd"]
+[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/wind_character.gd" id="1_o6wce"]
+[ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="2_lc7p5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy6b6"]
 size = Vector2(10, 10)
@@ -35,8 +35,10 @@ shape = SubResource("RectangleShape2D_fq5tf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, -8)
-sprite_frames = ExtResource("2_vxwmd")
-animation = &"Red"
+sprite_frames = ExtResource("2_lc7p5")
+animation = &"Haunted"
+autoplay = "Haunted"
+frame_progress = 0.430437
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

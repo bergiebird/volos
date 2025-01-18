@@ -1,0 +1,4 @@
+TODO: 1.18
+rename inputs
+setup windmage animations
+refactor weapon_character, place scripts in weakling and strongling

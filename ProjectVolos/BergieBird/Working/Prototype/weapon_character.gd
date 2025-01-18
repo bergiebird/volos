@@ -8,14 +8,11 @@ extends TileBasedCharacter
 var moving := false
 var current_dir: Vector2
 var tween: Tween
-
-
-
 const INPUTS: Dictionary = {"up": Vector2.UP,
-						"left": Vector2.LEFT,
-						"right": Vector2.RIGHT,
-						"down": Vector2.DOWN,
-						}
+							"left": Vector2.LEFT,
+							"right": Vector2.RIGHT,
+							"down": Vector2.DOWN,
+							}
 
 func _unhandled_input(event):
 	if moving: return
@@ -23,7 +20,6 @@ func _unhandled_input(event):
 		if event.is_action_pressed(direct):
 			current_dir = INPUTS[direct]
 			move_tiles(direct, tiles)
-
 
 
 func move_tiles(direct: StringName, tiles: int):

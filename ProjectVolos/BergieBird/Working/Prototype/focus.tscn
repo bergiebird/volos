@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://stq1h4uy1y0"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Vrood/Workshop/Prototype/focus.gd" id="1_183uv"]
+[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/focus.gd" id="1_183uv"]
 [ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/retro_shader_shaggy_dev.gdshader" id="2_m3ydw"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Components/ShaderComponents/PostProcessing/shader_rect.gd" id="3_2wi62"]
 
