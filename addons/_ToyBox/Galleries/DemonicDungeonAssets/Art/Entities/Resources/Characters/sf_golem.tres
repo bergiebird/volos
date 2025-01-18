@@ -67,7 +67,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Iron",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -81,5 +81,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"Magma",
-"speed": 5.0
+"speed": 3.0
 }]

@@ -14,3 +14,4 @@ script = ExtResource("1_sqvqv")
 tween_resource = SubResource("Resource_wq8a1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
