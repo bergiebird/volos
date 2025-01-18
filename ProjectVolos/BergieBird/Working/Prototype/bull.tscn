@@ -90,7 +90,6 @@ size = Vector2(10, 10)
 
 [node name="Bull" type="Area2D" groups=["Characters"]]
 script = ExtResource("1_tmq2h")
-tiles = 100
 move_rate = 15
 
 [node name="ColorRect" type="ColorRect" parent="."]

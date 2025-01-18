@@ -3,7 +3,6 @@ extends Area2D
 
 @export var tile_size:int = 16
 
-
 func _ready()->void:
 	snap_to_grid()
 

@@ -10,7 +10,6 @@ func _on_area_entered(area: TileBasedCharacter) -> void:
 	# Wait for the current tween to finish, then clear the list
 	await weapon_character.tween.finished
 	weapon_character.tween.kill()
-
 	# Spin the weapon
 	if weapon_character.current_dir == Vector2.RIGHT:
 		weapon_character.move_tiles(&"up", weapon_character.tiles)

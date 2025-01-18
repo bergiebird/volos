@@ -1,4 +1,4 @@
-@icon("res://addons/_ToyBox/Icons/control/icon_event.png")
+@icon("res://addons/_ToyBox/Icons/control/icon_target_2.png")
 extends Area2D # focus.gd
 # Used to highlight things on a grid
 @onready var label: Label = $Label
