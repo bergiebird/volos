@@ -121,4 +121,4 @@ common/physics_jitter_fix=0.0
 
 textures/canvas_textures/default_texture_filter=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
-environment/defaults/default_clear_color=Color(0.214844, 0.214844, 0.214844, 1)
+environment/defaults/default_clear_color=Color(0.0862745, 0.0509804, 0.0745098, 1)
