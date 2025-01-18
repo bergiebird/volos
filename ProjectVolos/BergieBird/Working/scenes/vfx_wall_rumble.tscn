@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm45c1rl6y0d3"]
+
+[sub_resource type="Curve" id="Curve_q20e7"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 360), 0.0, 0.0, 0, 0, Vector2(1, -360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_oon07"]
+offsets = PackedFloat32Array(0, 0.755968, 0.995579)
+colors = PackedColorArray(0.337255, 0.129412, 0.164706, 1, 0.337255, 0.129412, 0.164706, 1, 0.337255, 0.129412, 0.164706, 0.784314)
+
+[node name="VfxWallRumble" type="CPUParticles2D"]
+emitting = false
+amount = 6
+one_shot = true
+explosiveness = 0.5
+randomness = 1.0
+fixed_fps = 15
+emission_shape = 3
+emission_rect_extents = Vector2(5, 0)
+gravity = Vector2(0, 20)
+angle_min = 1.0
+angle_max = 1.0
+angle_curve = SubResource("Curve_q20e7")
+color_ramp = SubResource("Gradient_oon07")

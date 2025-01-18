@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://dcnvgh11271he"]
 
-[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://ProjectVolos/BergieBird/INBOX/DemDungeonUI.tres" id="1_2n73b"]
+[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://ProjectVolos/BergieBird/Working/resources/DemDungeonUI.tres" id="1_2n73b"]
 [ext_resource type="PackedScene" uid="uid://dcq8k1iildsx5" path="res://addons/_ToyBox/Menus/Scenes/Menus/Options/OptionMenus/master_options_menu_with_tabs.tscn" id="2_nlqxo"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/SCRIPTS/main_menu_with_animations.gd" id="2_rjsx6"]
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/_ToyBox/Menus/Scenes/Credits/credits.tscn" id="3_3m23o"]

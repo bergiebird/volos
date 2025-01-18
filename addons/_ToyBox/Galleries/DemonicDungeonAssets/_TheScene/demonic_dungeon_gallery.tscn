@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://y8qlf17irxex" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Frozen/Cavern.png" id="61_7kpp2"]
 [ext_resource type="Texture2D" uid="uid://ck5encjom78y3" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/Haunted/Temple.png" id="62_vyn0t"]
 [ext_resource type="Texture2D" uid="uid://cg02u8m8qc4em" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og1.png" id="63_3jnb6"]
+[ext_resource type="Texture2D" uid="uid://l35p7lnfkkfb" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/DD_Palette.png" id="63_adypk"]
 [ext_resource type="Texture2D" uid="uid://8eeapsprexk0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og2.png" id="64_x48g0"]
 [ext_resource type="Texture2D" uid="uid://bgr6pnyynqxhu" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og3.png" id="65_80ct3"]
 [ext_resource type="Texture2D" uid="uid://bd5p4rh8e77q4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_og4.png" id="66_2mlw7"]
@@ -94,8 +95,6 @@
 [ext_resource type="StyleBox" uid="uid://dpqkmimvmthdf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/StyleBox/stylebox_test1.tres" id="92_rg1hb"]
 [ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/dissolve.gdshader" id="93_vw2l2"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Toys/Lock_n_Key/key.gd" id="94_widcd"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rhtyp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhcte"]
 
@@ -1685,11 +1684,12 @@ region = Rect2(114, 353, 12, 14)
 
 [node name="DemonicDungeon_Gallery" type="Node2D"]
 
-[node name="WhiteForDocumentationDisplay" type="ColorRect" parent="."]
+[node name="GrayForDocumentationDisplay" type="ColorRect" parent="."]
 offset_left = -4854.0
 offset_top = -7286.0
 offset_right = 11037.0
 offset_bottom = 2365.0
+color = Color(0.334122, 0.334122, 0.334122, 1)
 metadata/_edit_lock_ = true
 
 [node name="Cards" type="Control" parent="."]
@@ -2204,6 +2204,10 @@ offset_bottom = 34.0
 text = "Examples"
 metadata/_edit_use_anchors_ = true
 
+[node name="DdPalette" type="Sprite2D" parent="Cards/ExamplesCard"]
+position = Vector2(1459, 1325)
+texture = ExtResource("63_adypk")
+
 [node name="Original" type="Node2D" parent="Cards/ExamplesCard"]
 position = Vector2(1334, 736)
 
@@ -2333,10 +2337,6 @@ texture = ExtResource("79_bcmlr")
 [node name="Mockup-3" type="Sprite2D" parent="Cards/ExamplesCard/UI"]
 position = Vector2(2457, 1791)
 texture = ExtResource("80_lf7y1")
-
-[node name="DdPalette" type="Sprite2D" parent="Cards/ExamplesCard"]
-position = Vector2(1469, 1323)
-texture = SubResource("CompressedTexture2D_rhtyp")
 
 [node name="UiCard" type="ColorRect" parent="Cards"]
 layout_mode = 0
