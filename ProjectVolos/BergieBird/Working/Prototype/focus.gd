@@ -1,10 +1,7 @@
-extends Area2D
-# focus.gd
+@icon("res://addons/_ToyBox/Icons/control/icon_event.png")
+extends Area2D # focus.gd
 # Used to highlight things on a grid
-
-
 @onready var label: Label = $Label
-
 
 @export var tile_size: int = 16
 @export var move_rate := 120
@@ -15,7 +12,6 @@ const INPUTS: Dictionary = {"up": Vector2.UP,
 						"left": Vector2.LEFT,
 						"right": Vector2.RIGHT,
 						"down": Vector2.DOWN}
-
 
 func _ready() -> void:
 	snap_to_grid()

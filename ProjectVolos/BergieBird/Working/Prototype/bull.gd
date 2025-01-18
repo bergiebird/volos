@@ -1,4 +1,5 @@
-class_name WeaponCharacter
+@icon("res://addons/_ToyBox/Icons/color/icon_weapon.png")
+class_name Bull
 extends TileBasedCharacter
 # weapon_character.gd
 

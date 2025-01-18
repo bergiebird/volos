@@ -1,7 +1,8 @@
+@icon("res://addons/_ToyBox/Icons/node/icon_character.png")
 class_name WindCharacter
 extends TileBasedCharacter
 
-@onready var weapon_character: WeaponCharacter = $"../WeaponCharacter"
+@onready var weapon_character: Bull = $"../Bull"
 var tiles
 
 

@@ -1,4 +1,18 @@
 TODO: 1.18
+
 rename inputs
+
 setup windmage animations
+
 refactor weapon_character, place scripts in weakling and strongling
+
+check the character hitting the wall
+
+investigate Focus.tscn
+
+GDD
+
+Prototype:
+	Focus.tscn
+	Start Battle Button
+	Lings Movement
