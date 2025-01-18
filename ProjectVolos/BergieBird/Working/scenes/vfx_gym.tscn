@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=4 uid="uid://0g4dbbw0d10u"]
+[gd_scene load_steps=4 format=4 uid="uid://0g4dbbw0d10u"]
 
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_gc4ob"]
+[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="2_j2ip5"]
+[ext_resource type="Texture2D" uid="uid://npy0b5bhpjfe" path="res://ProjectVolos/BergieBird/Working/resources/paw.png" id="3_ry2pk"]
 
 [node name="VfxGym" type="Node2D"]
 
@@ -22,11 +24,23 @@ metadata/_edit_lock_ = true
 
 [node name="CPU" type="Node2D" parent="."]
 
-[node name="Classic" type="CPUParticles2D" parent="CPU"]
+[node name="VfxClassic" type="CPUParticles2D" parent="CPU"]
 position = Vector2(104, 56)
 explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 50.0
-initial_velocity_max = 50.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
 scale_amount_min = 0.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(104, 88)
+scale = Vector2(0.6, 0.6)
+skew = 0.785398
+sprite_frames = ExtResource("2_j2ip5")
+animation = &"Axe"
+
+[node name="Paw" type="Sprite2D" parent="."]
+position = Vector2(104, 88)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ry2pk")
