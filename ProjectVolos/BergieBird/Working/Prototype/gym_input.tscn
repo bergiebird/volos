@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/gym.gd" id="1_mqrn7"]
 [ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/BergieBird/Working/Prototype/camera_man.tscn" id="2_emcx0"]
 [ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/BergieBird/Working/Prototype/focus.tscn" id="3_tsvlu"]
-[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/BergieBird/Working/Prototype/weakling.tscn" id="4_2gran"]
-[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/BergieBird/Working/Prototype/strongling.tscn" id="5_8okoo"]
-[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/BergieBird/Working/Prototype/wind_character.tscn" id="6_ijm31"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/weakling.tscn" id="4_2gran"]
+[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/strongling.tscn" id="5_8okoo"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/wind_character.tscn" id="6_ijm31"]
 
 [node name="InputGym" type="Node2D"]
 script = ExtResource("1_mqrn7")
@@ -23,6 +23,7 @@ follow_target = NodePath("../Characters/Bull")
 
 [node name="Bull" parent="Characters" instance=ExtResource("1_1lgve")]
 position = Vector2(-16, 112)
+charge_speed = 1
 move_rate = 60
 
 [node name="Lings" type="Node2D" parent="Characters"]
@@ -78,4 +79,6 @@ position = Vector2(288, 16)
 [node name="Strongling11" parent="Characters/Lings" instance=ExtResource("5_8okoo")]
 position = Vector2(304, 16)
 
-[node name="WindCharacter" parent="Characters" instance=ExtResource("6_ijm31")]
+[node name="WindMage" parent="Characters" instance=ExtResource("6_ijm31")]
+
+[node name="Marker2D" type="Marker2D" parent="."]

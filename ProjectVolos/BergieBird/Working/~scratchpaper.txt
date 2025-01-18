@@ -1,10 +1,10 @@
 TODO: 1.18
 
-rename inputs
+# rename inputs
 
 setup windmage animations
 
-refactor weapon_character, place scripts in weakling and strongling
+refactor bull, place scripts in weakling and strongling
 
 check the character hitting the wall
 

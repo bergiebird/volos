@@ -27,7 +27,6 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Focus" type="Area2D"]
-position = Vector2(32, 0)
 script = ExtResource("1_183uv")
 
 [node name="ShaderRect" type="ColorRect" parent="."]
