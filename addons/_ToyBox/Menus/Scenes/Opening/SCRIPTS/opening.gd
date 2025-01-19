@@ -12,7 +12,6 @@ extends Control
 @export var start_delay : float = 0.5
 @export var end_delay : float = 0.5
 @export var show_loading_screen : bool = false
-im
 var tween : Tween
 var next_image_index : int = 0
 
