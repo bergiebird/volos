@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqwuxyw6vatho"]
 
-[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/wind_character.gd" id="1_o6wce"]
+[ext_resource type="Script" path="res://ProjectVolos/Vrood/InputGym/characters/wind_character.gd" id="1_o6wce"]
 [ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="2_lc7p5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy6b6"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://da30prnju1581"]
 
-[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/bull.gd" id="1_tmq2h"]
+[ext_resource type="Script" path="res://ProjectVolos/Vrood/InputGym/characters/bull.gd" id="1_tmq2h"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_t4rxn"]
 [ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="3_2nqlj"]
 

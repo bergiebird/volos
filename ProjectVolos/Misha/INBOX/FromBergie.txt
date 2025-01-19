@@ -1,0 +1,18 @@
+Hey Misha welcome to the team!
+
+ couple things to note one of em being I'm writing this with a text to speech to save my hands:
+
+	 development scenes we call gyms
+
+	 you can find the toy box in addons/_toybox that is where you'll find the majority of the assets
+
+	 the project name is volos the name of the game is undetermined
+
+	 _MAIN Is the location of where all locked in or should be locked in items would be
+
+	 you have a folder which if you're reading this you are in it this folder is yours to use as scratch paper
+	 try to keep INBOX just as it is so that we can drop messages scripts or other files that we want you to have.
+
+	If you press play you'll find a variety of singletons like I said in our call or hopefully like I said in our call
+	 the toy box is on its first voyage so if you spot anything  redundant or unnecessary do let us know but also
+	 feel free to turn something off if it fits those parameters.

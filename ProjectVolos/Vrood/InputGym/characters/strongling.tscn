@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://de4oq520ifino"]
 
-[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/enemy.gd" id="1_xn6ae"]
+[ext_resource type="Script" path="res://ProjectVolos/Vrood/InputGym/characters/enemy.gd" id="1_xn6ae"]
 [ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="2_lsm3s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]

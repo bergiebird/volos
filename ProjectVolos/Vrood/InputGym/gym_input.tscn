@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dxveopck7ha85"]
 
-[ext_resource type="PackedScene" uid="uid://da30prnju1581" path="res://ProjectVolos/BergieBird/Working/Prototype/bull.tscn" id="1_1lgve"]
-[ext_resource type="Script" path="res://ProjectVolos/BergieBird/Working/Prototype/gym.gd" id="1_mqrn7"]
-[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/BergieBird/Working/Prototype/camera_man.tscn" id="2_emcx0"]
-[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/BergieBird/Working/Prototype/focus.tscn" id="3_tsvlu"]
-[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/weakling.tscn" id="4_2gran"]
-[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/strongling.tscn" id="5_8okoo"]
-[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/BergieBird/Working/Prototype/characters/wind_character.tscn" id="6_ijm31"]
+[ext_resource type="PackedScene" uid="uid://da30prnju1581" path="res://ProjectVolos/Vrood/InputGym/bull.tscn" id="1_1lgve"]
+[ext_resource type="Script" path="res://ProjectVolos/Vrood/InputGym/gym.gd" id="1_mqrn7"]
+[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/Vrood/InputGym/camera_man.tscn" id="2_emcx0"]
+[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/Vrood/InputGym/focus.tscn" id="3_tsvlu"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Vrood/InputGym/characters/weakling.tscn" id="4_2gran"]
+[ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/Vrood/InputGym/characters/strongling.tscn" id="5_8okoo"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Vrood/InputGym/characters/wind_character.tscn" id="6_ijm31"]
 
 [node name="InputGym" type="Node2D"]
 script = ExtResource("1_mqrn7")
