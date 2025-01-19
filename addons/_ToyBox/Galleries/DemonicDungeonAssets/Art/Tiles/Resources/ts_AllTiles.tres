@@ -2947,13 +2947,10 @@ texture = ExtResource("29_6qmoq")
 [resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "GVines"
-terrain_set_0/terrain_0/color = Color(0.501961, 0.92549, 0.25098, 1)
-terrain_set_0/terrain_1/name = "BVine"
-terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-terrain_set_1/mode = 0
-terrain_set_1/terrain_0/name = "IceWall"
-terrain_set_1/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_0/terrain_0/name = "Mlight"
+terrain_set_0/terrain_0/color = Color(0.956863, 0.345098, 0.25098, 1)
+terrain_set_0/terrain_1/name = "Mdark"
+terrain_set_0/terrain_1/color = Color(0.563651, 0.0279855, 0.133619, 1)
 sources/0 = SubResource("TileSetAtlasSource_tiuqf")
 sources/1 = SubResource("TileSetAtlasSource_ovlk0")
 sources/2 = SubResource("TileSetAtlasSource_ft0tk")
