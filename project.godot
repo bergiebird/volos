@@ -18,7 +18,7 @@ config/icon="res://addons/_ToyBox/Icons/misc/V_icon.png"
 
 [audio]
 
-buses/default_bus_layout="res://ProjectVolos/Aniruth/INBOX/AudioBus_ProjectVolo.tres"
+buses/default_bus_layout="res://ProjectVolos/Misha/INBOX/AudioBus_ProjectVolo.tres"
 
 [autoload]
 

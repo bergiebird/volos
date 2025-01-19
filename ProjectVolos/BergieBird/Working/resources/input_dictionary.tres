@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_ns7rl")
 dict = {
-"down_move": Vector2(0, 1),
-"left_move": Vector2(-1, 0),
-"right_move": Vector2(1, 0),
-"up_move": Vector2(0, -1)
+"down_mage": Vector2(0, 1),
+"left_mage": Vector2(-1, 0),
+"right_mage": Vector2(1, 0),
+"up_mage": Vector2(0, -1)
 }

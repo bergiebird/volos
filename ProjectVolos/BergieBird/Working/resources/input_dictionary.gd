@@ -1,8 +1,8 @@
 extends Resource
 
 @export var dict :Dictionary={
-						"up_move" :Vector2.UP,
-						"left_move" :Vector2.LEFT,
-						"right_move" :Vector2.RIGHT,
-						"down_move" :Vector2.DOWN,
+						"up_mage" :Vector2.UP,
+						"left_mage" :Vector2.LEFT,
+						"right_mage" :Vector2.RIGHT,
+						"down_mage" :Vector2.DOWN,
 	}

@@ -80,5 +80,3 @@ position = Vector2(288, 16)
 position = Vector2(304, 16)
 
 [node name="WindMage" parent="Characters" instance=ExtResource("6_ijm31")]
-
-[node name="Marker2D" type="Marker2D" parent="."]
