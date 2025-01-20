@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bos6k6jrkdwjg"]
+[gd_scene load_steps=3 format=3 uid="uid://b2cnhki1swbu3"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/clockwise_turn.gd" id="1_y2dab"]
 

@@ -114,6 +114,11 @@ animations = [{
 }]
 
 [node name="Strongling" type="Area2D" groups=["Strongling"]]
+editor_description = "*LU 1/20/25
+=====================================
+null atm script side
+=====================================
+contains collision, color mask, and animated sprite"
 script = ExtResource("1_xn6ae")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

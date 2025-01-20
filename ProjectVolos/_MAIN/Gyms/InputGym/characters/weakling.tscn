@@ -7,6 +7,14 @@
 size = Vector2(10, 10)
 
 [node name="Weakling" type="Area2D" groups=["Weakling"]]
+editor_description = "*LU 1/20/25
+=====================================
+null script
+=====================================
+contains:
+Collision Shape
+Color Rect
+Animation"
 script = ExtResource("1_2iq1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

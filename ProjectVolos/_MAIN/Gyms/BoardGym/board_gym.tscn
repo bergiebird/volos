@@ -11,6 +11,9 @@
 size = Vector2(32, 128)
 
 [node name="BoardGym" type="Node2D"]
+editor_description = "Gym = An empty Node2D, maybe a Node soon, that should only act as a supervisor
+	overseeing the code happening within. The script only adds a playground icon.
+	"
 script = ExtResource("1_glrin")
 
 [node name="NotBoard" type="Node2D" parent="."]
@@ -27,6 +30,11 @@ tile_set = ExtResource("4_s2tdh")
 position = Vector2(200, 152)
 
 [node name="TheBoard" type="Node2D" parent="."]
+editor_description = "Controls to just make a tilemap glow, will be extended and renamed later.
+
+func _process(delta:float)->void: #if glow:glow
+
+func glow_tilemap(delta:float)->void: #handles the visual oscillation of the glow"
 script = ExtResource("3_d370l")
 
 [node name="Placeable" type="TileMapLayer" parent="TheBoard"]

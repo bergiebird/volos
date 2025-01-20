@@ -12,22 +12,7 @@ var moving:bool= false
 var tiles:int= 1
 
 func _unhandled_input(event):
-	var action = detect_input_event(event)
-	match action:
-		"pan_up":
-			move_to_next_tile(Vector2.UP)
-		"pan_left":
-			move_to_next_tile(Vector2.LEFT)
-		"pan_right":
-			move_to_next_tile(Vector2.RIGHT)
-		"pan_down":
-			move_to_next_tile(Vector2.DOWN)
-		"zoom_in":
-			camera.zoom = Vector2(2, 2)
-		"zoom_out":
-			camera.zoom = Vector2(1, 1)
-		_:
-			print("Couldn't identify the action: ", action)
+	match_action(detect_input_event(event))
 
 func move_to_next_tile(direction :Vector2)->void:
 	vfx_look_here.lifetime = 0.01
@@ -47,3 +32,20 @@ func detect_input_event(event :Input)->StringName:
 		if event.is_action_pressed(action):
 			return action
 	return ""
+
+func match_action(action):
+	match action:
+		"pan_up":
+			move_to_next_tile(Vector2.UP)
+		"pan_left":
+			move_to_next_tile(Vector2.LEFT)
+		"pan_right":
+			move_to_next_tile(Vector2.RIGHT)
+		"pan_down":
+			move_to_next_tile(Vector2.DOWN)
+		"zoom_in":
+			camera.zoom = Vector2(2, 2)
+		"zoom_out":
+			camera.zoom = Vector2(1, 1)
+		_:
+			print("Couldn't identify the action: ", action)

@@ -5,6 +5,7 @@ offsets = PackedFloat32Array(0.00148148, 0.514074, 1)
 colors = PackedColorArray(0.964706, 0.94902, 0.764706, 0, 0.964706, 0.94902, 0.764706, 1, 0.964706, 0.94902, 0.764706, 0)
 
 [node name="VfxWind" type="CPUParticles2D"]
+editor_description = "Circular Wind Effect"
 amount = 1000
 lifetime = 100.0
 speed_scale = 5.0

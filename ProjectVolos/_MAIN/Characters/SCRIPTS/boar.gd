@@ -11,7 +11,7 @@ var tween :Tween
 var can_charge:bool= true
 @onready var ray :RayCast2D = $RayCast2D
 @onready var focus: FocusTile = %Focus
-@onready var shader_rect: ShaderRect = $"../CanvasLayer/ShaderRect"
+#@onready var shader_rect: ShaderRect = $"../CanvasLayer/ShaderRect"
 var score: int
 
 func _process(delta: float) -> void:
