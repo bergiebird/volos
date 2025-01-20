@@ -18,10 +18,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		position = focus.global_position
 
-
 func _unhandled_input(event: InputEvent) -> void:
-	if moving: return
-	if not can_charge: return
+	if moving:
+		return
+	if not can_charge:
+		return
 	if event.is_action_pressed("charge"):
 		move_tiles(initial_direction, max_range)
 		can_charge = false
@@ -58,7 +59,6 @@ func update_current(direction)->void:
 func trample(character)->void:
 	#character.die()
 	NodeRemover.remove(character)
-
 
 func shove(character)->void:
 	#character.get_shoved()

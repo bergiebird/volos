@@ -1,4 +1,5 @@
-extends TileMapLayer # board_glow.gd : Controls to just make a tilemap glow, will be extended and renamed later.
+@icon("res://addons/_ToyBox/Icons/node/icon_grid.png")
+extends Node2D # board_glow.gd : Controls to just make a tilemap glow, will be extended and renamed later.
 @export_category("Board Glow")
 @export var will_glow:bool  = true
 @export var will_change_color:bool  = true

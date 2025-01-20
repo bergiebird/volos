@@ -7,6 +7,18 @@
 size = Vector2(10, 10)
 
 [node name="Focus" type="Area2D"]
+editor_description = "[LU 1/21/25]
+Used to highlight things on a grid, can be used to direct the camera.
+
+_unhandled_input(event): # unhandled input events are done in load order, thus whatever is highest in the ProjectSettings/Inputs will be what gets used.
+func move_to_next_tile(direction :Vector2)->void: 
+_on_area_entered(area :TileBasedEntity)->void:
+_on_area_exited(area :TileBasedEntity)->void:
+detect_input_event(event :Input)->StringName: # This guy will let us name actions literally whatever we want in prototype
+
+
+
+"
 script = ExtResource("1_k04fo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,6 +1,6 @@
 @icon("res://addons/_ToyBox/Icons/node/icon_money_bag.png")
 class_name BreakableTile
-extends TileBasedEntity
+extends TileBasedEntity # breakable_tile_entity.gd
 
 
 @onready var sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
@@ -17,7 +17,7 @@ func play_effects():
 	play_sfx()
 	play_vfx()
 
-func _exit_tree() -> void:
+func _exit_tree()->void:
 	await play_effects()
 	await drop_loot()
 
