@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch4mqddy7adf6"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Characters/Objects/EffectTiles/Scripts/move_cardinal.gd" id="1_esocl"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Characters/Objects/EffectTiles/Scripts/twister.gd" id="1_l0q36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77smr"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2lpi"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgph1"]
+size = Vector2(8, 8)
+
+[node name="Twister" type="Node2D"]
+editor_description = "
+	LU 1/20/25
+
+	This scene contains 4 cardinal directions which shoots the character
+	in either direction
+	"
+modulate = Color(1, 1, 1, 0.121569)
+position = Vector2(8, 8)
+script = ExtResource("1_l0q36")
+
+[node name="SendNorth" type="Area2D" parent="."]
+position = Vector2(-8, -17)
+monitorable = false
+script = ExtResource("1_esocl")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendNorth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.550083, 0.42)
+
+[node name="Label" type="Label" parent="SendNorth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "N"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendEast" type="Area2D" parent="."]
+position = Vector2(0, -9)
+monitorable = false
+script = ExtResource("1_esocl")
+direction = Vector2(1, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendEast"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_77smr")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendEast/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendSouth" type="Area2D" parent="."]
+position = Vector2(-8, -1)
+monitorable = false
+script = ExtResource("1_esocl")
+direction = Vector2(0, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendSouth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_y2lpi")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendSouth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendWest" type="Area2D" parent="."]
+position = Vector2(-16, -9)
+monitorable = false
+script = ExtResource("1_esocl")
+direction = Vector2(-1, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendWest"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_tgph1")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendWest/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="SendNorth" to="." method="_on_send_north_area_entered"]
+[connection signal="area_entered" from="SendNorth" to="SendNorth" method="_on_area_entered"]
+[connection signal="area_entered" from="SendEast" to="." method="_on_send_east_area_entered"]
+[connection signal="area_entered" from="SendEast" to="SendEast" method="_on_area_entered"]
+[connection signal="area_entered" from="SendSouth" to="." method="_on_send_south_area_entered"]
+[connection signal="area_entered" from="SendSouth" to="SendSouth" method="_on_area_entered"]
+[connection signal="area_entered" from="SendWest" to="." method="_on_send_west_area_entered"]
+[connection signal="area_entered" from="SendWest" to="SendWest" method="_on_area_entered"]
