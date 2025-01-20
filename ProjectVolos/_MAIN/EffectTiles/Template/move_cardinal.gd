@@ -12,13 +12,14 @@ func _ready() -> void:
 	else: label.hide()
 
 # called when the MoveCardinal area is entered
-func _on_area_entered(target: TileBasedCharacter) -> void:
-	target.move_to_next_tile(direction)
-	#stop_target(target)
+func _on_area_entered(target: TileBasedEntity) -> void:
+	stop_target(target)
 
 
-func stop_target(target: Area2D):
-	#if target.tween:
-	#	await target.tween.stop
-	#	target.tween.kill()
-	pass
+
+
+func stop_target(target):
+	if !target.has_method("move_tiles"): return
+	await target.tween.finished
+	target.tween.kill()
+	target.move_tiles(direction, 30)

@@ -1,11 +1,11 @@
 @icon("res://addons/_ToyBox/Icons/control/icon_target_2.png")
 class_name FocusTile
-extends TileBasedCharacter # focus.gd : Used to highlight things on a grid, can be used to direct the camera
+extends TileBasedEntity # focus.gd : Used to highlight things on a grid, can be used to direct the camera
 
 #@export var resource_dictionary:Resource = load("res://ProjectVolos/BergieBird/Working/resources/input_dictionary.tres")
 #@onready var inputs :Dictionary = resource_dictionary.dict
 #var current_dir
-@onready var label :Label = $Label
+
 @onready var vfx_look_here: CPUParticles2D = $VfxLookHere
 
 
@@ -34,15 +34,16 @@ func _unhandled_input(event):
 func move_to_next_tile(direction: Vector2):
 	vfx_look_here.lifetime = 0.01
 	position += direction * tile_size
-	vfx_look_here.lifetime = 4
+	vfx_look_here.lifetime = 2
 
 
 
-func _on_area_entered(area :Area2D)->void:
-	# Enter any selection logic for the focus
+func _on_area_entered(area : TileBasedEntity)->void:
+	area.modulate = Color.REBECCA_PURPLE
 	printt(area.name, "in focus")
 
-func _on_area_exited(area :Area2D)->void:
+func _on_area_exited(area :TileBasedEntity)->void:
+	area.modulate = Color.WHITE
 	printt(area.name, "left focus")
 
 func detect_input_event(event): # This guy will let us name actions literally whatever we want in prototype

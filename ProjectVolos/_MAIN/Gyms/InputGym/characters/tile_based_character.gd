@@ -1,4 +1,4 @@
-class_name TileBasedCharacter
+class_name TileBasedEntity
 extends Area2D
 
 @export var tile_size:int = 16

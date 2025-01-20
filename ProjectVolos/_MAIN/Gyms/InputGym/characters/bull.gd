@@ -1,6 +1,6 @@
 @icon("res://addons/_ToyBox/Icons/color/icon_weapon.png")
 class_name Bull
-extends TileBasedCharacter # bull.gd
+extends TileBasedEntity # bull.gd
 @export var resource_dictionary: Resource = preload("res://ProjectVolos/BergieBird/Working/resources/input_dictionary.tres")
 @onready var inputs: Dictionary = resource_dictionary.dict
 @export var charge_speed :int = 3
@@ -30,8 +30,8 @@ func move_tiles(key:StringName, _tiles:int)->void:
 		await tween.finished
 		moving = false
 
-func _on_area_entered(character:TileBasedCharacter)->void:
-	if character is not TileBasedCharacter: return
+func _on_area_entered(character:TileBasedEntity)->void:
+	if character is not TileBasedEntity: return
 	if character.is_in_group("Strongling"): shove(character)
 	elif character.is_in_group("Weakling"): trample(character)
 	else:                                   printt(character, 'this entity is beyond our scope of understanding has collided with our bull')

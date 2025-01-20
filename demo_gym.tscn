@@ -1,0 +1,273 @@
+[gd_scene load_steps=33 format=4 uid="uid://dqomng2dfyb70"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/helpers/gym.gd" id="1_04gqu"]
+[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/_MAIN/Gyms/Demo_Build_One/FocusHighlightTool/focus.tscn" id="2_4cqv3"]
+[ext_resource type="TileSet" uid="uid://gyexk5y026e7" path="res://ProjectVolos/_MAIN/Gyms/BoardGym/ts_board.tres" id="2_6aflj"]
+[ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/retro_shader_shaggy_dev.gdshader" id="2_cyyoi"]
+[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/_MAIN/Characters/the_boar.tscn" id="2_lb8g8"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/ShaderComponents/PostProcessing/shader_rect.gd" id="3_jhuwv"]
+[ext_resource type="PackedScene" uid="uid://cma2xqyhueopf" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_look_here.tscn" id="3_vlw3j"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_sp36g"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_d6wr2"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/wind_mage.tscn" id="7_g7318"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="8_2mt4w"]
+[ext_resource type="PackedScene" uid="uid://dv2wrj3eqyhjb" path="res://ProjectVolos/_MAIN/Gyms/Demo_Build_One/breakable_object.tscn" id="9_kprj6"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Gyms/Demo_Build_One/breakable_entity.gd" id="10_dcabe"]
+[ext_resource type="SpriteFrames" uid="uid://7u0rrk5nf1y4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/sf_items.tres" id="11_7eahd"]
+[ext_resource type="PackedScene" uid="uid://050gh6ntga2f" path="res://ProjectVolos/_MAIN/EffectTiles/send_north.tscn" id="13_18fei"]
+[ext_resource type="PackedScene" uid="uid://h4mauytp8q25" path="res://ProjectVolos/_MAIN/EffectTiles/send_right.tscn" id="14_brlfk"]
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="15_kchmd"]
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="16_w5edo"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/Node2D/PhysicsVFX/hover_effect_vfx.gd" id="17_nxt6e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7f7g6"]
+shader = ExtResource("2_cyyoi")
+shader_parameter/scanline_count = 360
+shader_parameter/scanline_strength = 0.36
+shader_parameter/aberration_amount = 0.2
+shader_parameter/aberration_mult = 0.003
+shader_parameter/vignette_size = 0.3
+shader_parameter/vignette_opacity = 0.4
+shader_parameter/vignette_mult = 25.0
+shader_parameter/noise_intensity = 0.05
+shader_parameter/glow_strength = 0.5
+shader_parameter/glow_radius = 1
+shader_parameter/glow_threshold = 0.4
+
+[sub_resource type="Resource" id="Resource_py2se"]
+script = ExtResource("5_d6wr2")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kknc5"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjl1l"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u7gn"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_044yp"]
+atlas = ExtResource("16_w5edo")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8w0d"]
+atlas = ExtResource("16_w5edo")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2o1h"]
+atlas = ExtResource("16_w5edo")
+region = Rect2(160, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugm5h"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(64, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hje3y"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(80, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcdar"]
+atlas = ExtResource("15_kchmd")
+region = Rect2(96, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_al4o6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kknc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjl1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u7gn")
+}],
+"loop": true,
+"name": &"Copper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_044yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8w0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2o1h")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugm5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hje3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcdar")
+}],
+"loop": true,
+"name": &"Teal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fmwx"]
+size = Vector2(10, 10)
+
+[node name="FirstDemo" type="Node2D"]
+script = ExtResource("1_04gqu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShaderRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_7f7g6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 500.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_jhuwv")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(0.421875, 0.421875, 0.421875, 0.0509804)
+position = Vector2(80, -16)
+tile_map_data = PackedByteArray("AAD9//7/AAAAAAEAAAD9////AAAAAAEAAAD9/wAAAAAAAAEAAAD9/wEAAAAAAAEAAAD9/wIAAAAAAAEAAAD9/wMAAAAAAAEAAAD9/wQAAAAAAAEAAAD9/wUAAAAAAAEAAAD9/wYAAAAAAAEAAAD9/wcAAAAAAAEAAAD9/wgAAAAAAAEAAAD9/wkAAAAAAAEAAAD9/woAAAAAAAEAAAD+//7/AAAAAAEAAAD+////AAAAAAEAAAD+/wAAAAAAAAEAAAD+/wEAAAAAAAEAAAD+/wIAAAAAAAEAAAD+/wMAAAAAAAEAAAD+/wQAAAAAAAEAAAD+/wUAAAAAAAEAAAD+/wYAAAAAAAEAAAD+/wcAAAAAAAEAAAD+/wgAAAAAAAEAAAD+/wkAAAAAAAEAAAD+/woAAAAAAAEAAAD///7/AAAAAAEAAAD/////AAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAEAAAD//wUAAAAAAAEAAAD//wYAAAAAAAEAAAD//wcAAAAAAAEAAAD//wgAAAAAAAEAAAD//wkAAAAAAAEAAAD//woAAAAAAAEAAAAAAP7/AAAAAAEAAAAAAP//AAAAAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAABAP7/AAAAAAEAAAABAP//AAAAAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAABAAYAAAAAAAEAAAABAAcAAAAAAAEAAAABAAgAAAAAAAEAAAABAAkAAAAAAAEAAAABAAoAAAAAAAEAAAACAP7/AAAAAAEAAAACAP//AAAAAAEAAAACAAAAAAAAAAEAAAACAAEAAAAAAAEAAAACAAIAAAAAAAEAAAACAAMAAAAAAAEAAAACAAQAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAEAAAACAAoAAAAAAAEAAAADAP7/AAAAAAEAAAADAP//AAAAAAEAAAADAAAAAAAAAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAEAAAADAAMAAAAAAAEAAAADAAQAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAEAAAADAAcAAAAAAAEAAAADAAgAAAAAAAEAAAADAAkAAAAAAAEAAAADAAoAAAAAAAEAAAAEAP7/AAAAAAEAAAAEAP//AAAAAAEAAAAEAAAAAAAAAAEAAAAEAAEAAAAAAAEAAAAEAAIAAAAAAAEAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAkAAAAAAAEAAAAEAAoAAAAAAAEAAAAFAP7/AAAAAAEAAAAFAP//AAAAAAEAAAAFAAAAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAEAAAAFAAUAAAAAAAEAAAAFAAYAAAAAAAEAAAAFAAcAAAAAAAEAAAAFAAgAAAAAAAEAAAAFAAkAAAAAAAEAAAAFAAoAAAAAAAEAAAAGAP7/AAAAAAEAAAAGAP//AAAAAAEAAAAGAAAAAAAAAAEAAAAGAAEAAAAAAAEAAAAGAAIAAAAAAAEAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAAGAAgAAAAAAAEAAAAGAAkAAAAAAAEAAAAGAAoAAAAAAAEAAAAHAP7/AAAAAAEAAAAHAP//AAAAAAEAAAAHAAAAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAHAAUAAAAAAAEAAAAHAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAHAAgAAAAAAAEAAAAHAAkAAAAAAAEAAAAHAAoAAAAAAAEAAAAIAP7/AAAAAAEAAAAIAP//AAAAAAEAAAAIAAAAAAAAAAEAAAAIAAEAAAAAAAEAAAAIAAIAAAAAAAEAAAAIAAMAAAAAAAEAAAAIAAQAAAAAAAEAAAAIAAUAAAAAAAEAAAAIAAYAAAAAAAEAAAAIAAcAAAAAAAEAAAAIAAgAAAAAAAEAAAAIAAkAAAAAAAEAAAAIAAoAAAAAAAEAAAAJAP7/AAAAAAEAAAAJAP//AAAAAAEAAAAJAAAAAAAAAAEAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAEAAAAJAAMAAAAAAAEAAAAJAAQAAAAAAAEAAAAJAAUAAAAAAAEAAAAJAAYAAAAAAAEAAAAJAAcAAAAAAAEAAAAJAAgAAAAAAAEAAAAJAAkAAAAAAAEAAAAJAAoAAAAAAAEAAAAKAP7/AAAAAAEAAAAKAP//AAAAAAEAAAAKAAAAAAAAAAEAAAAKAAEAAAAAAAEAAAAKAAIAAAAAAAEAAAAKAAMAAAAAAAEAAAAKAAQAAAAAAAEAAAAKAAUAAAAAAAEAAAAKAAYAAAAAAAEAAAAKAAcAAAAAAAEAAAAKAAgAAAAAAAEAAAAKAAkAAAAAAAEAAAAKAAoAAAAAAAEAAAALAP7/AAAAAAEAAAALAP//AAAAAAEAAAALAAAAAAAAAAEAAAALAAEAAAAAAAEAAAALAAIAAAAAAAEAAAALAAMAAAAAAAEAAAALAAQAAAAAAAEAAAALAAUAAAAAAAEAAAALAAYAAAAAAAEAAAALAAcAAAAAAAEAAAALAAgAAAAAAAEAAAALAAkAAAAAAAEAAAALAAoAAAAAAAEAAAAMAP7/AAAAAAEAAAAMAP//AAAAAAEAAAAMAAAAAAAAAAEAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAEAAAAMAAMAAAAAAAEAAAAMAAQAAAAAAAEAAAAMAAUAAAAAAAEAAAAMAAYAAAAAAAEAAAAMAAcAAAAAAAEAAAAMAAgAAAAAAAEAAAAMAAkAAAAAAAEAAAAMAAoAAAAAAAEAAAANAP7/AAAAAAEAAAANAP//AAAAAAEAAAANAAAAAAAAAAEAAAANAAEAAAAAAAEAAAANAAIAAAAAAAEAAAANAAMAAAAAAAEAAAANAAQAAAAAAAEAAAANAAUAAAAAAAEAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAANAAoAAAAAAAEAAAAOAP7/AAAAAAEAAAAOAP//AAAAAAEAAAAOAAAAAAAAAAEAAAAOAAEAAAAAAAEAAAAOAAIAAAAAAAEAAAAOAAMAAAAAAAEAAAAOAAQAAAAAAAEAAAAOAAUAAAAAAAEAAAAOAAYAAAAAAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAAOAAkAAAAAAAEAAAAOAAoAAAAAAAEAAAAPAP7/AAAAAAEAAAAPAP//AAAAAAEAAAAPAAAAAAAAAAEAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAEAAAAPAAMAAAAAAAEAAAAPAAQAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAYAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAkAAAAAAAEAAAAPAAoAAAAAAAEAAAAQAP7/AAAAAAEAAAAQAP//AAAAAAEAAAAQAAAAAAAAAAEAAAAQAAEAAAAAAAEAAAAQAAIAAAAAAAEAAAAQAAMAAAAAAAEAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAEAAAAQAAYAAAAAAAEAAAAQAAcAAAAAAAEAAAAQAAgAAAAAAAEAAAAQAAkAAAAAAAEAAAAQAAoAAAAAAAEAAAARAP7/AAAAAAEAAAARAP//AAAAAAEAAAARAAAAAAAAAAEAAAARAAEAAAAAAAEAAAARAAIAAAAAAAEAAAARAAMAAAAAAAEAAAARAAQAAAAAAAEAAAARAAUAAAAAAAEAAAARAAYAAAAAAAEAAAARAAcAAAAAAAEAAAARAAgAAAAAAAEAAAARAAkAAAAAAAEAAAARAAoAAAAAAAEAAAA=")
+tile_set = ExtResource("2_6aflj")
+
+[node name="TheBoar" parent="." instance=ExtResource("2_lb8g8")]
+position = Vector2(144, 144)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="Walls" type="TileMapLayer" parent="Walls"]
+tile_map_data = PackedByteArray("AAAKAAAACQADAAIAAAALAAAACQADAAIAAAAMAAAACQADAAIAAAANAAAACQADAAIAAAAIAAAACQADAAIAAAAHAAAACQADAAIAAAAGAAAACQADAAIAAAAFAAAACQADAAIAAAAEAAAACQADAAIAAAADAAAACQADAAIAAAACAAAACQADAAIAAAABAAAACQADAAIAAAAAAAAACQACAAAAAAAAAAEACQAEAAEAAAAAAAIACQAEAAEAAAAAAAMACQAEAAEAAAAAAAQACQAEAAEAAAAAAAUACQAEAAEAAAAAAAYACQAEAAEAAAAAAAcACQACAAEAAAABAAcACQADAAIAAAACAAcACQADAAIAAAADAAcACQADAAIAAAAEAAcACQADAAIAAAAFAAcACQADAAIAAAAGAAcACQADAAIAAAAHAAcACQADAAIAAAAIAAcACQADAAIAAAAJAAcACQADAAIAAAAKAAcACQADAAIAAAALAAcACQADAAIAAAAMAAcACQADAAIAAAANAAcACQADAAIAAAAOAAcACQADAAIAAAAPAAcACQAEAAIAAAAPAAYACQAEAAEAAAAPAAUACQAEAAEAAAAPAAQABQABAAIAAAAPAAIABQAAAAIAAAAPAAEACQAEAAEAAAAPAAAACQAEAAAAAAAOAAAACQADAAAAAAAJAAAACQADAAIAAAA=")
+tile_set = ExtResource("8_2mt4w")
+navigation_enabled = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+visible = false
+polygon = PackedVector2Array(16, 16, 16, 112, 240, 112, 240, 64, 256, 64, 256, 128, 0, 128, 0, 0, 256, 0, 256, 48, 240, 48, 240, 16)
+
+[node name="Focus" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_4cqv3")]
+z_index = 2
+position = Vector2(128, 64)
+camera = NodePath("CameraMan/Camera2D")
+move_rate = 500
+
+[node name="VfxLookHere" parent="Focus" instance=ExtResource("3_vlw3j")]
+position = Vector2(8, 8)
+speed_scale = 1.0
+
+[node name="CameraMan" type="Node2D" parent="Focus" node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(136, 72)
+script = ExtResource("4_sp36g")
+follow_mode = 2
+follow_target = NodePath("../VfxLookHere")
+tween_resource = SubResource("Resource_py2se")
+
+[node name="Camera2D" type="Camera2D" parent="Focus/CameraMan"]
+
+[node name="WindMage" parent="." instance=ExtResource("7_g7318")]
+position = Vector2(176, 144)
+
+[node name="BreakableObject" parent="." instance=ExtResource("9_kprj6")]
+position = Vector2(224, 48)
+
+[node name="AnimatedSprite2D" parent="BreakableObject" index="1"]
+frame = 89
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="BreakableObject"]
+position = Vector2(8, 7)
+sprite_frames = SubResource("SpriteFrames_al4o6")
+animation = &"Copper"
+flip_h = true
+
+[node name="HoverEffectVFX" type="Node2D" parent="BreakableObject/AnimatedSprite2D2" node_paths=PackedStringArray("hover_effect_target_node")]
+script = ExtResource("17_nxt6e")
+hover_effect_delay = 0.5
+hover_effect_intensity = 1.0
+hover_effect_target_node = NodePath("..")
+
+[node name="SendNorth" parent="." instance=ExtResource("13_18fei")]
+position = Vector2(16, 48)
+
+[node name="SendRight" parent="." instance=ExtResource("14_brlfk")]
+position = Vector2(16, 32)
+
+[node name="Stuff" type="Node2D" parent="."]
+
+[node name="Bottle" type="Area2D" parent="Stuff"]
+position = Vector2(48, 48)
+script = ExtResource("10_dcabe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Stuff/Bottle"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stuff/Bottle"]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("11_7eahd")
+animation = &"ALL"
+frame = 72
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Bottle"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6fmwx")
+
+[node name="Bottle2" type="Area2D" parent="Stuff"]
+position = Vector2(32, 32)
+script = ExtResource("10_dcabe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Stuff/Bottle2"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stuff/Bottle2"]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("11_7eahd")
+animation = &"ALL"
+frame = 72
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Bottle2"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6fmwx")
+
+[node name="Bottle3" type="Area2D" parent="Stuff"]
+position = Vector2(208, 32)
+script = ExtResource("10_dcabe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Stuff/Bottle3"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stuff/Bottle3"]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("11_7eahd")
+animation = &"ALL"
+frame = 72
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stuff/Bottle3"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6fmwx")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stuff"]
+position = Vector2(136, 4)
+sprite_frames = SubResource("SpriteFrames_al4o6")
+animation = &"Copper"
+
+[node name="HoverEffectVFX" type="Node2D" parent="Stuff/AnimatedSprite2D2" node_paths=PackedStringArray("hover_effect_target_node")]
+script = ExtResource("17_nxt6e")
+hover_effect_delay = 0.5
+hover_effect_intensity = 1.0
+hover_effect_target_node = NodePath("..")
+
+[editable path="BreakableObject"]

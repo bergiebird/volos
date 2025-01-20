@@ -2945,7 +2945,8 @@ texture = ExtResource("29_6qmoq")
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [resource]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 4
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Mlight"
 terrain_set_0/terrain_0/color = Color(0.956863, 0.345098, 0.25098, 1)
