@@ -20,3 +20,5 @@ func glow_tilemap(delta:float)->void:
 		modulate = starting_color.lerp(glow_to_color, (sin(time*color_change_speed)+1) / 2)
 	if will_change_transparency:
 		modulate.a = lerp(transparency_minimum, transparency_maximum ,(sin(time*transparency_change_speed)+1) / 2)
+
+# :thumbs_up: V

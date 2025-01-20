@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=4 uid="uid://vspb18ooksr5"]
+[gd_scene load_steps=8 format=4 uid="uid://vspb18ooksr5"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/helpers/gym.gd" id="1_glrin"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Gyms/BoardGym/board_glow.gd" id="3_d370l"]
 [ext_resource type="TileSet" uid="uid://gyexk5y026e7" path="res://ProjectVolos/_MAIN/Gyms/BoardGym/ts_board.tres" id="3_trud7"]
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="4_s2tdh"]
 [ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="5_x7t2v"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Gyms/BoardGym/placeable_area.gd" id="6_j7mqd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_417wj"]
+size = Vector2(32, 128)
 
 [node name="BoardGym" type="Node2D"]
 script = ExtResource("1_glrin")
@@ -26,6 +30,18 @@ position = Vector2(200, 152)
 tile_map_data = PackedByteArray("AAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAAFAAoAAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAEAAoAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAADAAQAAAABAAAAAAADAAUAAAABAAAAAAADAAYAAAABAAAAAAADAAcAAAABAAAAAAADAAgAAAABAAAAAAADAAkAAAABAAAAAAADAAoAAAABAAAAAAADAAsAAAABAAAAAAAEAAMAAAACAAAAAAAFAAMAAAACAAAAAAA=")
 tile_set = ExtResource("3_trud7")
 script = ExtResource("3_d370l")
+
+[node name="PlaceableArea" type="Area2D" parent="TheBoard/Placeable"]
+position = Vector2(80, 80)
+collision_layer = 128
+collision_mask = 0
+monitoring = false
+script = ExtResource("6_j7mqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheBoard/Placeable/PlaceableArea"]
+position = Vector2(0, 48)
+shape = SubResource("RectangleShape2D_417wj")
+debug_color = Color(0, 0.6, 0.701961, 0.0784314)
 
 [node name="Playable" type="TileMapLayer" parent="TheBoard"]
 modulate = Color(0.152941, 0.152941, 0.152941, 1)

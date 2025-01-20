@@ -1,30 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxveopck7ha85"]
+[gd_scene load_steps=11 format=3 uid="uid://dxveopck7ha85"]
 
-[ext_resource type="PackedScene" uid="uid://da30prnju1581" path="res://ProjectVolos/_MAIN/Gyms/InputGym/bull.tscn" id="1_1lgve"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/helpers/gym.gd" id="1_mqrn7"]
-[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/_MAIN/Gyms/InputGym/camera_man.tscn" id="2_emcx0"]
-[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/_MAIN/Gyms/InputGym/focus.tscn" id="3_tsvlu"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_otss6"]
+[ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/Vrood/Workshop/focus.tscn" id="3_tsvlu"]
 [ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/weakling.tscn" id="4_2gran"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_aira2"]
 [ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/strongling.tscn" id="5_8okoo"]
-[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/wind_character.tscn" id="6_ijm31"]
+[ext_resource type="PackedScene" uid="uid://cma2xqyhueopf" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_look_here.tscn" id="5_ro8sd"]
+[ext_resource type="Script" path="res://move_cardinal.gd" id="9_5ocuk"]
+
+[sub_resource type="Resource" id="Resource_py2se"]
+script = ExtResource("4_aira2")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
+size = Vector2(16, 16)
 
 [node name="InputGym" type="Node2D"]
 script = ExtResource("1_mqrn7")
 
-[node name="CameraMan" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("2_emcx0")]
-top_level = true
-position = Vector2(-16, 112)
-follow_mode = 2
-follow_target = NodePath("../Characters/Bull")
+[node name="Focus" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("3_tsvlu")]
+z_index = 2
+camera = NodePath("PhantomCamera2D2/Camera2D")
+move_rate = 500
 
-[node name="Focus" parent="." instance=ExtResource("3_tsvlu")]
+[node name="PhantomCamera2D2" type="Node2D" parent="Focus" node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(8, 8)
+script = ExtResource("3_otss6")
+follow_mode = 2
+follow_target = NodePath("../VfxLookHere")
+tween_resource = SubResource("Resource_py2se")
+
+[node name="Camera2D" type="Camera2D" parent="Focus/PhantomCamera2D2"]
+
+[node name="VfxLookHere" parent="Focus" instance=ExtResource("5_ro8sd")]
+position = Vector2(8, 8)
+speed_scale = 1.0
 
 [node name="Characters" type="Node2D" parent="."]
-
-[node name="Bull" parent="Characters" instance=ExtResource("1_1lgve")]
-position = Vector2(-16, 112)
-charge_speed = 1
-move_rate = 60
 
 [node name="Lings" type="Node2D" parent="Characters"]
 
@@ -79,4 +95,90 @@ position = Vector2(288, 16)
 [node name="Strongling11" parent="Characters/Lings" instance=ExtResource("5_8okoo")]
 position = Vector2(304, 16)
 
-[node name="WindMage" parent="Characters" instance=ExtResource("6_ijm31")]
+[node name="SendNorth" type="Area2D" parent="."]
+position = Vector2(-80, -48)
+script = ExtResource("9_5ocuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendNorth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.550083, 0.42)
+
+[node name="Label" type="Label" parent="SendNorth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "N"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendSouth" type="Area2D" parent="."]
+position = Vector2(-48, -48)
+script = ExtResource("9_5ocuk")
+direction = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendSouth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendSouth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendLeft" type="Area2D" parent="."]
+position = Vector2(-64, -32)
+script = ExtResource("9_5ocuk")
+direction = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendLeft"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendLeft/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendRight" type="Area2D" parent="."]
+position = Vector2(-64, -64)
+script = ExtResource("9_5ocuk")
+direction = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SendRight"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="SendRight/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="SendNorth" to="SendNorth" method="_on_area_entered"]
+[connection signal="area_entered" from="SendSouth" to="SendSouth" method="_on_area_entered"]
+[connection signal="area_entered" from="SendLeft" to="SendLeft" method="_on_area_entered"]
+[connection signal="area_entered" from="SendRight" to="SendRight" method="_on_area_entered"]

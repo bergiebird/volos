@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://stq1h4uy1y0"]
+
+[ext_resource type="Script" path="res://ProjectVolos/Vrood/Workshop/focus.gd" id="1_183uv"]
+[ext_resource type="Texture2D" uid="uid://28b4gjouxmsm" path="res://addons/_ToyBox/Menus/Assets/Visual/Cursors/Crosshair/crosshair_dot.png" id="2_4bo6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2mhm"]
+size = Vector2(10, 10)
+
+[node name="Focus" type="Area2D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_183uv")
+camera = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_f2mhm")
+
+[node name="CrosshairDot" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.164706)
+position = Vector2(8, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4bo6t")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

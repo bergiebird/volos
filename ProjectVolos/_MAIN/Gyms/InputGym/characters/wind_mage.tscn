@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqwuxyw6vatho"]
+
+[ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="1_c33xa"]
+[ext_resource type="PackedScene" uid="uid://050gh6ntga2f" path="res://send_north.tscn" id="2_dqxpe"]
+[ext_resource type="PackedScene" uid="uid://h4mauytp8q25" path="res://send_right.tscn" id="3_astac"]
+[ext_resource type="PackedScene" uid="uid://bmyg8vv4hr23" path="res://send_south.tscn" id="4_66mpu"]
+[ext_resource type="PackedScene" uid="uid://ham1weovarmt" path="res://send_left.tscn" id="5_tn5dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fq5tf"]
+size = Vector2(10, 10)
+
+[node name="WindMage" type="Area2D" groups=["Characters"]]
+position = Vector2(0, 16)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+color = Color(0.0493495, 0.0609964, 0.125, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_fq5tf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8, -8)
+sprite_frames = ExtResource("1_c33xa")
+animation = &"Haunted"
+autoplay = "Haunted"
+frame_progress = 0.430437
+
+[node name="Twister" type="Node2D" parent="."]
+
+[node name="SendNorth" parent="Twister" instance=ExtResource("2_dqxpe")]
+position = Vector2(-32, -16)
+monitorable = false
+
+[node name="SendRight" parent="Twister" instance=ExtResource("3_astac")]
+position = Vector2(-16, -32)
+monitorable = false
+
+[node name="SendSouth" parent="Twister" instance=ExtResource("4_66mpu")]
+position = Vector2(0, -16)
+monitorable = false
+
+[node name="SendLeft" parent="Twister" instance=ExtResource("5_tn5dc")]
+position = Vector2(-16, 0)
+monitorable = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
