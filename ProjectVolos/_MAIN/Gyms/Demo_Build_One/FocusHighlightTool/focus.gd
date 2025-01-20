@@ -5,7 +5,7 @@ extends TileBasedEntity # focus.gd
 #@onready var inputs :Dictionary = resource_dictionary.dict
 #var current_dir
 
-@onready var vfx_look_here: CPUParticles2D = $VfxLookHere
+@onready var vfx_look_here: GPUParticles2D = $VfxLookHere
 @export var camera: Camera2D
 @export var move_rate :int= 120
 var moving:bool= false

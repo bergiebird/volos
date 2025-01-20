@@ -1819,145 +1819,145 @@ dance = true
 position = Vector2(-136, -110)
 sprite_frames = ExtResource("20_peyxx")
 animation = &"Frozen"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Devil" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -62)
 sprite_frames = ExtResource("21_e7weg")
 animation = &"Original"
 autoplay = "Original"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Ghost" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-100, -86)
 sprite_frames = ExtResource("22_6s1ha")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Goblin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-43, -62)
 sprite_frames = ExtResource("23_bx8pq")
 animation = &"Pickaxe"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Golem" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -87)
 sprite_frames = ExtResource("24_sh6i5")
 animation = &"Copper"
-frame_progress = 0.010291
+frame_progress = 0.862914
 
 [node name="Flies" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-154, -111)
 sprite_frames = ExtResource("25_hjy8u")
 animation = &"Haunted"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Lizard" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-40, -109)
 sprite_frames = ExtResource("26_bmej1")
 animation = &"Frozen"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Medusa" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-136, -87)
 sprite_frames = ExtResource("27_lpcqr")
 animation = &"Teal_Alt"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Mimic" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-69, -86)
 sprite_frames = ExtResource("28_yu5fp")
 animation = &"Original"
 autoplay = "Original"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Pumpkin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-49, -85)
 sprite_frames = ExtResource("29_vqeoh")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Rat" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-78, -110)
 sprite_frames = ExtResource("30_pvlmp")
 animation = &"Teal"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Reaper" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-122, -62)
 sprite_frames = ExtResource("31_a3xju")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Skeleton" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-137, -62)
 sprite_frames = ExtResource("32_b7bbh")
 animation = &"Black_Sword"
-frame_progress = 0.0920306
+frame_progress = 0.862914
 
 [node name="Spider" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-116, -111)
 sprite_frames = ExtResource("33_ms6uh")
 animation = &"Teal"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Snake" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-96, -110)
 sprite_frames = ExtResource("34_ccl70")
 animation = &"Pink"
-frame_progress = 0.675249
+frame_progress = 0.211
 
 [node name="Snowman" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-118, -87)
 sprite_frames = ExtResource("35_u28hi")
 animation = &"Frozen"
 autoplay = "Frozen"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Slime" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-31, -84)
 sprite_frames = ExtResource("36_ief0s")
 animation = &"Green"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Red" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-75, -63)
 sprite_frames = ExtResource("37_c3tm8")
 animation = &"Whip"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Pink" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-59, -63)
 sprite_frames = ExtResource("38_k2stb")
 animation = &"Axe"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Green" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-90, -62)
 sprite_frames = ExtResource("39_1rpwm")
 animation = &"Gloves"
-frame_progress = 0.0912806
+frame_progress = 0.862914
 
 [node name="Black" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-106, -62)
 sprite_frames = ExtResource("40_vw4lk")
 animation = &"Axe"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="Dragon" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-60, -110)
 sprite_frames = ExtResource("41_q5383")
 animation = &"Pink"
-frame_progress = 0.592803
+frame_progress = 0.862914
 
 [node name="Scarecrow" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-86, -86)
 sprite_frames = ExtResource("42_w3kh3")
 animation = &"Black"
-frame_progress = 0.675249
+frame_progress = 0.862914
 
 [node name="ItemCard" type="ColorRect" parent="Cards"]
 layout_mode = 1

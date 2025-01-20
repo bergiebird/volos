@@ -17,12 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://050gh6ntga2f" path="res://ProjectVolos/_MAIN/EffectTiles/send_north.tscn" id="13_18fei"]
 [ext_resource type="PackedScene" uid="uid://h4mauytp8q25" path="res://ProjectVolos/_MAIN/EffectTiles/send_right.tscn" id="14_brlfk"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="15_kchmd"]
-[ext_resource type="PackedScene" path="res://ProjectVolos/_MAIN/EffectTiles/counter_clock_turn.tscn" id="16_kthi6"]
+[ext_resource type="PackedScene" uid="uid://4di2kiayewcc" path="res://ProjectVolos/_MAIN/EffectTiles/counter_clock_turn.tscn" id="16_kthi6"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="16_w5edo"]
 [ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="17_cm3hf"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Components/Node2D/PhysicsVFX/hover_effect_vfx.gd" id="17_nxt6e"]
 [ext_resource type="PackedScene" uid="uid://b286ni22a7d8q" path="res://ProjectVolos/_MAIN/EffectTiles/turn_around.tscn" id="20_a2r4p"]
-[ext_resource type="PackedScene" uid="uid://bos6k6jrkdwjg" path="res://ProjectVolos/_MAIN/EffectTiles/clockwise_turn.tscn" id="21_rdgnw"]
+[ext_resource type="PackedScene" uid="uid://b2cnhki1swbu3" path="res://ProjectVolos/_MAIN/EffectTiles/clockwise_turn.tscn" id="21_rdgnw"]
 [ext_resource type="Script" path="res://ProjectVolos/Vrood/Workshop/vrood_tutorial_label.gd" id="21_u1yku"]
 [ext_resource type="PackedScene" uid="uid://bvk4ld7rmownw" path="res://ProjectVolos/_MAIN/Characters/spider_mage.tscn" id="24_xe6xi"]
 
@@ -241,6 +241,9 @@ transition = 0
 ease = 2
 
 [node name="FirstDemo" type="Node2D"]
+editor_description = "Gym = An empty Node2D, maybe a Node soon, that should only act as a supervisor
+	overseeing the code happening within. The script only adds a playground icon.
+	"
 script = ExtResource("1_04gqu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("shader_rect")]
