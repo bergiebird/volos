@@ -6,13 +6,13 @@ extends TileBasedEntity
 @export var move_rate := 5
 @export var initial_direction := Vector2.RIGHT
 var moving :bool = false
-var current_dir :Vector2
+var current_direction :Vector2
 var tween :Tween
 var can_charge:bool= true
 @onready var ray :RayCast2D = $RayCast2D
 @onready var focus: FocusTile = $"../Focus"
 @onready var shader_rect: ShaderRect = $"../CanvasLayer/ShaderRect"
-
+var score: int
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
@@ -46,9 +46,12 @@ func move_tiles(direction: Vector2, tiles: int)->void:
 
 func _on_area_entered(character:TileBasedEntity)->void:
 	if character is BreakableTile: NodeRemover.remove(character)
+	score += 1
+	printt("Score:", score)
+
 func update_current(direction)->void:
-	current_dir = direction
-	ray.target_position = current_dir * tile_size * 1.2
+	current_direction = direction
+	ray.target_position = current_direction * tile_size * 1.2
 	ray.force_raycast_update()
 
 func trample(character)->void:
@@ -59,4 +62,4 @@ func trample(character)->void:
 
 func shove(character)->void:
 	#character.get_shoved()
-	character.global_position += current_dir.orthogonal() * tile_size #move to side
+	character.global_position += current_direction.orthogonal() * tile_size #move to side

@@ -1,3 +1,4 @@
+@icon("res://addons/_ToyBox/Icons/node/icon_money_bag.png")
 class_name BreakableTile
 extends TileBasedEntity
 
@@ -20,7 +21,7 @@ func drop_loot():
 
 func _exit_tree() -> void:
 	await play_effects()
-	drop_loot()
+	await drop_loot()
 
 func play_effects():
 	play_sfx()

@@ -1,8 +1,7 @@
-class_name MoverCardinalTile
-extends Area2D
+class_name ClockwiseTurnTile
+extends Area2D # turn_around.gd
 
-
-@export var direction := Vector2.UP
+# Give the unit a 180 spin
 @onready var label: Label = $CollisionShape2D/Label
 
 
@@ -13,13 +12,15 @@ func _ready() -> void:
 
 # called when the MoveCardinal area is entered
 func _on_area_entered(target: TileBasedEntity) -> void:
-	stop_target(target)
+	spin_target(target)
 
 
 
 
-func stop_target(target):
+func spin_target(target):
 	if !target.has_method("move_tiles"): return
+	var original_direction = target.current_direction
+	var flipped_direction = -original_direction.orthogonal()
 	await target.tween.finished
 	target.tween.kill()
-	target.move_tiles(direction, 30)
+	target.move_tiles(flipped_direction, 30)

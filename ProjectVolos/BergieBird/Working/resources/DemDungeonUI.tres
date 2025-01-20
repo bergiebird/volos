@@ -1,16 +1,33 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cubcobg6h116f"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cubcobg6h116f"]
 
 [ext_resource type="FontFile" uid="uid://ks4qgcbcy78d" path="res://addons/_ToyBox/Resources/Fonts/VEXED/DemonicDungeon/Everyday-Slight-All/Everyday_Slight.ttf" id="1_qv32o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo4qr"]
 bg_color = Color(0.0862745, 0.0509804, 0.0745098, 1)
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_t2u30"]
-color = Color(0.937255, 0.619608, 0.305882, 1)
-grow_begin = -5.0
-grow_end = -5.0
-thickness = 4
-vertical = true
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71mb8"]
+bg_color = Color(0.227451, 0.0156863, 0.227451, 0.694118)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 0, 0.117647)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcc56"]
+bg_color = Color(0.227451, 0.0156863, 0.227451, 0.117647)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 0, 0.117647)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7dwr"]
 bg_color = Color(0.317647, 0.105882, 0.0901961, 1)
@@ -55,10 +72,9 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 8
 Button/fonts/font = ExtResource("1_qv32o")
-Button/styles/focus = SubResource("StyleBoxLine_t2u30")
-Button/styles/hover = null
-Button/styles/normal = null
-Button/styles/pressed = null
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxFlat_71mb8")
+Button/styles/normal = SubResource("StyleBoxFlat_qcc56")
 CheckBox/font_sizes/font_size = 8
 CheckBox/icons/checked = null
 CheckBox/icons/checked_disabled = null
