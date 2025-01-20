@@ -1,11 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqwuxyw6vatho"]
+[gd_scene load_steps=14 format=3 uid="uid://dqwuxyw6vatho"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/wind_mage.gd" id="1_gw202"]
-[ext_resource type="PackedScene" uid="uid://050gh6ntga2f" path="res://ProjectVolos/_MAIN/EffectTiles/send_north.tscn" id="2_dqxpe"]
-[ext_resource type="PackedScene" uid="uid://h4mauytp8q25" path="res://ProjectVolos/_MAIN/EffectTiles/send_right.tscn" id="3_astac"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="3_bu5rg"]
-[ext_resource type="PackedScene" uid="uid://bmyg8vv4hr23" path="res://ProjectVolos/_MAIN/EffectTiles/send_south.tscn" id="4_66mpu"]
-[ext_resource type="PackedScene" uid="uid://ham1weovarmt" path="res://ProjectVolos/_MAIN/EffectTiles/send_left.tscn" id="5_tn5dc"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/move_cardinal.gd" id="4_0xia1"]
 [ext_resource type="PackedScene" uid="uid://1jvcisft16s0" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_wind.tscn" id="7_xhw4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fq5tf"]
@@ -40,6 +37,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77smr"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2lpi"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgph1"]
+size = Vector2(8, 8)
+
 [node name="WindMage" type="Area2D" groups=["Characters"]]
 script = ExtResource("1_gw202")
 
@@ -69,28 +78,103 @@ autoplay = "Haunted"
 modulate = Color(1, 1, 1, 0.121569)
 position = Vector2(8, 8)
 
-[node name="SendNorth" parent="Twister" instance=ExtResource("2_dqxpe")]
+[node name="SendNorth" type="Area2D" parent="Twister"]
 position = Vector2(-16, -8)
 monitorable = false
+script = ExtResource("4_0xia1")
 
-[node name="SendRight" parent="Twister" instance=ExtResource("3_astac")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Twister/SendNorth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_l8tmj")
+debug_color = Color(0.7, 0, 0.550083, 0.42)
+
+[node name="Label" type="Label" parent="Twister/SendNorth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "N"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendRight" type="Area2D" parent="Twister"]
 position = Vector2(-8, -16)
 monitorable = false
+script = ExtResource("4_0xia1")
+direction = Vector2(1, 0)
 
-[node name="SendSouth" parent="Twister" instance=ExtResource("4_66mpu")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Twister/SendRight"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_77smr")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="Twister/SendRight/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendSouth" type="Area2D" parent="Twister"]
 position = Vector2(0, -8)
 monitorable = false
+script = ExtResource("4_0xia1")
+direction = Vector2(0, 1)
 
-[node name="SendLeft" parent="Twister" instance=ExtResource("5_tn5dc")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Twister/SendSouth"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_y2lpi")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="Twister/SendSouth/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendLeft" type="Area2D" parent="Twister"]
 position = Vector2(-8, 4.76837e-07)
 monitorable = false
+script = ExtResource("4_0xia1")
+direction = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Twister/SendLeft"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_tgph1")
+debug_color = Color(0.7, 0, 0.305923, 0.42)
+
+[node name="Label" type="Label" parent="Twister/SendLeft/CollisionShape2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(16, 16)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="area_entered" from="Twister/SendNorth" to="Twister/SendNorth" method="_on_area_entered"]
 [connection signal="area_exited" from="Twister/SendNorth" to="." method="_on_send_north_area_exited"]
+[connection signal="area_entered" from="Twister/SendRight" to="Twister/SendRight" method="_on_area_entered"]
 [connection signal="area_exited" from="Twister/SendRight" to="." method="_on_send_right_area_exited"]
+[connection signal="area_entered" from="Twister/SendSouth" to="Twister/SendSouth" method="_on_area_entered"]
 [connection signal="area_exited" from="Twister/SendSouth" to="." method="_on_send_south_area_exited"]
+[connection signal="area_entered" from="Twister/SendLeft" to="Twister/SendLeft" method="_on_area_entered"]
 [connection signal="area_exited" from="Twister/SendLeft" to="." method="_on_send_left_area_exited"]

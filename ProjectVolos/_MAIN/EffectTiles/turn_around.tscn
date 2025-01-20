@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://b286ni22a7d8q"]
 
-[ext_resource type="Script" path="res://turn_around.gd" id="1_1v2si"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/turn_around.gd" id="1_guxvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
 size = Vector2(8, 8)
 
 [node name="TurnAround" type="Area2D"]
 position = Vector2(-80, -48)
-script = ExtResource("1_1v2si")
+script = ExtResource("1_guxvm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)

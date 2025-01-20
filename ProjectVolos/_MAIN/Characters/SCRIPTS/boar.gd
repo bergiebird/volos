@@ -10,13 +10,13 @@ var current_direction :Vector2
 var tween :Tween
 var can_charge:bool= true
 @onready var ray :RayCast2D = $RayCast2D
-@onready var focus: FocusTile = $"../Focus"
+@onready var focus: FocusTile = %Focus
 @onready var shader_rect: ShaderRect = $"../CanvasLayer/ShaderRect"
 var score: int
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
-		global_position = focus.global_position
+		position = focus.global_position
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -45,9 +45,10 @@ func move_tiles(direction: Vector2, tiles: int)->void:
 		moving = false
 
 func _on_area_entered(character:TileBasedEntity)->void:
-	if character is BreakableTile: NodeRemover.remove(character)
-	score += 1
-	printt("Score:", score)
+	if character is BreakableTile:
+		NodeRemover.remove(character)
+		score += 1
+		printt("Score:", score)
 
 func update_current(direction)->void:
 	current_direction = direction
@@ -56,7 +57,6 @@ func update_current(direction)->void:
 
 func trample(character)->void:
 	#character.die()
-	shader_rect.material.shader.set_shader_parameter("aberration", 0.5)
 	NodeRemover.remove(character)
 
 

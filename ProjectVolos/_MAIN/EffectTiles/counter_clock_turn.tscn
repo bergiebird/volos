@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bos6k6jrkdwjg"]
+[gd_scene load_steps=3 format=3 uid="uid://4di2kiayewcc"]
 
-[ext_resource type="Script" path="res://clockwise_turn.gd" id="1_mf4sk"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/counter_clock_turn.gd" id="1_2dmu1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
 size = Vector2(8, 8)
 
-[node name="ClockwiseTurn" type="Area2D"]
-position = Vector2(96, 48)
-script = ExtResource("1_mf4sk")
+[node name="CounterClockTurn" type="Area2D"]
+position = Vector2(96, 80)
+script = ExtResource("1_2dmu1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
@@ -21,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 8
-text = "CW"
+text = "CCW"
 horizontal_alignment = 1
 vertical_alignment = 1
 

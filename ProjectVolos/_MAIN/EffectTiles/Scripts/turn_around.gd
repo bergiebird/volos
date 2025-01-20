@@ -1,3 +1,4 @@
+@icon("res://addons/_ToyBox/Icons/node/icon_reset.png")
 class_name TurnAroundTile
 extends Area2D # turn_around.gd
 

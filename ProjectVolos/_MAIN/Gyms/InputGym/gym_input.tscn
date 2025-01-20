@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_aira2"]
 [ext_resource type="PackedScene" uid="uid://de4oq520ifino" path="res://ProjectVolos/_MAIN/Gyms/InputGym/characters/strongling.tscn" id="5_8okoo"]
 [ext_resource type="PackedScene" uid="uid://cma2xqyhueopf" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_look_here.tscn" id="5_ro8sd"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Template/move_cardinal.gd" id="9_5ocuk"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/move_cardinal.gd" id="9_5ocuk"]
 
 [sub_resource type="Resource" id="Resource_py2se"]
 script = ExtResource("4_aira2")

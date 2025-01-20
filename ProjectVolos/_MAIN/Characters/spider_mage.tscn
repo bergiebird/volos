@@ -1,0 +1,123 @@
+[gd_scene load_steps=16 format=3 uid="uid://bvk4ld7rmownw"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Characters/SCRIPTS/spider_mage.gd" id="1_k1mkh"]
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_a8p33"]
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="3_rjbxd"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/turn_around.gd" id="4_hkc75"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kknc5"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjl1l"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u7gn"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_044yp"]
+atlas = ExtResource("3_rjbxd")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8w0d"]
+atlas = ExtResource("3_rjbxd")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2o1h"]
+atlas = ExtResource("3_rjbxd")
+region = Rect2(160, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugm5h"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(64, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hje3y"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(80, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcdar"]
+atlas = ExtResource("2_a8p33")
+region = Rect2(96, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cqta"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kknc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjl1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u7gn")
+}],
+"loop": true,
+"name": &"Copper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_044yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8w0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2o1h")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugm5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hje3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcdar")
+}],
+"loop": true,
+"name": &"Teal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34pwa"]
+size = Vector2(26, 26)
+
+[node name="SpiderMage" type="Area2D"]
+script = ExtResource("1_k1mkh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_1cqta")
+animation = &"Teal"
+autoplay = "Teal"
+
+[node name="TurnAround" type="Area2D" parent="."]
+script = ExtResource("4_hkc75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TurnAround"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_34pwa")
+debug_color = Color(0.7, 0, 0.550083, 0.42)
+
+[node name="Label" type="Label" parent="TurnAround/CollisionShape2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "180"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="TurnAround" to="TurnAround" method="_on_area_entered"]

@@ -7,10 +7,7 @@ extends TileBasedEntity # focus.gd : Used to highlight things on a grid, can be 
 #var current_dir
 
 @onready var vfx_look_here: CPUParticles2D = $VfxLookHere
-
-
 @export var camera: Camera2D
-
 @export var move_rate :int= 120
 
 var moving:bool= false
@@ -29,14 +26,10 @@ func _unhandled_input(event):
 		"zoom_in": camera.zoom = Vector2(2, 2)
 		"zoom_out": camera.zoom = Vector2(1, 1)
 
-
-
 func move_to_next_tile(direction: Vector2):
 	vfx_look_here.lifetime = 0.01
 	position += direction * tile_size
 	vfx_look_here.lifetime = 2
-
-
 
 func _on_area_entered(area : TileBasedEntity)->void:
 	area.modulate = Color.REBECCA_PURPLE

@@ -13,16 +13,16 @@ func play_sfx():
 func play_vfx():
 	pass
 
-func drop_loot():
-	if cargo:
-		var loot = cargo.instantiate()
-		loot.position = position
-		add_sibling(loot)
+func play_effects():
+	play_sfx()
+	play_vfx()
 
 func _exit_tree() -> void:
 	await play_effects()
 	await drop_loot()
 
-func play_effects():
-	play_sfx()
-	play_vfx()
+func drop_loot():
+	if cargo:
+		var loot = cargo.instantiate()
+		loot.global_position = global_position
+		add_sibling(loot)

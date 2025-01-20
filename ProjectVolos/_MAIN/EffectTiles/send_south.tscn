@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmyg8vv4hr23"]
 
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Template/move_cardinal.gd" id="1_4a2c0"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/EffectTiles/Scripts/move_cardinal.gd" id="1_4a2c0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
 size = Vector2(8, 8)
