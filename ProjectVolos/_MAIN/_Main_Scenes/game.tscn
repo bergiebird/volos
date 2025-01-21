@@ -1,3 +1,64 @@
-[gd_scene format=3 uid="uid://cjythrib2w6i0"]
+[gd_scene load_steps=10 format=3 uid="uid://cjythrib2w6i0"]
 
-[node name="GAME" type="Node2D"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
+[ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/_MAIN/Audio/19-1-25-2.mp3" id="1_kqgyx"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/music_box.gd" id="2_3sxvc"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_0nk7l"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/lvl_manager.gd" id="4_awf6f"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_c8no8"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/level_1.gd" id="5_nmsd3"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/editor_tools.gd" id="8_twdtt"]
+
+[sub_resource type="Resource" id="Resource_r52ha"]
+script = ExtResource("5_c8no8")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="GAME" type="Node"]
+editor_description = "Our main game scene/node.
+
+Use this node's script as your first Singleton to pass information that must be global to the main game scene. "
+script = ExtResource("1_ad5kq")
+
+[node name="MusicBox" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+editor_description = "Lots of calls and edits will be made to this MusicBox, therefore it must sit either at the rootiest of roots in this scene. Maybe it will get promotoed to a Singleton for easiest of usages."
+stream = ExtResource("1_kqgyx")
+autoplay = true
+script = ExtResource("2_3sxvc")
+
+[node name="PhantomCamera2D" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(321, 241)
+script = ExtResource("4_0nk7l")
+tween_resource = SubResource("Resource_r52ha")
+
+[node name="LVL" type="Node2D" parent="."]
+unique_name_in_owner = true
+editor_description = "All level information can be found here, while above this node will handle the camera, music, character's stats, etch. Everything below here is what is in the particular level. So enemys, layout, and such. "
+script = ExtResource("4_awf6f")
+
+[node name="level_1" type="Node2D" parent="LVL"]
+script = ExtResource("5_nmsd3")
+
+[node name="BackGround" type="Node2D" parent="LVL/level_1"]
+
+[node name="GameGround" type="Node2D" parent="LVL/level_1"]
+
+[node name="Foreground" type="Node2D" parent="LVL/level_1"]
+
+[node name="EditorTools" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_twdtt")
+
+[node name="ViewportGuide" type="ColorRect" parent="EditorTools"]
+editor_description = "An editor only guide so we know how large the camera must be.
+
+Keep Locked.
+transform.size = 400,304"
+visible = false
+offset_right = 400.0
+offset_bottom = 304.0
+color = Color(0.901961, 0.901961, 0.901961, 0.196078)
+metadata/_edit_lock_ = true
