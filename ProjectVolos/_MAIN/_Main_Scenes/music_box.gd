@@ -27,12 +27,8 @@ func loop(coming_from_finished_signal:bool = true, reduce_time_by:int = 30):
 func evaluate_song_stats():
 	print(get_playback_position())
 
-
 '''
-
 Other scripts that want to interact with this node will most likely:
 	 tell this node to stop playing:
 		collect get_playback_position() before initiating stop()
-
-
 '''
