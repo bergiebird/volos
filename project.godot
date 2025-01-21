@@ -193,5 +193,7 @@ common/physics_jitter_fix=0.0
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 environment/defaults/default_clear_color=Color(0.0862745, 0.0509804, 0.0745098, 1)

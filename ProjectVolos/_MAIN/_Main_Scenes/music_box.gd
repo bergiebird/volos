@@ -1,32 +1,38 @@
 @icon("res://addons/_ToyBox/Icons/node/icon_audio.png")
 extends AudioStreamPlayer
-var reduce_seconds_by: int = 30
 var new_time: int = 0
+const SONG_LENGTH = 90
 @export var shhhh = false
 
 func _ready():
 	if shhhh:
 		playing = false
-		set_process(false)
-
-func evaluate_song_position(delta):
-	print(get_playback_position())
-
 
 func _on_finished()->void:
-	print(get_playback_position())
-	set_process(false)
-	loop(true)
+	evaluate_song_stats()
+	loop()
 
-func loop(coming_from_finished_signal:bool = false):
-	var current_time = 90
+func loop(coming_from_finished_signal:bool = true, reduce_time_by:int = 30):
+	var current_time:int
 	if coming_from_finished_signal:
-		pass
+		current_time = SONG_LENGTH
 	else:
+		stop()
 		current_time = int(get_playback_position())
+	current_time -= reduce_time_by
+	await play(current_time)
+	if not is_playing():
+		print('play did not work')
 
-	await play()
-	if is_playing():
-		set_process(true)
-	else:
-		print('seek did not work')
+func evaluate_song_stats():
+	print(get_playback_position())
+
+
+'''
+
+Other scripts that want to interact with this node will most likely:
+	 tell this node to stop playing:
+		collect get_playback_position() before initiating stop()
+
+
+'''

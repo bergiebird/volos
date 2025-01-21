@@ -25,6 +25,7 @@ Use this node's script as your first Singleton to pass information that must be 
 script = ExtResource("1_ad5kq")
 
 [node name="Ui" type="Control" parent="."]
+unique_name_in_owner = true
 editor_description = "Everything and anything UI could exist here.
 Keep the @icons green"
 layout_mode = 3
@@ -47,19 +48,16 @@ script = ExtResource("4_0nk7l")
 tween_resource = SubResource("Resource_r52ha")
 
 [node name="level_1" type="Node2D" parent="Lvl"]
+editor_description = "Dont Touch"
 script = ExtResource("5_nmsd3")
 
-[node name="BackGround" type="Node2D" parent="Lvl/level_1"]
-
-[node name="GameGround" type="Node2D" parent="Lvl/level_1"]
-
-[node name="Foreground" type="Node2D" parent="Lvl/level_1"]
-
 [node name="Player" type="Node2D" parent="Lvl"]
+unique_name_in_owner = true
 script = ExtResource("6_e3l73")
 
 [node name="Non" type="Node" parent="."]
-editor_description = "Everything that is relevant to the game or making of the game but doesn't cleanly fit in the lvl"
+unique_name_in_owner = true
+editor_description = "Everything that is relevant to the game or making of the game but doesn't cleanly fit in the lvl or ui folders"
 script = ExtResource("6_lk047")
 
 [node name="MusicBox" type="AudioStreamPlayer" parent="Non"]
