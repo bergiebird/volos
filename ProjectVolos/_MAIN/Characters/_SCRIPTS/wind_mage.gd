@@ -5,7 +5,6 @@ extends TileBasedEntity #wind_mage.gd
 @onready var vfx_wind: CPUParticles2D = $VfxWind
 @onready var focus: FocusTile = %Focus
 
-
 #func _process(delta :float)->void:
 	#if Input.is_action_pressed("ui_left"):
 		#global_position = focus.global_position

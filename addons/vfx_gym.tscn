@@ -1,25 +1,25 @@
 [gd_scene load_steps=6 format=4 uid="uid://0g4dbbw0d10u"]
 
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/helpers/gym.gd" id="1_2wqvd"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_gc4ob"]
-[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="2_j2ip5"]
-[ext_resource type="Texture2D" uid="uid://npy0b5bhpjfe" path="res://ProjectVolos/BergieBird/Working/resources/paw.png" id="3_ry2pk"]
-[ext_resource type="PackedScene" uid="uid://4cmawmgivy8l" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_impact.tscn" id="3_uhnp7"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/helpers/gym.gd" id="1_dw7t8"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="2_uw565"]
+[ext_resource type="PackedScene" uid="uid://4cmawmgivy8l" path="res://ProjectVolos/_MAIN/Gyms/VfxGym/vfx_impact.tscn" id="3_w4j70"]
+[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="4_yrpww"]
+[ext_resource type="Texture2D" uid="uid://npy0b5bhpjfe" path="res://ProjectVolos/BergieBird/Working/resources/paw.png" id="5_i3dj4"]
 
 [node name="VfxGym" type="Node2D"]
 editor_description = "Gym = An empty Node2D, maybe a Node soon, that should only act as a supervisor
 	overseeing the code happening within. The script only adds a playground icon.
 	"
-script = ExtResource("1_2wqvd")
+script = ExtResource("1_dw7t8")
 
 [node name="Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAEAAMAIAADAAIAAAAHAAMAIAAAAAUAAAAIAAMAIAACAAMAAAADAAMAIAADAAAAAAACAAMAIAACAAEAAAANAAMAIAAEAAIAAAANAAEAIAAFAAMAAAANAAAAIAAEAAAAAAACAAEAIAAEAAEAAAACAAAAIAACAAAAAAADAAAAIAADAAAAAAAEAAAAIAADAAAAAAAFAAAAIAADAAAAAAAGAAAAIAADAAAAAAAHAAAAIAADAAAAAAAIAAAAIAADAAAAAAAJAAAAIAADAAAAAAAKAAAAIAADAAAAAAALAAAAIAADAAAAAAAMAAAAIAADAAAAAAANAAIAIAAFAAQAAAAMAAMAIAAEAAMAAAAJAAMAIAAEAAQAAAAFAAMAIAABAAUAAAAGAAMAIAAHAAIAAAA=")
-tile_set = ExtResource("1_gc4ob")
+tile_set = ExtResource("2_uw565")
 
 [node name="Destructibles" type="TileMapLayer" parent="."]
 visible = false
 tile_map_data = PackedByteArray("AAAGAAMAIAACAAUAAAAFAAMAIAADAAIAAAAHAAMAIAADAAIAAAACAAIAIAAEAAEAAAAJAAMAIAADAAMAAAAKAAMAIAADAAMAAAALAAMAIAADAAMAAAAFAAEADwAAAAAAAAAGAAEADwAEAAAAAAAMAAEADwAAAAAAAAAMAAIADwAEAAAAAAALAAIADwAAAAAAAAAKAAIADwAAAAAAAAADAAIADwAAAAAAAAADAAEADwACAAAAAAA=")
-tile_set = ExtResource("1_gc4ob")
+tile_set = ExtResource("2_uw565")
 
 [node name="ViewportGuide" type="ColorRect" parent="."]
 offset_right = 400.0
@@ -37,7 +37,7 @@ initial_velocity_min = 10.0
 initial_velocity_max = 10.0
 scale_amount_min = 0.5
 
-[node name="VfxImpact" parent="CPU" instance=ExtResource("3_uhnp7")]
+[node name="VfxImpact" parent="CPU" instance=ExtResource("3_w4j70")]
 position = Vector2(47, 30)
 rotation = 1.5708
 
@@ -45,12 +45,12 @@ rotation = 1.5708
 position = Vector2(104, 88)
 scale = Vector2(0.6, 0.6)
 skew = 0.785398
-sprite_frames = ExtResource("2_j2ip5")
+sprite_frames = ExtResource("4_yrpww")
 animation = &"Axe"
 frame = 2
 frame_progress = 0.86055
 
-[node name="Paw" type="Sprite2D" parent="."]
-position = Vector2(104, 88)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ry2pk")
+[node name="Paw" type="Sprite2D" parent="AnimatedSprite2D"]
+scale = Vector2(0.833333, 1.44338)
+skew = -0.61548
+texture = ExtResource("5_i3dj4")

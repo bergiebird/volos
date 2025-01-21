@@ -4,15 +4,7 @@ extends Control
 
 signal setting_changed(value)
 
-enum OptionSections{
-	NONE,
-	INPUT,
-	AUDIO,
-	VIDEO,
-	GAME,
-	APPLICATION,
-	CUSTOM,
-}
+enum OptionSections{NONE,INPUT,AUDIO,VIDEO,GAME,APPLICATION,CUSTOM,}
 
 const OptionSectionNames : Dictionary = {
 	OptionSections.NONE : "",
@@ -70,7 +62,8 @@ func _get_setting(default : Variant = null) -> Variant:
 	return Config.get_config(section, key, default)
 
 func _connect_option_inputs(node):
-	if node in _connected_nodes: return
+	if node in _connected_nodes:
+		return
 	if node is Button:
 		if node is OptionButton:
 			node.item_selected.connect(_on_setting_changed)

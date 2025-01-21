@@ -8,19 +8,19 @@ extends Area2D # turn_around.gd
 
 func _ready() -> void:
 	# Only show these tiles if we are in the Editor
-	if Engine.is_editor_hint: label.show()
-	else: label.hide()
+	if Engine.is_editor_hint:
+		label.show()
+	else:
+		label.hide()
 
-# called when the MoveCardinal area is entered
-func _on_area_entered(target: TileBasedEntity) -> void:
-	spin_target(target)
+func _on_area_entered(moveCardinal: TileBasedEntity) -> void:
+	spin_target(moveCardinal)
 
-
-
-
-func spin_target(target):
-	if !target.has_method("move_tiles"): return
-	if target.is_pickedup: return
+func spin_target(target) -> void:
+	if !target.has_method("move_tiles"):
+		return
+	if target.is_pickedup:
+		return
 	var original_direction = target.current_direction
 	var flipped_direction = Vector2(-original_direction.x, -original_direction.y)
 	await target.tween.finished

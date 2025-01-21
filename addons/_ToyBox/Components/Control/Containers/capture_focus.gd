@@ -1,16 +1,6 @@
 class_name CaptureFocus
 extends Container # capture_focus.gd
 
-
-## Node that captures UI focus for games with a hidden mouse or joypad enabled.
-##
-## This script assists with capturing UI focus when
-## opening, closing, or switching between menus.
-## When attached to a node, it will check if it was changed to visible
-## and if it should grab focus. If both are true, it will capture focus
-## on the first eligible node in its scene tree.
-
-## Hierarchical depth to search in the scene tree.
 @export var search_depth : int = 1
 @export var enabled : bool = false
 @export var joypad_enabled : bool = true
@@ -60,3 +50,14 @@ func _ready():
 	if is_inside_tree():
 		update_focus()
 		connect("visibility_changed", _on_visibility_changed)
+
+
+## Node that captures UI focus for games with a hidden mouse or joypad enabled.
+##
+## This script assists with capturing UI focus when
+## opening, closing, or switching between menus.
+## When attached to a node, it will check if it was changed to visible
+## and if it should grab focus. If both are true, it will capture focus
+## on the first eligible node in its scene tree.
+
+## Hierarchical depth to search in the scene tree.

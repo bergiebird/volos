@@ -16,12 +16,6 @@ grow_vertical = 2
 script = ExtResource("2_ryqny")
 next_scene = "res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/main_menu_with_animations.tscn"
 images = Array[Texture2D]([ExtResource("2_aht51"), ExtResource("3_f5flk")])
-fade_in_time = null
-fade_out_time = null
-visible_time = null
-start_delay = null
-end_delay = null
-show_loading_screen = null
 
 [node name="BackgroundColor" type="ColorRect" parent="Opening"]
 layout_mode = 1

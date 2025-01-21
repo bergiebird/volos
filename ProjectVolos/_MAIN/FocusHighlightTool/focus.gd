@@ -54,7 +54,6 @@ func _unhandled_input(event):
 			print("Couldn't identify the action: ", action)
 
 func move_to_next_tile(direction: Vector2) -> void:
-
 	position += direction * tile_size
 	if selected_entiy != null and picked_up:
 		selected_entiy.position = position

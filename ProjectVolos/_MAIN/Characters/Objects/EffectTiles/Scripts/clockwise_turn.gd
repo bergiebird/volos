@@ -17,7 +17,8 @@ func _on_area_entered(move_cardinal: TileBasedEntity) -> void:
 func spin_target(move_cardinal: TileBasedEntity) -> void:
 	if !move_cardinal.has_method("move_tiles"):
 		return
-	if move_cardinal.is_pickedup: return
+	if move_cardinal.is_pickedup:
+		return
 	var original_direction = move_cardinal.current_direction
 	var flipped_direction = -original_direction.orthogonal()
 	await move_cardinal.tween.finished
