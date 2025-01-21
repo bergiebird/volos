@@ -8,10 +8,11 @@ extends Area2D
 @export var can_be_selected: bool = false
 @export var is_destroyable: bool = false
 @export var is_pushable: bool = false
-@export var tile_size:int = 16
+@export var tile_size: int = 16
+var is_pickedup: bool = false
 
-func _ready()->void:
+func _ready() -> void:
 	snap_to_grid()
 
-func snap_to_grid(): #NOTE has tendency to snap character down and to the right one tile
-	position = position.snapped(Vector2.ONE * tile_size/2)
+func snap_to_grid(): # NOTE has tendency to snap character down and to the right one tile
+	position = position.snapped(Vector2.ONE * tile_size / 2)

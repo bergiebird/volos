@@ -11,8 +11,8 @@ var score: int
 		#position = focus.global_position
 
 
-func _on_area_entered(character:TileBasedEntity)->void:
-	if can_kill and character.is_destroyable:
+func _on_area_entered(character: TileBasedEntity) -> void:
+	if can_kill and character.is_destroyable and !character.is_pickedup and !is_pickedup:
 		kill(character)
 		score += 1
 		printt("Score:", score)

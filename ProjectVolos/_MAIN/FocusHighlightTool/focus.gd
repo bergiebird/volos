@@ -7,18 +7,22 @@ extends Area2D # focus.gd
 
 @onready var vfx_look_here: GPUParticles2D = $VfxLookHere
 @export var camera: Camera2D
-@export var move_rate :int= 120
-var moving:bool= false
-var tiles:int= 1
-# TODO Drag and Drop
+@export var move_rate: int = 120
+var moving: bool = false
+var tiles: int = 1
+# TODO Clean up Drag and Drop code
 
-@export var tile_size:int = 16
+@export var tile_size: int = 16
 
-func _ready()->void:
+var selected_entiy: TileBasedEntity
+var entiy_below: bool = false
+var picked_up: bool = false
+
+func _ready() -> void:
 	snap_to_grid()
 
-func snap_to_grid(): #NOTE has tendency to snap character down and to the right one tile
-	position = position.snapped(Vector2.ONE * tile_size/2)
+func snap_to_grid(): # NOTE has tendency to snap character down and to the right one tile
+	position = position.snapped(Vector2.ONE * tile_size / 2)
 
 
 func _unhandled_input(event):
@@ -36,21 +40,41 @@ func _unhandled_input(event):
 			camera.zoom = Vector2(2, 2)
 		"zoom_out":
 			camera.zoom = Vector2(1, 1)
+		"toggle_pickup":
+			if selected_entiy != null and !picked_up and selected_entiy.can_be_selected:
+				selected_entiy.is_pickedup = true
+				picked_up = true
+				printt(selected_entiy.name, "picked up")
+			elif !entiy_below:
+				picked_up = false
+				if selected_entiy != null:
+					selected_entiy.is_pickedup = false
+					printt(selected_entiy.name, "Droped")
 		_:
 			print("Couldn't identify the action: ", action)
 
-func move_to_next_tile(direction :Vector2)->void:
+func move_to_next_tile(direction: Vector2) -> void:
 
 	position += direction * tile_size
+	if selected_entiy != null and picked_up:
+		selected_entiy.position = position
 
 
-func _on_area_entered(area :TileBasedEntity)->void:
-	area.modulate = Color.REBECCA_PURPLE
-	printt(area.name, "in focus")
+func _on_area_entered(area: TileBasedEntity) -> void:
+	if !picked_up and area.can_be_selected:
+		area.modulate = Color.REBECCA_PURPLE
+		selected_entiy = area
+		printt(area.name, "in focus")
+	else:
+		entiy_below = true
 
-func _on_area_exited(area :TileBasedEntity)->void:
-	area.modulate = Color.WHITE
-	printt(area.name, "left focus")
+func _on_area_exited(area: TileBasedEntity) -> void:
+	if !picked_up:
+		area.modulate = Color.WHITE
+		selected_entiy = null
+		printt(area.name, "left focus")
+	else:
+		entiy_below = false
 
 func detect_input_event(event):
 	for action in InputMap.get_actions():

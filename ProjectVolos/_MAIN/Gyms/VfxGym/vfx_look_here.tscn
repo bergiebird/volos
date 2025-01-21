@@ -1,5 +1,4 @@
 [gd_scene load_steps=8 format=3 uid="uid://cma2xqyhueopf"]
-[gd_scene load_steps=8 format=3 uid="uid://cma2xqyhueopf"]
 
 [sub_resource type="Curve" id="Curve_1kgji"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.498024, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -14,24 +13,7 @@ point_count = 1
 
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_s21ma"]
 curve_y = SubResource("Curve_ac1fs")
-[sub_resource type="Curve" id="Curve_1kgji"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.498024, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_05qsi"]
-curve = SubResource("Curve_1kgji")
-
-[sub_resource type="Curve" id="Curve_ac1fs"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
-point_count = 1
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_s21ma"]
-curve_y = SubResource("Curve_ac1fs")
-
-[sub_resource type="Curve" id="Curve_riy63"]
-min_value = -2.0
-max_value = 2.0
-_data = [Vector2(0, 0.246334), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 [sub_resource type="Curve" id="Curve_riy63"]
 min_value = -2.0
 max_value = 2.0
@@ -53,38 +35,6 @@ emission_ring_inner_radius = 10.0
 directional_velocity_min = -5.00002
 directional_velocity_max = 4.99998
 directional_velocity_curve = SubResource("CurveXYZTexture_s21ma")
-orbit_velocity_min = 0.25
-orbit_velocity_max = 0.5
-orbit_velocity_curve = SubResource("CurveTexture_3f6c8")
-gravity = Vector3(0, 0, 0)
-tangential_accel_min = -2.23517e-06
-tangential_accel_max = 10.7
-attractor_interaction_enabled = false
-scale_min = 0.5
-scale_max = 1.5
-color = Color(0.792261, 0.903102, 0.649303, 1)
-alpha_curve = SubResource("CurveTexture_05qsi")
-turbulence_initial_displacement_min = 1.49012e-06
-turbulence_initial_displacement_max = 1.49012e-06
-
-[node name="VfxLookHere" type="GPUParticles2D"]
-[sub_resource type="CurveTexture" id="CurveTexture_3f6c8"]
-curve = SubResource("Curve_riy63")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jbuc4"]
-lifetime_randomness = 0.1
-particle_flag_align_y = true
-particle_flag_disable_z = true
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 15.0
-emission_ring_radius = 15.0
-emission_ring_inner_radius = 10.0
-directional_velocity_min = -5.00002
-directional_velocity_max = 4.99998
-directional_velocity_curve = SubResource("CurveXYZTexture_s21ma")
-orbit_velocity_min = 0.25
-orbit_velocity_max = 0.5
 orbit_velocity_curve = SubResource("CurveTexture_3f6c8")
 gravity = Vector3(0, 0, 0)
 tangential_accel_min = -2.23517e-06
@@ -102,12 +52,8 @@ amount = 400
 process_material = SubResource("ParticleProcessMaterial_jbuc4")
 lifetime = 1.5
 preprocess = 4.0
-process_material = SubResource("ParticleProcessMaterial_jbuc4")
-lifetime = 1.5
-preprocess = 4.0
 speed_scale = 0.15
 randomness = 1.0
 fixed_fps = 180
 fract_delta = false
-local_coords = true
 draw_order = 2

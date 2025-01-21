@@ -1,9 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bvk4ld7rmownw"]
+[gd_scene load_steps=17 format=3 uid="uid://bvk4ld7rmownw"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Characters/_SCRIPTS/spider_mage.gd" id="1_jgjg6"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/Characters/Objects/EffectTiles/Scripts/turn_around.gd" id="2_svupi"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="3_pjw5s"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="4_5lgvq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2l3p"]
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34pwa"]
 size = Vector2(26, 26)
@@ -92,6 +95,10 @@ animations = [{
 [node name="SpiderMage" type="Area2D"]
 script = ExtResource("1_jgjg6")
 is_destroyable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_d2l3p")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

@@ -20,6 +20,7 @@ func _on_area_entered(target: TileBasedEntity) -> void:
 
 func spin_target(target):
 	if !target.has_method("move_tiles"): return
+	if target.is_pickedup: return
 	var original_direction = target.current_direction
 	var flipped_direction = Vector2(-original_direction.x, -original_direction.y)
 	await target.tween.finished
