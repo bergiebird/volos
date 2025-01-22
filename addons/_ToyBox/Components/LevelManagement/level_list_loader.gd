@@ -1,6 +1,14 @@
 @tool
+@icon("res://addons/_ToyBox/Icons/node/icon_folder.png")
 class_name LevelListLoader
 extends SceneLister
+
+## Using the inspector, set the @exports:
+## level_container = node that holds individual levels
+## files = individual levels
+## directory = directory that holds all of our levels
+## level id = where the level is in the files array
+
 ## Extends [SceneLister] to manage level advancement through [GameStateExample].
 
 signal level_load_started

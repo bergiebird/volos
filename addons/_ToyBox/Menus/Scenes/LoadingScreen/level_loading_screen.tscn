@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwqpwon2lm6ex"]
+[gd_scene load_steps=5 format=3 uid="uid://cwqpwon2lm6ex"]
 
 [ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/LoadingScreen/SCRIPTS/loading_screen.gd" id="2_n2mby"]
+[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://ProjectVolos/BergieBird/Working/resources/DemDungeonUI.tres" id="2_qsat7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_re0f4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8s6b"]
+bg_color = Color(0.533333, 0.215686, 0.52549, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [node name="LevelLoadingScreen" type="CanvasLayer"]
 process_mode = 3
@@ -18,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_qsat7")
 
 [node name="BackPanel" type="Panel" parent="Control"]
 layout_mode = 0
@@ -65,6 +81,8 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_re0f4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y8s6b")
 max_value = 1.0
 
 [node name="ErrorMessage" type="AcceptDialog" parent="Control"]

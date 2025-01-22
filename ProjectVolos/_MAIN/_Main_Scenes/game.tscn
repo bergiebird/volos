@@ -1,15 +1,22 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjythrib2w6i0"]
+[gd_scene load_steps=23 format=3 uid="uid://cjythrib2w6i0"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
 [ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/_MAIN/Audio/19-1-25-2.mp3" id="1_kqgyx"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/music_box.gd" id="2_3sxvc"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/AudioStreamPlayers/SCRIPTS/background_music_player.gd" id="2_7xpfb"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/LevelManagement/level_list_loader.gd" id="2_8nk4y"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Ui/ui_manager.gd" id="2_mx23f"]
 [ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://ProjectVolos/BergieBird/Working/resources/DemDungeonUI.tres" id="2_xlu5r"]
+[ext_resource type="PackedScene" uid="uid://cwqpwon2lm6ex" path="res://addons/_ToyBox/Menus/Scenes/LoadingScreen/level_loading_screen.tscn" id="3_gh8se"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/Utilities/level_list_state_manager.gd" id="3_n6qhj"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_0nk7l"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Resources/RichTextEffects/rich_text_hue_shift.gd" id="4_7n51k"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/lvl_manager.gd" id="4_awf6f"]
+[ext_resource type="PackedScene" uid="uid://ijv2bss1rkwr" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/game_won_menu.tscn" id="4_ynpit"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_c8no8"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/level_1.gd" id="5_nmsd3"]
+[ext_resource type="PackedScene" uid="uid://c1qmaqru34mcu" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/level_lost_menu.tscn" id="5_rvq5r"]
+[ext_resource type="PackedScene" uid="uid://djo2dwbk7ft8x" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/level_won_menu.tscn" id="6_agint"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/player.gd" id="6_e3l73"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/non_manager.gd" id="6_lk047"]
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/editor_tools.gd" id="8_twdtt"]
@@ -33,6 +40,26 @@ editor_description = "Our main game scene/node.
 
 Use this node's script as your first Singleton to pass information that must be global to the main game scene. "
 script = ExtResource("1_ad5kq")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("2_7xpfb")
+
+[node name="LevelLoadingScreen" parent="." instance=ExtResource("3_gh8se")]
+visible = false
+
+[node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
+script = ExtResource("2_8nk4y")
+level_container = NodePath("../Lvl")
+
+[node name="LevelListManager" type="Node" parent="." node_paths=PackedStringArray("level_list_loader", "level_loading_screen")]
+script = ExtResource("3_n6qhj")
+level_list_loader = NodePath("../LevelLoader")
+main_menu_scene = "res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/main_menu_with_animations.tscn"
+ending_scene = "res://addons/_ToyBox/Menus/Scenes/Credits/end_credits.tscn"
+level_loading_screen = NodePath("../LevelLoadingScreen")
+game_won_scene = ExtResource("4_ynpit")
+level_lost_scene = ExtResource("5_rvq5r")
+level_won_scene = ExtResource("6_agint")
 
 [node name="Ui" type="Control" parent="."]
 unique_name_in_owner = true
