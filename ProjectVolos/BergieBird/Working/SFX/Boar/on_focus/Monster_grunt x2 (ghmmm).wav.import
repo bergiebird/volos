@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n3p6fbn6t5fq"
+path="res://.godot/imported/Monster_grunt x2 (ghmmm).wav-8bf717dffc90071ec0d2febd456e31d8.sample"
+
+[deps]
+
+source_file="res://ProjectVolos/BergieBird/Working/SFX/Boar/on_focus/Monster_grunt x2 (ghmmm).wav"
+dest_files=["res://.godot/imported/Monster_grunt x2 (ghmmm).wav-8bf717dffc90071ec0d2febd456e31d8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

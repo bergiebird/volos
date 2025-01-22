@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
 [ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/_MAIN/Audio/19-1-25-2.mp3" id="1_kqgyx"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/music_box.gd" id="2_3sxvc"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/ui_manager.gd" id="2_mx23f"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/music_box.gd" id="2_3sxvc"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Ui/ui_manager.gd" id="2_mx23f"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_0nk7l"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/lvl_manager.gd" id="4_awf6f"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/lvl_manager.gd" id="4_awf6f"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_c8no8"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/level_1.gd" id="5_nmsd3"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/player.gd" id="6_e3l73"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/non_manager.gd" id="6_lk047"]
-[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/editor_tools.gd" id="8_twdtt"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/level_1.gd" id="5_nmsd3"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Lvl/player.gd" id="6_e3l73"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/non_manager.gd" id="6_lk047"]
+[ext_resource type="Script" path="res://ProjectVolos/_MAIN/_Main_Scenes/Non/editor_tools.gd" id="8_twdtt"]
 
 [sub_resource type="Resource" id="Resource_r52ha"]
 script = ExtResource("5_c8no8")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfsqldvh3xp6"
+path="res://.godot/imported/Pot Break C.wav-d581bda1660270088ae0bc44a188efdd.sample"
+
+[deps]
+
+source_file="res://ProjectVolos/BergieBird/Working/SFX/ceramic/Pot Break C.wav"
+dest_files=["res://.godot/imported/Pot Break C.wav-d581bda1660270088ae0bc44a188efdd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

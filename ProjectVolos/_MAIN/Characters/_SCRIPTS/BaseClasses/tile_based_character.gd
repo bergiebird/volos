@@ -1,9 +1,7 @@
 @icon("res://addons/_ToyBox/Icons/node_2D/icon_character.png")
 class_name TileBasedCharacter
 extends TileBasedEntity
-
 # Promoted a handful of edge_case scripts
-
 @export var can_charge:bool= true # if we don't want a character to move, we turn this to False
 @export var can_kill: bool= false
 @export var max_range := 500
@@ -13,7 +11,6 @@ extends TileBasedEntity
 var moving :bool = false
 var current_direction :Vector2
 var tween :Tween
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	if moving:
@@ -30,7 +27,6 @@ func kill(this_thing: TileBasedEntity)->void:
 		return
 	SignalTown.who_killed_what.emit(self, this_thing)
 	NodeRemover.remove(this_thing)
-
 
 func move_tiles(direction: Vector2, tiles: int)->void:
 	update_current(direction)

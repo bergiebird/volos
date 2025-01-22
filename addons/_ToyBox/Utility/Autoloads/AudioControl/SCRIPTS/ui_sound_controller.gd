@@ -1,10 +1,5 @@
 class_name UISoundController
-extends Node
-## Controller for managing all UI sounds in a scene from one place.
-##
-## This node manages all of the UI sounds under the provided node path.
-## When attached just below the root node of a scene tree, it will manage
-## all of the UI sounds in that scene.
+extends Node #ui_sound_controller.gd
 
 const MAX_DEPTH = 16
 
@@ -165,3 +160,10 @@ func _exit_tree():
 	var tree_node = get_tree()
 	if tree_node.node_added.is_connected(connect_ui_sounds):
 		tree_node.node_added.disconnect(connect_ui_sounds)
+
+
+## Controller for managing all UI sounds in a scene from one place.
+##
+## This node manages all of the UI sounds under the provided node path.
+## When attached just below the root node of a scene tree, it will manage
+## all of the UI sounds in that scene.

@@ -125,7 +125,8 @@ shape = SubResource("RectangleShape2D_5xqqc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f1pbj")
-animation = &"blink? 5th"
+animation = &"charge"
+frame_progress = 0.519641
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
