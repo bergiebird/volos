@@ -1,14 +1,61 @@
 extends Node #SignalTown.gd
 ## A Global Signal Bus for Assorted Gametypes. Feel free to add/comment out any signals as they as they aren't being used!
 
-## Project Volos Specific:
+#region volos
 signal who_killed_what(responsible: TileBasedEntity, target: TileBasedCharacter)
-
-
+signal sfx_break(target:TileBasedCharacter)
+signal add_to_score(by_how_much: int)
 signal twister_entered # see twister.gd
 signal web_entered # see spider_mage.gd
 signal spinner_activated # spin_mage.gd
-## End Volos Specific
+#endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @warning_ignore("unused_signal")
