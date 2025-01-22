@@ -1,36 +1,36 @@
 [gd_resource type="TileSet" load_steps=57 format=3 uid="uid://nvwhbal1sd70"]
 
-[ext_resource type="Texture2D" uid="uid://cvptw4x567b2i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/extras.png" id="1_3sqel"]
-[ext_resource type="Texture2D" uid="uid://dc0fptxc58lh4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/flames.png" id="2_07f3c"]
-[ext_resource type="Texture2D" uid="uid://bf8tr6s7eafvf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-s.png" id="3_jqo8r"]
-[ext_resource type="Texture2D" uid="uid://cenqt5uvaw81v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-se.png" id="4_k73i7"]
-[ext_resource type="Texture2D" uid="uid://dff7lk1hi73tx" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-sw.png" id="5_uatle"]
-[ext_resource type="Texture2D" uid="uid://dv1oqdhhv5ad2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-w.png" id="6_naa8g"]
-[ext_resource type="Texture2D" uid="uid://bybqde8ts47g0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/mine-dark.png" id="7_l52w5"]
-[ext_resource type="Texture2D" uid="uid://bpfhoe4mmllov" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/mine-light.png" id="8_f72hb"]
-[ext_resource type="Texture2D" uid="uid://y1jvn6wfae6p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-e.png" id="9_mndqa"]
-[ext_resource type="Texture2D" uid="uid://bfp55pkq5vsgo" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/frozen-walls.png" id="10_k06hf"]
-[ext_resource type="Texture2D" uid="uid://bxm83o23ywyg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-n.png" id="11_kp0ck"]
-[ext_resource type="Texture2D" uid="uid://cq1rk4vrx4uk2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-ne.png" id="12_8hqgd"]
-[ext_resource type="Texture2D" uid="uid://5bkqe4jt0aq6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-nw.png" id="13_ifyrx"]
-[ext_resource type="Texture2D" uid="uid://60tv1oyqwjqc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-s.png" id="14_4k0v4"]
-[ext_resource type="Texture2D" uid="uid://besktheu2rcq8" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-se.png" id="15_ypkhs"]
-[ext_resource type="Texture2D" uid="uid://ecggnnsolttl" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-sw.png" id="16_61igy"]
-[ext_resource type="Texture2D" uid="uid://lheo6epsmy23" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-w.png" id="17_47d5n"]
-[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="19_cj6wy"]
-[ext_resource type="Texture2D" uid="uid://d00xn7ok5v8o6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/plants-vines.png" id="20_ohd74"]
-[ext_resource type="Texture2D" uid="uid://duiayyk0bgwh2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/spooky-stuff.png" id="21_wn0t4"]
-[ext_resource type="Texture2D" uid="uid://dbpwqk4wd2kqd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-dark.png" id="22_n1mw1"]
-[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="23_7io8k"]
-[ext_resource type="Texture2D" uid="uid://8in7f5ik33js" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_obsidian-walls-dark.png" id="24_ee5mr"]
-[ext_resource type="Texture2D" uid="uid://qeb6yj81yrp7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_obsidian-walls-light.png" id="25_lm78a"]
-[ext_resource type="Texture2D" uid="uid://nw2tjmf8126s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-e.png" id="26_3nolq"]
-[ext_resource type="Texture2D" uid="uid://bqyq7vstn345" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-n.png" id="27_2uoj6"]
-[ext_resource type="Texture2D" uid="uid://bpi0a2xign53u" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-ne.png" id="28_7ji10"]
-[ext_resource type="Texture2D" uid="uid://c0rokrlg1m8u0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-nw.png" id="29_6qmoq"]
+[ext_resource type="Texture2D" uid="uid://cvptw4x567b2i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/extras.png" id="1_luoyg"]
+[ext_resource type="Texture2D" uid="uid://dc0fptxc58lh4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/flames.png" id="2_vygdi"]
+[ext_resource type="Texture2D" uid="uid://dff7lk1hi73tx" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-sw.png" id="3_t1fha"]
+[ext_resource type="Texture2D" uid="uid://dv1oqdhhv5ad2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-w.png" id="4_n43m5"]
+[ext_resource type="Texture2D" uid="uid://bybqde8ts47g0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/mine-dark.png" id="5_fae1r"]
+[ext_resource type="Texture2D" uid="uid://bpfhoe4mmllov" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/mine-light.png" id="6_mlbyn"]
+[ext_resource type="Texture2D" uid="uid://y1jvn6wfae6p" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-e.png" id="7_yhw28"]
+[ext_resource type="Texture2D" uid="uid://bxm83o23ywyg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-n.png" id="8_c4nyy"]
+[ext_resource type="Texture2D" uid="uid://cq1rk4vrx4uk2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-ne.png" id="9_3btnw"]
+[ext_resource type="Texture2D" uid="uid://5bkqe4jt0aq6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-nw.png" id="10_qrqdd"]
+[ext_resource type="Texture2D" uid="uid://60tv1oyqwjqc" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-s.png" id="11_ld5wd"]
+[ext_resource type="Texture2D" uid="uid://besktheu2rcq8" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-se.png" id="12_ythi0"]
+[ext_resource type="Texture2D" uid="uid://bfp55pkq5vsgo" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/frozen-walls.png" id="13_n65hg"]
+[ext_resource type="Texture2D" uid="uid://ecggnnsolttl" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-sw.png" id="14_4t87l"]
+[ext_resource type="Texture2D" uid="uid://lheo6epsmy23" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/obsidian-walls-w.png" id="15_4hryu"]
+[ext_resource type="Texture2D" uid="uid://d00xn7ok5v8o6" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/plants-vines.png" id="16_ps6tf"]
+[ext_resource type="Texture2D" uid="uid://duiayyk0bgwh2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/spooky-stuff.png" id="17_8boj5"]
+[ext_resource type="Texture2D" uid="uid://dbpwqk4wd2kqd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-dark.png" id="18_ogjkl"]
+[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="19_kj6rk"]
+[ext_resource type="Texture2D" uid="uid://8in7f5ik33js" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_obsidian-walls-dark.png" id="20_wjlvx"]
+[ext_resource type="Texture2D" uid="uid://qeb6yj81yrp7" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_obsidian-walls-light.png" id="21_s1vdl"]
+[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="22_t8c1g"]
+[ext_resource type="Texture2D" uid="uid://nw2tjmf8126s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-e.png" id="23_bd0ri"]
+[ext_resource type="Texture2D" uid="uid://bqyq7vstn345" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-n.png" id="24_73hx6"]
+[ext_resource type="Texture2D" uid="uid://bpi0a2xign53u" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-ne.png" id="25_yx4xl"]
+[ext_resource type="Texture2D" uid="uid://c0rokrlg1m8u0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-nw.png" id="26_4u6rh"]
+[ext_resource type="Texture2D" uid="uid://bf8tr6s7eafvf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-s.png" id="27_mnbc3"]
+[ext_resource type="Texture2D" uid="uid://cenqt5uvaw81v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-se.png" id="28_ai4jl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tiuqf"]
-texture = ExtResource("1_3sqel")
+texture = ExtResource("1_luoyg")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -337,7 +337,7 @@ texture = ExtResource("1_3sqel")
 20:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovlk0"]
-texture = ExtResource("2_07f3c")
+texture = ExtResource("2_vygdi")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -494,7 +494,7 @@ texture = ExtResource("2_07f3c")
 5:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m001w"]
-texture = ExtResource("5_uatle")
+texture = ExtResource("3_t1fha")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -540,7 +540,7 @@ texture = ExtResource("5_uatle")
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk0fx"]
-texture = ExtResource("6_naa8g")
+texture = ExtResource("4_n43m5")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -590,7 +590,7 @@ texture = ExtResource("6_naa8g")
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v42uw"]
-texture = ExtResource("7_l52w5")
+texture = ExtResource("5_fae1r")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -717,7 +717,7 @@ texture = ExtResource("7_l52w5")
 7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjg05"]
-texture = ExtResource("8_f72hb")
+texture = ExtResource("6_mlbyn")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -850,7 +850,7 @@ texture = ExtResource("8_f72hb")
 8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_emsd0"]
-texture = ExtResource("9_mndqa")
+texture = ExtResource("7_yhw28")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -889,7 +889,7 @@ texture = ExtResource("9_mndqa")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgtsa"]
-texture = ExtResource("11_kp0ck")
+texture = ExtResource("8_c4nyy")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -928,7 +928,7 @@ texture = ExtResource("11_kp0ck")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk24g"]
-texture = ExtResource("12_8hqgd")
+texture = ExtResource("9_3btnw")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -967,7 +967,7 @@ texture = ExtResource("12_8hqgd")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l81tr"]
-texture = ExtResource("13_ifyrx")
+texture = ExtResource("10_qrqdd")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1006,7 +1006,7 @@ texture = ExtResource("13_ifyrx")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ef7xe"]
-texture = ExtResource("14_4k0v4")
+texture = ExtResource("11_ld5wd")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1045,7 +1045,7 @@ texture = ExtResource("14_4k0v4")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xs5pl"]
-texture = ExtResource("15_ypkhs")
+texture = ExtResource("12_ythi0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1084,7 +1084,7 @@ texture = ExtResource("15_ypkhs")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ft0tk"]
-texture = ExtResource("10_k06hf")
+texture = ExtResource("13_n65hg")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1288,7 +1288,7 @@ texture = ExtResource("10_k06hf")
 2:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0i3y"]
-texture = ExtResource("16_61igy")
+texture = ExtResource("14_4t87l")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1327,7 +1327,7 @@ texture = ExtResource("16_61igy")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xd75c"]
-texture = ExtResource("17_47d5n")
+texture = ExtResource("15_4hryu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1366,7 +1366,7 @@ texture = ExtResource("17_47d5n")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcu7n"]
-texture = ExtResource("20_ohd74")
+texture = ExtResource("16_ps6tf")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1512,7 +1512,7 @@ texture = ExtResource("20_ohd74")
 9:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82tee"]
-texture = ExtResource("21_wn0t4")
+texture = ExtResource("17_8boj5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1599,7 +1599,7 @@ texture = ExtResource("21_wn0t4")
 9:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbewo"]
-texture = ExtResource("22_n1mw1")
+texture = ExtResource("18_ogjkl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1763,7 +1763,7 @@ texture = ExtResource("22_n1mw1")
 9:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wacod"]
-texture = ExtResource("23_7io8k")
+texture = ExtResource("19_kj6rk")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -1925,7 +1925,7 @@ texture = ExtResource("23_7io8k")
 9:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go4xq"]
-texture = ExtResource("24_ee5mr")
+texture = ExtResource("20_wjlvx")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2017,7 +2017,7 @@ texture = ExtResource("24_ee5mr")
 9:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq2v7"]
-texture = ExtResource("25_lm78a")
+texture = ExtResource("21_s1vdl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2133,7 +2133,7 @@ texture = ExtResource("25_lm78a")
 9:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nv22j"]
-texture = ExtResource("19_cj6wy")
+texture = ExtResource("22_t8c1g")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -2499,7 +2499,7 @@ texture = ExtResource("19_cj6wy")
 13:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg0xv"]
-texture = ExtResource("26_3nolq")
+texture = ExtResource("23_bd0ri")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2549,7 +2549,7 @@ texture = ExtResource("26_3nolq")
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhmfi"]
-texture = ExtResource("27_2uoj6")
+texture = ExtResource("24_73hx6")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2614,7 +2614,7 @@ texture = ExtResource("27_2uoj6")
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56xxw"]
-texture = ExtResource("28_7ji10")
+texture = ExtResource("25_yx4xl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2661,7 +2661,7 @@ texture = ExtResource("28_7ji10")
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7co5s"]
-texture = ExtResource("29_6qmoq")
+texture = ExtResource("26_4u6rh")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2708,7 +2708,7 @@ texture = ExtResource("29_6qmoq")
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckfxk"]
-texture = ExtResource("3_jqo8r")
+texture = ExtResource("27_mnbc3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -2773,7 +2773,7 @@ texture = ExtResource("3_jqo8r")
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aohmo"]
-texture = ExtResource("4_k73i7")
+texture = ExtResource("28_ai4jl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0

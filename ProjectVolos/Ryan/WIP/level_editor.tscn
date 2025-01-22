@@ -31,7 +31,6 @@ offset_top = -134.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_07gdk")
-tile_sets = Array[TileSet]([ExtResource("3_x3aoa"), ExtResource("2_l60kp")])
 
 [node name="ScrollContainer" type="ScrollContainer" parent="UI/Panel"]
 layout_mode = 1
