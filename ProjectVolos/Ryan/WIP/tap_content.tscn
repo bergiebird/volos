@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dgsikia4n5k0u"]
+
+[node name="TapContent" type="ScrollContainer"]
+custom_minimum_size = Vector2(630, 130)
+anchors_preset = -1
+anchor_right = 0.984375
+anchor_bottom = 0.270833
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 17
