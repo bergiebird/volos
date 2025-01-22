@@ -3,11 +3,12 @@ extends Node #SignalTown.gd
 
 #region volos
 signal who_killed_what(responsible: TileBasedEntity, target: TileBasedCharacter)
-signal sfx_break(target:TileBasedCharacter)
-signal add_to_score(by_how_much: int)
+signal sfx_break(target :TileBasedCharacter)
+signal add_to_score(by_how_much: int) #TODO: Display score in bottom right of screen on UI
 signal twister_entered # see twister.gd
 signal web_entered # see spider_mage.gd
 signal spinner_activated # spin_mage.gd
+signal change_animated_direction(direction, who) # TODO: Use for Animation Player
 #endregion
 
 

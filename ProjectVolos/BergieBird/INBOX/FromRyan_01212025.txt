@@ -1,9 +1,9 @@
 
 Hi,
 
-I’ve been working on the level editor, and I would appreciate your help in organizing the tile maps. 
-I suggest we separate the tiles into three categories: one for background tiles, one for walls, and 
-one for destructible items. 
+I’ve been working on the level editor, and I would appreciate your help in organizing the tile maps.
+I suggest we separate the tiles into three categories: one for background tiles, one for walls, and
+one for destructible items.
 
 For example:
 
@@ -16,7 +16,7 @@ Foreground:
 	Floor tiles (interactable)
 		Pits
 		Spikes
-		Cracked ice
+		Cracked Ice
 	Walls
 	Doors
 	Flames
@@ -26,3 +26,6 @@ Destructibles:
 	Crystals
 	Crates
 	Destructible Walls
+
+
+Collid-able destructibles
