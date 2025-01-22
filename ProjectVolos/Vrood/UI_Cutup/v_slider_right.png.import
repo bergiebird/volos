@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvf4lnfv7m01h"
-path="res://.godot/imported/arrow_right_tall.png-42362700cae6b61aa018432dd1c90f0a.ctex"
+uid="uid://c2hp8n6bpunuv"
+path="res://.godot/imported/v_slider_right.png-1e3570406446b92d07e5e1d3e3485565.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/arrow_right_tall.png"
-dest_files=["res://.godot/imported/arrow_right_tall.png-42362700cae6b61aa018432dd1c90f0a.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/v_slider_right.png"
+dest_files=["res://.godot/imported/v_slider_right.png-1e3570406446b92d07e5e1d3e3485565.ctex"]
 
 [params]
 

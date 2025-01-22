@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2am4e6d2e4dg"
-path="res://.godot/imported/h_slider_right.png-aad469b9cc8e0be1f9eb01b7a14956b9.ctex"
+uid="uid://ct7ofr26ncprr"
+path="res://.godot/imported/green_plus.png-78f3850dfc1015b0825511bb4f437e9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/h_slider_right.png"
-dest_files=["res://.godot/imported/h_slider_right.png-aad469b9cc8e0be1f9eb01b7a14956b9.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/green_plus.png"
+dest_files=["res://.godot/imported/green_plus.png-78f3850dfc1015b0825511bb4f437e9e.ctex"]
 
 [params]
 

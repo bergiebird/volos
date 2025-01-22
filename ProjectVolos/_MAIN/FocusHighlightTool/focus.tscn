@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://stq1h4uy1y0"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_MAIN/FocusHighlightTool/focus.gd" id="1_k04fo"]
-[ext_resource type="Texture2D" uid="uid://28b4gjouxmsm" path="res://addons/_ToyBox/Menus/Assets/Visual/Cursors/Crosshair/crosshair_dot.png" id="2_poj01"]
+[ext_resource type="Texture2D" uid="uid://df04ly7a0kv0c" path="res://ProjectVolos/Vrood/UI_Cutup/sword_cursor.png" id="2_m01kb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2mhm"]
 size = Vector2(10, 10)
@@ -22,6 +22,7 @@ detect_input_event(event :Input)->StringName: # This guy will let us name action
 script = ExtResource("1_k04fo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_f2mhm")
 
@@ -29,7 +30,7 @@ shape = SubResource("RectangleShape2D_f2mhm")
 modulate = Color(1, 1, 1, 0.164706)
 position = Vector2(8, 8)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_poj01")
+texture = ExtResource("2_m01kb")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

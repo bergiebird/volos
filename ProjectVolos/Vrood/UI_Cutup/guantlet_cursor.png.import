@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7ofr26ncprr"
-path="res://.godot/imported/green_plus.png-f7b85e500b41720ec2e70b4ca4158a27.ctex"
+uid="uid://bloor2ihwdr7d"
+path="res://.godot/imported/guantlet_cursor.png-2b13f7a196991fc26e6b0b75cd493d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/green_plus.png"
-dest_files=["res://.godot/imported/green_plus.png-f7b85e500b41720ec2e70b4ca4158a27.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/guantlet_cursor.png"
+dest_files=["res://.godot/imported/guantlet_cursor.png-2b13f7a196991fc26e6b0b75cd493d69.ctex"]
 
 [params]
 

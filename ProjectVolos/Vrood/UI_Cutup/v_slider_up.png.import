@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7xiraq0vu03l"
-path="res://.godot/imported/music_on.png-34a946272d3a82678cfc5ec736904581.ctex"
+uid="uid://bx7lg0dwjokok"
+path="res://.godot/imported/v_slider_up.png-64ef5c6c373fef9b4b5eee953127657b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/music_on.png"
-dest_files=["res://.godot/imported/music_on.png-34a946272d3a82678cfc5ec736904581.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/v_slider_up.png"
+dest_files=["res://.godot/imported/v_slider_up.png-64ef5c6c373fef9b4b5eee953127657b.ctex"]
 
 [params]
 

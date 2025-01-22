@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m3rmqpp25b3h"
-path="res://.godot/imported/sword_cursor_pressed.png-41fa7e3c1b6ee66edfe1b32f3753eacc.ctex"
+uid="uid://fhdd875jkv3x"
+path="res://.godot/imported/arrow_right_short.png-7e67f34c36a57fbf5dd5f1f128953d56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/sword_cursor_pressed.png"
-dest_files=["res://.godot/imported/sword_cursor_pressed.png-41fa7e3c1b6ee66edfe1b32f3753eacc.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/arrow_right_short.png"
+dest_files=["res://.godot/imported/arrow_right_short.png-7e67f34c36a57fbf5dd5f1f128953d56.ctex"]
 
 [params]
 

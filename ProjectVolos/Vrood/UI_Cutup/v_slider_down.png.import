@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc8j1d2kdiqfa"
-path="res://.godot/imported/red_minus.png-e52712b15338343e66d0bdc430e1ad26.ctex"
+uid="uid://c08a16bsdhah1"
+path="res://.godot/imported/v_slider_down.png-2ad0352ea54178ac7285219b4f433e47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/red_minus.png"
-dest_files=["res://.godot/imported/red_minus.png-e52712b15338343e66d0bdc430e1ad26.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/v_slider_down.png"
+dest_files=["res://.godot/imported/v_slider_down.png-2ad0352ea54178ac7285219b4f433e47.ctex"]
 
 [params]
 

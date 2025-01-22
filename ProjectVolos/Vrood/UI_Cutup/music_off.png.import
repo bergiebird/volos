@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqvbw58xoe2qg"
-path="res://.godot/imported/cursor_pointer.png-1a90ab8559a59f2f36dc566d89f024dc.ctex"
+uid="uid://b5pyhbmtr2grc"
+path="res://.godot/imported/music_off.png-01e8cf5417d4a132dd5289236dd4feec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/cursor_pointer.png"
-dest_files=["res://.godot/imported/cursor_pointer.png-1a90ab8559a59f2f36dc566d89f024dc.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/music_off.png"
+dest_files=["res://.godot/imported/music_off.png-01e8cf5417d4a132dd5289236dd4feec.ctex"]
 
 [params]
 

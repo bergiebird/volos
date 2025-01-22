@@ -34,6 +34,7 @@ SceneLoader="*res://addons/_ToyBox/Utility/Autoloads/SceneLoader/scene_loader.ts
 GitReminder="*res://addons/_ToyBox/Utility/Autoloads/Tools/git_reminder.gd"
 Taken="*res://addons/_ToyBox/Utility/Autoloads/BergieWhereDoYouWantThese/taken.gd"
 ScoreManager="*res://ProjectVolos/_MAIN/Utilities/Singletons/score_manager.gd"
+CursorManager="*res://ProjectVolos/_MAIN/Utilities/Singletons/cursor_manager.gd"
 
 [display]
 

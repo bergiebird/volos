@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crarr3kngusj8"
-path="res://.godot/imported/arrow_left_tall.png-a871b3b57a99ace210a5294949118b33.ctex"
+uid="uid://dvf4lnfv7m01h"
+path="res://.godot/imported/arrow_right_tall.png-0e98a9711842093549238b3da079de6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Warehouse/UI_Cutup/arrow_left_tall.png"
-dest_files=["res://.godot/imported/arrow_left_tall.png-a871b3b57a99ace210a5294949118b33.ctex"]
+source_file="res://ProjectVolos/Vrood/UI_Cutup/arrow_right_tall.png"
+dest_files=["res://.godot/imported/arrow_right_tall.png-0e98a9711842093549238b3da079de6d.ctex"]
 
 [params]
 
