@@ -1,5 +1,4 @@
-class_name TileButton
-extends TextureButton
+extends TextureRect
 
 @export var index: int = -1
 @export var tap_content_index: int = -1

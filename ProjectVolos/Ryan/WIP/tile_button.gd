@@ -1,6 +1,9 @@
 extends TileButton
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _clicked():
+	var node = get_parent().get_parent().get_parent().get_parent().get_child(1)
+	node.texture = texture_normal
+	node.index = index
+	node.tap_content_index = tap_content_index
+	node.coords = coords
+	node.tab = tab

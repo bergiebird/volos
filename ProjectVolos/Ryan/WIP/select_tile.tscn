@@ -12,3 +12,5 @@ offset_bottom = 16.0
 texture_normal = SubResource("PlaceholderTexture2D_geidk")
 stretch_mode = 0
 script = ExtResource("1_d6165")
+
+[connection signal="button_down" from="." to="." method="_clicked"]
