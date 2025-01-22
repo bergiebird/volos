@@ -9,13 +9,16 @@ var total_count: int = 0
 var string_array: Array[String] = ["n", "ne", "e", "se", "s", "sw", "w", "nw", "dark"]
 
 func _ready():
+	for child in get_parent().get_parent().get_child(1).get_children():
+		if tile_sets.has(child.get_tile_set()) == false:
+			tile_sets.append(child.get_tile_set())
+	
+	var tile_set_index = 0
 	for tileset in tile_sets:
 		var starting_count = tileset.get_source_count()
-		var old_count = starting_count
-		
-		while old_count > 0:
-			old_count -= 1
-			var atlas = tileset.get_source(old_count) as TileSetAtlasSource
+		while starting_count > 0:
+			starting_count -= 1
+			var atlas = tileset.get_source(starting_count) as TileSetAtlasSource
 			var atlas_count = atlas.get_tiles_count()
 			var name_of_file = atlas.texture.resource_path.get_file().get_slice(".", 0)
 			var light_durection = name_of_file.split("-")[name_of_file.get_slice_count("-") - 1].to_lower()
@@ -53,11 +56,13 @@ func _ready():
 				var coord = atlas.get_tile_id(atlas_count)
 				var instance = texture_rect.instantiate()
 				instance.texture_normal = get_cell_texture(coord, atlas)
-				instance.index = atlas_count
+				instance.index = starting_count
+				instance.layer_index = tile_set_index
 				instance.tap_content_index = total_count
 				instance.coords = coord
 				instance.tab = " ".join(name_of_file.split("-"))
 				self.get_child(total_count).get_child(0).add_child(instance)
+		tile_set_index += 1
 	for child in self.get_child(0).get_child(0).get_children():
 		child.total = total_count
 

@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://c86y6wso3byef"]
+[gd_scene load_steps=6 format=3 uid="uid://c86y6wso3byef"]
 
-[ext_resource type="PackedScene" uid="uid://vspb18ooksr5" path="res://ProjectVolos/_MAIN/Gyms/BoardGym/board_gym.tscn" id="1_ii5oj"]
 [ext_resource type="Script" path="res://ProjectVolos/Ryan/WIP/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
 [ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="2_l60kp"]
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
@@ -9,11 +8,16 @@
 
 [node name="LevelEditor" type="Node2D"]
 
-[node name="BoardGym" parent="." instance=ExtResource("1_ii5oj")]
-position = Vector2(-201, -217)
+[node name="Target" type="TextureRect" parent="."]
+modulate = Color(0.726367, 0.6391, 0.77, 0.521569)
+z_index = 100
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
 
-[node name="level" type="Node2D" parent="."]
+[node name="level" type="Node2D" parent="." node_paths=PackedStringArray("info_node")]
 script = ExtResource("1_pxjwo")
+info_node = NodePath("../UI/TextureRect")
 
 [node name="Backgound" type="TileMapLayer" parent="level"]
 tile_set = ExtResource("2_l60kp")
@@ -32,7 +36,6 @@ offset_top = -134.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_07gdk")
-tile_sets = Array[TileSet]([ExtResource("3_x3aoa"), ExtResource("2_l60kp")])
 
 [node name="ScrollContainer" type="ScrollContainer" parent="UI/Panel"]
 layout_mode = 1
@@ -46,6 +49,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
+modulate = Color(1, 1, 1, 0.631373)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
