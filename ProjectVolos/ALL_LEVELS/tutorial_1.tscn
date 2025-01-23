@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpfafpiobls6o"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Lvl/level_container.gd" id="1_v7wc4"]
+
+[node name="LevelContainer" type="Node2D"]
+editor_description = "Dont Touch"
+script = ExtResource("1_v7wc4")

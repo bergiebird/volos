@@ -4,6 +4,8 @@ const SONG_LENGTH :int = 90
 @export var shhhh :bool = false
 
 func _ready()->void:
+	# Vrood small tweak, adjust if we don't likey
+	fade_in()
 	if shhhh:
 		playing = false
 
@@ -25,6 +27,11 @@ func loop(coming_from_finished_signal :bool=true, reduce_time_by :int=30)->void:
 
 func evaluate_song_stats()->void:
 	print(get_playback_position())
+
+func fade_in()->void:
+	var fade_in_rate: float = 0.5
+	volume_db -= 5
+	lerp(volume_db, 0.0, 1.0)
 
 '''
 Other scripts that want to interact with this node will most likely:

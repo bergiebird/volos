@@ -8,7 +8,8 @@ const SWORD_CURSOR :Resource = preload(\
 "res://ProjectVolos/UI/Cursors/sword_cursor.png")
 const SWORD_CURSOR_PRESSED :Resource  = preload(\
 "res://ProjectVolos/UI/Cursors/sword_cursor_pressed.png")
-
+const CURSOR = preload(\
+"res://ProjectVolos/UI/Cursors/cursor.png")
 
 # See [https://docs.godotengine.org/en/stable/classes/class_input.html#enum-input-cursorshape]
 func _ready()->void:

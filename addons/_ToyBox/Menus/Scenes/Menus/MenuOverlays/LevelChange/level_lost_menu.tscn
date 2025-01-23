@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1qmaqru34mcu"]
+[gd_scene load_steps=4 format=3 uid="uid://c1qmaqru34mcu"]
 
+[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://Warehouse/_users/BergieBird/Working/resources/DemDungeonUI.tres" id="1_ncuhl"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/SCRIPTS/level_lost_menu.gd" id="2_fjxrh"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Components/Control/Containers/capture_focus.gd" id="2_ykl1d"]
 
@@ -11,7 +12,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ncuhl")
 script = ExtResource("2_fjxrh")
+pauses_game = true
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
@@ -74,7 +77,7 @@ theme_override_constants/margin_bottom = 64
 [node name="DescriptionLabel" type="RichTextLabel" parent="MenuPanelContainer/MarginContainer/BoxContainer/DescriptionMargin"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[center]You lost...[/center]"
+text = "[center]You lost[/center]"
 scroll_active = false
 
 [node name="MenuButtonsMargin" type="MarginContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer"]
@@ -91,6 +94,7 @@ script = ExtResource("2_ykl1d")
 
 [node name="ExitButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Exit"
