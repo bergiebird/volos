@@ -1,2 +1,2 @@
 @icon("res://addons/_ToyBox/Icons/control/icon_folder.png")
-extends Control
+extends Control #ui_manager.gd

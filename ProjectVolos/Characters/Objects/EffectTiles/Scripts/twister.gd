@@ -1,6 +1,6 @@
 @tool
 @icon("res://addons/_ToyBox/Icons/node_2D/icon_reset.png")
-extends Node2D
+extends Node2D #twister.gd
 
 func _ready()->void:
 	set_editor_description("
@@ -11,15 +11,14 @@ func _ready()->void:
 	")
 
 
-func _on_send_north_area_entered(character: TileBasedCharacter) -> void:
+func _on_send_north_area_entered(character :TileBasedCharacter)->void:
 	SignalTown.twister_entered.emit
 
-func _on_send_east_area_entered(character: TileBasedCharacter) -> void:
+func _on_send_east_area_entered(character :TileBasedCharacter)->void:
 	SignalTown.twister_entered.emit
 
-func _on_send_south_area_entered(character: TileBasedCharacter) -> void:
+func _on_send_south_area_entered(character :TileBasedCharacter)->void:
 	SignalTown.twister_entered.emit
 
-
-func _on_send_west_area_entered(character: TileBasedCharacter) -> void:
+func _on_send_west_area_entered(character :TileBasedCharacter)->void:
 	SignalTown.twister_entered.emit

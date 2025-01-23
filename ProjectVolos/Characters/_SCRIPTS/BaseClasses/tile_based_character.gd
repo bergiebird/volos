@@ -1,10 +1,10 @@
 @icon("res://addons/_ToyBox/Icons/node_2D/icon_character.png")
 class_name TileBasedCharacter
 extends TileBasedEntity #tile_based_character.gd : Promoted a handful of edge_case scripts
-@export var can_move:bool= true
-@export var can_kill: bool= false
-@export var max_range := 500
-@export var move_rate := 5
+@export var can_move :bool= true
+@export var can_kill:bool= false
+@export var max_range :int = 500
+@export var move_rate :int = 5
 @export var initial_direction :Vector2 = Vector2.RIGHT
 @onready var ray :RayCast2D = $RayCast2D
 var current_direction :Vector2

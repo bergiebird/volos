@@ -1,12 +1,12 @@
 extends Node #score_manager.gd
 
-@onready var score = 0
-@onready var score_label: RichTextLabel = %ScoreLabel
+@onready var score :int = 0
+@onready var score_label :RichTextLabel = %ScoreLabel
 
-func _ready():
+func _ready()->void:
 	SignalTown.who_killed_what.connect(parse_the_killing)
 
-func parse_the_killing(culprit, victim):
+func parse_the_killing(culprit :TileBasedEntity, victim :TileBasedCharacter)->void:
 	SignalTown.sfx_break.emit(victim)
 	printt("parse_the_killing",culprit,victim)
 	score +=1

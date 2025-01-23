@@ -2,23 +2,25 @@
 class_name TheBoar # boar.gd
 extends TileBasedCharacter
 
-@onready var focus: FocusTile = %Focus
+@onready var focus :FocusTile = %Focus
 
-func _ready():
-	SignalTown.change_animated_direction.connect("_change_boar_direction", direction)
+func _ready()->void:
+	SignalTown.change_animated_direction.connect(_change_boar_direction)
 
-func _on_area_entered(character: TileBasedEntity) -> void:
-	if can_kill and character.is_destroyable and !character.is_pickedup and !is_pickedup:
-		SignalTown.who_killed_what.emit(self,character)
-		kill(character)
+func _on_area_entered(character :TileBasedEntity)->void:
+	if can_kill and !is_pickedup:
+		if character.is_destroyable and !character.is_pickedup:
+			SignalTown.who_killed_what.emit(self,character)
+			kill(character)
+		else:
+			printt("Why. Won't. You. Die?!")
 	else:
 		printt("Why. Won't. You. Die?!")
 
-func _change_boar_direction(direction):
+func _change_boar_direction(direction)->void:
 	pass
 
 
-
-#func _process(delta: float) -> void:
+#func _process(_delta :float)->void:
 	#if Input.is_action_pressed("ui_right"):
 		#position = focus.global_position

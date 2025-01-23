@@ -1,10 +1,13 @@
-extends Node
-# cursor_manager.gd
+extends Node # cursor_manager.gd
 
-const CURSOR_POINTER = preload("res://ProjectVolos/UI/Cursors/cursor_pointer.png")
-const GUANTLET_CURSOR = preload("res://ProjectVolos/UI/Cursors/guantlet_cursor.png")
-const SWORD_CURSOR = preload("res://ProjectVolos/UI/Cursors/sword_cursor.png")
-const SWORD_CURSOR_PRESSED = preload("res://ProjectVolos/UI/Cursors/sword_cursor_pressed.png")
+const CURSOR_POINTER :Resource = preload(\
+"res://ProjectVolos/UI/Cursors/cursor_pointer.png")
+const GUANTLET_CURSOR :Resource = preload(\
+"res://ProjectVolos/UI/Cursors/guantlet_cursor.png")
+const SWORD_CURSOR :Resource = preload(\
+"res://ProjectVolos/UI/Cursors/sword_cursor.png")
+const SWORD_CURSOR_PRESSED :Resource  = preload(\
+"res://ProjectVolos/UI/Cursors/sword_cursor_pressed.png")
 
 
 # See [https://docs.godotengine.org/en/stable/classes/class_input.html#enum-input-cursorshape]

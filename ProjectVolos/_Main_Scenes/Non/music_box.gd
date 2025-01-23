@@ -1,10 +1,9 @@
 @icon("res://addons/_ToyBox/Icons/node/icon_audio.png")
-extends AudioStreamPlayer
-var new_time: int = 0
-const SONG_LENGTH = 90
-@export var shhhh = false
+extends AudioStreamPlayer #music_box.gd
+const SONG_LENGTH :int = 90
+@export var shhhh :bool = false
 
-func _ready():
+func _ready()->void:
 	if shhhh:
 		playing = false
 
@@ -12,8 +11,8 @@ func _on_finished()->void:
 	evaluate_song_stats()
 	loop()
 
-func loop(coming_from_finished_signal:bool = true, reduce_time_by:int = 30):
-	var current_time:int
+func loop(coming_from_finished_signal :bool=true, reduce_time_by :int=30)->void:
+	var current_time :int = 0
 	if coming_from_finished_signal:
 		current_time = SONG_LENGTH
 	else:
@@ -24,7 +23,7 @@ func loop(coming_from_finished_signal:bool = true, reduce_time_by:int = 30):
 	if not is_playing():
 		print('play did not work')
 
-func evaluate_song_stats():
+func evaluate_song_stats()->void:
 	print(get_playback_position())
 
 '''

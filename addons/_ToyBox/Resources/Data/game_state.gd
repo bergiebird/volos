@@ -26,7 +26,7 @@ static func has_game_state()->bool:
 static func get_game_state()->GameState:
 	return GlobalState.get_state(STATE_NAME, FILE_PATH)
 
-static func get_current_level()->int:
+static func get_current_level_id()->int:
 	var game_state = get_game_state()
 	if not game_state:
 		return 0
@@ -46,8 +46,8 @@ static func level_reached(level_number :int)->void:
 	game_state.current_level = level_number
 	GlobalState.save()
 
-static func set_current_level_node(level_number :int)->void:
-	var game_state = get_game_state()
+static func set_current_level_id(level_number :int)->void:
+	var game_state :GameState = get_game_state()
 	if not game_state:
 		return
 	game_state.current_level = level_number
