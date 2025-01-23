@@ -423,30 +423,21 @@ var _should_follow: bool = false
 var _follow_framed_offset: Vector2 = Vector2.ZERO
 var _follow_target_physics_based: bool = false
 var _physics_interpolation_enabled: bool = false # NOTE - Enable for Godot 4.3 and when PhysicsInterpolationMode bug is resolved
-
 var _has_multiple_follow_targets: bool = false
 var _follow_targets_single_target_index: int = 0
 var _follow_targets: Array[Node2D]
-
 var _follow_velocity_ref: Vector2 = Vector2.ZERO # Stores and applies the velocity of the movement
-
 var _has_follow_path: bool = false
-
 var _tween_skip: bool = false
 
 ## Defines the position of the [member follow_target] within the viewport.[br]
 ## This is only used for when [member follow_mode] is set to [param Framed].
 var _follow_framed_initial_set: bool = false
-
 static var _draw_limits: bool
-
 var _limit_sides: Vector4i
 var _limit_sides_default: Vector4i = Vector4i(-10000000, -10000000, 10000000, 10000000)
-
 var _limit_node: Node2D
-
 var _limit_inactive_pcam: bool
-
 var _transform_output: Transform2D
 var _transform_noise: Transform2D
 

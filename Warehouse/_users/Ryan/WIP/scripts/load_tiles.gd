@@ -2,9 +2,9 @@ extends Panel
 
 
 @export var tile_sets: Array[TileSet]
-const texture_rect: PackedScene = preload("res://ProjectVolos/Ryan/WIP/select_tile.tscn")
-const tab: PackedScene = preload("res://ProjectVolos/Ryan/WIP/tilemap_tab.tscn")
-const tab_content: PackedScene = preload("res://ProjectVolos/Ryan/WIP/tap_content.tscn")
+const texture_rect: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/select_tile.tscn")
+const tab: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/tilemap_tab.tscn")
+const tab_content: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/tap_content.tscn")
 var total_count: int = 0
 var string_array: Array[String] = ["n", "ne", "e", "se", "s", "sw", "w", "nw", "dark"]
 
@@ -12,7 +12,7 @@ func _ready():
 	for child in get_parent().get_parent().get_child(1).get_children():
 		if tile_sets.has(child.get_tile_set()) == false:
 			tile_sets.append(child.get_tile_set())
-	
+
 	var tile_set_index = 0
 	for tileset in tile_sets:
 		var starting_count = tileset.get_source_count()
@@ -22,12 +22,12 @@ func _ready():
 			var atlas_count = atlas.get_tiles_count()
 			var name_of_file = atlas.texture.resource_path.get_file().get_slice(".", 0)
 			var light_durection = name_of_file.split("-")[name_of_file.get_slice_count("-") - 1].to_lower()
-			
+
 			var whatever = false
 			for st in string_array:
 				if light_durection == st:
 					whatever = true
-			
+
 			if whatever:
 				continue
 

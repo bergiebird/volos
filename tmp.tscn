@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg6uakxm30p83"]
+
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_st3t3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+rotation = -0.000563488
+tile_map_data = PackedByteArray(0, 0, 7, 0, 6, 0, 1, 0, 0, 0, 3, 0, 0, 0, 10, 0, 6, 0, 1, 0, 0, 0, 4, 0, 0, 0, 9, 0, 8, 0, 1, 0, 0, 0, 5, 0, 0, 0)
+tile_set = ExtResource("1_st3t3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(126, 104)
+zoom = Vector2(3, 3)
