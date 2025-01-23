@@ -476,9 +476,9 @@ var viewport_position: Vector2
 #region Property Validator
 
 func _validate_property(property: Dictionary) -> void:
-	################
+
 	## Follow Target
-	################
+
 	if property.name == "follow_target":
 		if follow_mode == FollowMode.NONE or \
 		follow_mode == FollowMode.GROUP:
@@ -489,9 +489,9 @@ func _validate_property(property: Dictionary) -> void:
 		property.usage = PROPERTY_USAGE_NO_EDITOR
 
 
-	####################
+	####
 	## Follow Parameters
-	####################
+	####
 	if follow_mode == FollowMode.NONE:
 		match property.name:
 			"follow_offset", \
@@ -507,9 +507,7 @@ func _validate_property(property: Dictionary) -> void:
 	if property.name == "follow_damping_value" and not follow_damping:
 		property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	###############
 	## Follow Group
-	###############
 	if follow_mode != FollowMode.GROUP:
 		match property.name:
 			"follow_targets", \
@@ -523,9 +521,9 @@ func _validate_property(property: Dictionary) -> void:
 			"auto_zoom_margin":
 				property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	################
+
 	## Follow Framed
-	################
+
 	if not follow_mode == FollowMode.FRAMED:
 		match property.name:
 			"dead_zone_width", \
@@ -533,15 +531,13 @@ func _validate_property(property: Dictionary) -> void:
 			"show_viewfinder_in_play":
 				property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	#######
 	## Zoom
-	#######
 	if property.name == "zoom" and follow_mode == FollowMode.GROUP and auto_zoom:
 		property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	########
+
 	## Limit
-	########
+
 	if is_instance_valid(_limit_node):
 		match property.name:
 			"limit_left", \
@@ -553,9 +549,9 @@ func _validate_property(property: Dictionary) -> void:
 	if property.name == "limit_margin" and not _limit_node:
 		property.usage = PROPERTY_USAGE_NO_EDITOR
 
-	################
+
 	## Frame Preview
-	################
+
 	if property.name == "frame_preview" and _is_active:
 		property.usage |= PROPERTY_USAGE_READ_ONLY
 
@@ -581,10 +577,8 @@ func _enter_tree() -> void:
 
 func _exit_tree() -> void:
 	_phantom_camera_manager.pcam_removed(self)
-
 	if _has_valid_pcam_owner():
 		get_pcam_host_owner().pcam_removed_from_scene(self)
-
 	if not follow_mode == FollowMode.GROUP:
 		follow_targets = []
 
@@ -592,10 +586,8 @@ func _exit_tree() -> void:
 func _ready() -> void:
 	_transform_output = global_transform
 	_phantom_camera_manager.noise_2d_emitted.connect(_noise_emitted)
-
 	if not Engine.is_editor_hint():
 		_preview_noise = true
-
 	if follow_mode == FollowMode.GROUP:
 		_follow_targets_size_check()
 
@@ -604,11 +596,9 @@ func _process(delta: float) -> void:
 	if _follow_target_physics_based or _is_active: return
 	process_logic(delta)
 
-
 func _physics_process(delta: float) -> void:
 	if not _follow_target_physics_based or _is_active: return
 	process_logic(delta)
-
 
 func process_logic(delta: float) -> void:
 	if _is_active:
@@ -619,20 +609,17 @@ func process_logic(delta: float) -> void:
 	else:
 		match inactive_update_mode:
 			InactiveUpdateMode.NEVER: return
-			InactiveUpdateMode.ALWAYS:
-				# Only triggers if limit isn't default
+			InactiveUpdateMode.ALWAYS: # Only triggers if limit isn't default
 				if _limit_inactive_pcam:
 					global_position = _set_limit_clamp_position(global_position)
 			# InactiveUpdateMode.EXPONENTIALLY:
 			# TODO - Trigger positional updates less frequently as more PCams gets added
-
 	_limit_checker()
 #	if not Engine.is_editor_hint(): print(_should_follow)
 	if _should_follow:
 		_follow(delta)
 	else:
 		_transform_output = global_transform
-
 	if _follow_axis_is_locked:
 		match follow_axis_lock:
 			FollowLockAxis.X:
@@ -644,7 +631,7 @@ func process_logic(delta: float) -> void:
 				_transform_output.origin.y = _follow_axis_lock_value.y
 
 
-func _limit_checker() -> void:
+func _limit_checker()->void:
 	## TODO - Needs to see if this can be triggerd only from CollisionShape2D Transform changes
 	if not Engine.is_editor_hint(): return
 	if draw_limits:

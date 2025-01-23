@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://6m776ve5gv2x"]
+
+[ext_resource type="Script" path="res://screen_shake.gd" id="1_lriid"]
+[ext_resource type="Texture2D" uid="uid://b4lthwsi32mot" path="res://addons/_ToyBox/Components/Statistics/HP/ManaBar/Frames-and-Banners.png" id="1_ykc2k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_lriid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ykc2k")

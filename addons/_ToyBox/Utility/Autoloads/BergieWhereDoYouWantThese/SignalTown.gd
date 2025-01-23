@@ -1,5 +1,6 @@
 extends Node #SignalTown.gd
-## A Global Signal Bus for Assorted Gametypes. Feel free to add/comment out any signals as they as they aren't being used!
+## A Global Signal Bus for Assorted Gametypes.
+## Feel free to add/comment out any signals as they as they aren't being used!
 
 #region volos
 signal who_killed_what(responsible: TileBasedEntity, target: TileBasedCharacter)
@@ -9,6 +10,24 @@ signal twister_entered # see twister.gd
 signal web_entered # see spider_mage.gd
 signal spinner_activated # spin_mage.gd
 signal change_animated_direction(direction, who) # TODO: Use for Animation Player
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endregion
 
 
