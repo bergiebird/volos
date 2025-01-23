@@ -39,4 +39,4 @@ func remove_tile():
 			as Vector2i)
 
 func ui_check():
-	return get_parent().get_child(0).position.y <= 64 and get_parent().get_child(0).position.y >= -208
+	return get_parent().get_child(0).position.y <= 408 and get_parent().get_child(0).position.y >= 12

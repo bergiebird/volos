@@ -70,20 +70,19 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("6_n1y7t")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/SaveAndLoad"]
+[node name="VBoxContainer" type="HBoxContainer" parent="UI/SaveAndLoad"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.008
 anchor_top = 0.01
-anchor_right = 0.098
-anchor_bottom = 0.183
+anchor_right = 0.008
+anchor_bottom = 0.062
 offset_left = -0.12
 offset_top = 0.2
-offset_right = 0.279999
-offset_bottom = 0.159996
+offset_right = 57.88
+offset_bottom = 0.239998
 
 [node name="Save" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "Save"
@@ -95,11 +94,15 @@ text = "Save As
 "
 
 [node name="Load" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "Load
 "
+
+[node name="Upload" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Upload"
 
 [node name="Control" type="Control" parent="UI/SaveAndLoad"]
 visible = false
@@ -160,8 +163,23 @@ grow_vertical = 0
 texture_normal = ExtResource("7_ouv3f")
 stretch_mode = 0
 
+[node name="Label" type="Label" parent="UI/SaveAndLoad"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Unnamed"
+horizontal_alignment = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(427, 320)
+zoom = Vector2(0.75, 0.75)
 
 [connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/SaveAs" to="UI/SaveAndLoad" method="_save_as_menu"]
 [connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/Load" to="UI/SaveAndLoad" method="_load"]
+[connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/Upload" to="UI/SaveAndLoad" method="_upload"]
 [connection signal="button_down" from="UI/SaveAndLoad/Control/Panel/TextureButton" to="UI/SaveAndLoad" method="_save_as"]
