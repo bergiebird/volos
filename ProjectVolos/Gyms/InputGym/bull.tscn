@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=3 uid="uid://da30prnju1581"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/characters/bull.gd" id="1_tmq2h"]
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_t4rxn"]
+[ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="3_2nqlj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1fno"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rjbo"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(16, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0n1"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(32, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsfew"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(64, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob0yk"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(80, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv7p3"]
+atlas = ExtResource("2_t4rxn")
+region = Rect2(96, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bniyq"]
+atlas = ExtResource("3_2nqlj")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycgor"]
+atlas = ExtResource("3_2nqlj")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne0qn"]
+atlas = ExtResource("3_2nqlj")
+region = Rect2(160, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1t25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1fno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rjbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0n1")
+}],
+"loop": true,
+"name": &"Copper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsfew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob0yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv7p3")
+}],
+"loop": true,
+"name": &"Iron",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bniyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycgor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne0qn")
+}],
+"loop": true,
+"name": &"Magma",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5svem"]
+size = Vector2(10, 10)
+
+[node name="Bull" type="Area2D" groups=["Characters"]]
+script = ExtResource("1_tmq2h")
+move_rate = 15
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+color = Color(0, 0, 0, 0.396078)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-8, -8)
+sprite_frames = SubResource("SpriteFrames_f1t25")
+animation = &"Iron"
+autoplay = "Iron"
+frame_progress = 0.240625
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+shape = SubResource("RectangleShape2D_5svem")
+
+[node name="Ray" type="RayCast2D" parent="."]
+position = Vector2(-8, -8)
+target_position = Vector2(0, 16)
+collision_mask = 0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

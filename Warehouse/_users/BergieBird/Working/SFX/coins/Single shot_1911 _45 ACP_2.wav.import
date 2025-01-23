@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg2yegfxn0xam"
+path="res://.godot/imported/Single shot_1911 _45 ACP_2.wav-b41321915761002227f1127e1ab40c4c.sample"
+
+[deps]
+
+source_file="res://Warehouse/_users/BergieBird/Working/SFX/coins/Single shot_1911 _45 ACP_2.wav"
+dest_files=["res://.godot/imported/Single shot_1911 _45 ACP_2.wav-b41321915761002227f1127e1ab40c4c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

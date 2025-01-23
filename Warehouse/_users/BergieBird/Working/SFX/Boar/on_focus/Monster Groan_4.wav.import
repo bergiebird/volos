@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d08ea8h54v1q6"
+path="res://.godot/imported/Monster Groan_4.wav-b8ef2a52e43d259c0dc32471f7613b66.sample"
+
+[deps]
+
+source_file="res://Warehouse/_users/BergieBird/Working/SFX/Boar/on_focus/Monster Groan_4.wav"
+dest_files=["res://.godot/imported/Monster Groan_4.wav-b8ef2a52e43d259c0dc32471f7613b66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

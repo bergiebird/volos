@@ -1,0 +1,163 @@
+[gd_scene load_steps=22 format=3 uid="uid://cjythrib2w6i0"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
+[ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/Audio/19-1-25-2.mp3" id="1_kqgyx"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/music_box.gd" id="2_3sxvc"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Components/LevelManagement/level_list_loader.gd" id="2_8nk4y"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Ui/ui_manager.gd" id="2_mx23f"]
+[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://Warehouse/_users/BergieBird/Working/resources/DemDungeonUI.tres" id="2_xlu5r"]
+[ext_resource type="PackedScene" uid="uid://cwqpwon2lm6ex" path="res://addons/_ToyBox/Menus/Scenes/LoadingScreen/level_loading_screen.tscn" id="3_gh8se"]
+[ext_resource type="Script" path="res://ProjectVolos/Utilities/level_list_state_manager.gd" id="3_n6qhj"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_0nk7l"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Resources/RichTextEffects/rich_text_hue_shift.gd" id="4_7n51k"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Lvl/lvl_manager.gd" id="4_awf6f"]
+[ext_resource type="PackedScene" uid="uid://ijv2bss1rkwr" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/game_won_menu.tscn" id="4_ynpit"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_c8no8"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Lvl/level_1.gd" id="5_nmsd3"]
+[ext_resource type="PackedScene" uid="uid://c1qmaqru34mcu" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/level_lost_menu.tscn" id="5_rvq5r"]
+[ext_resource type="PackedScene" uid="uid://djo2dwbk7ft8x" path="res://addons/_ToyBox/Menus/Scenes/Menus/MenuOverlays/LevelChange/level_won_menu.tscn" id="6_agint"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Lvl/player.gd" id="6_e3l73"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/non_manager.gd" id="6_lk047"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/editor_tools.gd" id="8_twdtt"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t2t0a"]
+script = ExtResource("4_7n51k")
+hue_shift_speed = 1.0
+hue_shift_amount = 1.0
+hue_gliph_offset = 1.0
+hue_gliph_random = 1.0
+hue_sat_offset = 0.2
+
+[sub_resource type="Resource" id="Resource_r52ha"]
+script = ExtResource("5_c8no8")
+duration = 1.0
+transition = 0
+ease = 2
+
+[node name="GAME" type="Node"]
+editor_description = "Our main game scene/node.
+
+Use this node's script as your first Singleton to pass information that must be global to the main game scene. "
+script = ExtResource("1_ad5kq")
+
+[node name="LevelLoadingScreen" parent="." instance=ExtResource("3_gh8se")]
+visible = false
+
+[node name="Ui" type="Control" parent="."]
+unique_name_in_owner = true
+editor_description = "Everything and anything UI could exist here.
+Keep the @icons green"
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_xlu5r")
+script = ExtResource("2_mx23f")
+
+[node name="BottomPanel" type="Panel" parent="Ui"]
+self_modulate = Color(1, 1, 1, 0.231373)
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Ui/BottomPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -43.0
+offset_bottom = 43.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.533333, 0.215686, 0.52549, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[hue][wave]Score: 0[/wave][/hue]"
+fit_content = true
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_t2t0a")]
+
+[node name="Lvl" type="Node2D" parent="."]
+unique_name_in_owner = true
+editor_description = "Keep all @icons node_2D
+
+All level information can be found here, while above this node will handle the camera, music, character's stats, etch. Everything below here is what is in the particular level. So enemys, layout, and such. "
+script = ExtResource("4_awf6f")
+
+[node name="PhantomCamera2D" type="Node2D" parent="Lvl"]
+unique_name_in_owner = true
+position = Vector2(321, 241)
+script = ExtResource("4_0nk7l")
+tween_resource = SubResource("Resource_r52ha")
+
+[node name="level_1" type="Node2D" parent="Lvl"]
+editor_description = "Dont Touch"
+script = ExtResource("5_nmsd3")
+
+[node name="Player" type="Node2D" parent="Lvl"]
+unique_name_in_owner = true
+script = ExtResource("6_e3l73")
+
+[node name="Non" type="Node" parent="."]
+unique_name_in_owner = true
+editor_description = "Everything that is relevant to the game or making of the game but doesn't cleanly fit in the lvl or ui folders"
+script = ExtResource("6_lk047")
+
+[node name="MusicBox" type="AudioStreamPlayer" parent="Non"]
+unique_name_in_owner = true
+editor_description = "This is where the Ptrack will sit. Lots of calls will come in and out of this track throughout the course of the game. Keep this nice and pretty."
+stream = ExtResource("1_kqgyx")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_3sxvc")
+
+[node name="EditorTools" type="Node" parent="Non"]
+unique_name_in_owner = true
+editor_description = "Add tools that will assist editing here. If there is a better location to place them by all means"
+script = ExtResource("8_twdtt")
+
+[node name="ViewportGuide" type="ColorRect" parent="Non/EditorTools"]
+editor_description = "An editor only guide so we know how large the camera must be.
+
+Keep Locked.
+transform.size = 400,304"
+visible = false
+offset_right = 400.0
+offset_bottom = 304.0
+color = Color(0.901961, 0.901961, 0.901961, 0.196078)
+metadata/_edit_lock_ = true
+
+[node name="LevelLoader" type="Node" parent="Non"]
+script = ExtResource("2_8nk4y")
+
+[node name="LevelListManager" type="Node" parent="Non/LevelLoader" node_paths=PackedStringArray("level_list_loader", "level_loading_screen")]
+script = ExtResource("3_n6qhj")
+main_menu_scene = "res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/main_menu_with_animations.tscn"
+ending_scene = "res://addons/_ToyBox/Menus/Scenes/Credits/end_credits.tscn"
+auto_load = null
+game_won_scene = ExtResource("4_ynpit")
+level_lost_scene = ExtResource("5_rvq5r")
+level_won_scene = ExtResource("6_agint")
+force_level = null
+level_list_loader = NodePath("..")
+level_loading_screen = NodePath("../../../LevelLoadingScreen")
+
+[connection signal="finished" from="Non/MusicBox" to="Non/MusicBox" method="_on_finished"]

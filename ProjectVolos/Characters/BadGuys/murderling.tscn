@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2ettgulcg0c"]
+
+[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/murderling.gd" id="1_87khk"]
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="2_hu5bv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
+size = Vector2(10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pslg"]
+atlas = ExtResource("2_hu5bv")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr3af"]
+atlas = ExtResource("2_hu5bv")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmp5p"]
+atlas = ExtResource("2_hu5bv")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8c3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pslg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr3af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmp5p")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}]
+
+[node name="MurderLing" type="Area2D"]
+editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_87khk")
+can_kill = true
+is_destroyable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_5xqqc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_a8c3r")
+animation = &"Haunted"
+autoplay = "Haunted"
+frame_progress = 0.452547
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)
+collision_mask = 5
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

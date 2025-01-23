@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwqpwon2lm6ex"]
 
 [ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/LoadingScreen/SCRIPTS/loading_screen.gd" id="2_n2mby"]
-[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://ProjectVolos/BergieBird/Working/resources/DemDungeonUI.tres" id="2_qsat7"]
+[ext_resource type="Theme" uid="uid://cubcobg6h116f" path="res://Warehouse/_users/BergieBird/Working/resources/DemDungeonUI.tres" id="2_qsat7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_re0f4"]
 

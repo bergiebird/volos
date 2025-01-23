@@ -83,7 +83,7 @@
 [ext_resource type="Texture2D" uid="uid://dlrmoofnbkwyb" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Examples/example_ui4.png" id="80_lf7y1"]
 [ext_resource type="Texture2D" uid="uid://c4ctk3dr4x73s" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Banners.png" id="81_l5axh"]
 [ext_resource type="Texture2D" uid="uid://cjxjexb47kxb5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Bars-Sliders-Scrollbars.png" id="82_olsss"]
-[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Cursors.png" id="83_f84dp"]
+[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://ProjectVolos/UI/Cursors/Cursors.png" id="83_f84dp"]
 [ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="84_gu1su"]
 [ext_resource type="Texture2D" uid="uid://dvfr3hwrvs7ou" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Icons.png" id="85_4fp5j"]
 [ext_resource type="Texture2D" uid="uid://cbvvleds2780v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/~Documented/UI/Inputs.png" id="86_ja5ew"]

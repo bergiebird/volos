@@ -1,23 +1,23 @@
 @tool
 extends Node
 class_name SceneLister
-## Helper class for listing all the scenes in a directory.
+## Helper class for listing all the scenes in a level_directory.
 
-## List of paths to scene files.
-## Prefilled in the editor by selecting a directory.
-@export var files : Array[String]
-## Prefill files with any scenes in the directory.
-@export_dir var directory : String :
+## Prefilled in the editor by selecting a level_directory.
+@export var scene_files : Array[String]
+
+## Prefill scene_files with any scenes in the level_directory.
+@export_dir var level_directory : String :
 	set(value):
-		directory = value
-		_refresh_files()
+		level_directory = value
+		_refresh_scene_files()
 
-func _refresh_files():
-	if not is_inside_tree() or directory.is_empty(): return
-	var dir_access = DirAccess.open(directory)
+func _refresh_scene_files():
+	if not is_inside_tree() or level_directory.is_empty(): return
+	var dir_access = DirAccess.open(level_directory)
 	if dir_access:
-		files.clear()
-		for file in dir_access.get_files():
+		scene_files.clear()
+		for file in dir_access.get_scene_files():
 			if not file.ends_with(".tscn"):
 				continue
-			files.append(directory + "/" + file)
+			scene_files.append(level_directory + "/" + file)

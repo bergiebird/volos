@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cb3iuhh5mcvt0"]
+
+[ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/resources/input_dictionary.gd" id="1_ns7rl"]
+
+[resource]
+script = ExtResource("1_ns7rl")
+dict = {
+"down_mage": Vector2(0, 1),
+"left_mage": Vector2(-1, 0),
+"right_mage": Vector2(1, 0),
+"up_mage": Vector2(0, -1)
+}

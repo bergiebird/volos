@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cc37235kj4384"]
 
 [ext_resource type="Script" path="res://addons/_ToyBox/Utility/Autoloads/AudioControl/SCRIPTS/ui_sound_controller.gd" id="1_2a3uh"]
-[ext_resource type="AudioStream" uid="uid://cdypk55ixi7ca" path="res://ProjectVolos/BergieBird/Working/SFX/UISFX/Buttons/Laser_18.wav" id="2_54fx5"]
-[ext_resource type="AudioStream" uid="uid://c2dmy2sctou6" path="res://ProjectVolos/BergieBird/Working/SFX/UISFX/Buttons/Shaker.wav" id="2_ideyj"]
-[ext_resource type="AudioStream" uid="uid://yb5owv3xowtf" path="res://ProjectVolos/BergieBird/Working/SFX/UISFX/Buttons/Spray.wav" id="4_y4kn6"]
-[ext_resource type="AudioStream" uid="uid://ldogvwnxus8x" path="res://ProjectVolos/BergieBird/Working/SFX/UISFX/Buttons/Spray_3.wav" id="5_126tb"]
-[ext_resource type="AudioStream" uid="uid://wft4ke62d210" path="res://ProjectVolos/BergieBird/Working/SFX/UISFX/Buttons/Bubble_artificial.wav" id="5_smegn"]
+[ext_resource type="AudioStream" uid="uid://cdypk55ixi7ca" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Laser_18.wav" id="2_54fx5"]
+[ext_resource type="AudioStream" uid="uid://c2dmy2sctou6" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Shaker.wav" id="2_ideyj"]
+[ext_resource type="AudioStream" uid="uid://yb5owv3xowtf" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Spray.wav" id="4_y4kn6"]
+[ext_resource type="AudioStream" uid="uid://ldogvwnxus8x" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Spray_3.wav" id="5_126tb"]
+[ext_resource type="AudioStream" uid="uid://wft4ke62d210" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Bubble_artificial.wav" id="5_smegn"]
 
 [node name="ProjectUISoundController" type="Node"]
 script = ExtResource("1_2a3uh")

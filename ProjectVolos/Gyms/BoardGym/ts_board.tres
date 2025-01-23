@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://gyexk5y026e7"]
+
+[ext_resource type="Texture2D" uid="uid://cemwjnwyv1k70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/grid.png" id="1_si03r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_le0aq"]
+texture = ExtResource("1_si03r")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_le0aq")

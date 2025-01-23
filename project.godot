@@ -18,7 +18,7 @@ config/icon="res://addons/_ToyBox/Icons/misc/V_icon.png"
 
 [audio]
 
-buses/default_bus_layout="res://ProjectVolos/Ryan/INBOX/AudioBus_ProjectVolo.tres"
+buses/default_bus_layout="res://Warehouse/_users/Ryan/INBOX/AudioBus_ProjectVolo.tres"
 
 [autoload]
 
@@ -33,8 +33,8 @@ TimeWizard="*res://addons/_ToyBox/Utility/Autoloads/AutoWizards/time_wizard.gd"
 SceneLoader="*res://addons/_ToyBox/Utility/Autoloads/SceneLoader/scene_loader.tscn"
 GitReminder="*res://addons/_ToyBox/Utility/Autoloads/Tools/git_reminder.gd"
 Taken="*res://addons/_ToyBox/Utility/Autoloads/BergieWhereDoYouWantThese/taken.gd"
-ScoreManager="*res://ProjectVolos/_MAIN/Utilities/Singletons/score_manager.gd"
-CursorManager="*res://ProjectVolos/_MAIN/Utilities/Singletons/cursor_manager.gd"
+ScoreManager="*res://ProjectVolos/Utilities/Singletons/score_manager.gd"
+CursorManager="*res://ProjectVolos/UI/Cursors/cursor_manager.gd"
 
 [display]
 
@@ -57,8 +57,7 @@ enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/
 [file_customization]
 
 folder_colors={
-"res://ProjectVolos/": "red",
-"res://ProjectVolos/_MAIN/": "yellow",
+"res://ProjectVolos/": "yellow",
 "res://Warehouse/": "gray",
 "res://Warehouse/_lost&found/": "gray",
 "res://addons/": "gray",
