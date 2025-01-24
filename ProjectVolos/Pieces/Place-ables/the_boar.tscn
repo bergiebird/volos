@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dxt21l016vwdl"]
+[gd_scene load_steps=17 format=3 uid="uid://dxt21l016vwdl"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/boar.gd" id="1_q5t1u"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_5pmdo"]
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="2_had1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
@@ -126,6 +127,8 @@ is_destroyable = null
 is_pushable = null
 tile_size = null
 
+[node name="Mask" parent="." instance=ExtResource("2_5pmdo")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_5xqqc")
@@ -133,8 +136,8 @@ shape = SubResource("RectangleShape2D_5xqqc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f1pbj")
-animation = &"charge"
-frame_progress = 0.818347
+animation = &"idle"
+autoplay = "idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

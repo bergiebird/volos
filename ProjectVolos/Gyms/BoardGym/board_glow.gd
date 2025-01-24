@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/_ToyBox/Icons/node_2D/icon_grid.png")
+@icon("res://addons/_ToyBox/Icons/node/icon_grid.png")
 extends Node2D # board_glow.gd
 @export_category("Board Glow")
 @export var will_glow :bool  = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj6xbcy8wvkjx"]
+[gd_scene load_steps=5 format=3 uid="uid://dj6xbcy8wvkjx"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_1vsb3"]
 [ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_r020a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
@@ -17,6 +18,9 @@ Color Rect
 Animation"
 script = ExtResource("1_1vsb3")
 is_destroyable = true
+
+[node name="Mask" parent="." instance=ExtResource("2_r020a")]
+will_this_blink = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

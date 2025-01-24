@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqwuxyw6vatho"]
+[gd_scene load_steps=11 format=3 uid="uid://dqwuxyw6vatho"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/wind_mage.gd" id="1_k760s"]
 [ext_resource type="PackedScene" uid="uid://1jvcisft16s0" path="res://ProjectVolos/Gyms/VfxGym/vfx_wind.tscn" id="2_1mxqr"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="3_030lx"]
 [ext_resource type="PackedScene" uid="uid://ch4mqddy7adf6" path="res://ProjectVolos/Pieces/Place-ables/twister.tscn" id="4_t4pkt"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="5_6nfpm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fq5tf"]
 size = Vector2(5, 5)
@@ -54,11 +55,7 @@ _on_send_left_area_exited(area :Area2D)->void:"
 script = ExtResource("1_k760s")
 is_destroyable = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 16.0
-offset_bottom = 16.0
-color = Color(0.0493495, 0.0609964, 0.125, 1)
+[node name="Mask" parent="." instance=ExtResource("5_6nfpm")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)

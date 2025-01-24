@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0jh7e8ljad7t"]
+[gd_scene load_steps=18 format=3 uid="uid://c0jh7e8ljad7t"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_0o0lh"]
 [ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="2_k2uuf"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_kibvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
@@ -124,6 +125,8 @@ Color Rect
 Animation"
 script = ExtResource("1_0o0lh")
 is_destroyable = true
+
+[node name="Mask" parent="." instance=ExtResource("2_kibvm")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

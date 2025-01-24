@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2ettgulcg0c"]
+[gd_scene load_steps=9 format=3 uid="uid://c2ettgulcg0c"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/murderling.gd" id="1_87khk"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="2_hu5bv"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_qyd3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
 size = Vector2(10, 10)
@@ -42,6 +43,8 @@ collision_mask = 5
 script = ExtResource("1_87khk")
 can_kill = true
 is_destroyable = true
+
+[node name="Mask" parent="." instance=ExtResource("2_qyd3i")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
