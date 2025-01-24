@@ -22,6 +22,6 @@ func _process(delta):
 		time = time + delta / 10
 		camera.zoom = Vector2(zoom_amount.curve.sample(time * animation_speed), zoom_amount.curve.sample(time * animation_speed))
 		var start_pos = Vector2(left_mask.position.x, right_mask.position.x)
-		if time > 0.2:
-			left_mask.position.x = lerp(start_pos.x, -split_amount, (time - 0.2) * animation_speed / 10)
-			right_mask.position.x = lerp(start_pos.y, split_amount + 800, (time - 0.2) * animation_speed / 10)
+		if time > 0.1:
+			left_mask.position.x = lerp(start_pos.x, -split_amount - 130, (time - 0.1) * animation_speed / 10)
+			right_mask.position.x = lerp(start_pos.y, split_amount + 800, (time - 0.1) * animation_speed / 10)

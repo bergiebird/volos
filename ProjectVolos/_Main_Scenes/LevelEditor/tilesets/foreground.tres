@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cucmg2u2xtxtp"]
 
-[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="1_3a4f4"]
+[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://Warehouse/Art/Tiles/PNGs/_magma-walls-light.png" id="1_3a4f4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huefq"]
 texture = ExtResource("1_3a4f4")

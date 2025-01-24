@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://c86y6wso3byef"]
 
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
-[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://Warehouse/_users/Ryan/WIP/tilesets/background.tres" id="2_di1iu"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/load_tiles.gd" id="4_07gdk"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/le_display_tile.gd" id="6_2tnbs"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/le_save_and_load.gd" id="6_n1y7t"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
+[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/background.tres" id="2_di1iu"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/load_tiles.gd" id="4_07gdk"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/le_display_tile.gd" id="6_2tnbs"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/le_save_and_load.gd" id="6_n1y7t"]
 [ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/_users/Vrood/UI_Cutup/green_plus.png" id="7_ouv3f"]
 [ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/_users/Vrood/UI_Cutup/red_x.png" id="8_cygwd"]
 
@@ -42,6 +42,7 @@ offset_top = -134.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("4_07gdk")
+tile_sets = null
 
 [node name="ScrollContainer" type="ScrollContainer" parent="UI/Panel"]
 layout_mode = 1

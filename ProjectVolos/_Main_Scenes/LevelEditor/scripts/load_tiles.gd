@@ -2,9 +2,9 @@ extends Panel
 
 
 @export var tile_sets: Array[TileSet]
-const texture_rect: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/select_tile.tscn")
-const tab: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/tilemap_tab.tscn")
-const tab_content: PackedScene = preload("res://Warehouse/_users/Ryan/WIP/tap_content.tscn")
+const texture_rect: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/select_tile.tscn")
+const tab: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/tilemap_tab.tscn")
+const tab_content: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn")
 var total_count: int = 0
 var string_array: Array[String] = ["n", "ne", "e", "se", "s", "sw", "w", "nw", "dark"]
 
