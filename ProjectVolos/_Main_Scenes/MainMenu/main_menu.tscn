@@ -1,0 +1,173 @@
+[gd_scene load_steps=6 format=3 uid="uid://bopb0iwb820qu"]
+
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/MainMenu/scripts/main_menu_controller.gd" id="1_0smrk"]
+[ext_resource type="Theme" uid="uid://dvmq4dlf8kbqa" path="res://addons/input-overlay/overlay-theme.theme" id="2_5jhvl"]
+[ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/SCRIPTS/config_version_label.gd" id="3_b6rn5"]
+
+[sub_resource type="Curve" id="Curve_3m70n"]
+min_value = 0.4
+_data = [Vector2(0, 0.4), 0.0, -0.517894, 0, 0, Vector2(1, 1), 0.30228, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_58ns8"]
+curve = SubResource("Curve_3m70n")
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(800, 600)
+zoom = Vector2(0.4, 0.4)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(800, 600)
+
+[node name="UI" type="Control" parent="." node_paths=PackedStringArray("left_mask", "right_mask", "camera")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1600.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5jhvl")
+script = ExtResource("1_0smrk")
+left_mask = NodePath("Split Buttons/Mask left")
+right_mask = NodePath("Split Buttons/Mask Right")
+camera = NodePath("../Camera2D")
+animation_speed = 3.0
+zoom_amount = SubResource("CurveTexture_58ns8")
+split_amount = 321.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -717.0
+offset_top = 152.0
+offset_right = 717.0
+offset_bottom = 349.0
+grow_horizontal = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 98
+text = "Kog in the Mage Machine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level Editor Button" type="Button" parent="UI"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 262.5
+offset_right = 160.0
+offset_bottom = 337.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 39
+text = "Level Editor"
+
+[node name="Split Buttons" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 1200.0
+mouse_filter = 2
+theme = ExtResource("2_5jhvl")
+
+[node name="Mask left" type="Control" parent="UI/Split Buttons"]
+clip_contents = true
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 1200.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask left"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -112.5
+offset_right = -30.0
+offset_bottom = 112.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 110
+
+[node name="Start Button" type="Button" parent="UI/Split Buttons/Mask left/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 39
+text = "Start"
+
+[node name="Options Button" type="Button" parent="UI/Split Buttons/Mask left/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 39
+text = "Options"
+
+[node name="Mask Right" type="Control" parent="UI/Split Buttons"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -800.0
+offset_bottom = 1200.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask Right"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -112.5
+offset_right = 350.0
+offset_bottom = 112.5
+grow_vertical = 2
+theme_override_constants/separation = 110
+
+[node name="Credits Button" type="Button" parent="UI/Split Buttons/Mask Right/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 39
+text = "Credits"
+
+[node name="Quit Button" type="Button" parent="UI/Split Buttons/Mask Right/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+
+[node name="ConfigVersionLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -499.0
+offset_top = -67.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_5jhvl")
+theme_override_font_sizes/font_size = 32
+text = "v0.0.0"
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("3_b6rn5")
+
+[connection signal="button_down" from="UI/Split Buttons/Mask Right/VBoxContainer/Credits Button" to="UI" method="split_buttons"]
