@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://2c0oie46ubok"]
+[gd_scene load_steps=19 format=4 uid="uid://2c0oie46ubok"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/gym.gd" id="1_twgo6"]
 [ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="2_t71rg"]
@@ -7,6 +7,16 @@
 [ext_resource type="TileSet" uid="uid://gyexk5y026e7" path="res://ProjectVolos/Gyms/BoardGym/ts_board.tres" id="5_gjy4o"]
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/BoardGym/placeable_area.gd" id="6_4nowo"]
 [ext_resource type="Script" path="res://camera_2d.gd" id="7_b7tov"]
+[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/Place-ables/the_boar.tscn" id="8_1wlqg"]
+[ext_resource type="PackedScene" uid="uid://dbbj7dtkdfn0d" path="res://ProjectVolos/Pieces/Place-ables/runner.tscn" id="9_trxxu"]
+[ext_resource type="PackedScene" uid="uid://ch4mqddy7adf6" path="res://ProjectVolos/Pieces/Place-ables/twister.tscn" id="10_pqx4b"]
+[ext_resource type="PackedScene" uid="uid://c2ettgulcg0c" path="res://ProjectVolos/Pieces/Enemies/murderling.tscn" id="11_8kca5"]
+[ext_resource type="PackedScene" uid="uid://c0jh7e8ljad7t" path="res://ProjectVolos/Pieces/Enemies/weakling.tscn" id="12_4nd0r"]
+[ext_resource type="PackedScene" uid="uid://dv2wrj3eqyhjb" path="res://ProjectVolos/Pieces/Containers/breakable_object.tscn" id="13_b5cu4"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Pieces/Containers/jar.tscn" id="14_g2x5o"]
+[ext_resource type="PackedScene" uid="uid://bvk4ld7rmownw" path="res://ProjectVolos/Pieces/Containers/spider_mage.tscn" id="15_mxw5m"]
+[ext_resource type="PackedScene" uid="uid://cfnro6o12vytp" path="res://ProjectVolos/Pieces/Containers/spin_mage.tscn" id="16_o4pdg"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Pieces/Containers/wind_mage.tscn" id="17_dcyyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4moe"]
 size = Vector2(192, 128)
@@ -25,7 +35,7 @@ editor_description = "Controls to just make a tilemap glow, will be extended and
 func _process(delta:float)->void: #if glow:glow
 
 func glow_tilemap(delta:float)->void: #handles the visual oscillation of the glow"
-modulate = Color(0.613154, 0.304212, 0.361542, 0.8873)
+modulate = Color(0.511388, 0.361661, 0.389445, 0.636168)
 script = ExtResource("4_jyuvl")
 
 [node name="Playable" type="TileMapLayer" parent="BoardGym/TheBoard"]
@@ -68,3 +78,33 @@ position = Vector2(321, 240)
 rotation = -0.0592957
 zoom = Vector2(2, 2)
 script = ExtResource("7_b7tov")
+
+[node name="TheBoar" parent="." instance=ExtResource("8_1wlqg")]
+position = Vector2(336, 271)
+
+[node name="Runner" parent="." instance=ExtResource("9_trxxu")]
+position = Vector2(368, 271)
+
+[node name="Twister" parent="." instance=ExtResource("10_pqx4b")]
+position = Vector2(399, 271)
+
+[node name="MurderLing" parent="." instance=ExtResource("11_8kca5")]
+position = Vector2(288, 271)
+
+[node name="Weakling" parent="." instance=ExtResource("12_4nd0r")]
+position = Vector2(304, 271)
+
+[node name="BreakableObject" parent="." instance=ExtResource("13_b5cu4")]
+position = Vector2(318, 256)
+
+[node name="Jar" parent="." instance=ExtResource("14_g2x5o")]
+position = Vector2(336, 255)
+
+[node name="SpiderMage" parent="." instance=ExtResource("15_mxw5m")]
+position = Vector2(272, 239)
+
+[node name="SpinMage" parent="." instance=ExtResource("16_o4pdg")]
+position = Vector2(224, 255)
+
+[node name="WindMage" parent="." instance=ExtResource("17_dcyyg")]
+position = Vector2(240, 287)

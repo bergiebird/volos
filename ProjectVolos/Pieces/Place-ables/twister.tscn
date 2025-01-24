@@ -23,11 +23,10 @@ editor_description = "
 	in either direction
 	"
 modulate = Color(1, 1, 1, 0.121569)
-position = Vector2(8, 8)
 script = ExtResource("1_l0q36")
 
 [node name="SendNorth" type="Area2D" parent="."]
-position = Vector2(-8, -17)
+position = Vector2(0, -9)
 monitorable = false
 script = ExtResource("1_esocl")
 metadata/_edit_group_ = true
@@ -49,7 +48,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SendEast" type="Area2D" parent="."]
-position = Vector2(0, -9)
+position = Vector2(8, -1)
 monitorable = false
 script = ExtResource("1_esocl")
 direction = Vector2(1, 0)
@@ -72,7 +71,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SendSouth" type="Area2D" parent="."]
-position = Vector2(-8, -1)
+position = Vector2(0, 7)
 monitorable = false
 script = ExtResource("1_esocl")
 direction = Vector2(0, 1)
@@ -95,7 +94,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SendWest" type="Area2D" parent="."]
-position = Vector2(-16, -9)
+position = Vector2(-8, 1)
 monitorable = false
 script = ExtResource("1_esocl")
 direction = Vector2(-1, 0)

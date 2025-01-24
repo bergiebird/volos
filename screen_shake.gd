@@ -1,4 +1,4 @@
-extends Camera2D
+extends Camera2D #screen_shake.gd
 
 var rng = RandomNumberGenerator.new()
 var random_strength = 30.0

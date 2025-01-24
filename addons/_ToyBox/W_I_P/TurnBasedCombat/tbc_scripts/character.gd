@@ -1,4 +1,4 @@
-extends Node2D
+tends Node2D
 class_name Character #character.gd
 
 @export var cur_hp:int = 25
