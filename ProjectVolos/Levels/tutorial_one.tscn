@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://buab8x0ypsien"]
+[gd_scene load_steps=11 format=4 uid="uid://buab8x0ypsien"]
 
 [ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/Place-ables/the_boar.tscn" id="1_q4il8"]
 [ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Pieces/Containers/wind_mage.tscn" id="2_aatvo"]
@@ -9,14 +9,6 @@
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/BoardGym/board_glow.gd" id="6_uqmb6"]
 [ext_resource type="TileSet" uid="uid://gyexk5y026e7" path="res://ProjectVolos/Gyms/BoardGym/ts_board.tres" id="7_s0i81"]
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/BoardGym/placeable_area.gd" id="8_jsfj1"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="11_cca30"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="12_4e6jg"]
-
-[sub_resource type="Resource" id="Resource_wq8a1"]
-script = ExtResource("12_4e6jg")
-duration = 1.0
-transition = 0
-ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_417wj"]
 size = Vector2(192, 128)
@@ -41,17 +33,7 @@ is_destroyable = false
 
 [node name="Focus" parent="GoodGuys" node_paths=PackedStringArray("camera") instance=ExtResource("3_hfwxl")]
 position = Vector2(304, 224)
-camera = NodePath("CameraMan/Camera2D")
-
-[node name="CameraMan" type="Node2D" parent="GoodGuys/Focus" node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(304, 224)
-script = ExtResource("11_cca30")
-follow_mode = 2
-follow_target = NodePath("..")
-tween_resource = SubResource("Resource_wq8a1")
-
-[node name="Camera2D" type="Camera2D" parent="GoodGuys/Focus/CameraMan"]
+camera = NodePath("")
 
 [node name="BadGuys" type="Node2D" parent="."]
 
@@ -77,6 +59,7 @@ editor_description = "Controls to just make a tilemap glow, will be extended and
 func _process(delta:float)->void: #if glow:glow
 
 func glow_tilemap(delta:float)->void: #handles the visual oscillation of the glow"
+modulate = Color(0.641254, 0.28835, 0.353837, 0.956642)
 script = ExtResource("6_uqmb6")
 
 [node name="Placeable" type="TileMapLayer" parent="BoardGym/TheBoard"]
