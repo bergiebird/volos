@@ -24,7 +24,6 @@ buses/default_bus_layout="res://Warehouse/_users/Ryan/INBOX/AudioBus_ProjectVolo
 
 AppConfig="*res://addons/_ToyBox/Utility/Autoloads/AppConfig/app_config.gd"
 SignalTown="*res://addons/_ToyBox/Utility/Autoloads/BergieWhereDoYouWantThese/SignalTown.gd"
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 ProjectUISoundController="*res://addons/_ToyBox/Utility/Autoloads/AudioControl/project_ui_sound_controller.tscn"
 ProjectMusicController="*res://addons/_ToyBox/Utility/Autoloads/AudioControl/project_music_controller.tscn"

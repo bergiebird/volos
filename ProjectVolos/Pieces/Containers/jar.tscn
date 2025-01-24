@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj6xbcy8wvkjx"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_1vsb3"]
-[ext_resource type="SpriteFrames" uid="uid://7u0rrk5nf1y4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/sf_items.tres" id="2_1svjv"]
+[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
@@ -25,6 +25,6 @@ shape = SubResource("RectangleShape2D_aj61q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
-sprite_frames = ExtResource("2_1svjv")
-animation = &"ALL"
-frame = 70
+sprite_frames = ExtResource("2_8gmov")
+animation = &"Open_Jb"
+autoplay = "Open_Jb"
