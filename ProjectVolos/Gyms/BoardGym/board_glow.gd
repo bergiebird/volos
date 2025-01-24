@@ -1,3 +1,4 @@
+@tool
 @icon("res://addons/_ToyBox/Icons/node_2D/icon_grid.png")
 extends Node2D # board_glow.gd
 @export_category("Board Glow")
@@ -13,7 +14,8 @@ extends Node2D # board_glow.gd
 var time :float=0
 
 func _process(delta :float)->void:
-	if will_glow: glow_tilemap(delta)
+	if will_glow:
+		glow_tilemap(delta)
 
 func glow_tilemap(delta :float)->void:
 	time+=delta # This needs to exist outside of if statements or else it will get choppy
