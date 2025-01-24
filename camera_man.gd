@@ -1,4 +1,4 @@
-extends Camera2D
+extends Camera2D #camera_man.gd
 
 const MAX_ZOOM_WIDTH := 40
 const MAX_ZOOM_HEIGHT := 30
@@ -17,7 +17,7 @@ func _ready():
 	current_zoom = initial_zoom
 	target_zoom = initial_zoom
 
-func _process(delta):
+func _process(_delta):
 	current_zoom = current_zoom.lerp(target_zoom, ZOOM_SMOOTHING)
 	zoom = current_zoom
 

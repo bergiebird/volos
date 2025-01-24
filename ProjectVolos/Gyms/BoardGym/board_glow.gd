@@ -14,6 +14,7 @@ extends Node2D # board_glow.gd
 var time :float=0
 
 func _process(delta :float)->void:
+
 	if will_glow:
 		glow_tilemap(delta)
 
@@ -21,5 +22,5 @@ func glow_tilemap(delta :float)->void:
 	time+=delta # This needs to exist outside of if statements or else it will get choppy
 	if will_change_color:
 		modulate = starting_color.lerp(glow_to_color, (sin(time*color_change_speed)+1) / 2)
-	if will_change_transparency:
-		modulate.a = lerp(transparency_minimum, transparency_maximum ,(sin(time*transparency_change_speed)+1) / 2)
+	if will_change_transparency and %Playable:
+		%Playable.modulate.a = lerp(transparency_minimum, transparency_maximum ,(sin(time*transparency_change_speed)+1) / 2)

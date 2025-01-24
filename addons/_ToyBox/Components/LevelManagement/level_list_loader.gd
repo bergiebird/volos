@@ -34,6 +34,7 @@ func load_level(level_id :int)->void:
 	if level_file == null:
 		levels_finished.emit()
 		return
+	return #for now
 	SceneLoader.load_scene(level_file, true)
 	level_load_started.emit()
 	await SceneLoader.scene_loaded
