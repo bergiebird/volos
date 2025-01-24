@@ -9,9 +9,9 @@ var parterns: Array[TileMapPattern]
 func _ready():
 	get_parent().get_parent().get_child(1).updated_file.connect(_file_change)
 	var x = 0
-	while x < 39:
+	while x < 16:
 		var y = 0
-		while y < 29:
+		while y < 12:
 			playable_area.append(Vector2i(x, y))
 			y += 1
 		x += 1

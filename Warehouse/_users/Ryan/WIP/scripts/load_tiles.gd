@@ -54,6 +54,7 @@ func _ready():
 			while atlas_count > 0:
 				atlas_count -= 1
 				var coord = atlas.get_tile_id(atlas_count)
+				atlas.get_tile_data(coord, 0)
 				if !atlas.has_tile(coord): print(atlas.has_tile(coord))
 				var instance = texture_rect.instantiate()
 				instance.texture_normal = get_cell_texture(coord, atlas)

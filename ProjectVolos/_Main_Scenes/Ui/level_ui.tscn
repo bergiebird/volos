@@ -1,0 +1,248 @@
+[gd_scene load_steps=5 format=3 uid="uid://durhx8tl68ovf"]
+
+[ext_resource type="Theme" uid="uid://dvmq4dlf8kbqa" path="res://addons/input-overlay/overlay-theme.theme" id="1_o0f8i"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_j2cbp"]
+size = Vector2(16, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_36tg1"]
+size = Vector2(16, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pvoga"]
+size = Vector2(16, 16)
+
+[node name="LevelUi" type="CanvasLayer"]
+
+[node name="UI Layout 1" type="Panel" parent="."]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+theme = ExtResource("1_o0f8i")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI Layout 1"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = 256.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TextureButton" type="TextureButton" parent="UI Layout 1/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 1/HBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.023
+anchor_right = 1.0
+anchor_bottom = 1.023
+offset_left = -32.0
+offset_top = -21.012
+offset_right = 5.0
+offset_bottom = 1.988
+theme = ExtResource("1_o0f8i")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 3
+
+[node name="TextureButton2" type="TextureButton" parent="UI Layout 1/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 1/HBoxContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.023
+anchor_right = 1.0
+anchor_bottom = 1.023
+offset_left = -32.0
+offset_top = -21.012
+offset_right = 5.0
+offset_bottom = 1.988
+theme = ExtResource("1_o0f8i")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 3
+
+[node name="TextureButton3" type="TextureButton" parent="UI Layout 1/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 1/HBoxContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.023
+anchor_right = 1.0
+anchor_bottom = 1.023
+offset_left = -32.0
+offset_top = -21.012
+offset_right = 5.0
+offset_bottom = 1.988
+theme = ExtResource("1_o0f8i")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 3
+
+[node name="TextureButton4" type="TextureButton" parent="UI Layout 1/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 1/HBoxContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.023
+anchor_right = 1.0
+anchor_bottom = 1.023
+offset_left = -32.0
+offset_top = -21.012
+offset_right = 5.0
+offset_bottom = 1.988
+theme = ExtResource("1_o0f8i")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI Layout 1"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -296.0
+offset_right = -10.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_o0f8i")
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI Layout 1/HBoxContainer2"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_36tg1")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 1/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_o0f8i")
+text = "0"
+
+[node name="UI Layout 2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI Layout 2"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -63.0
+offset_right = 167.0
+offset_bottom = -11.0
+grow_vertical = 0
+theme = ExtResource("1_o0f8i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI Layout 2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -327.0
+offset_right = 32.0
+offset_bottom = -10.0
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="UI Layout 2/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="UI Layout 2/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="UI Layout 2/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="UI Layout 2/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_j2cbp")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI Layout 2/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -22.0
+offset_right = 63.0
+offset_bottom = 23.0
+grow_vertical = 2
+theme = ExtResource("1_o0f8i")
+text = "0"
+
+[node name="TextureButton" type="TextureButton" parent="UI Layout 2/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -20.0
+offset_right = -10.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = SubResource("PlaceholderTexture2D_pvoga")
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="UI Layout 2/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -20.0
+offset_right = -62.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = SubResource("PlaceholderTexture2D_pvoga")
+stretch_mode = 5

@@ -48,7 +48,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if camera.zoom.x * 1.1 < 43:
 			camera.zoom = camera.zoom * 1.1
 	elif action == "zoom_out":
-		if camera.zoom.x * 0.9 > 0.6:
+		if camera.zoom.x * 0.9 > 1:
 			camera.zoom = camera.zoom * 0.9
 	
 
@@ -64,7 +64,7 @@ func remove_tile():
 
 func ui_check():
 	var curent_pos = get_parent().get_child(0).position
-	return get_viewport().gui_get_hovered_control() == null and curent_pos.y <= 464 and curent_pos.y >= 0 and curent_pos.x <= 624 and curent_pos.x >= 0
+	return get_viewport().gui_get_hovered_control() == null and curent_pos.y <= 12 * 16 and curent_pos.y >= 0 and curent_pos.x <= 16 * 16 and curent_pos.x >= 0
 
 func pan(new_pos: Vector2):
 	var move_vector = new_pos - start_pos

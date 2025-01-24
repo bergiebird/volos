@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c86y6wso3byef"]
 
 [ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
-[ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="2_sr4kn"]
+[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://Warehouse/_users/Ryan/WIP/tilesets/background.tres" id="2_di1iu"]
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
 [ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/load_tiles.gd" id="4_07gdk"]
 [ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/le_display_tile.gd" id="6_2tnbs"]
@@ -23,7 +23,10 @@ script = ExtResource("1_pxjwo")
 info_node = NodePath("../UI/TextureRect")
 
 [node name="Backgound" type="TileMapLayer" parent="level"]
-tile_set = ExtResource("2_sr4kn")
+tile_set = ExtResource("2_di1iu")
+
+[node name="Intactables" type="TileMapLayer" parent="level"]
+tile_set = ExtResource("2_di1iu")
 
 [node name="Foregound" type="TileMapLayer" parent="level"]
 tile_set = ExtResource("3_x3aoa")
@@ -209,8 +212,8 @@ text = "UNNAMED.lvl"
 horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(312, 350)
-zoom = Vector2(0.6, 0.6)
+position = Vector2(128, 156)
+zoom = Vector2(1.331, 1.331)
 
 [connection signal="button_down" from="UI/SaveAndLoad/VBoxContainer/Save" to="UI/SaveAndLoad" method="_save_menu"]
 [connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/SaveAsMenu" to="UI/SaveAndLoad" method="_save_as_menu"]
