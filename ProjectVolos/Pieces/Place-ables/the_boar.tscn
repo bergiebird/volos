@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dxt21l016vwdl"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/boar.gd" id="1_q5t1u"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/boar.gd" id="1_q5t1u"]
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="2_had1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]

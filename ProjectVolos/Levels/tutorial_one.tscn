@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://buab8x0ypsien"]
 
-[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Characters/Movers/the_boar.tscn" id="1_q4il8"]
-[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Characters/Standers/wind_mage.tscn" id="2_aatvo"]
+[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/Place-ables/the_boar.tscn" id="1_q4il8"]
+[ext_resource type="PackedScene" uid="uid://dqwuxyw6vatho" path="res://ProjectVolos/Pieces/Containers/wind_mage.tscn" id="2_aatvo"]
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/gym.gd" id="3_cadbo"]
 [ext_resource type="PackedScene" uid="uid://stq1h4uy1y0" path="res://ProjectVolos/UI/FocusHighlightTool/focus.tscn" id="3_hfwxl"]
 [ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="4_2glqw"]

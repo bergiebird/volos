@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://050gh6ntga2f"]
+[gd_scene load_steps=3 format=3 uid="uid://b2cnhki1swbu3"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/Objects/EffectTiles/Scripts/move_cardinal.gd" id="1_58wlp"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/~Effects/clockwise_turn.gd" id="1_y2dab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
 size = Vector2(8, 8)
 
-[node name="SendNorth" type="Area2D"]
-position = Vector2(-80, -48)
-script = ExtResource("1_58wlp")
+[node name="ClockwiseTurn" type="Area2D"]
+script = ExtResource("1_y2dab")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
@@ -21,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 8
-text = "N"
+text = "CW"
 horizontal_alignment = 1
 vertical_alignment = 1
 

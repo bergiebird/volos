@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ch4mqddy7adf6"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/Objects/EffectTiles/Scripts/move_cardinal.gd" id="1_esocl"]
-[ext_resource type="Script" path="res://ProjectVolos/Characters/Objects/EffectTiles/Scripts/twister.gd" id="1_l0q36"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/~Effects/move_cardinal.gd" id="1_esocl"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/~Effects/twister.gd" id="1_l0q36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8tmj"]
 size = Vector2(8, 8)

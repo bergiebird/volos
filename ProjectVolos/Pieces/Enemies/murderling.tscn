@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c2ettgulcg0c"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/murderling.gd" id="1_87khk"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/murderling.gd" id="1_87khk"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="2_hu5bv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]

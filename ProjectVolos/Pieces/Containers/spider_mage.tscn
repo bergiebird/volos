@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://bvk4ld7rmownw"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/spider_mage.gd" id="1_jgjg6"]
-[ext_resource type="Script" path="res://ProjectVolos/Characters/Objects/EffectTiles/Scripts/turn_around.gd" id="2_svupi"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/spider_mage.gd" id="1_jgjg6"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/~Effects/turn_around.gd" id="2_svupi"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="3_pjw5s"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="4_5lgvq"]
 

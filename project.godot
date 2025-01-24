@@ -59,6 +59,7 @@ enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/
 
 folder_colors={
 "res://ProjectVolos/": "yellow",
+"res://ProjectVolos/Pieces/_Scripts/": "blue",
 "res://Warehouse/": "gray",
 "res://Warehouse/_lost&found/": "gray",
 "res://addons/": "gray",

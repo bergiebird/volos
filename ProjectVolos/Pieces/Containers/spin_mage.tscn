@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=3 uid="uid://cfnro6o12vytp"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/spin_mage.gd" id="1_62350"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/spin_mage.gd" id="1_62350"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="3_a5oxp"]
 [ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="4_ivlqb"]
-[ext_resource type="Script" path="res://ProjectVolos/Characters/Objects/EffectTiles/Scripts/clockwise_turn.gd" id="4_jeu0d"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/~Effects/clockwise_turn.gd" id="4_jeu0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn13k"]
 size = Vector2(10, 10)

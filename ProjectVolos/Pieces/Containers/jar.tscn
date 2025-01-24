@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj6xbcy8wvkjx"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/BaseClasses/container_tile_entity.gd" id="1_1vsb3"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_1vsb3"]
 [ext_resource type="SpriteFrames" uid="uid://7u0rrk5nf1y4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/sf_items.tres" id="2_1svjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]

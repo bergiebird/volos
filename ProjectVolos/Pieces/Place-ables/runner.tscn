@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dbbj7dtkdfn0d"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Characters/_SCRIPTS/boar.gd" id="1_f2h77"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/boar.gd" id="1_f2h77"]
 [ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="2_0b0jo"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="3_mo13o"]
 
