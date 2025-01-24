@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=4 uid="uid://cjythrib2w6i0"]
+[gd_scene load_steps=82 format=4 uid="uid://cjythrib2w6i0"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
 [ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/Audio/19-1-25-2.mp3" id="1_kqgyx"]
@@ -18,7 +18,6 @@
 [ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="9_4awcb"]
 [ext_resource type="Script" path="res://ProjectVolos/UI/FocusHighlightTool/focus.gd" id="9_ud415"]
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="10_2nu86"]
-[ext_resource type="PackedScene" uid="uid://ddnm5n15ftsbw" path="res://ProjectVolos/UI/FocusHighlightTool/camera_man.tscn" id="10_t7hfn"]
 [ext_resource type="Texture2D" uid="uid://cvptw4x567b2i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/extras.png" id="10_xltts"]
 [ext_resource type="Texture2D" uid="uid://dc0fptxc58lh4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/flames.png" id="11_gfmyq"]
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/BoardGym/board_glow.gd" id="11_v61vp"]
@@ -2979,6 +2978,7 @@ editor_description = "Controls to just make a tilemap glow, will be extended and
 func _process(delta:float)->void: #if glow:glow
 
 func glow_tilemap(delta:float)->void: #handles the visual oscillation of the glow"
+modulate = Color(0.466968, 0.386737, 0.401625, 0.526549)
 script = ExtResource("11_v61vp")
 
 [node name="Placeable" type="TileMapLayer" parent="Lvl/LevelContainer/Tutorial_One/BoardGym/TheBoard"]
@@ -3010,15 +3010,12 @@ unique_name_in_owner = true
 script = ExtResource("6_e3l73")
 metadata/_edit_group_ = true
 
-[node name="FocusTile" type="Area2D" parent="Lvl/Player" node_paths=PackedStringArray("camera")]
+[node name="FocusTile" type="Area2D" parent="Lvl/Player"]
 script = ExtResource("9_ud415")
-camera = NodePath("../CameraMan/Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl/Player/FocusTile"]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_n1gnp")
-
-[node name="CameraMan" parent="Lvl/Player" instance=ExtResource("10_t7hfn")]
 
 [node name="Non" type="Node" parent="."]
 unique_name_in_owner = true
@@ -3062,5 +3059,3 @@ optional_ending_scene = "res://addons/_ToyBox/Menus/Scenes/Credits/credits.tscn"
 optional_level_loading_screen = NodePath("../../../LevelLoadingScreen")
 
 [connection signal="finished" from="Non/MusicBox" to="Non/MusicBox" method="_on_finished"]
-
-[editable path="Lvl/Player/CameraMan"]

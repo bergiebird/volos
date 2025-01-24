@@ -68,8 +68,7 @@ folder_colors={
 "res://addons/_ToyBox/Menus/": "blue",
 "res://addons/dialogue_manager/": "gray",
 "res://addons/input-overlay/": "gray",
-"res://addons/limboai/": "gray",
-"res://addons/phantom_camera/": "gray"
+"res://addons/limboai/": "gray"
 }
 
 [global_group]
