@@ -35,7 +35,7 @@ editor_description = "Controls to just make a tilemap glow, will be extended and
 func _process(delta:float)->void: #if glow:glow
 
 func glow_tilemap(delta:float)->void: #handles the visual oscillation of the glow"
-modulate = Color(0.511388, 0.361661, 0.389445, 0.636168)
+modulate = Color(0.525179, 0.353876, 0.385664, 0.6702)
 script = ExtResource("4_jyuvl")
 
 [node name="Playable" type="TileMapLayer" parent="BoardGym/TheBoard"]
