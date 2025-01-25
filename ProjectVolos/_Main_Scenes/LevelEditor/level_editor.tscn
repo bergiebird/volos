@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c86y6wso3byef"]
+[gd_scene load_steps=10 format=3 uid="uid://c86y6wso3byef"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
 [ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/background.tres" id="2_di1iu"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
+[ext_resource type="TileSet" uid="uid://vx7cdumnr8n8" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/intractibles.tres" id="3_c4i05"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/load_tiles.gd" id="4_07gdk"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/le_display_tile.gd" id="6_2tnbs"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/le_save_and_load.gd" id="6_n1y7t"]
@@ -26,7 +27,7 @@ info_node = NodePath("../UI/TextureRect")
 tile_set = ExtResource("2_di1iu")
 
 [node name="Intactables" type="TileMapLayer" parent="level"]
-tile_set = ExtResource("2_di1iu")
+tile_set = ExtResource("3_c4i05")
 
 [node name="Foregound" type="TileMapLayer" parent="level"]
 tile_set = ExtResource("3_x3aoa")

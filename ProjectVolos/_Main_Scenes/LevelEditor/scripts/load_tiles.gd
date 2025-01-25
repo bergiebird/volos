@@ -15,6 +15,8 @@ func _ready():
 
 	var tile_set_index = 0
 	for tileset in tile_sets:
+		if tileset == null:
+			continue
 		var starting_count = tileset.get_source_count()
 		while starting_count > 0:
 			starting_count -= 1
