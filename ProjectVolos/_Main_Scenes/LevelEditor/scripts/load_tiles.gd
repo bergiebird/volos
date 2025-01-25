@@ -5,8 +5,10 @@ extends Panel
 const texture_rect: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/select_tile.tscn")
 const tab: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/tilemap_tab.tscn")
 const tab_content: PackedScene = preload("res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn")
-var total_count: int = 0
+var total_count: int = 1
 var string_array: Array[String] = ["n", "ne", "e", "se", "s", "sw", "w", "nw", "dark"]
+var terrain_array: Array[int]
+var tab_array: Array[String]
 
 func _ready():
 	for child in get_parent().get_parent().get_child(1).get_children():
@@ -15,8 +17,7 @@ func _ready():
 
 	var tile_set_index = 0
 	for tileset in tile_sets:
-		if tileset == null:
-			continue
+		terrain_array.clear()
 		var starting_count = tileset.get_source_count()
 		while starting_count > 0:
 			starting_count -= 1
@@ -40,32 +41,49 @@ func _ready():
 				total_count -= 1
 				continue
 			'''
+			var us_tab = total_count
+			if tab_array.has(" ".join(name_of_file.split("-"))):
+				us_tab = tab_array.find(" ".join(name_of_file.split("-"))) + 2
+				total_count -= 1
+			else:
+				var tab_instance = tab.instantiate() as ContentTab
+				tab_array.append(" ".join(name_of_file.split("-")))
+				tab_instance.text = " ".join(name_of_file.split("-"))
+				tab_instance.index = us_tab
+				self.get_child(0).get_child(0).add_child(tab_instance)
 
-			var tab_instance = tab.instantiate() as ContentTab
-			tab_instance.text = " ".join(name_of_file.split("-"))
-			tab_instance.index = total_count
-			self.get_child(0).get_child(0).add_child(tab_instance)
+				var tab_content_instance = tab_content.instantiate()
+				tab_content_instance.position += Vector2(320, 65)
+				if us_tab > 1:
+					tab_content_instance.visible = false
+				self.add_child(tab_content_instance)
 
-			var tab_content_instance = tab_content.instantiate()
-			tab_content_instance.position += Vector2(320, 65)
-			if total_count > 1:
-				tab_content_instance.visible = false
-			self.add_child(tab_content_instance)
-
-			print(total_count)
+			print(us_tab)
 			while atlas_count > 0:
 				atlas_count -= 1
 				var coord = atlas.get_tile_id(atlas_count)
-				atlas.get_tile_data(coord, 0)
-				if !atlas.has_tile(coord): print(atlas.has_tile(coord))
-				var instance = texture_rect.instantiate()
-				instance.texture_normal = get_cell_texture(coord, atlas)
-				instance.index = starting_count
-				instance.layer_index = tile_set_index
-				instance.tap_content_index = total_count
-				instance.coords = coord
-				instance.tab = " ".join(name_of_file.split("-"))
-				self.get_child(total_count).get_child(0).add_child(instance)
+				var terrain_id = atlas.get_tile_data(coord, 0).terrain
+				if terrain_array.has(terrain_id) == false and atlas.get_tile_data(coord, 0).terrain != -1:
+					terrain_array.append(terrain_id)
+					var instance = texture_rect.instantiate()
+					instance.texture_normal = get_cell_texture(coord, atlas)
+					instance.index = starting_count
+					instance.layer_index = tile_set_index
+					instance.tap_content_index = us_tab
+					instance.terrain_index = terrain_id
+					instance.coords = coord
+					instance.tab = " ".join(name_of_file.split("-"))
+					self.get_child(1).get_child(0).add_child(instance)
+				elif atlas.get_tile_data(coord, 0).terrain == -1:
+					if !atlas.has_tile(coord): print(atlas.has_tile(coord))
+					var instance = texture_rect.instantiate()
+					instance.texture_normal = get_cell_texture(coord, atlas)
+					instance.index = starting_count
+					instance.layer_index = tile_set_index
+					instance.tap_content_index = us_tab
+					instance.coords = coord
+					instance.tab = " ".join(name_of_file.split("-"))
+					self.get_child(us_tab).get_child(0).add_child(instance)
 		tile_set_index += 1
 	for child in self.get_child(0).get_child(0).get_children():
 		child.total = total_count
