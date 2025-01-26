@@ -7,6 +7,7 @@ var mouse_right_down: bool = false
 var mouse_middle_down: bool = false
 var start_pos: Vector2 = Vector2.ZERO
 var cam_start_pos: Vector2 = Vector2.ZERO
+var terrains_dict: Dictionary
 signal updated_file
 
 func _input(event):
@@ -53,14 +54,33 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 
 func place_tile():
-	get_child(info_node.layer_index) \
-		.set_cell((get_parent().get_child(0).position / 16) \
-			as Vector2i, info_node.index, info_node.coords)
+	if info_node.terrain_index != -1:
+		remove_tile()
+		if terrains_dict.has(info_node.terrain_index) == false:
+			terrains_dict[info_node.terrain_index] = [] as Array[Vector2i]
+		var terrain_cells = terrains_dict[info_node.terrain_index]
+		if terrain_cells.has((get_parent().get_child(0).position / 16) as Vector2i) == false:
+			terrain_cells.append((get_parent().get_child(0).position / 16) as Vector2i)
+			terrains_dict[info_node.terrain_index] = terrain_cells
+			get_child(info_node.layer_index).set_cells_terrain_connect(terrain_cells, 0, info_node.terrain_index, false)
+	else:
+		get_child(info_node.layer_index).set_cell((get_parent().get_child(0).position / 16) as Vector2i, info_node.index, info_node.coords)
 
 func remove_tile():
-	get_child(info_node.layer_index) \
-		.erase_cell((get_parent().get_child(0).position / 16) \
-			as Vector2i)
+	var data: TileData = get_child(info_node.layer_index).get_cell_tile_data((get_parent().get_child(0).position / 16) as Vector2i)
+	if data and data.terrain != -1:
+		if terrains_dict.has(data.terrain) == false:
+			return
+		var terrain_cells = terrains_dict[data.terrain]
+		if terrain_cells.has((get_parent().get_child(0).position / 16) as Vector2i):
+			get_child(info_node.layer_index).set_cells_terrain_connect(terrain_cells, 0, -1, false)
+			terrain_cells.erase((get_parent().get_child(0).position / 16) as Vector2i)
+			get_child(info_node.layer_index).set_cells_terrain_connect(terrain_cells, 0, data.terrain, false)
+			terrains_dict[data.terrain] = terrain_cells
+	elif data:
+		get_child(info_node.layer_index) \
+				.erase_cell((get_parent().get_child(0).position / 16) \
+					as Vector2i)
 
 func ui_check():
 	var curent_pos = get_parent().get_child(0).position
@@ -68,7 +88,11 @@ func ui_check():
 
 func pan(new_pos: Vector2):
 	var move_vector = new_pos - start_pos
-	get_parent().get_child(3).position = cam_start_pos - move_vector * 1 / get_parent().get_child(3).zoom.x
+	var new_cam_pos = cam_start_pos - move_vector * 1 / get_parent().get_child(3).zoom.x
+	if (new_cam_pos).x >= -280 and (new_cam_pos).x <= 512:
+		get_parent().get_child(3).position.x = new_cam_pos.x
+	if (new_cam_pos).y >= -180 and (new_cam_pos).y <= 388:
+		get_parent().get_child(3).position.y = new_cam_pos.y
 	
 func detect_input_event(event: InputEvent) -> StringName:
 	for action in InputMap.get_actions():

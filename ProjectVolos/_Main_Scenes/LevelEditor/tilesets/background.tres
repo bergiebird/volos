@@ -115,7 +115,4 @@ texture = ExtResource("3_2i8rh")
 4:17/0 = 0
 
 [resource]
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "ice"
-terrain_set_0/terrain_0/color = Color(0.549336, 0.816753, 0.801353, 1)
 sources/0 = SubResource("TileSetAtlasSource_bnk2h")

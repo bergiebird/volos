@@ -1,13 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://c86y6wso3byef"]
+[gd_scene load_steps=14 format=3 uid="uid://c86y6wso3byef"]
 
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
-[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://Warehouse/_users/Ryan/WIP/tilesets/background.tres" id="2_di1iu"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="3_x3aoa"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/load_tiles.gd" id="4_07gdk"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/le_display_tile.gd" id="6_2tnbs"]
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/scripts/le_save_and_load.gd" id="6_n1y7t"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
+[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/background.tres" id="2_di1iu"]
+[ext_resource type="TileSet" uid="uid://vx7cdumnr8n8" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/intractibles.tres" id="3_c4i05"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/load_tiles.gd" id="4_07gdk"]
+[ext_resource type="TileSet" uid="uid://cucmg2u2xtxtp" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/foreground.tres" id="4_tnc41"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/le_display_tile.gd" id="6_2tnbs"]
+[ext_resource type="PackedScene" uid="uid://c8ruov1ab3lrx" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilemap_tab.tscn" id="6_30y2k"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/le_save_and_load.gd" id="6_n1y7t"]
+[ext_resource type="PackedScene" uid="uid://dgsikia4n5k0u" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn" id="6_ql2xx"]
 [ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/_users/Vrood/UI_Cutup/green_plus.png" id="7_ouv3f"]
 [ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/_users/Vrood/UI_Cutup/red_x.png" id="8_cygwd"]
+[ext_resource type="Theme" uid="uid://dvmq4dlf8kbqa" path="res://addons/input-overlay/overlay-theme.theme" id="10_6f0hf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3k1l"]
+bg_color = Color(0.0618169, 0.0329235, 0.0520804, 1)
 
 [node name="LevelEditor" type="Node2D"]
 
@@ -26,10 +33,10 @@ info_node = NodePath("../UI/TextureRect")
 tile_set = ExtResource("2_di1iu")
 
 [node name="Intactables" type="TileMapLayer" parent="level"]
-tile_set = ExtResource("2_di1iu")
+tile_set = ExtResource("3_c4i05")
 
 [node name="Foregound" type="TileMapLayer" parent="level"]
-tile_set = ExtResource("3_x3aoa")
+tile_set = ExtResource("4_tnc41")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -47,12 +54,27 @@ script = ExtResource("4_07gdk")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = -28.0
+offset_top = -24.0
 grow_horizontal = 2
 
 [node name="Tabs" type="HBoxContainer" parent="UI/Panel/ScrollContainer"]
 layout_mode = 2
 alignment = 1
+
+[node name="TilemapTab" parent="UI/Panel/ScrollContainer/Tabs" instance=ExtResource("6_30y2k")]
+layout_mode = 2
+text = "terrains"
+index = 1
+
+[node name="TapContent" parent="UI/Panel" instance=ExtResource("6_ql2xx")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 630.0
+offset_bottom = 130.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
 modulate = Color(1, 1, 1, 0.631373)
@@ -214,6 +236,14 @@ horizontal_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(128, 156)
 zoom = Vector2(1.331, 1.331)
+
+[node name="Control" type="Panel" parent="."]
+z_index = -1000
+offset_right = 272.0
+offset_bottom = 207.0
+mouse_filter = 2
+theme = ExtResource("10_6f0hf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3k1l")
 
 [connection signal="button_down" from="UI/SaveAndLoad/VBoxContainer/Save" to="UI/SaveAndLoad" method="_save_menu"]
 [connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/SaveAsMenu" to="UI/SaveAndLoad" method="_save_as_menu"]

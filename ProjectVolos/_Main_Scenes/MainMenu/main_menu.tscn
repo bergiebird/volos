@@ -1,33 +1,86 @@
-[gd_scene load_steps=6 format=3 uid="uid://bopb0iwb820qu"]
+[gd_scene load_steps=14 format=3 uid="uid://bopb0iwb820qu"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/MainMenu/scripts/main_menu_controller.gd" id="1_0smrk"]
+[ext_resource type="Texture2D" uid="uid://b1pkmmsxknmna" path="res://Warehouse/_users/Ryan/WIP/Volos_loading-Sheet.png" id="1_2edbo"]
 [ext_resource type="Theme" uid="uid://dvmq4dlf8kbqa" path="res://addons/input-overlay/overlay-theme.theme" id="2_5jhvl"]
 [ext_resource type="Script" path="res://addons/_ToyBox/Menus/Scenes/Menus/MainMenu/SCRIPTS/config_version_label.gd" id="3_b6rn5"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_43wxc"]
+atlas = ExtResource("1_2edbo")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afi6a"]
+atlas = ExtResource("1_2edbo")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytirk"]
+atlas = ExtResource("1_2edbo")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi1pq"]
+atlas = ExtResource("1_2edbo")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6ddb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43wxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afi6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytirk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi1pq")
+}],
+"loop": true,
+"name": &"Loading",
+"speed": 2.0
+}]
+
 [sub_resource type="Curve" id="Curve_3m70n"]
 min_value = 0.4
-_data = [Vector2(0, 0.4), 0.0, -0.517894, 0, 0, Vector2(1, 1), 0.30228, 0.0, 0, 0]
+_data = [Vector2(0, 0.4), 0.0, -0.566517, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_58ns8"]
 curve = SubResource("Curve_3m70n")
 
+[sub_resource type="Gradient" id="Gradient_qducu"]
+colors = PackedColorArray(0.170325, 0.140967, 0.197007, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_01mao"]
+gradient = SubResource("Gradient_qducu")
+width = 1
+
 [node name="MainMenu" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(800, 600)
+position = Vector2(320, 266)
 zoom = Vector2(0.4, 0.4)
 
-[node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(800, 600)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -6
+position = Vector2(586, 467)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_r6ddb")
+animation = &"Loading"
+frame_progress = 0.921101
+speed_scale = 1.25
 
-[node name="UI" type="Control" parent="." node_paths=PackedStringArray("left_mask", "right_mask", "camera")]
+[node name="UI" type="Control" parent="." node_paths=PackedStringArray("left_mask", "right_mask", "camera", "loading_animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1600.0
-offset_bottom = 1200.0
+offset_left = -480.0
+offset_top = -335.0
+offset_right = 1120.0
+offset_bottom = 865.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_5jhvl")
@@ -35,9 +88,10 @@ script = ExtResource("1_0smrk")
 left_mask = NodePath("Split Buttons/Mask left")
 right_mask = NodePath("Split Buttons/Mask Right")
 camera = NodePath("../Camera2D")
-animation_speed = 3.0
+animation_speed = 5.0
 zoom_amount = SubResource("CurveTexture_58ns8")
 split_amount = 321.0
+loading_animation = NodePath("../AnimatedSprite2D")
 
 [node name="Label" type="Label" parent="UI"]
 layout_mode = 1
@@ -83,8 +137,10 @@ theme = ExtResource("2_5jhvl")
 [node name="Mask left" type="Control" parent="UI/Split Buttons"]
 clip_contents = true
 anchors_preset = 0
+offset_left = -130.0
+offset_top = -101.0
 offset_right = 800.0
-offset_bottom = 1200.0
+offset_bottom = 1301.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask left"]
 layout_mode = 1
@@ -115,6 +171,18 @@ theme = ExtResource("2_5jhvl")
 theme_override_font_sizes/font_size = 39
 text = "Options"
 
+[node name="TextureRect" type="TextureRect" parent="UI/Split Buttons/Mask left"]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 914.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_01mao")
+
 [node name="Mask Right" type="Control" parent="UI/Split Buttons"]
 clip_contents = true
 layout_mode = 1
@@ -122,7 +190,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -800.0
-offset_bottom = 1200.0
+offset_top = -101.0
+offset_right = 114.0
+offset_bottom = 1301.0
 grow_horizontal = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask Right"]
@@ -150,6 +220,18 @@ layout_mode = 2
 theme = ExtResource("2_5jhvl")
 theme_override_font_sizes/font_size = 39
 text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="UI/Split Buttons/Mask Right"]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -930.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_01mao")
 
 [node name="ConfigVersionLabel" type="Label" parent="UI"]
 layout_mode = 1

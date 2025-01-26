@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5sog8j2gu5bb"]
 
-[ext_resource type="Script" path="res://Warehouse/_users/Ryan/WIP/tile_button.gd" id="1_d6165"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tile_button.gd" id="1_d6165"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_geidk"]
 size = Vector2(16, 16)
