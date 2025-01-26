@@ -1,0 +1,226 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpw0726joo3mm"]
+
+[ext_resource type="Texture2D" uid="uid://b1pkmmsxknmna" path="res://Warehouse/_users/Ryan/WIP/Volos_loading-Sheet.png" id="1_42aku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43wxc"]
+atlas = ExtResource("1_42aku")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afi6a"]
+atlas = ExtResource("1_42aku")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytirk"]
+atlas = ExtResource("1_42aku")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi1pq"]
+atlas = ExtResource("1_42aku")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6ddb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43wxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afi6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytirk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi1pq")
+}],
+"loop": true,
+"name": &"Loading",
+"speed": 2.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_qducu"]
+colors = PackedColorArray(0.170325, 0.140967, 0.197007, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_01mao"]
+gradient = SubResource("Gradient_qducu")
+width = 1
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 266)
+zoom = Vector2(0.4, 0.4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -6
+position = Vector2(586, 467)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_r6ddb")
+animation = &"Loading"
+frame_progress = 0.921101
+speed_scale = 1.25
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -335.0
+offset_right = 1120.0
+offset_bottom = 865.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -717.0
+offset_top = 152.0
+offset_right = 717.0
+offset_bottom = 349.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 98
+text = "Kog in the Mage Machine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level Editor Button" type="Button" parent="UI"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 262.5
+offset_right = 160.0
+offset_bottom = 337.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "Level Editor"
+
+[node name="Split Buttons" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 1200.0
+mouse_filter = 2
+
+[node name="Mask left" type="Control" parent="UI/Split Buttons"]
+clip_contents = true
+anchors_preset = 0
+offset_left = -130.0
+offset_top = -101.0
+offset_right = 800.0
+offset_bottom = 1301.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask left"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -112.5
+offset_right = -30.0
+offset_bottom = 112.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 110
+
+[node name="Start Button" type="Button" parent="UI/Split Buttons/Mask left/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Start"
+
+[node name="Options Button" type="Button" parent="UI/Split Buttons/Mask left/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Options"
+
+[node name="TextureRect" type="TextureRect" parent="UI/Split Buttons/Mask left"]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 914.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_01mao")
+
+[node name="Mask Right" type="Control" parent="UI/Split Buttons"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -800.0
+offset_top = -101.0
+offset_right = 114.0
+offset_bottom = 1301.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Split Buttons/Mask Right"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -112.5
+offset_right = 350.0
+offset_bottom = 112.5
+grow_vertical = 2
+theme_override_constants/separation = 110
+
+[node name="Credits Button" type="Button" parent="UI/Split Buttons/Mask Right/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Credits"
+
+[node name="Quit Button" type="Button" parent="UI/Split Buttons/Mask Right/VBoxContainer"]
+custom_minimum_size = Vector2(320, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="UI/Split Buttons/Mask Right"]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -930.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_01mao")
+
+[node name="ConfigVersionLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -499.0
+offset_top = -67.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "v0.0.0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="button_down" from="UI/Split Buttons/Mask Right/VBoxContainer/Credits Button" to="UI" method="split_buttons"]
