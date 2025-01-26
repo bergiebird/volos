@@ -1,4 +1,4 @@
-@icon("res://addons/_ToyBox/Icons/node/icon_money_bag.png")
+@icon("res://ProjectVolos/Pieces/Containers/Jar.png")
 class_name ContainerTileEntity
 extends TileBasedEntity # breakable_tile_entity.gd
 @export var cargo :PackedScene

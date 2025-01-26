@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
 
-[node name="SmallJar" type="Area2D"]
+[node name="Jar" type="Area2D"]
 editor_description = "*LU 1/20/25
 =====================================
 null script
