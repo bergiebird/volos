@@ -146,7 +146,7 @@ position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f1pbj")
 animation = &"charge"
 autoplay = "idle"
-frame_progress = 0.711576
+frame_progress = 0.44132
 
 [node name="WallDetectors" type="Node2D" parent="."]
 

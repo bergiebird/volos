@@ -10,6 +10,7 @@ var charging: bool = false
 @onready var west_collider: Area2D = %WestCollider
 @onready var east_collider: Area2D = %EastCollider
 @onready var vfx_wall: GPUParticles2D = $VfxWall
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float):
 	if can_do(): kontrols(delta)
@@ -51,6 +52,7 @@ func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
 	var target_position: Vector2 = position + new_direction * CELL_SIZE * step_amount
 	var cooldown = 0.1
 	direction = new_direction
+	animation_change()
 	if cant_move_there():
 		if charging:
 			charging = false
@@ -87,3 +89,10 @@ func cant_move_there():
 
 func snap_to_tile():
 	position = round(position / 16) * 16
+
+func animation_change():
+	match direction:
+		Vector2.UP: pass
+		Vector2.RIGHT: animated_sprite_2d.scale = Vector2(1, 1)
+		Vector2.DOWN: pass
+		Vector2.LEFT: animated_sprite_2d.scale = Vector2(-1, 1)
