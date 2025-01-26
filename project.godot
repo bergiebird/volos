@@ -13,7 +13,7 @@ config_version=5
 config/name="volos"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.06, 0.06, 0.06, 1)
-config/icon="res://addons/_ToyBox/Icons/misc/V_icon.png"
+config/icon="res://Warehouse/Icons/misc/V_icon.png"
 
 [audio]
 
@@ -48,11 +48,9 @@ enabled=PackedStringArray()
 
 folder_colors={
 "res://ProjectVolos/": "yellow",
-"res://ProjectVolos/Pieces/_Scripts/": "blue",
 "res://Warehouse/": "gray",
 "res://Warehouse/_lost&found/": "gray",
-"res://addons/": "gray",
-"res://addons/_ToyBox/": "red"
+"res://addons/": "gray"
 }
 
 [global_group]

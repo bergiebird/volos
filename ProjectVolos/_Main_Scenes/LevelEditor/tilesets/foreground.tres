@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cucmg2u2xtxtp"]
 
-[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="1_3a4f4"]
-[ext_resource type="Texture2D" uid="uid://dbpwqk4wd2kqd" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-dark.png" id="2_u0ycl"]
-[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="3_dnoj3"]
+[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="1_3a4f4"]
+[ext_resource type="Texture2D" uid="uid://dbpwqk4wd2kqd" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-dark.png" id="2_u0ycl"]
+[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="3_dnoj3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huefq"]
 texture = ExtResource("1_3a4f4")

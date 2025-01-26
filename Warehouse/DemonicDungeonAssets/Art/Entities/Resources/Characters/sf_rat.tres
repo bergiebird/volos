@@ -1,0 +1,110 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://clvouuic1cr6k"]
+
+[ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="1_xh4ur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbyfq"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aftga"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slhy4"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s5sr"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(192, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8idlk"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(208, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu0hx"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(224, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkxhx"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pky3a"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3xrh"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyv7t"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cup5k"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j7jk"]
+atlas = ExtResource("1_xh4ur")
+region = Rect2(160, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbyfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aftga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slhy4")
+}],
+"loop": true,
+"name": &"Teal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8s5sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8idlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu0hx")
+}],
+"loop": true,
+"name": &"Teal_Spike",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkxhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pky3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3xrh")
+}],
+"loop": true,
+"name": &"White",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyv7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cup5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j7jk")
+}],
+"loop": true,
+"name": &"White_Spike",
+"speed": 5.0
+}]

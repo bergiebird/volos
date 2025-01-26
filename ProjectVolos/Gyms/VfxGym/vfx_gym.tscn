@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=4 uid="uid://0g4dbbw0d10u"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/gym.gd" id="1_dw7t8"]
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="2_uw565"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="2_uw565"]
 [ext_resource type="PackedScene" uid="uid://4cmawmgivy8l" path="res://ProjectVolos/Gyms/VfxGym/vfx_impact.tscn" id="3_w4j70"]
-[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="4_yrpww"]
+[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="4_yrpww"]
 [ext_resource type="Texture2D" uid="uid://npy0b5bhpjfe" path="res://Warehouse/_users/BergieBird/Working/resources/paw.png" id="5_i3dj4"]
 
 [node name="VfxGym" type="Node2D"]

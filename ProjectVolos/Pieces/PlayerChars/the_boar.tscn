@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dxt21l016vwdl"]
 
-[ext_resource type="Script" path="res://ProjectVolos/Pieces/Place-ables/kog.gd" id="1_vch8y"]
-[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_5pmdo"]
-[ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="2_had1g"]
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/PlayerChars/kog.gd" id="1_vch8y"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_5pmdo"]
+[ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="2_had1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
 size = Vector2(10, 10)

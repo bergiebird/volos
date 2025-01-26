@@ -1,4 +1,5 @@
-@icon("res://ProjectVolos/Pieces/PlayerChars/loot_goblin.png") extends Area2D
+@icon("res://ProjectVolos/Pieces/PlayerChars/loot_goblin.png")
+extends Area2D
 
 const CELL_SIZE :int = 16
 @export var charge_distance :int = 6

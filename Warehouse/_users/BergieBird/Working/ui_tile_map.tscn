@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://f37o41ji60j"]
 
-[ext_resource type="Texture2D" uid="uid://btv8neb32114l" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/UI/PNGs/Frames.png" id="1_5nd3t"]
+[ext_resource type="Texture2D" uid="uid://btv8neb32114l" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Frames.png" id="1_5nd3t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_odnj0"]
 texture = ExtResource("1_5nd3t")

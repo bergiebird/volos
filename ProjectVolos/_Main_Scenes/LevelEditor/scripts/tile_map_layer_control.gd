@@ -1,4 +1,4 @@
-@icon("res://addons/_ToyBox/Icons/node_2D/icon_area_meteo.png")
+@icon("res://Warehouse/Icons/node_2D/icon_area_meteo.png")
 extends Node2D
 
 @export var info_node: TextureRect
@@ -51,7 +51,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif action == "zoom_out":
 		if camera.zoom.x * 0.9 > 1:
 			camera.zoom = camera.zoom * 0.9
-	
+
 
 func place_tile():
 	if info_node.terrain_index != -1:
@@ -93,7 +93,7 @@ func pan(new_pos: Vector2):
 		get_parent().get_child(3).position.x = new_cam_pos.x
 	if (new_cam_pos).y >= -180 and (new_cam_pos).y <= 388:
 		get_parent().get_child(3).position.y = new_cam_pos.y
-	
+
 func detect_input_event(event: InputEvent) -> StringName:
 	for action in InputMap.get_actions():
 		if event.is_action_pressed(action):

@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=62 format=3 uid="uid://duoy5d63yo4a8"]
 
-[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="1_dyta1"]
+[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="1_dyta1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_maxuw"]
 atlas = ExtResource("1_dyta1")

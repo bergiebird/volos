@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=4 uid="uid://cgn6nc10mr4ju"]
 
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_8klsa"]
-[ext_resource type="SpriteFrames" uid="uid://bwkda24hfnye4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_dragon.tres" id="2_j60qe"]
-[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="3_mwb0c"]
-[ext_resource type="SpriteFrames" uid="uid://cmlj65ggds6yk" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_grim.tres" id="4_g0y3r"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_8klsa"]
+[ext_resource type="SpriteFrames" uid="uid://bwkda24hfnye4" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_dragon.tres" id="2_j60qe"]
+[ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="3_mwb0c"]
+[ext_resource type="SpriteFrames" uid="uid://cmlj65ggds6yk" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_grim.tres" id="4_g0y3r"]
 
 [node name="BrainstormScene" type="Node2D"]
 

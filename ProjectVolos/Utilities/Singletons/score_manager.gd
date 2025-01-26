@@ -6,7 +6,7 @@ extends Node #score_manager.gd
 func _ready()->void:
 	Signalton.who_killed_what.connect(parse_the_killing)
 
-func parse_the_killing(culprit :TileBasedEntity, victim :TileBasedCharacter)->void:
+func parse_the_killing(culprit, victim)->void:
 	Signalton.sfx_break.emit(victim)
 	printt("parse_the_killing",culprit,victim)
 	score +=1

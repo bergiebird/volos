@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://j5g7g1btmco6"]
-
-[ext_resource type="Script" path="res://addons/_ToyBox/Utility/Autoloads/SceneLoader/SCRIPTS/scene_loader.gd" id="1_0slt7"]
-
-[node name="SceneLoader" type="Node"]
-script = ExtResource("1_0slt7")
-loading_screen_path = "res://addons/_ToyBox/Menus/Scenes/LoadingScreen/loading_screen.tscn"

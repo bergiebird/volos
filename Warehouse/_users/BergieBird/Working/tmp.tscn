@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bg6uakxm30p83"]
 
-[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_st3t3"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="1_st3t3"]
 
 [node name="Node2D" type="Node2D"]
 

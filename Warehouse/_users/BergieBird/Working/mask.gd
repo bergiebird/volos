@@ -1,4 +1,4 @@
-@icon("res://addons/_ToyBox/Icons/control/icon_card.png")
+@icon("res://Warehouse/Icons/control/icon_card.png")
 extends Node2D
 
 @onready var mask = $ColorRect

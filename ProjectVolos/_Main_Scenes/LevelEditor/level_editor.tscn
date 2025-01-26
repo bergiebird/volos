@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c8ruov1ab3lrx" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilemap_tab.tscn" id="6_30y2k"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/le_save_and_load.gd" id="6_n1y7t"]
 [ext_resource type="PackedScene" uid="uid://dgsikia4n5k0u" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn" id="6_ql2xx"]
-[ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/_users/Vrood/UI_Cutup/green_plus.png" id="7_ouv3f"]
-[ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/_users/Vrood/UI_Cutup/red_x.png" id="8_cygwd"]
-[ext_resource type="Texture2D" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/UI/PNGs/Direction_buttons-Sheet.png" id="9_3p5t5"]
+[ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/DemonicDungeonAssets/UI_Cutup/green_plus.png" id="7_ouv3f"]
+[ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/DemonicDungeonAssets/UI_Cutup/red_x.png" id="8_cygwd"]
+[ext_resource type="Texture2D" uid="uid://bhxkwffnanyno" path="res://ProjectVolos/_Main_Scenes/LevelEditor/Direction_buttons-Sheet.png" id="9_3p5t5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfs7d"]
 atlas = ExtResource("9_3p5t5")

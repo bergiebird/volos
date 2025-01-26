@@ -1,0 +1,85 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://cvna7f83t27rg"]
+
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="1_nu1u3"]
+[ext_resource type="Texture2D" uid="uid://cb0cbdwao56xw" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_haunt.png" id="2_73vmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kknc5"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjl1l"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u7gn"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_044yp"]
+atlas = ExtResource("2_73vmo")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8w0d"]
+atlas = ExtResource("2_73vmo")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2o1h"]
+atlas = ExtResource("2_73vmo")
+region = Rect2(160, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugm5h"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(64, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hje3y"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(80, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcdar"]
+atlas = ExtResource("1_nu1u3")
+region = Rect2(96, 96, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kknc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjl1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u7gn")
+}],
+"loop": true,
+"name": &"Copper",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_044yp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8w0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2o1h")
+}],
+"loop": true,
+"name": &"Haunted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugm5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hje3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcdar")
+}],
+"loop": true,
+"name": &"Teal",
+"speed": 5.0
+}]

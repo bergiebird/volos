@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://gyexk5y026e7"]
 
-[ext_resource type="Texture2D" uid="uid://cemwjnwyv1k70" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/grid.png" id="1_si03r"]
-[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="2_f2ih1"]
+[ext_resource type="Texture2D" uid="uid://cemwjnwyv1k70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/grid.png" id="1_si03r"]
+[ext_resource type="Texture2D" uid="uid://cnffvvwlael5j" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/liquids.png" id="2_f2ih1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_le0aq"]
 texture = ExtResource("1_si03r")

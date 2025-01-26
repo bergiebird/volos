@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bwkda24hfnye4"]
+
+[ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="1_l0r40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5am6u"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_undwq"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(80, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irp4t"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(96, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dt26"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn5eu"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbyoi"]
+atlas = ExtResource("1_l0r40")
+region = Rect2(32, 80, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5am6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_undwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irp4t")
+}],
+"loop": true,
+"name": &"Pink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dt26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn5eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbyoi")
+}],
+"loop": true,
+"name": &"Red",
+"speed": 5.0
+}]

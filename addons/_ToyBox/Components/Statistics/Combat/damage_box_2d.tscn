@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0tqyvjvpcd1"]
-
-[ext_resource type="Script" path="res://addons/_ToyBox/Components/Statistics/Combat/Scripts/damage_box_2d.gd" id="1_t8j7h"]
-
-[node name="AttackBox2D" type="Area2D"]
-collision_layer = 0
-collision_mask = 256
-script = ExtResource("1_t8j7h")
-damage = null

@@ -2,9 +2,9 @@ extends Node #Signalton.gd
 
 
 @warning_ignore("unused_signal")
-signal who_killed_what(responsible: TileBasedEntity, target: TileBasedCharacter)
+signal who_killed_what(responsible, target)
 @warning_ignore("unused_signal")
-signal sfx_break(target :TileBasedCharacter)
+signal sfx_break(target)
 @warning_ignore("unused_signal")
 signal add_to_score(by_how_much: int)
 #signal change_animated_direction(direction, who)
