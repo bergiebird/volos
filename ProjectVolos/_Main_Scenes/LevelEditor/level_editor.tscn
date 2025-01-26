@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c86y6wso3byef"]
+[gd_scene load_steps=32 format=3 uid="uid://c86y6wso3byef"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
 [ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/background.tres" id="2_di1iu"]
@@ -11,6 +11,79 @@
 [ext_resource type="PackedScene" uid="uid://dgsikia4n5k0u" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn" id="6_ql2xx"]
 [ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/_users/Vrood/UI_Cutup/green_plus.png" id="7_ouv3f"]
 [ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/_users/Vrood/UI_Cutup/red_x.png" id="8_cygwd"]
+[ext_resource type="Texture2D" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/UI/PNGs/Direction_buttons-Sheet.png" id="9_3p5t5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfs7d"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(0, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0pfq"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyt6s"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(9, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpfc4"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(9, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c536"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(18, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edplm"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(18, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evaan"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(27, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd2xv"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(27, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fywnr"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(36, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rbwe"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(36, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmj51"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(45, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgege"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(45, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cgi5"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(54, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efomy"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(54, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrylk"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(63, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ryj"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(63, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxfj7"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(72, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iopbd"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(72, 0, 8, 8)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3k1l"]
 bg_color = Color(0.0618169, 0.0329235, 0.0520804, 1)
@@ -62,14 +135,16 @@ alignment = 1
 
 [node name="TilemapTab" parent="UI/Panel/ScrollContainer/Tabs" instance=ExtResource("6_30y2k")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 11
 text = "terrains"
 index = 1
 
 [node name="TapContent" parent="UI/Panel" instance=ExtResource("6_ql2xx")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
+layout_mode = 1
+anchor_left = 0.0109375
+anchor_top = 0.0298507
+anchor_right = 0.0109375
+anchor_bottom = 0.0298507
 offset_right = 630.0
 offset_bottom = 130.0
 grow_horizontal = 1
@@ -84,6 +159,151 @@ offset_left = -64.0
 offset_bottom = 64.0
 grow_horizontal = 0
 script = ExtResource("6_2tnbs")
+
+[node name="lighting" type="Panel" parent="UI/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = 12.0
+offset_right = -5.0
+offset_bottom = 66.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="NButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+texture_normal = SubResource("AtlasTexture_vfs7d")
+texture_pressed = SubResource("AtlasTexture_s0pfq")
+stretch_mode = 0
+
+[node name="NEButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_gyt6s")
+texture_pressed = SubResource("AtlasTexture_fpfc4")
+stretch_mode = 0
+
+[node name="EButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_8c536")
+texture_pressed = SubResource("AtlasTexture_edplm")
+stretch_mode = 0
+
+[node name="SEButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_evaan")
+texture_pressed = SubResource("AtlasTexture_dd2xv")
+stretch_mode = 0
+
+[node name="SButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_fywnr")
+texture_pressed = SubResource("AtlasTexture_6rbwe")
+stretch_mode = 0
+
+[node name="SWButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_right = 16.0
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_vmj51")
+texture_pressed = SubResource("AtlasTexture_wgege")
+stretch_mode = 0
+
+[node name="WButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_1cgi5")
+texture_pressed = SubResource("AtlasTexture_efomy")
+stretch_mode = 0
+
+[node name="NWButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 16.0
+texture_normal = SubResource("AtlasTexture_rrylk")
+texture_pressed = SubResource("AtlasTexture_g5ryj")
+stretch_mode = 0
+
+[node name="OffButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_yxfj7")
+texture_pressed = SubResource("AtlasTexture_iopbd")
+stretch_mode = 0
 
 [node name="SaveAndLoad" type="Control" parent="UI"]
 layout_mode = 3
@@ -111,24 +331,24 @@ offset_bottom = 0.239998
 
 [node name="Save" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "Save"
 
 [node name="SaveAsMenu" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "Save As
 "
 
 [node name="LoadMenu" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "Load
 "
 
 [node name="Upload" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "Upload"
 
 [node name="Control" type="Control" parent="UI/SaveAndLoad"]
@@ -158,6 +378,7 @@ offset_left = 5.0
 offset_top = 1.0
 offset_right = 64.0
 offset_bottom = 24.0
+theme_override_font_sizes/font_size = 11
 text = "Save As"
 
 [node name="LineEdit" type="LineEdit" parent="UI/SaveAndLoad/Control/Panel"]
@@ -170,7 +391,7 @@ offset_top = -29.0
 offset_right = 182.0
 offset_bottom = -7.0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 11
 placeholder_text = "Unnamed.lvl"
 max_length = 21
 
@@ -229,6 +450,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
 text = "UNNAMED.lvl"
 horizontal_alignment = 1
 
