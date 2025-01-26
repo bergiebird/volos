@@ -7,6 +7,7 @@ extends TileBasedEntity # breakable_tile_entity.gd
 func _exit_tree()->void:
 	if cargo:
 		drop_loot()
+
 func drop_loot()->void:
 		var loot :Node = cargo.instantiate()
 		loot.global_position = global_position
