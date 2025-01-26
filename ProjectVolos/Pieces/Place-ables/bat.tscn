@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbbj7dtkdfn0d"]
+[gd_scene load_steps=13 format=3 uid="uid://bbluj3uspdbdk"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/boar.gd" id="1_f2h77"]
 [ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="2_0b0jo"]
@@ -63,17 +63,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Runner" type="Area2D"]
+[node name="Bat" type="Area2D"]
 editor_description = "Like Our Bull, he can Move. But he can't break anything"
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_f2h77")
-can_be_selected = true
-is_destroyable = true
 
 [node name="Mask" parent="." instance=ExtResource("2_ytaag")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_5xqqc")
 
@@ -85,10 +84,5 @@ animation = &"Frozen"
 autoplay = "Frozen"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(8, 8)
-target_position = Vector2(0, 16)
-collision_mask = 5
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -32,7 +32,7 @@ func move_once(new_direction :Vector2)->void:
 	var target_position :Vector2 = position + new_direction * CELL_SIZE
 	var cooldown :float = 0.1
 	direction = new_direction
-	if cant_move_there(target_position):
+	if cant_move_there():
 		print('north')
 		return
 	is_already_moving = true
@@ -40,7 +40,7 @@ func move_once(new_direction :Vector2)->void:
 	await get_tree().create_timer(cooldown).timeout
 	is_already_moving = false
 
-func cant_move_there(target_position :Vector2):
+func cant_move_there():
 	match direction:
 		Vector2.UP:
 			return north_collider.has_overlapping_bodies()

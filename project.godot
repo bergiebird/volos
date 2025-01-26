@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="volos"
-run/main_scene="res://addons/_ToyBox/Menus/Scenes/Opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.06, 0.06, 0.06, 1)
 config/icon="res://addons/_ToyBox/Icons/misc/V_icon.png"
@@ -53,8 +52,7 @@ folder_colors={
 "res://Warehouse/": "gray",
 "res://Warehouse/_lost&found/": "gray",
 "res://addons/": "gray",
-"res://addons/_ToyBox/": "red",
-"res://addons/_ToyBox/Menus/": "blue"
+"res://addons/_ToyBox/": "red"
 }
 
 [global_group]

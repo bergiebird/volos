@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://h4mauytp8q25" path="res://ProjectVolos/Pieces/~Effects/send_right.tscn" id="7_xl6rl"]
 [ext_resource type="PackedScene" uid="uid://050gh6ntga2f" path="res://ProjectVolos/Pieces/~Effects/send_north.tscn" id="8_ga3fv"]
 [ext_resource type="PackedScene" uid="uid://ham1weovarmt" path="res://ProjectVolos/Pieces/~Effects/send_left.tscn" id="9_8ulav"]
-[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/Place-ables/the_boar.tscn" id="10_v0boe"]
+[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/PlayerChars/the_boar.tscn" id="10_v0boe"]
 [ext_resource type="PackedScene" uid="uid://dbbj7dtkdfn0d" path="res://ProjectVolos/Pieces/Place-ables/runner.tscn" id="11_a2s1k"]
 [ext_resource type="PackedScene" uid="uid://c0jh7e8ljad7t" path="res://ProjectVolos/Pieces/Enemies/weakling.tscn" id="12_salbu"]
 [ext_resource type="PackedScene" uid="uid://c2ettgulcg0c" path="res://ProjectVolos/Pieces/Enemies/murderling.tscn" id="13_u80fl"]

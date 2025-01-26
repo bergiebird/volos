@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://gyexk5y026e7" path="res://ProjectVolos/Gyms/BoardGym/ts_board.tres" id="5_gjy4o"]
 [ext_resource type="Script" path="res://ProjectVolos/Gyms/BoardGym/placeable_area.gd" id="6_4nowo"]
 [ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/camera_man.gd" id="7_b7tov"]
-[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/Place-ables/the_boar.tscn" id="8_1wlqg"]
+[ext_resource type="PackedScene" uid="uid://dxt21l016vwdl" path="res://ProjectVolos/Pieces/PlayerChars/the_boar.tscn" id="8_1wlqg"]
 [ext_resource type="PackedScene" uid="uid://dbbj7dtkdfn0d" path="res://ProjectVolos/Pieces/Place-ables/runner.tscn" id="9_trxxu"]
 [ext_resource type="PackedScene" uid="uid://c2ettgulcg0c" path="res://ProjectVolos/Pieces/Enemies/murderling.tscn" id="11_8kca5"]
 [ext_resource type="PackedScene" uid="uid://c0jh7e8ljad7t" path="res://ProjectVolos/Pieces/Enemies/weakling.tscn" id="12_4nd0r"]

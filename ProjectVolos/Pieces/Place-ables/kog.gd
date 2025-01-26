@@ -35,8 +35,9 @@ func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
 		Signalton.charge_started.emit()
 		for unit in charge_distance:
 			await move_once(new_direction)
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(.5).timeout
 		snap_to_tile()
+		await get_tree().create_timer(.5).timeout
 		charging = false
 		is_already_moving = false
 		Signalton.charge_ended.emit()
@@ -47,8 +48,7 @@ func move_once(new_direction: Vector2) -> void:
 	var target_position: Vector2 = position + new_direction * CELL_SIZE
 	var cooldown = 0.1
 	direction = new_direction
-	if cant_move_there(target_position):
-		print('north')
+	if cant_move_there():
 		return
 	is_already_moving = true
 	if charging:
@@ -60,7 +60,7 @@ func move_once(new_direction: Vector2) -> void:
 		await get_tree().create_timer(cooldown).timeout
 		is_already_moving = false
 
-func cant_move_there(target_position: Vector2):
+func cant_move_there():
 	match direction:
 		Vector2.UP: return north_collider.has_overlapping_bodies()
 		Vector2.RIGHT: return east_collider.has_overlapping_bodies()

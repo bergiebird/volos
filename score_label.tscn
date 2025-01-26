@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs4ra2ikfexh3"]
+
+[ext_resource type="Script" path="res://addons/_ToyBox/Resources/RichTextEffects/rich_text_hue_shift.gd" id="1_r17nk"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_t2t0a"]
+script = ExtResource("1_r17nk")
+hue_shift_speed = 1.0
+hue_shift_amount = 1.0
+hue_gliph_offset = 1.0
+hue_gliph_random = 1.0
+hue_sat_offset = 0.2
+
+[node name="ScoreLabel" type="RichTextLabel"]
+z_index = 10
+custom_minimum_size = Vector2(16, 16)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 405.0
+offset_top = 127.0
+offset_right = 527.0
+offset_bottom = 165.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[hue]Score:    0[/hue]"
+fit_content = true
+scroll_active = false
+custom_effects = [SubResource("RichTextEffect_t2t0a")]

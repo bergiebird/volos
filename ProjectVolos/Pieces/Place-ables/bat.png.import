@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csd07idssxp54"
-path="res://.godot/imported/crosshair_x.png-fd0b986f14e5580bef5b7578636ce3d3.ctex"
+uid="uid://c8xr5hp6bfjq7"
+path="res://.godot/imported/bat.png-35c98bfedc1ac01701875e0fcaa9e6bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/_ToyBox/Menus/Assets/Visual/Cursors/Crosshair/crosshair_x.png"
-dest_files=["res://.godot/imported/crosshair_x.png-fd0b986f14e5580bef5b7578636ce3d3.ctex"]
+source_file="res://ProjectVolos/Pieces/Place-ables/bat.png"
+dest_files=["res://.godot/imported/bat.png-35c98bfedc1ac01701875e0fcaa9e6bd.ctex"]
 
 [params]
 
