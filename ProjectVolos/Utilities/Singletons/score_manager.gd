@@ -4,10 +4,10 @@ extends Node #score_manager.gd
 @onready var score_label :RichTextLabel = %ScoreLabel
 
 func _ready()->void:
-	SignalTown.who_killed_what.connect(parse_the_killing)
+	Signalton.who_killed_what.connect(parse_the_killing)
 
 func parse_the_killing(culprit :TileBasedEntity, victim :TileBasedCharacter)->void:
-	SignalTown.sfx_break.emit(victim)
+	Signalton.sfx_break.emit(victim)
 	printt("parse_the_killing",culprit,victim)
 	score +=1
 	adjust_score_label(score)

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_1vsb3"]
 [ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
-[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_r020a"]
+[ext_resource type="PackedScene" uid="uid://cjqo0li63hac5" path="res://ProjectVolos/Pieces/Containers/item_mask.tscn" id="3_esl3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
 
-[node name="Jar" type="Area2D"]
+[node name="SmallJar" type="Area2D"]
 editor_description = "*LU 1/20/25
 =====================================
 null script
@@ -16,11 +16,9 @@ contains:
 Collision Shape
 Color Rect
 Animation"
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_1vsb3")
 is_destroyable = true
-
-[node name="Mask" parent="." instance=ExtResource("2_r020a")]
-will_this_blink = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -28,7 +26,10 @@ position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_aj61q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
 position = Vector2(8, 8)
 sprite_frames = ExtResource("2_8gmov")
 animation = &"Open_Jb"
 autoplay = "Open_Jb"
+
+[node name="SmallMask" parent="." instance=ExtResource("3_esl3h")]

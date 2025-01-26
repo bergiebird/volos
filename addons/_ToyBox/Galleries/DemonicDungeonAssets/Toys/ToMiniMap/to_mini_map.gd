@@ -28,7 +28,6 @@ func atlas():
 	for map_name in main_maps:
 		var node = get_node(map_name)
 		var cells = node.get_used_cells()
-
 		for cell in cells:
 			var atlas_coord = node.get_cell_atlas_coords(cell)
 			print(atlas_coord)

@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddf25vj48dbou"]
-
-[ext_resource type="Script" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Tilemap/destroyable_tilemap_component.gd" id="1_okyof"]
-[ext_resource type="PackedScene" uid="uid://c33j6nuac2av8" path="res://addons/_ToyBox/W_I_P/DestructibleTerrain/DestroyWorld/Tilemap/smoke_fx.tscn" id="2_xfkb6"]
-
-[node name="DestroyMap" type="Node2D"]
-script = ExtResource("1_okyof")
-smoke_scene = ExtResource("2_xfkb6")

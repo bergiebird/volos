@@ -12,13 +12,13 @@ func _ready()->void:
 
 
 func _on_send_north_area_entered(character :TileBasedCharacter)->void:
-	SignalTown.twister_entered.emit
+	Signalton.twister_entered.emit
 
 func _on_send_east_area_entered(character :TileBasedCharacter)->void:
-	SignalTown.twister_entered.emit
+	Signalton.twister_entered.emit
 
 func _on_send_south_area_entered(character :TileBasedCharacter)->void:
-	SignalTown.twister_entered.emit
+	Signalton.twister_entered.emit
 
 func _on_send_west_area_entered(character :TileBasedCharacter)->void:
-	SignalTown.twister_entered.emit
+	Signalton.twister_entered.emit

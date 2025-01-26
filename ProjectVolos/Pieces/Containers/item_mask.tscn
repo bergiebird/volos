@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjqo0li63hac5"]
+
+[ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/mask.gd" id="1_umyp1"]
+
+[node name="SmallMask" type="Node2D"]
+editor_description = "This will mask a 17x17 grid to demonstrate what area the character covers.
+
+This will blink every second."
+script = ExtResource("1_umyp1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

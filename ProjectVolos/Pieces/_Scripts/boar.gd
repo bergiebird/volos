@@ -5,12 +5,12 @@ extends TileBasedCharacter
 @onready var focus :FocusTile = %Focus
 
 func _ready()->void:
-	SignalTown.change_animated_direction.connect(_change_boar_direction)
+	Signalton.change_animated_direction.connect(_change_boar_direction)
 
 func _on_area_entered(character :TileBasedEntity)->void:
 	if can_kill and !is_pickedup:
 		if character.is_destroyable and !character.is_pickedup:
-			SignalTown.who_killed_what.emit(self,character)
+			Signalton.who_killed_what.emit(self,character)
 			kill(character)
 		else:
 			printt("Why. Won't. You. Die?!")

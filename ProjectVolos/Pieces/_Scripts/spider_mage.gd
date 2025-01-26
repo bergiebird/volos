@@ -5,7 +5,7 @@ extends TileBasedEntity #spider_mage.gd
 @onready var focus: FocusTile = %Focus
 
 func _on_turn_around_area_entered(area :Area2D)->void:
-	SignalTown.web_entered.emit
+	Signalton.web_entered.emit
 
 #func _process(_delta :float)->void:
 #	if Input.is_action_pressed("ui_up"):

@@ -123,6 +123,7 @@ contains:
 Collision Shape
 Color Rect
 Animation"
+z_index = 20
 script = ExtResource("1_0o0lh")
 is_destroyable = true
 
@@ -134,6 +135,7 @@ position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_aj61q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ecmqc")
 animation = &"Unarmed"

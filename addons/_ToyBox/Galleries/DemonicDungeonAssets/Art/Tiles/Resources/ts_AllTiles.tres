@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=57 format=3 uid="uid://nvwhbal1sd70"]
+[gd_resource type="TileSet" load_steps=58 format=3 uid="uid://nvwhbal1sd70"]
 
 [ext_resource type="Texture2D" uid="uid://cvptw4x567b2i" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/extras.png" id="1_luoyg"]
 [ext_resource type="Texture2D" uid="uid://dc0fptxc58lh4" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/flames.png" id="2_vygdi"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://c0rokrlg1m8u0" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-nw.png" id="26_4u6rh"]
 [ext_resource type="Texture2D" uid="uid://bf8tr6s7eafvf" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-s.png" id="27_mnbc3"]
 [ext_resource type="Texture2D" uid="uid://cenqt5uvaw81v" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Tiles/PNGs/magma-walls-se.png" id="28_ai4jl"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0bmp8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tiuqf"]
 texture = ExtResource("1_luoyg")
@@ -2821,6 +2823,7 @@ texture = ExtResource("28_ai4jl")
 [resource]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_0bmp8")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Mlight"
 terrain_set_0/terrain_0/color = Color(0.956863, 0.345098, 0.25098, 1)

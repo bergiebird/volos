@@ -6,4 +6,4 @@ extends TileBasedEntity #spin_mage.gd
 @onready var focus :FocusTile = %Focus
 
 func _on_clockwise_turn_area_entered(area :Area2D)->void:
-	SignalTown.spinner_activated.emit
+	Signalton.spinner_activated.emit

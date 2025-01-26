@@ -26,6 +26,7 @@ will_this_blink = false
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
 position = Vector2(8, 8)
 sprite_frames = ExtResource("2_h6f05")
 animation = &"Closed_Cb"

@@ -22,7 +22,7 @@ func _unhandled_input(event :InputEvent)->void:
 
 func kill(this_thing :TileBasedEntity)->void:
 	if can_kill:
-		SignalTown.who_killed_what.emit(this_thing, self)
+		Signalton.who_killed_what.emit(this_thing, self)
 		NodeRemover.remove(this_thing)
 
 func move_tiles(direction :Vector2, tiles :int)->void:
@@ -33,7 +33,7 @@ func move_tiles(direction :Vector2, tiles :int)->void:
 func update_current(direction :Vector2)->void:
 	if current_direction != direction:
 		current_direction = direction
-		SignalTown.change_animated_direction.emit(current_direction, self)
+		Signalton.change_animated_direction.emit(current_direction, self)
 		ray.target_position = direction * tile_size * 1.2
 		ray.force_raycast_update()
 

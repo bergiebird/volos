@@ -1,0 +1,187 @@
+[gd_scene load_steps=21 format=3 uid="uid://fjn5sdhsg04w"]
+
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/Place-ables/kog.gd" id="1_0fjts"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="2_fd6s4"]
+[ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://addons/_ToyBox/Galleries/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="3_8jagf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdqou"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7lgw"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a27jn"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgjig"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onwff"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxktr"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5800"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvon2"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sc7q"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsids"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yls7r"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1pbj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdqou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7lgw")
+}],
+"loop": true,
+"name": &"blink? 5th",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a27jn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgjig")
+}],
+"loop": true,
+"name": &"charge",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onwff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxktr")
+}],
+"loop": true,
+"name": &"crouch? 3rd",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5800")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvon2")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sc7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsids")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yls7r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ew3gf"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hpuk"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frapi"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syrs4"]
+size = Vector2(8, 8)
+
+[node name="Kog" type="Area2D"]
+editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_0fjts")
+
+[node name="NormalMask" parent="." instance=ExtResource("2_fd6s4")]
+
+[node name="ContainerCollider" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_5xqqc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_f1pbj")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="WallDetectors" type="Node2D" parent="."]
+
+[node name="NorthCollider" type="Area2D" parent="WallDetectors"]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 4
+
+[node name="NorthCollider" type="CollisionShape2D" parent="WallDetectors/NorthCollider"]
+position = Vector2(8, -8)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_ew3gf")
+
+[node name="EastCollider" type="Area2D" parent="WallDetectors"]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 4
+
+[node name="EastCollider" type="CollisionShape2D" parent="WallDetectors/EastCollider"]
+position = Vector2(24, 8)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_3hpuk")
+
+[node name="WestCollider" type="Area2D" parent="WallDetectors"]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 4
+
+[node name="WestCollider" type="CollisionShape2D" parent="WallDetectors/WestCollider"]
+position = Vector2(-8, 8)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_frapi")
+
+[node name="SouthCollider" type="Area2D" parent="WallDetectors"]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 4
+
+[node name="SouthCollider" type="CollisionShape2D" parent="WallDetectors/SouthCollider"]
+position = Vector2(8, 24)
+shape = SubResource("RectangleShape2D_syrs4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
