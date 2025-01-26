@@ -7,13 +7,14 @@ editor_description = "This will mask a 17x17 grid to demonstrate what area the c
 
 This will blink every second."
 script = ExtResource("1_y32ra")
+will_this_blink = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 16.0
 offset_bottom = 16.0
-color = Color(0, 0, 0, 1)
+color = Color(0.0862745, 0.0509804, 0.0745098, 1)
 
 [node name="Timer" type="Timer" parent="."]
 

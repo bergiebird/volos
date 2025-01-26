@@ -7,14 +7,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
 size = Vector2(16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdqou"]
-atlas = ExtResource("3_8jagf")
-region = Rect2(0, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s7lgw"]
-atlas = ExtResource("3_8jagf")
-region = Rect2(16, 64, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_a27jn"]
 atlas = ExtResource("3_8jagf")
 region = Rect2(0, 48, 16, 16)
@@ -22,14 +14,6 @@ region = Rect2(0, 48, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgjig"]
 atlas = ExtResource("3_8jagf")
 region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_onwff"]
-atlas = ExtResource("3_8jagf")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bxktr"]
-atlas = ExtResource("3_8jagf")
-region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p5800"]
 atlas = ExtResource("3_8jagf")
@@ -51,19 +35,24 @@ region = Rect2(16, 0, 16, 16)
 atlas = ExtResource("3_8jagf")
 region = Rect2(32, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_onwff"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxktr"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdqou"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7lgw"]
+atlas = ExtResource("3_8jagf")
+region = Rect2(16, 64, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1pbj"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bdqou")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s7lgw")
-}],
-"loop": true,
-"name": &"blink? 5th",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a27jn")
@@ -73,17 +62,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"charge",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_onwff")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bxktr")
-}],
-"loop": true,
-"name": &"crouch? 3rd",
 "speed": 5.0
 }, {
 "frames": [{
@@ -109,6 +87,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onwff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxktr")
+}],
+"loop": true,
+"name": &"idle_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdqou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7lgw")
+}],
+"loop": true,
+"name": &"stunned",
 "speed": 5.0
 }]
 
@@ -140,8 +140,9 @@ shape = SubResource("RectangleShape2D_5xqqc")
 z_index = 20
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f1pbj")
-animation = &"idle"
+animation = &"charge"
 autoplay = "idle"
+frame_progress = 0.615801
 
 [node name="WallDetectors" type="Node2D" parent="."]
 

@@ -39,7 +39,8 @@ func process_movement(new_direction :Vector2, is_charge :bool=false)->void:
 		charging = false
 		is_already_moving = false
 		Signalton.charge_ended.emit()
-	else: move_once(new_direction)
+	else:
+		move_once(new_direction)
 
 func move_once(new_direction :Vector2)->void:
 	var target_position :Vector2 = position + new_direction * CELL_SIZE

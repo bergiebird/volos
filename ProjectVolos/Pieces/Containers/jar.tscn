@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_1vsb3"]
 [ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
-[ext_resource type="PackedScene" uid="uid://cjqo0li63hac5" path="res://ProjectVolos/Pieces/Containers/item_mask.tscn" id="3_esl3h"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/Containers/Mask.tscn" id="3_18fm2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
@@ -32,4 +32,4 @@ sprite_frames = ExtResource("2_8gmov")
 animation = &"Open_Jb"
 autoplay = "Open_Jb"
 
-[node name="SmallMask" parent="." instance=ExtResource("3_esl3h")]
+[node name="NormalMask" parent="." instance=ExtResource("3_18fm2")]

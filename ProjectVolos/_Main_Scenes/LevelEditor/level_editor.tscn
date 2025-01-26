@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c86y6wso3byef"]
+[gd_scene load_steps=13 format=3 uid="uid://c86y6wso3byef"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
 [ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tilesets/background.tres" id="2_di1iu"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dgsikia4n5k0u" path="res://ProjectVolos/_Main_Scenes/LevelEditor/tap_content.tscn" id="6_ql2xx"]
 [ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/_users/Vrood/UI_Cutup/green_plus.png" id="7_ouv3f"]
 [ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/_users/Vrood/UI_Cutup/red_x.png" id="8_cygwd"]
-[ext_resource type="Theme" uid="uid://dvmq4dlf8kbqa" path="res://addons/input-overlay/overlay-theme.theme" id="10_6f0hf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3k1l"]
 bg_color = Color(0.0618169, 0.0329235, 0.0520804, 1)
@@ -242,7 +241,6 @@ z_index = -1000
 offset_right = 272.0
 offset_bottom = 207.0
 mouse_filter = 2
-theme = ExtResource("10_6f0hf")
 theme_override_styles/panel = SubResource("StyleBoxFlat_n3k1l")
 
 [connection signal="button_down" from="UI/SaveAndLoad/VBoxContainer/Save" to="UI/SaveAndLoad" method="_save_menu"]
