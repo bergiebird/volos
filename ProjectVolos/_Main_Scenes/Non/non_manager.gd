@@ -1,2 +1,2 @@
-@icon("res://addons/_ToyBox/Icons/node/icon_folder.png")
-extends Node #non_manager.gd
+@icon("res://Warehouse/Icons/node/icon_folder.png")
+extends Node # non_manager.gd

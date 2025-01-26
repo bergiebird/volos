@@ -9,6 +9,7 @@ var charging: bool = false
 @onready var south_collider: Area2D = %SouthCollider
 @onready var west_collider: Area2D = %WestCollider
 @onready var east_collider: Area2D = %EastCollider
+@onready var vfx_wall: GPUParticles2D = $VfxWall
 
 func _physics_process(delta: float):
 	if can_do(): kontrols(delta)
@@ -39,7 +40,7 @@ func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
 				await move_once(new_direction, 0.1)
 		await get_tree().create_timer(.05).timeout
 		snap_to_tile()
-		await get_tree().create_timer(.95).timeout
+		await get_tree().create_timer(.45).timeout
 		charging = false
 		is_already_moving = false
 		Signalton.charge_ended.emit()
@@ -54,6 +55,13 @@ func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
 		if charging:
 			charging = false
 			cooldown = 1
+			vfx_wall.position = Vector2(8, 8) + direction * CELL_SIZE / 2
+			match direction:
+				Vector2.UP: vfx_wall.rotation_degrees = 180
+				Vector2.RIGHT: vfx_wall.rotation_degrees = 270
+				Vector2.DOWN: vfx_wall.rotation_degrees = 0
+				Vector2.LEFT: vfx_wall.rotation_degrees = 90
+			vfx_wall.emitting = true
 			snap_to_tile()
 			await get_tree().create_timer(cooldown).timeout
 		return

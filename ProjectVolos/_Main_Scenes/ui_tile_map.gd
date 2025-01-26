@@ -1,4 +1,4 @@
-@icon("res://addons/_ToyBox/Icons/control/icon_grid.png")
+@icon("res://Warehouse/Icons/control/icon_grid.png")
 extends TileMapLayer
 
 
