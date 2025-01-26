@@ -1,13 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj6xbcy8wvkjx"]
+[gd_scene load_steps=6 format=3 uid="uid://dj6xbcy8wvkjx"]
 
+[ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_ac0lq"]
 [ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
-[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="3_18fm2"]
-
-[sub_resource type="GDScript" id="GDScript_utuih"]
-script/source = "@icon(\"res://ProjectVolos/Pieces/Containers/Jar.png\")
-extends Area2D
-@export var cargo :PackedScene
-"
+[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="3_18fm2"]
+[ext_resource type="PackedScene" uid="uid://cmknsxlhd1bqu" path="res://ProjectVolos/Gyms/VfxGym/vfx_pot.tscn" id="4_qo3d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(10, 10)
@@ -22,10 +18,9 @@ Collision Shape
 Color Rect
 Animation"
 scale = Vector2(0.5, 0.5)
-script = SubResource("GDScript_utuih")
+script = ExtResource("1_ac0lq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_aj61q")
 
@@ -37,3 +32,8 @@ animation = &"Open_Jb"
 autoplay = "Open_Jb"
 
 [node name="NormalMask" parent="." instance=ExtResource("3_18fm2")]
+
+[node name="VfxPot" parent="." instance=ExtResource("4_qo3d2")]
+position = Vector2(8, 8)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

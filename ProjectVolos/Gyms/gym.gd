@@ -1,5 +1,5 @@
 @tool
-@icon("res://addons/_ToyBox/Icons/misc/icon_playground.png")
+@icon("res://Warehouse/Icons/misc/icon_playground.png")
 extends Node2D
 func _ready():
 	set_editor_description(\

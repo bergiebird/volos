@@ -45,9 +45,9 @@ func setup_selection_indicator():
 	selection_indicator.visible = false
 	parent.call_deferred("add_child", selection_indicator)
 
-func create_default_selection_indicator()->Node2D:
+func create_default_selection_indicator() -> Node2D:
 	var _sprite = Sprite2D.new()
-	_sprite.texture = preload("res://addons/_ToyBox/Icons/misc/icons8-exclamation-mark-100.png")
+	_sprite.texture = preload("res://Warehouse/Icons/misc/icons8-exclamation-mark-100.png")
 	_sprite.scale = Vector2(0.1, 0.1)
 	_sprite.position = Vector2(tile_size / 2, tile_size / 2)
 	return _sprite

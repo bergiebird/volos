@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://fjn5sdhsg04w"]
+[gd_scene load_steps=21 format=3 uid="uid://bl7e3evmswrme"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/PlayerChars/kog.gd" id="1_0fjts"]
-[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_fd6s4"]
+[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_fd6s4"]
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="3_8jagf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
@@ -126,6 +126,7 @@ size = Vector2(8, 8)
 
 [node name="Kog" type="Area2D"]
 editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
+z_index = 40
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_0fjts")
@@ -137,7 +138,6 @@ position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_5xqqc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 20
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f1pbj")
 animation = &"charge"
@@ -148,6 +148,7 @@ frame_progress = 0.711576
 
 [node name="NorthCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
+z_index = 40
 collision_layer = 4
 collision_mask = 4
 
