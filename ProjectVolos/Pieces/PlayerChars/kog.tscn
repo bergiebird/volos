@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="3_8jagf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
-size = Vector2(16, 16)
+size = Vector2(14, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a27jn"]
 atlas = ExtResource("3_8jagf")

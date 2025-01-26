@@ -35,7 +35,8 @@ func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
 		charging = true
 		Signalton.charge_started.emit()
 		for unit in charge_distance * 10:
-			await move_once(new_direction, 0.1)
+			if charging:
+				await move_once(new_direction, 0.1)
 		await get_tree().create_timer(.05).timeout
 		snap_to_tile()
 		await get_tree().create_timer(.95).timeout
@@ -52,7 +53,7 @@ func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
 	if cant_move_there():
 		if charging:
 			charging = false
-			cooldown = 2
+			cooldown = 1
 			snap_to_tile()
 			await get_tree().create_timer(cooldown).timeout
 		return
