@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dj6xbcy8wvkjx"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_ac0lq"]
-[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_8gmov"]
+[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Breakables/sf_small_breakables.tres" id="2_8gmov"]
 [ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="3_18fm2"]
 [ext_resource type="PackedScene" uid="uid://cmknsxlhd1bqu" path="res://ProjectVolos/Gyms/VfxGym/vfx_pot.tscn" id="4_qo3d2"]
-[ext_resource type="AudioStream" uid="uid://pan88w5xfb3y" path="res://Warehouse/_users/BergieBird/Working/SFX/ceramic/Pot Break A.wav" id="5_hyowo"]
+[ext_resource type="AudioStream" uid="uid://d3nbpoxp5t7hq" path="res://ProjectVolos/Audio/sfx_dont_move/impact_cco.wav" id="5_xbk6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
 size = Vector2(14, 13)
@@ -43,8 +43,8 @@ autoplay = "Open_Jb"
 position = Vector2(8, 8)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_hyowo")
-volume_db = -14.465
+stream = ExtResource("5_xbk6p")
+volume_db = -5.917
 
 [node name="AfterBreak" type="Timer" parent="."]
 wait_time = 3.0

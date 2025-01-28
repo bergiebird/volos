@@ -409,7 +409,9 @@ texture = ExtResource("1_luoyg")
 14:6/0/terrains_peering_bit/top_side = 6
 15:6/0 = 0
 15:6/0/terrain_set = 0
+15:6/0/terrain = 6
 15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:6/0/terrains_peering_bit/bottom_side = 6
 16:6/0 = 0
 16:6/0/terrain_set = 0
 16:6/0/terrain = 6
@@ -1890,6 +1892,12 @@ texture = ExtResource("18_ogjkl")
 7:11/0 = 0
 8:11/0 = 0
 9:11/0 = 0
+6:4/0 = 0
+9:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wacod"]
 texture = ExtResource("19_kj6rk")

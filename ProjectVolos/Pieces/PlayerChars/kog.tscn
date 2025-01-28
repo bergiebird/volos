@@ -1,9 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://bl7e3evmswrme"]
+[gd_scene load_steps=24 format=3 uid="uid://bl7e3evmswrme"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/PlayerChars/kog.gd" id="1_0fjts"]
 [ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_fd6s4"]
 [ext_resource type="PackedScene" uid="uid://bj7pc6s333uja" path="res://ProjectVolos/Gyms/VfxGym/vfx_wall.tscn" id="2_wy07s"]
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="3_8jagf"]
+[ext_resource type="AudioStream" uid="uid://hengmnb3orqr" path="res://Warehouse/_users/BergieBird/Working/SFX/Boar/hit/Monster Groan.wav" id="5_lw30p"]
+[ext_resource type="AudioStream" path="res://thud_cco.wav" id="6_ug2qi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
 size = Vector2(14, 14)
@@ -190,5 +192,17 @@ collision_mask = 7
 [node name="SouthCollider" type="CollisionShape2D" parent="WallDetectors/SouthCollider"]
 position = Vector2(8, 24)
 shape = SubResource("RectangleShape2D_syrs4")
+
+[node name="SfxCharge" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_lw30p")
+volume_db = -18.435
+bus = &"SFX"
+
+[node name="SfxWall" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_ug2qi")
+pitch_scale = 0.6
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

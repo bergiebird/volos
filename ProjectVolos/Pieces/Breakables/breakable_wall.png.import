@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c56qsf1thw53g"
-path="res://.godot/imported/Jar.png-d20b6ac09835abdd8dabe5e197f35d44.ctex"
+uid="uid://bodump02tp6oq"
+path="res://.godot/imported/breakable_wall.png-465d0a99ad90c55fc31e9e03e68cc001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ProjectVolos/Pieces/Containers/Jar.png"
-dest_files=["res://.godot/imported/Jar.png-d20b6ac09835abdd8dabe5e197f35d44.ctex"]
+source_file="res://ProjectVolos/Pieces/Breakables/breakable_wall.png"
+dest_files=["res://.godot/imported/breakable_wall.png-465d0a99ad90c55fc31e9e03e68cc001.ctex"]
 
 [params]
 

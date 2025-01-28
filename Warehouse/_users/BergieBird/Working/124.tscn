@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/Place-ables/runner.tscn" id="9_trxxu"]
 [ext_resource type="PackedScene" uid="uid://c2ettgulcg0c" path="res://ProjectVolos/Pieces/Enemies/murderling.tscn" id="11_8kca5"]
 [ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/Enemies/weakling.tscn" id="12_4nd0r"]
-[ext_resource type="PackedScene" uid="uid://dv2wrj3eqyhjb" path="res://ProjectVolos/Pieces/Containers/breakable_object.tscn" id="13_b5cu4"]
-[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Pieces/Containers/jar.tscn" id="14_g2x5o"]
-[ext_resource type="PackedScene" uid="uid://bvk4ld7rmownw" path="res://ProjectVolos/Pieces/_Scripts/spider_mage.tscn" id="15_mxw5m"]
+[ext_resource type="PackedScene" uid="uid://dv2wrj3eqyhjb" path="res://ProjectVolos/Pieces/Breakables/breakable_object.tscn" id="13_b5cu4"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Pieces/Breakables/jar.tscn" id="14_g2x5o"]
+[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/_Scripts/spider_mage.tscn" id="15_mxw5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4moe"]
 size = Vector2(192, 128)

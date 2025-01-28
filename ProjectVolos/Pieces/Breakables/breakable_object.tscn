@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_t7c6w"]
 [ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_8qw8c"]
-[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Containers/sf_small_breakables.tres" id="2_h6f05"]
+[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Breakables/sf_small_breakables.tres" id="2_h6f05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fmwx"]
 size = Vector2(10, 10)

@@ -1,4 +1,4 @@
-@icon("res://ProjectVolos/Pieces/Containers/Jar.png")
+@icon("res://ProjectVolos/Pieces/Breakables/Jar.png")
 class_name Jar
 extends Area2D
 @export var cargo: PackedScene

@@ -2,7 +2,7 @@
 extends Area2D
 const CELL_SIZE: int = 16
 @export var charge_distance: int = 6
-var direction: Vector2
+var direction: Vector2 = Vector2.ZERO
 var is_already_moving: bool = false
 var charging: bool = false
 @onready var north_collider: Area2D = %NorthCollider
@@ -11,6 +11,8 @@ var charging: bool = false
 @onready var east_collider: Area2D = %EastCollider
 @onready var vfx_wall: GPUParticles2D = $VfxWall
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sfx_charge :AudioStreamPlayer2D = %SfxCharge
+@onready var sfx_wall :AudioStreamPlayer2D = %SfxWall
 
 func _physics_process(delta: float):
 	if can_do():
@@ -35,9 +37,12 @@ func kontrols(_delta) -> void:
 
 func process_movement(new_direction :Vector2, is_charge :bool=false)->void:
 	if is_charge:
+		if direction == Vector2.ZERO:
+			return
 		charging = true
 		set_collision_mask_value(2,false)
 		Signalton.charge_started.emit()
+		sfx_charge.play()
 		for unit in charge_distance * 10:
 			if charging:
 				await move_once(new_direction, 0.1)
@@ -54,19 +59,22 @@ func move_once(new_direction :Vector2, step_amount :float=1)->void:
 	var target_position :Vector2 = position + new_direction * CELL_SIZE * step_amount
 	var cooldown = 0.1
 	direction = new_direction
-	print(cant_move_there())
 	animation_change()
 	if cant_move_there():
 		if charging:
 			charging = false
-
 			cooldown = 1
+			sfx_wall.play()
 			vfx_wall.position = Vector2(8, 8) + direction * CELL_SIZE / 2
 			match direction:
-				Vector2.UP: vfx_wall.rotation_degrees = 180
-				Vector2.RIGHT: vfx_wall.rotation_degrees = 270
-				Vector2.DOWN: vfx_wall.rotation_degrees = 0
-				Vector2.LEFT: vfx_wall.rotation_degrees = 90
+				Vector2.UP:
+					vfx_wall.rotation_degrees = 180
+				Vector2.RIGHT:
+					vfx_wall.rotation_degrees = 270
+				Vector2.DOWN:
+					vfx_wall.rotation_degrees = 0
+				Vector2.LEFT:
+					vfx_wall.rotation_degrees = 90
 			vfx_wall.emitting = true
 			snap_to_tile()
 			await get_tree().create_timer(cooldown).timeout
@@ -86,10 +94,14 @@ func cant_move_there():
 	if charging:
 		return has_overlapping_bodies()
 	match direction:
-		Vector2.UP: return north_collider.has_overlapping_bodies()
-		Vector2.RIGHT: return east_collider.has_overlapping_bodies()
-		Vector2.DOWN: return south_collider.has_overlapping_bodies()
-		Vector2.LEFT: return west_collider.has_overlapping_bodies()
+		Vector2.UP:
+			return north_collider.has_overlapping_bodies()
+		Vector2.RIGHT:
+			return east_collider.has_overlapping_bodies()
+		Vector2.DOWN:
+			return south_collider.has_overlapping_bodies()
+		Vector2.LEFT:
+			return west_collider.has_overlapping_bodies()
 	return false
 
 func snap_to_tile():
@@ -97,7 +109,11 @@ func snap_to_tile():
 
 func animation_change():
 	match direction:
-		Vector2.UP: pass
-		Vector2.RIGHT: animated_sprite_2d.scale = Vector2(1, 1)
-		Vector2.DOWN: pass
-		Vector2.LEFT: animated_sprite_2d.scale = Vector2(-1, 1)
+		Vector2.UP:
+			pass
+		Vector2.RIGHT:
+			animated_sprite_2d.scale = Vector2(1, 1)
+		Vector2.DOWN:
+			pass
+		Vector2.LEFT:
+			animated_sprite_2d.scale = Vector2(-1, 1)
