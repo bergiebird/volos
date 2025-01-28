@@ -13,7 +13,8 @@ var charging: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float):
-	if can_do(): kontrols(delta)
+	if can_do():
+		kontrols(delta)
 
 func can_do() -> bool:
 	if is_already_moving: return false
@@ -32,9 +33,10 @@ func kontrols(_delta) -> void:
 	elif Input.is_action_just_pressed("kog_up"):
 		process_movement(Vector2.UP)
 
-func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
+func process_movement(new_direction :Vector2, is_charge :bool=false)->void:
 	if is_charge:
 		charging = true
+		set_collision_mask_value(2,false)
 		Signalton.charge_started.emit()
 		for unit in charge_distance * 10:
 			if charging:
@@ -48,14 +50,16 @@ func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
 	else:
 		move_once(new_direction)
 
-func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
-	var target_position: Vector2 = position + new_direction * CELL_SIZE * step_amount
+func move_once(new_direction :Vector2, step_amount :float=1)->void:
+	var target_position :Vector2 = position + new_direction * CELL_SIZE * step_amount
 	var cooldown = 0.1
 	direction = new_direction
+	print(cant_move_there())
 	animation_change()
 	if cant_move_there():
 		if charging:
 			charging = false
+
 			cooldown = 1
 			vfx_wall.position = Vector2(8, 8) + direction * CELL_SIZE / 2
 			match direction:
@@ -66,13 +70,14 @@ func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
 			vfx_wall.emitting = true
 			snap_to_tile()
 			await get_tree().create_timer(cooldown).timeout
+			set_collision_mask_value(2,true)
 		return
 	is_already_moving = true
 	if charging:
 		position = target_position
 		cooldown = 0.01
 		await get_tree().create_timer(cooldown).timeout
-	else:
+	elif not cant_move_there():
 		position = target_position
 		await get_tree().create_timer(cooldown).timeout
 		is_already_moving = false

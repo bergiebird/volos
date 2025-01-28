@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://bl7e3evmswrme"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/PlayerChars/kog.gd" id="1_0fjts"]
-[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_fd6s4"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_fd6s4"]
 [ext_resource type="PackedScene" uid="uid://bj7pc6s333uja" path="res://ProjectVolos/Gyms/VfxGym/vfx_wall.tscn" id="2_wy07s"]
 [ext_resource type="Texture2D" uid="uid://cddwyqox3bx45" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_pig_player.png" id="3_8jagf"]
 
@@ -129,13 +129,14 @@ size = Vector2(8, 8)
 editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
 z_index = 40
 collision_layer = 5
-collision_mask = 5
+collision_mask = 7
 script = ExtResource("1_0fjts")
 
 [node name="VfxWall" parent="." instance=ExtResource("2_wy07s")]
 z_index = 50
 
 [node name="NormalMask" parent="." instance=ExtResource("2_fd6s4")]
+visible = false
 
 [node name="ContainerCollider" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
@@ -153,8 +154,8 @@ frame_progress = 0.44132
 [node name="NorthCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
 z_index = 40
-collision_layer = 4
-collision_mask = 4
+collision_layer = 5
+collision_mask = 7
 
 [node name="NorthCollider" type="CollisionShape2D" parent="WallDetectors/NorthCollider"]
 position = Vector2(8, -8)
@@ -163,8 +164,8 @@ shape = SubResource("RectangleShape2D_ew3gf")
 
 [node name="EastCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 4
-collision_mask = 4
+collision_layer = 5
+collision_mask = 7
 
 [node name="EastCollider" type="CollisionShape2D" parent="WallDetectors/EastCollider"]
 position = Vector2(24, 8)
@@ -173,8 +174,8 @@ shape = SubResource("RectangleShape2D_3hpuk")
 
 [node name="WestCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 4
-collision_mask = 4
+collision_layer = 5
+collision_mask = 7
 
 [node name="WestCollider" type="CollisionShape2D" parent="WallDetectors/WestCollider"]
 position = Vector2(-8, 8)
@@ -183,8 +184,8 @@ shape = SubResource("RectangleShape2D_frapi")
 
 [node name="SouthCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 4
-collision_mask = 4
+collision_layer = 5
+collision_mask = 7
 
 [node name="SouthCollider" type="CollisionShape2D" parent="WallDetectors/SouthCollider"]
 position = Vector2(8, 24)

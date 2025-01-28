@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="volos"
+run/main_scene="res://Warehouse/_users/BergieBird/Working/the_board.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.06, 0.06, 0.06, 1)
 config/icon="res://Warehouse/Icons/misc/V_icon.png"
