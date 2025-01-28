@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c54lfjxwhype3"]
+
+[ext_resource type="Shader" path="res://gold_shine.gdshader" id="1_fxdbr"]
+[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="2_dgqda"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0xw7"]
+shader = ExtResource("1_fxdbr")
+shader_parameter/default_color = Color(1, 1, 0.619608, 1)
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_angle = -45.0
+shader_parameter/shine_duration = 5.0
+shader_parameter/shine_speed = 1000.0
+shader_parameter/shine_width = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl81x"]
+atlas = ExtResource("2_dgqda")
+region = Rect2(32, 96, 16, 16)
+
+[node name="Gold" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_n0xw7")
+position = Vector2(8, 8)
+texture = SubResource("AtlasTexture_rl81x")

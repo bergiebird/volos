@@ -156,17 +156,17 @@ shape = SubResource("RectangleShape2D_aj61q")
 z_index = 20
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_bqorb")
-animation = &"vfr"
+animation = &"hws"
 
 [node name="SfxWallMetal" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_cxjtn")
-volume_db = -3.205
+volume_db = -15.0
 
 [node name="SfxWallConcrete" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_r3bmi")
-volume_db = -5.0
+volume_db = -15.0
 pitch_scale = 1.1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

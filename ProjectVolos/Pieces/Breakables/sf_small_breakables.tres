@@ -434,15 +434,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_r54av")
 }],
 "loop": true,
-"name": &"Broken_Cb",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xi7nm")
-}],
-"loop": true,
-"name": &"Broken_Jb",
+"name": &"cb",
 "speed": 5.0
 }, {
 "frames": [{
@@ -450,7 +442,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_maxuw")
 }],
 "loop": true,
-"name": &"Closed_Cb",
+"name": &"cc",
 "speed": 5.0
 }, {
 "frames": [{
@@ -458,7 +450,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_7gm6q")
 }],
 "loop": true,
-"name": &"Open_Cb",
+"name": &"co",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi7nm")
+}],
+"loop": true,
+"name": &"jb",
 "speed": 5.0
 }, {
 "frames": [{
@@ -466,6 +466,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_u4bm5")
 }],
 "loop": true,
-"name": &"Open_Jb",
+"name": &"jw",
 "speed": 5.0
 }]
