@@ -11,8 +11,9 @@ var charging: bool = false
 @onready var east_collider: Area2D = %EastCollider
 @onready var vfx_wall: GPUParticles2D = $VfxWall
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var sfx_charge :AudioStreamPlayer2D = %SfxCharge
-@onready var sfx_wall :AudioStreamPlayer2D = %SfxWall
+@onready var sfx_charge: AudioStreamPlayer2D = %SfxCharge
+@onready var sfx_wall: AudioStreamPlayer2D = %SfxWall
+signal kog_moved
 
 func _physics_process(delta: float):
 	if can_do():
@@ -35,12 +36,13 @@ func kontrols(_delta) -> void:
 	elif Input.is_action_just_pressed("kog_up"):
 		process_movement(Vector2.UP)
 
-func process_movement(new_direction :Vector2, is_charge :bool=false)->void:
+func process_movement(new_direction: Vector2, is_charge: bool = false) -> void:
+	kog_moved.emit()
 	if is_charge:
 		if direction == Vector2.ZERO:
 			return
 		charging = true
-		set_collision_mask_value(2,false)
+		set_collision_mask_value(2, false)
 		Signalton.charge_started.emit()
 		sfx_charge.play()
 		for unit in charge_distance * 10:
@@ -55,8 +57,8 @@ func process_movement(new_direction :Vector2, is_charge :bool=false)->void:
 	else:
 		move_once(new_direction)
 
-func move_once(new_direction :Vector2, step_amount :float=1)->void:
-	var target_position :Vector2 = position + new_direction * CELL_SIZE * step_amount
+func move_once(new_direction: Vector2, step_amount: float = 1) -> void:
+	var target_position: Vector2 = position + new_direction * CELL_SIZE * step_amount
 	var cooldown = 0.1
 	direction = new_direction
 	animation_change()
@@ -78,7 +80,7 @@ func move_once(new_direction :Vector2, step_amount :float=1)->void:
 			vfx_wall.emitting = true
 			snap_to_tile()
 			await get_tree().create_timer(cooldown).timeout
-			set_collision_mask_value(2,true)
+			set_collision_mask_value(2, true)
 		return
 	is_already_moving = true
 	if charging:

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bpayqq81cie2c"]
 
 [ext_resource type="Script" path="res://loot_goblin.gd" id="1_a1ald"]
-[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_bmg2d"]
+[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_bmg2d"]
 [ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="3_vycoi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48lof"]
-size = Vector2(15, 15)
+size = Vector2(14, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqreh"]
 size = Vector2(8, 8)
@@ -35,7 +35,7 @@ animation = &"Unarmed"
 autoplay = "Unarmed"
 
 [node name="TreasureCollider" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, 7.5)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_48lof")
 
 [node name="WallDetectors" type="Node2D" parent="."]
