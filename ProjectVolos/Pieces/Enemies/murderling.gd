@@ -5,6 +5,8 @@ var current_path: Array[Vector2i]
 var walls: TileMapLayer
 var kog
 var goblin
+var kog_move_count: int = 1
+var gob_move_count: int = 1
 
 func _ready():
 
@@ -38,6 +40,9 @@ func _ready():
         goblin.gob_moved.connect(goblin_move)
 
 func goblin_move():
+    gob_move_count += 1
+    kog_move_count -= 1
+
     goblin = get_parent().get_node("LootGoblin")
     current_path = astar.get_id_path(
         walls.local_to_map(global_position),
@@ -46,8 +51,18 @@ func goblin_move():
     move()
 
 func move():
-    print("test")
+    kog_move_count += 1
+    var seed_gen = kog_move_count * gob_move_count
+    
+    print(rand_from_seed(seed_gen)[0] % 9)
     # TODO: add other logic for fire ball and fire walls
+    if kog.position.x == position.x or kog.position.y == position.y:
+        if rand_from_seed(seed_gen)[0] % 4 == 0:
+            print("Spawn fire-wall at Kog")
+            return
+    if rand_from_seed(seed_gen)[0] % 9 == 0:
+        print("Spawn fireball at goblin")
+        return
     if current_path.front() == null:
         return
     var target_position = walls.map_to_local(current_path.pop_front())
