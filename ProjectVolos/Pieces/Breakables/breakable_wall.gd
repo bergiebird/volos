@@ -3,6 +3,8 @@
 extends Area2D
 @export var is_vertical :bool = false
 @export var is_fence :bool=false
+@export var is_exit :bool=false
+@onready var exit_node = preload("res://exit_gate2.tscn")
 @onready var static_wall = %StaticBody2D
 @onready var sprite = $AnimatedSprite2D
 @onready var sfx_wall_concrete: AudioStreamPlayer2D = %SfxWallConcrete
@@ -23,10 +25,17 @@ func _on_area_entered(area :Area2D)->void:
 			%StaticBody2D.queue_free()
 			if is_fence: sfx_wall_metal.play()
 			else: sfx_wall_concrete.play()
-			broken = true
-			#vfx_wall.emitting = true
-			sprite.play((get_wall_type()+'r'))
+			broken = true #vfx_wall.emitting = true
 			static_wall.queue_free()
+			if is_exit:
+				create_exit_gate()
+			else:
+				sprite.play((get_wall_type()+'r'))
+
+func create_exit_gate():
+	var exit_gate = exit_node.instantiate()
+	exit_gate.position = position
+	get_parent().add_child(exit_gate)
 
 func get_wall_type():
 	if is_vertical:

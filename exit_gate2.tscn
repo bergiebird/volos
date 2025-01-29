@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://7tumcqgfelhu"]
+
+[ext_resource type="Script" path="res://exit_gate.gd" id="1_enrf0"]
+[ext_resource type="PackedScene" uid="uid://cma2xqyhueopf" path="res://ProjectVolos/Gyms/VfxGym/vfx_look_here.tscn" id="2_cl5il"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjgwr"]
+size = Vector2(14, 14)
+
+[node name="ExitGate" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_enrf0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_sjgwr")
+
+[node name="VfxLookHere" parent="." instance=ExtResource("2_cl5il")]
+position = Vector2(8, 8)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -36,7 +36,6 @@ func move_once(new_direction: Vector2) -> void:
 	var cooldown: float = 0.1
 	direction = new_direction
 	if cant_move_there():
-		print('north')
 		return
 	is_already_moving = true
 	position = target_position

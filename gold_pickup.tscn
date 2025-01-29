@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr105qi4b4bbl"]
+
+[ext_resource type="Shader" path="res://gold_shine.gdshader" id="1_7ae2m"]
+[ext_resource type="Script" path="res://gold_pickup.gd" id="1_erkk7"]
+[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="2_lxayb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0xw7"]
+shader = ExtResource("1_7ae2m")
+shader_parameter/default_color = Color(1, 1, 0.619608, 1)
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_angle = -45.0
+shader_parameter/shine_duration = 5.0
+shader_parameter/shine_speed = 1000.0
+shader_parameter/shine_width = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl81x"]
+atlas = ExtResource("2_lxayb")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ntoj"]
+size = Vector2(15, 15)
+
+[node name="Gold" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_erkk7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_n0xw7")
+position = Vector2(8, 8)
+texture = SubResource("AtlasTexture_rl81x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 8.5)
+shape = SubResource("RectangleShape2D_6ntoj")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

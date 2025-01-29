@@ -16,3 +16,5 @@ signal charge_ended()
 #signal item_collected(item: Node2D)
 @warning_ignore("unused_signal")
 signal transition_camera_2d_requested(from: Camera2D, to: Camera2D, duration: float)
+
+signal level_complete

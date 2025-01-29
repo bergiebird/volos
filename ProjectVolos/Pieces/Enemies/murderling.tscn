@@ -1,11 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2ettgulcg0c"]
+[gd_scene load_steps=9 format=3 uid="uid://c2ettgulcg0c"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/Enemies/murderling.gd" id="1_87khk"]
-[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_qyd3i"]
-[ext_resource type="SpriteFrames" uid="uid://cr30uyi1bqp5s" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/skeleton_animated.tres" id="3_hi57o"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_qyd3i"]
+[ext_resource type="Texture2D" uid="uid://bb17akv48atmg" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/Mummy.png" id="3_1a16w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
 size = Vector2(14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2e4c"]
+atlas = ExtResource("3_1a16w")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bslt"]
+atlas = ExtResource("3_1a16w")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofpvb"]
+atlas = ExtResource("3_1a16w")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtwtm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2e4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bslt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofpvb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="MurderLing" type="Area2D"]
 editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
@@ -21,8 +50,9 @@ shape = SubResource("RectangleShape2D_5xqqc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
-sprite_frames = ExtResource("3_hi57o")
-animation = &"Pink_Staff"
+sprite_frames = SubResource("SpriteFrames_rtwtm")
+autoplay = "default"
+frame_progress = 0.884029
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

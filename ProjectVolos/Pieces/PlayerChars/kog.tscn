@@ -129,7 +129,7 @@ size = Vector2(8, 8)
 [node name="Kog" type="Area2D"]
 editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
 z_index = 40
-collision_layer = 5
+collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_0fjts")
 

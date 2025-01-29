@@ -10,8 +10,6 @@ extends Area2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var broken :bool = false
 
-
-
 func _ready():
 	sprite.animation = get_crate()
 
@@ -29,12 +27,12 @@ func _on_area_entered(area: Area2D):
 	if area.name == "Kog" and area.charging:
 		if !broken:
 			%StaticBody2D.queue_free()
+			%AfterBreak.start()
 			sfx.play()
 			broken = true
 			vfx.emitting = true
 			sprite.play(get_crate())
 			drop_loot()
-
 
 func get_crate()->String:
 	if broken:
@@ -50,3 +48,7 @@ func get_crate()->String:
 				return 'cc'
 		else:
 			return 'jw'
+
+
+func _on_after_break_timeout() -> void:
+	queue_free()
