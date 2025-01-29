@@ -1,14 +1,14 @@
 @icon("res://ProjectVolos/Pieces/PlayerChars/loot_goblin.png")
 extends Area2D
 
-const CELL_SIZE: int = 16
-@export var charge_distance: int = 6
-var direction: Vector2
-var is_already_moving: bool = false
-@onready var north_collider: Area2D = %NorthCollider
-@onready var south_collider: Area2D = %SouthCollider
-@onready var west_collider: Area2D = %WestCollider
-@onready var east_collider: Area2D = %EastCollider
+const CELL_SIZE :int = 16
+@export var charge_distance :int = 6
+var direction :Vector2
+var is_already_moving :bool = false
+@onready var north_collider :Area2D = %NorthCollider
+@onready var south_collider :Area2D = %SouthCollider
+@onready var west_collider :Area2D = %WestCollider
+@onready var east_collider :Area2D = %EastCollider
 signal gob_moved
 
 func _physics_process(delta: float):

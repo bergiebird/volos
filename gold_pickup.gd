@@ -1,19 +1,22 @@
 @icon("res://gold.png")
 extends Area2D
+@export var gold_worth :int = 1
+@onready var sfx_pickup :AudioStreamPlayer2D = %SfxPickup
+@onready var despawn :Timer = %Despawn
 
+func _ready():
+	snap_to_tile()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_area_entered(area :Area2D)->void:
+	if area.name == 'LootGoblin':
+		Signalton.add_to_score.emit(gold_worth)
+		_disappear()
 
+func _disappear():
+	sfx_pickup.play()
+	despawn.start()
+	await despawn.timeout
+	queue_free()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.name == 'loot_goblin':
-		print(1)
-	else:
-		print(2)
+func snap_to_tile():
+	position = round(position / 16) * 16

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj6xbcy8wvkjx"]
+[gd_scene load_steps=9 format=3 uid="uid://dj6xbcy8wvkjx"]
 
 [ext_resource type="Script" path="res://ProjectVolos/Pieces/_Scripts/Containers/container_tile_entity.gd" id="1_ac0lq"]
 [ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://ProjectVolos/Pieces/Breakables/sf_small_breakables.tres" id="2_8gmov"]
+[ext_resource type="PackedScene" uid="uid://frd2sfct1h25" path="res://gold_pickup.tscn" id="2_8xlpb"]
 [ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="3_18fm2"]
 [ext_resource type="PackedScene" uid="uid://cmknsxlhd1bqu" path="res://ProjectVolos/Gyms/VfxGym/vfx_pot.tscn" id="4_qo3d2"]
 [ext_resource type="AudioStream" uid="uid://d3nbpoxp5t7hq" path="res://ProjectVolos/Audio/sfx_dont_move/impact_cco.wav" id="5_xbk6p"]
@@ -24,6 +25,7 @@ Animation"
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_ac0lq")
+cargo = ExtResource("2_8xlpb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1

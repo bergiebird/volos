@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr105qi4b4bbl"]
+[gd_scene load_steps=8 format=3 uid="uid://frd2sfct1h25"]
 
 [ext_resource type="Shader" path="res://gold_shine.gdshader" id="1_7ae2m"]
 [ext_resource type="Script" path="res://gold_pickup.gd" id="1_erkk7"]
 [ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="2_lxayb"]
+[ext_resource type="AudioStream" uid="uid://biylnabbm140r" path="res://Warehouse/_users/BergieBird/Working/SFX/coins/good/Swoosh_5.wav" id="4_sgpt7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n0xw7"]
 shader = ExtResource("1_7ae2m")
@@ -21,8 +22,7 @@ region = Rect2(32, 96, 16, 16)
 size = Vector2(15, 15)
 
 [node name="Gold" type="Area2D"]
-collision_layer = 8
-collision_mask = 0
+collision_layer = 0
 script = ExtResource("1_erkk7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -33,5 +33,14 @@ texture = SubResource("AtlasTexture_rl81x")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8.5, 8.5)
 shape = SubResource("RectangleShape2D_6ntoj")
+
+[node name="SfxPickup" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_sgpt7")
+volume_db = -5.343
+
+[node name="Despawn" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.15
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

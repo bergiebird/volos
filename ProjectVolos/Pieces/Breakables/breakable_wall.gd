@@ -1,5 +1,4 @@
 @icon("res://ProjectVolos/Pieces/Breakables/breakable_wall.png")
-@tool
 extends Area2D
 @export var is_vertical :bool = false
 @export var is_fence :bool=false
@@ -14,7 +13,6 @@ var broken :bool = false
 
 func _ready():
 	sprite.animation = get_wall_type()+'s'
-
 func _process(delta):
 	if Engine.is_editor_hint():
 		sprite.animation = get_wall_type()+'s'
@@ -23,11 +21,14 @@ func _on_area_entered(area :Area2D)->void:
 	if area.name == "Kog" and area.charging:
 		if !broken:
 			%StaticBody2D.queue_free()
-			if is_fence: sfx_wall_metal.play()
-			else: sfx_wall_concrete.play()
+			if is_fence:
+				sfx_wall_metal.play()
+			else:
+				sfx_wall_concrete.play()
 			broken = true #vfx_wall.emitting = true
 			static_wall.queue_free()
 			if is_exit:
+				sprite.play((get_wall_type()+'r'))
 				create_exit_gate()
 			else:
 				sprite.play((get_wall_type()+'r'))
@@ -35,6 +36,7 @@ func _on_area_entered(area :Area2D)->void:
 func create_exit_gate():
 	var exit_gate = exit_node.instantiate()
 	exit_gate.position = position
+	exit_gate.z_index = 98
 	get_parent().add_child(exit_gate)
 
 func get_wall_type():

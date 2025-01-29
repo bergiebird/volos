@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bpayqq81cie2c"]
 
 [ext_resource type="Script" path="res://loot_goblin.gd" id="1_a1ald"]
-[ext_resource type="PackedScene" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_bmg2d"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="2_bmg2d"]
 [ext_resource type="SpriteFrames" uid="uid://b1poa6c4wpx0r" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_goblin.tres" id="3_vycoi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48lof"]
@@ -21,6 +21,8 @@ size = Vector2(8, 8)
 
 [node name="LootGoblin" type="Area2D"]
 z_index = 40
+collision_layer = 15
+collision_mask = 15
 script = ExtResource("1_a1ald")
 
 [node name="NormalMask" parent="." instance=ExtResource("2_bmg2d")]
@@ -42,7 +44,7 @@ shape = SubResource("RectangleShape2D_48lof")
 
 [node name="NorthCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetectors/NorthCollider"]
@@ -52,7 +54,7 @@ shape = SubResource("RectangleShape2D_fqreh")
 
 [node name="EastCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetectors/EastCollider"]
@@ -62,7 +64,7 @@ shape = SubResource("RectangleShape2D_oe807")
 
 [node name="WestCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetectors/WestCollider"]
@@ -72,7 +74,7 @@ shape = SubResource("RectangleShape2D_paj08")
 
 [node name="SouthCollider" type="Area2D" parent="WallDetectors"]
 unique_name_in_owner = true
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetectors/SouthCollider"]

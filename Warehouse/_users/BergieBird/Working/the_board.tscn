@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dwnsooyhvecam"]
+[gd_scene load_steps=18 format=4 uid="uid://dwnsooyhvecam"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/the_board.gd" id="1_u4jx2"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/map.gd" id="2_mwj23"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://0py8xhtkwc1j" path="res://ProjectVolos/Pieces/Breakables/breakable_wall.tscn" id="12_wgpj1"]
 [ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/camera_man.gd" id="12_yc54w"]
 [ext_resource type="PackedScene" uid="uid://bpayqq81cie2c" path="res://loot_goblin.tscn" id="13_ck2u5"]
+[ext_resource type="PackedScene" uid="uid://frd2sfct1h25" path="res://gold_pickup.tscn" id="13_vayp7"]
+[ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/score.gd" id="14_bsl1v"]
 [ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://ProjectVolos/Pieces/Breakables/jar.tscn" id="14_pyn46"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_id1pd"]
@@ -38,6 +40,7 @@ tile_set = ExtResource("3_qc6u6")
 script = ExtResource("7_rgi5i")
 
 [node name="Characters" type="Node2D" parent="Map/Pieces"]
+z_index = 99
 
 [node name="Kog" parent="Map/Pieces/Characters" instance=ExtResource("12_tnxyy")]
 unique_name_in_owner = true
@@ -78,33 +81,43 @@ input_pickable = false
 
 [node name="VFence" parent="Map/Pieces/Breakables" instance=ExtResource("12_wgpj1")]
 position = Vector2(288, 192)
-collision_layer = 7
 is_vertical = true
 is_fence = true
-is_exit = false
 
 [node name="HFence" parent="Map/Pieces/Breakables" instance=ExtResource("12_wgpj1")]
 position = Vector2(240, 224)
-collision_layer = 7
 is_fence = true
-is_exit = false
 
 [node name="VFence2" parent="Map/Pieces/Breakables" instance=ExtResource("12_wgpj1")]
 position = Vector2(288, 160)
-collision_layer = 7
 is_vertical = true
 is_fence = true
-is_exit = false
 
 [node name="ExitWall" parent="Map/Pieces/Breakables" instance=ExtResource("12_wgpj1")]
 position = Vector2(320, 144)
-collision_layer = 7
 is_exit = true
 
 [node name="ExitWall2" parent="Map/Pieces/Breakables" instance=ExtResource("12_wgpj1")]
 position = Vector2(336, 144)
-collision_layer = 7
 is_exit = true
+
+[node name="Gold" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(239, 191)
+
+[node name="Gold2" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(336, 208)
+
+[node name="Gold3" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(249, 285)
+
+[node name="Gold4" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(259, 266)
+
+[node name="Gold5" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(301, 279)
+
+[node name="Gold6" parent="Map/Pieces/Breakables" instance=ExtResource("13_vayp7")]
+position = Vector2(302, 241)
 
 [node name="Grid" type="TileMapLayer" parent="Map"]
 unique_name_in_owner = true
@@ -118,6 +131,13 @@ tile_set = ExtResource("6_2mrhp")
 unique_name_in_owner = true
 tile_map_data = PackedByteArray("AAAMABQAAAAQAAIAAAALABUAGwACAAcAAAAMABUAGwAFAAgAAAANABUAGwAEAAgAAAAOABUAGwABAAcAAAAPABUAGwAFAAgAAAAQABUAGwAAAAcAAAARABUAGwADAAcAAAALAAgAGwAEAAcAAAALAAkAGwACAAcAAAALAAoAGwAAAAgAAAALAAsAGwAEAAcAAAALAAwAGwAFAAgAAAALAA0AGwACAAgAAAALAA4AGwADAAcAAAALAA8AGwABAAcAAAALABAAGwADAAgAAAALABEAGwABAAgAAAALABIAGwAEAAgAAAALABMAGwAAAAgAAAALABQAGwAEAAgAAAAMAAgAGwAFAAgAAAANAAgAGwAEAAgAAAAOAAgAGwACAAcAAAAPAAgAGwAFAAcAAAAQAAgAGwABAAcAAAARAAgAGwABAAgAAAAXAAgAGwAFAAgAAAAYAAgAGwACAAgAAAAZAAgAGwAEAAgAAAAaAAgAGwAFAAcAAAAbAAgAGwAFAAgAAAAcAAgAGwAAAAgAAAAcAAkAGwADAAcAAAAcAAoAGwAAAAgAAAAcAAsAGwADAAcAAAAcAAwAGwAFAAcAAAAcAA0AGwACAAgAAAAcAA4AGwAAAAcAAAAcAA8AGwACAAgAAAAcABAAGwAAAAcAAAAcABEAGwADAAgAAAAcABIAGwAFAAcAAAAcABMAGwAEAAgAAAAcABQAGwADAAgAAAAcABUAGwABAAcAAAAXABUAGwABAAcAAAAYABUAGwAAAAcAAAAZABUAGwADAAgAAAAaABUAGwADAAgAAAAbABUAGwADAAgAAAANABQAAAARAAMAAAAOABQAAAARAAMAAAAPABQAAAARAAMAAAAQABQAAAARAAMAAAARABQAAAARAAMAAAASABQAAAARAAMAAAATABQAAAARAAEAAAAVABQAAAARAAEAAAAWABQAAAARAAMAAAAXABQAAAARAAEAAAAYABQAAAARAAEAAAAZABQAAAARAAMAAAAaABQAAAARAAMAAAAbABQAAAASAAMAAAAbAAoAAAASAAIAAAAbAAsAAAASAAIAAAAbAAwAAAASAAIAAAAbAA0AAAASAAIAAAAbAA4AAAAPAAEAAAAbAA8AAAASAAIAAAAbABAAAAASAAIAAAAbABEAAAASAAIAAAAbABIAAAASAAIAAAAbABMAAAASAAIAAAAbAAkAAAASAAEAAAANAAkAAAARAAMAAAAOAAkAAAARAAMAAAAPAAkAAAARAAMAAAAQAAkAAAARAAMAAAARAAkAAAARAAMAAAASAAkAAAAOAAEAAAAWAAkAAAARAAMAAAAXAAkAAAARAAEAAAAYAAkAAAARAAEAAAAZAAkAAAARAAEAAAAaAAkAAAARAAEAAAAMAAkAAAAQAAEAAAAMAAoAAAASAAIAAAAMAAsAAAASAAIAAAAMAAwAAAASAAIAAAAMAA0AAAASAAIAAAAMAA4AAAAOAAIAAAAMAA8AAAASAAIAAAAMABAAAAASAAIAAAAMABEAAAASAAIAAAAMABIAAAASAAIAAAAMABMAAAASAAIAAAAVAA4AAAARAAEAAAAXAA4AAAARAAMAAAAaAA4AAAARAAEAAAANAA4AAAARAAEAAAAOAA4AAAARAAMAAAAQAA4AAAARAAMAAAARAA4AAAARAAMAAAASAA4AAAAPAAIAAAATAA4AAAARAAEAAAAUAA4AAAARAAEAAAAYAA4AAAARAAMAAAAZAA4AAAARAAEAAAASAA0AAAAPAAMAAAAWABUAGwACAAgAAAAVABUAGwAAAAgAAAATABUAGwAAAAgAAAASABUAGwACAAgAAAAUABQAAAARAAMAAAAUABUAGwACAAgAAAASAAgAGwAFAAcAAAAWAAgAGwAEAAgAAAATAAkAAAARAAMAAAATAAgAGwABAAcAAAASAAsAAAASAAIAAAAUAAgAGwABAAcAAAAVAAgAGwABAAcAAAA=")
 tile_set = ExtResource("4_bbkkj")
+
+[node name="Label" type="Label" parent="Map"]
+offset_left = 215.0
+offset_top = 274.0
+offset_right = 255.0
+offset_bottom = 297.0
+script = ExtResource("14_bsl1v")
 
 [node name="CameraManV2" type="Camera2D" parent="."]
 position = Vector2(321, 240)

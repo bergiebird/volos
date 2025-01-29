@@ -83,6 +83,11 @@ animations = [{
 "name": &"hws",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"null",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sdlcu")
@@ -143,10 +148,9 @@ contains:
 Collision Shape
 Color Rect
 Animation"
-collision_layer = 5
-collision_mask = 5
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_otusg")
-is_exit = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
@@ -157,7 +161,7 @@ shape = SubResource("RectangleShape2D_aj61q")
 z_index = 20
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_bqorb")
-animation = &"hws"
+animation = &"null"
 
 [node name="SfxWallMetal" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
