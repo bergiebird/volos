@@ -40,6 +40,7 @@ animation = &"jw"
 autoplay = "jw"
 
 [node name="NormalMask" parent="." instance=ExtResource("3_18fm2")]
+visible = false
 
 [node name="VfxPot" parent="." instance=ExtResource("4_qo3d2")]
 position = Vector2(8, 8)

@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://diqixg7xiu3x6"]
+
+[ext_resource type="Texture2D" uid="uid://be0k8mbkk1204" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Bars-Sliders-Scrollbars.png" id="1_tla25"]
+
+[resource]
+atlas = ExtResource("1_tla25")
+region = Rect2(27, 83, 27, 9)
+filter_clip = true

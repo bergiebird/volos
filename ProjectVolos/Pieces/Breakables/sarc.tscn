@@ -1,0 +1,109 @@
+[gd_scene load_steps=13 format=3 uid="uid://btinf1sg3gbwk"]
+
+[ext_resource type="Script" path="res://sarc.gd" id="1_ytt8g"]
+[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="3_uavav"]
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://ProjectVolos/Pieces/~Effects/Mask.tscn" id="4_24d6c"]
+[ext_resource type="PackedScene" uid="uid://cmknsxlhd1bqu" path="res://ProjectVolos/Gyms/VfxGym/vfx_pot.tscn" id="5_bb3tm"]
+[ext_resource type="AudioStream" uid="uid://d3nbpoxp5t7hq" path="res://ProjectVolos/Audio/sfx_dont_move/impact_cco.wav" id="6_qtt8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
+size = Vector2(14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k2qt"]
+atlas = ExtResource("3_uavav")
+region = Rect2(16, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2awl"]
+atlas = ExtResource("3_uavav")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p1up"]
+atlas = ExtResource("3_uavav")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70bge"]
+atlas = ExtResource("3_uavav")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgejw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k2qt")
+}],
+"loop": true,
+"name": &"bot_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2awl")
+}],
+"loop": true,
+"name": &"bot_s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p1up")
+}],
+"loop": true,
+"name": &"top_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70bge")
+}],
+"loop": true,
+"name": &"top_s",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyg5i"]
+size = Vector2(14, 13)
+
+[node name="Sarc" type="Area2D"]
+editor_description = "*LU 1/20/25
+=====================================
+null script
+=====================================
+contains:
+Collision Shape
+Color Rect
+Animation"
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_ytt8g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(8, 7.5)
+shape = SubResource("RectangleShape2D_aj61q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_kgejw")
+animation = &"top_r"
+
+[node name="NormalMask" parent="." instance=ExtResource("4_24d6c")]
+visible = false
+
+[node name="VfxPot" parent="." instance=ExtResource("5_bb3tm")]
+position = Vector2(8, 8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qtt8i")
+volume_db = -20.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8, 7.5)
+shape = SubResource("RectangleShape2D_hyg5i")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

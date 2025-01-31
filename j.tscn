@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr6bv8q8lpe05"]
+
+[ext_resource type="FontFile" uid="uid://53yvsagn4cwe" path="res://ProjectVolos/UI/fonts_dont_move/Enter_Input_Dark.ttf" id="1_pqe7g"]
+
+[node name="j" type="Label"]
+offset_left = 168.0
+offset_top = 136.0
+offset_right = 184.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("1_pqe7g")
+text = "j"

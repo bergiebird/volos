@@ -91,7 +91,7 @@ func build_query() -> String:
 					query += "&".join(PackedStringArray(query_struct[key]))
 				"Or":
 					query += "or=(%s)"%[",".join(query_struct[key])]
-	print(query)
+	#print(query)
 	return query
 
 
@@ -141,7 +141,7 @@ func order(column : String, direction : int = Directions.Ascending, nullsorder :
 	query_struct.order += PackedStringArray([("%s.%s.%s" % [column, direction_str, nullsorder_str])])
 	return self
 
-## [FILTERS] -------------------------------------------------------------------- 
+## [FILTERS] --------------------------------------------------------------------
 
 func filter(column : String, filter : int, value : String, _props : Dictionary = {}) -> SupabaseQuery:
 	var filter_str : String = match_filter(filter)
@@ -259,7 +259,7 @@ func clean() -> void:
 	body = ""
 	header = []
 	request = 0
-	
+
 	query_struct.table = ""
 	query_struct.select = PackedStringArray([])
 	query_struct.order = PackedStringArray([])

@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://bb45s8o0uvxro"]
+
+[sub_resource type="Curve" id="Curve_1kgji"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.498024, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_05qsi"]
+curve = SubResource("Curve_1kgji")
+
+[sub_resource type="Gradient" id="Gradient_lw2ki"]
+colors = PackedColorArray(0.0862745, 0.0509804, 0.0745098, 1, 0.678431, 0.25098, 0.188235, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s11hy"]
+gradient = SubResource("Gradient_lw2ki")
+
+[sub_resource type="Curve" id="Curve_ac1fs"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_s21ma"]
+curve_y = SubResource("Curve_ac1fs")
+
+[sub_resource type="Curve" id="Curve_riy63"]
+min_value = -2.0
+max_value = 2.0
+_data = [Vector2(0, 1.61222), 0.0, 0.0, 0, 0, Vector2(0.991304, 1.96271), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3f6c8"]
+curve = SubResource("Curve_riy63")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jbuc4"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 8.0
+emission_ring_radius = 8.0
+emission_ring_inner_radius = 4.0
+directional_velocity_min = -5.00002
+directional_velocity_max = 4.99998
+directional_velocity_curve = SubResource("CurveXYZTexture_s21ma")
+orbit_velocity_curve = SubResource("CurveTexture_3f6c8")
+gravity = Vector3(0, 0, 0)
+attractor_interaction_enabled = false
+scale_min = 0.25
+scale_max = 0.75
+color_ramp = SubResource("GradientTexture1D_s11hy")
+alpha_curve = SubResource("CurveTexture_05qsi")
+turbulence_initial_displacement_min = 1.49012e-06
+turbulence_initial_displacement_max = 1.49012e-06
+
+[node name="VfxCapture" type="GPUParticles2D"]
+emitting = false
+amount = 750
+process_material = SubResource("ParticleProcessMaterial_jbuc4")
+lifetime = 1.5
+one_shot = true
+speed_scale = 0.3
+randomness = 1.0
+fixed_fps = 180
+fract_delta = false
+draw_order = 2

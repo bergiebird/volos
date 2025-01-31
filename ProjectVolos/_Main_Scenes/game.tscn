@@ -1,12 +1,62 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjythrib2w6i0"]
+[gd_scene load_steps=31 format=3 uid="uid://cjythrib2w6i0"]
 
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
-[ext_resource type="AudioStream" uid="uid://d3fxwrsusb77k" path="res://ProjectVolos/Audio/19-1-25-2.mp3" id="1_kqgyx"]
-[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/music_box.gd" id="2_3sxvc"]
+[ext_resource type="AudioStream" uid="uid://sljxwe78nod" path="res://ProjectVolos/Audio/sfx_dont_move/173859__jivatma07__j1game_over_mono.wav" id="4_ktoqi"]
+[ext_resource type="AudioStream" uid="uid://b4ak2wbqrhyvb" path="res://ProjectVolos/Audio/sfx_dont_move/capture_804.wav" id="5_bxh0o"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/audio_stream_player.gd" id="5_cu72s"]
+[ext_resource type="AudioStream" uid="uid://ne8khdnmy5ad" path="res://ProjectVolos/Audio/sfx_dont_move/victory.wav" id="6_28c5r"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/non_manager.gd" id="6_lk047"]
-[ext_resource type="PackedScene" uid="uid://dwnsooyhvecam" path="res://Warehouse/_users/BergieBird/Working/the_board.tscn" id="7_mpgir"]
+[ext_resource type="Texture2D" uid="uid://x6fajdk87ykr" path="res://Warehouse/DemonicDungeonAssets/Art/Mage.png" id="7_qiuiq"]
+[ext_resource type="Texture2D" uid="uid://btv8neb32114l" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Frames.png" id="8_aokq4"]
+[ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="8_mq60e"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/Non/editor_tools.gd" id="8_twdtt"]
+[ext_resource type="AudioStream" uid="uid://cdypk55ixi7ca" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Laser_18.wav" id="8_w507f"]
+[ext_resource type="Texture2D" uid="uid://bbiiaungnago7" path="res://Warehouse/DemonicDungeonAssets/Art/Hero.png" id="9_3vxas"]
+[ext_resource type="Texture2D" uid="uid://cbvvleds2780v" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Inputs.png" id="9_4npx5"]
+[ext_resource type="FontFile" uid="uid://53yvsagn4cwe" path="res://ProjectVolos/UI/fonts_dont_move/Enter_Input_Dark.ttf" id="10_5ld7a"]
+[ext_resource type="Script" path="res://Warehouse/_users/BergieBird/Working/camera_man.gd" id="10_7fuoc"]
+[ext_resource type="FontFile" uid="uid://bv2qy6iakuqg" path="res://ProjectVolos/UI/fonts_dont_move/High_Birth.ttf" id="11_lqds8"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/game_cover.gd" id="13_8nj8b"]
+[ext_resource type="FontFile" uid="uid://duaa435o2cwak" path="res://ProjectVolos/UI/fonts_dont_move/Enter_Input_Dark_Pressed.ttf" id="13_lcrup"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/space_press.gd" id="13_td277"]
+[ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/win_loss_label.gd" id="16_8o0ry"]
 [ext_resource type="Script" path="res://ProjectVolos/_Main_Scenes/main_menu.gd" id="18_vi2el"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dnlm"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(437, 804, 38, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0qhr"]
+atlas = ExtResource("9_4npx5")
+region = Rect2(320, 80, 48, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdhsx"]
+atlas = ExtResource("8_mq60e")
+region = Rect2(629, 69, 54, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heh6m"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(439, 231, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_getfs"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 33, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cljpf"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 20, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eko4s"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 16, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygpg5"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(627, 723, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tim3t"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(659, 724, 23, 16)
 
 [node name="GAME" type="Node"]
 editor_description = "Our main game scene/node.
@@ -14,18 +64,13 @@ editor_description = "Our main game scene/node.
 Use this node's script as your first Singleton to pass information that must be global to the main game scene. "
 script = ExtResource("1_ad5kq")
 
+[node name="LevelGoesHere" type="Node2D" parent="."]
+unique_name_in_owner = true
+
 [node name="Non" type="Node" parent="."]
 unique_name_in_owner = true
 editor_description = "Everything that is relevant to the game or making of the game but doesn't cleanly fit in the lvl or ui folders"
 script = ExtResource("6_lk047")
-
-[node name="MusicBox" type="AudioStreamPlayer" parent="Non"]
-unique_name_in_owner = true
-editor_description = "This is where the Ptrack will sit. Lots of calls will come in and out of this track throughout the course of the game. Keep this nice and pretty."
-stream = ExtResource("1_kqgyx")
-autoplay = true
-bus = &"Music"
-script = ExtResource("2_3sxvc")
 
 [node name="EditorTools" type="Node" parent="Non"]
 unique_name_in_owner = true
@@ -54,9 +99,796 @@ offset_right = 481.0
 offset_bottom = 360.0
 color = Color(0.901961, 0.901961, 0.901961, 0.196078)
 
-[node name="TheBoard" parent="." instance=ExtResource("7_mpgir")]
+[node name="NonAudio" type="Node" parent="Non/EditorTools"]
+script = ExtResource("5_cu72s")
+
+[node name="NonCapture" type="AudioStreamPlayer" parent="Non/EditorTools/NonAudio"]
+unique_name_in_owner = true
+stream = ExtResource("5_bxh0o")
+bus = &"SFX"
+
+[node name="NonGameOver" type="AudioStreamPlayer" parent="Non/EditorTools/NonAudio"]
+unique_name_in_owner = true
+stream = ExtResource("4_ktoqi")
+bus = &"SFX"
+
+[node name="NonVictory" type="AudioStreamPlayer" parent="Non/EditorTools/NonAudio"]
+unique_name_in_owner = true
+stream = ExtResource("6_28c5r")
+volume_db = 8.0
+bus = &"SFX"
+
+[node name="NonSpacebar" type="AudioStreamPlayer" parent="Non/EditorTools/NonAudio"]
+unique_name_in_owner = true
+stream = ExtResource("8_w507f")
+volume_db = -35.0
+pitch_scale = 0.4
 
 [node name="MainMenu" type="Node2D" parent="."]
 script = ExtResource("18_vi2el")
 
-[connection signal="finished" from="Non/MusicBox" to="Non/MusicBox" method="_on_finished"]
+[node name="Decorations" type="Node2D" parent="MainMenu"]
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/Decorations"]
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 625.0
+offset_bottom = 466.0
+color = Color(0.337255, 0.129412, 0.164706, 1)
+
+[node name="Dev1" type="Node2D" parent="MainMenu/Decorations"]
+position = Vector2(16, -13)
+
+[node name="Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev1"]
+position = Vector2(77, 145)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/Decorations/Dev1"]
+offset_left = 21.0
+offset_top = 155.0
+offset_right = 137.0
+offset_bottom = 181.0
+texture = SubResource("AtlasTexture_y0qhr")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 8
+
+[node name="Anti-Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev1"]
+position = Vector2(77, 191)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+flip_v = true
+
+[node name="Label4" type="Label" parent="MainMenu/Decorations/Dev1"]
+offset_left = 24.0
+offset_top = 157.0
+offset_right = 162.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "ThisGameIsRyan"
+
+[node name="programmer" type="Label" parent="MainMenu/Decorations/Dev1"]
+offset_left = 30.0
+offset_top = 198.0
+offset_right = 168.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "programmer"
+
+[node name="artist" type="Label" parent="MainMenu/Decorations/Dev1"]
+offset_left = 55.0
+offset_top = 294.0
+offset_right = 193.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "artist"
+
+[node name="Dev2" type="Node2D" parent="MainMenu/Decorations"]
+position = Vector2(16, 160)
+
+[node name="Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev2"]
+position = Vector2(77, 145)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/Decorations/Dev2"]
+offset_left = 30.0
+offset_top = 155.0
+offset_right = 125.0
+offset_bottom = 181.0
+texture = SubResource("AtlasTexture_y0qhr")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 8
+
+[node name="Anti-Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev2"]
+position = Vector2(77, 191)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+flip_v = true
+
+[node name="Label3" type="Label" parent="MainMenu/Decorations/Dev2"]
+offset_left = 55.0
+offset_top = 158.0
+offset_right = 99.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "V3X3D"
+
+[node name="Dev3" type="Node2D" parent="MainMenu/Decorations"]
+position = Vector2(472, -13)
+
+[node name="Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev3"]
+position = Vector2(77, 144)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/Decorations/Dev3"]
+offset_left = 30.0
+offset_top = 155.0
+offset_right = 125.0
+offset_bottom = 181.0
+texture = SubResource("AtlasTexture_y0qhr")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 8
+
+[node name="Anti-Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev3"]
+position = Vector2(77, 191)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+flip_v = true
+
+[node name="Label2" type="Label" parent="MainMenu/Decorations/Dev3"]
+offset_left = 54.0
+offset_top = 158.0
+offset_right = 192.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "VR00D"
+
+[node name="programmer" type="Label" parent="MainMenu/Decorations/Dev3"]
+offset_left = 34.0
+offset_top = 198.0
+offset_right = 172.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "programmer"
+
+[node name="Dev4" type="Node2D" parent="MainMenu/Decorations"]
+position = Vector2(472, 159)
+
+[node name="Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev4"]
+position = Vector2(77, 144)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/Decorations/Dev4"]
+offset_left = 30.0
+offset_top = 155.0
+offset_right = 125.0
+offset_bottom = 181.0
+texture = SubResource("AtlasTexture_y0qhr")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 8
+
+[node name="Anti-Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev4"]
+position = Vector2(77, 191)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+flip_v = true
+
+[node name="Label" type="Label" parent="MainMenu/Decorations/Dev4"]
+offset_left = 32.0
+offset_top = 158.0
+offset_right = 170.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "  bergiebird"
+
+[node name="programmer" type="Label" parent="MainMenu/Decorations/Dev4"]
+offset_left = 34.0
+offset_top = 117.0
+offset_right = 172.0
+offset_bottom = 149.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "programmer"
+
+[node name="Dev5" type="Node2D" parent="MainMenu/Decorations"]
+position = Vector2(233, 240)
+
+[node name="Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev5"]
+position = Vector2(77, 144)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu/Decorations/Dev5"]
+offset_left = 27.0
+offset_top = 155.0
+offset_right = 134.0
+offset_bottom = 181.0
+texture = SubResource("AtlasTexture_y0qhr")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 8
+
+[node name="Anti-Squiggles" type="Sprite2D" parent="MainMenu/Decorations/Dev5"]
+position = Vector2(77, 191)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2dnlm")
+flip_v = true
+
+[node name="Label5" type="Label" parent="MainMenu/Decorations/Dev5"]
+offset_left = 21.0
+offset_top = 157.0
+offset_right = 159.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "  hotcakeinabox"
+
+[node name="musician" type="Label" parent="MainMenu/Decorations/Dev5"]
+offset_left = 49.0
+offset_top = 120.0
+offset_right = 187.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "musician"
+
+[node name="musician2" type="Label" parent="MainMenu/Decorations/Dev5"]
+modulate = Color(1, 1, 1, 0.196078)
+offset_left = 151.0
+offset_top = 174.0
+offset_right = 368.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "MADE IN: Godot 4.3
+MADE FOR: PirateSoftware Jam 16"
+
+[node name="GameFrame" type="NinePatchRect" parent="MainMenu"]
+z_index = 5
+offset_left = 170.0
+offset_top = 121.0
+offset_right = 472.0
+offset_bottom = 360.0
+texture = SubResource("AtlasTexture_vdhsx")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="GameCover" type="NinePatchRect" parent="MainMenu"]
+unique_name_in_owner = true
+z_index = 200
+offset_left = 177.0
+offset_top = 128.0
+offset_right = 465.0
+offset_bottom = 353.0
+texture = SubResource("AtlasTexture_heh6m")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+script = ExtResource("13_8nj8b")
+
+[node name="Kontrols" type="Node2D" parent="MainMenu/GameCover"]
+modulate = Color(0.917647, 0.54902, 0.886275, 1)
+position = Vector2(-2, 73)
+
+[node name="w" type="Label" parent="MainMenu/GameCover/Kontrols"]
+offset_left = 86.0
+offset_top = -16.0
+offset_right = 134.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("10_5ld7a")
+text = "w"
+
+[node name="e" type="Label" parent="MainMenu/GameCover/Kontrols"]
+offset_left = 102.0
+offset_top = -16.0
+offset_right = 150.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("10_5ld7a")
+text = "e"
+script = ExtResource("13_td277")
+
+[node name="asd" type="Label" parent="MainMenu/GameCover/Kontrols"]
+offset_left = 70.0
+offset_right = 166.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("10_5ld7a")
+text = "asd"
+
+[node name="take2_kog" type="Label" parent="MainMenu/GameCover/Kontrols"]
+unique_name_in_owner = true
+visible = false
+offset_left = 51.0
+offset_top = -17.0
+offset_right = 107.0
+offset_bottom = 6.0
+rotation = -0.174533
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Smasher"
+
+[node name="take2_kog2" type="Label" parent="MainMenu/GameCover/Kontrols"]
+unique_name_in_owner = true
+visible = false
+offset_left = 18.0
+offset_top = -56.0
+offset_right = 277.0
+offset_bottom = -40.0
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Charge! Into Enemies to Stop Capture!"
+
+[node name="Kleptrols" type="Node2D" parent="MainMenu/GameCover"]
+modulate = Color(0.584314, 0.713726, 0.4, 1)
+position = Vector2(100, 75)
+
+[node name="i" type="Label" parent="MainMenu/GameCover/Kleptrols"]
+offset_left = 80.0
+offset_top = -19.0
+offset_right = 128.0
+offset_bottom = 5.0
+theme_override_fonts/font = ExtResource("10_5ld7a")
+text = "i"
+
+[node name="jkl" type="Label" parent="MainMenu/GameCover/Kleptrols"]
+offset_left = 64.0
+offset_top = -3.0
+offset_right = 112.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("10_5ld7a")
+text = "jkl"
+
+[node name="take3_klep" type="Label" parent="MainMenu/GameCover/Kleptrols"]
+unique_name_in_owner = true
+visible = false
+offset_left = 48.0
+offset_top = -35.0
+offset_right = 180.0
+offset_bottom = -19.0
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Don't Get Captured!
+"
+
+[node name="take2_klep" type="Label" parent="MainMenu/GameCover/Kleptrols"]
+unique_name_in_owner = true
+visible = false
+offset_left = 80.0
+offset_top = -27.0
+offset_right = 136.0
+offset_bottom = -4.0
+rotation = 0.174533
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Grabber"
+
+[node name="Start" type="Node2D" parent="MainMenu/GameCover"]
+
+[node name="spacebar" type="Label" parent="MainMenu/GameCover/Start"]
+offset_left = 113.0
+offset_top = 105.0
+offset_right = 161.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("13_lcrup")
+text = "Z"
+script = ExtResource("13_td277")
+
+[node name="SecondTimer" type="Timer" parent="MainMenu/GameCover/Start"]
+unique_name_in_owner = true
+autostart = true
+
+[node name="spacebar_how" type="Label" parent="MainMenu/GameCover/Start"]
+offset_left = 72.0
+offset_top = 130.0
+offset_right = 436.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Start & Restart Game"
+
+[node name="goal" type="Label" parent="MainMenu/GameCover/Start"]
+offset_left = 32.0
+offset_top = 97.0
+offset_right = 396.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.937255, 0.619608, 0.305882, 1)
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Collect all 25 Treasures to escape!"
+
+[node name="take2_start" type="Label" parent="MainMenu/GameCover/Start"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.937255, 0.619608, 0.305882, 1)
+offset_left = 105.0
+offset_top = 142.0
+offset_right = 276.0
+offset_bottom = 159.0
+rotation = 0.0872665
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "You got this!"
+
+[node name="MenuFrame" type="Node2D" parent="MainMenu"]
+position = Vector2(0, 2)
+
+[node name="Title" type="Node2D" parent="MainMenu/MenuFrame"]
+position = Vector2(141, 25)
+
+[node name="Label" type="Label" parent="MainMenu/MenuFrame/Title"]
+modulate = Color(0.937255, 0.619608, 0.305882, 1)
+z_index = 1
+offset_left = -6.0
+offset_top = 11.0
+offset_right = 356.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "       &         Pharout Heist"
+
+[node name="Klep" type="Label" parent="MainMenu/MenuFrame/Title"]
+modulate = Color(0.584314, 0.713726, 0.4, 1)
+z_index = 1
+offset_left = -4.0
+offset_top = 11.0
+offset_right = 358.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Klep"
+
+[node name="Kogs" type="Label" parent="MainMenu/MenuFrame/Title"]
+modulate = Color(0.917647, 0.54902, 0.886275, 1)
+z_index = 1
+offset_left = 89.0
+offset_top = 11.0
+offset_right = 451.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Kog's"
+
+[node name="WinLossLabel" type="Label" parent="MainMenu/MenuFrame/Title"]
+visible = false
+modulate = Color(0.937255, 0.619608, 0.305882, 1)
+z_index = 1
+offset_left = -111.0
+offset_top = 333.0
+offset_right = 6.99999
+offset_bottom = 400.0
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Certified
+LOSER"
+script = ExtResource("16_8o0ry")
+
+[node name="ColorRect2" type="ColorRect" parent="MainMenu/MenuFrame/Title"]
+offset_left = -71.0
+offset_top = -9.0
+offset_right = 420.0
+offset_bottom = 61.0
+color = Color(0.0862745, 0.0509804, 0.0745098, 1)
+
+[node name="KogPic" type="Sprite2D" parent="MainMenu/MenuFrame/Title"]
+z_index = 1
+position = Vector2(436, 24)
+texture = ExtResource("9_3vxas")
+
+[node name="PharoahPic" type="Sprite2D" parent="MainMenu/MenuFrame/Title"]
+z_index = 1
+position = Vector2(-81, 20)
+texture = ExtResource("7_qiuiq")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title"]
+position = Vector2(-71, 23)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title"]
+position = Vector2(418, 23)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="Bot" type="Node2D" parent="MainMenu/MenuFrame/Title"]
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(-38, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(91, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(27, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(155, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(284, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(220, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(348, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot"]
+position = Vector2(399, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_cljpf")
+
+[node name="Top" type="Node2D" parent="MainMenu/MenuFrame/Title"]
+position = Vector2(0, -68)
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(-38, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(91, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(27, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(155, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(284, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(220, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(348, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top"]
+position = Vector2(399, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_cljpf")
+
+[node name="Bot" type="Node2D" parent="MainMenu/MenuFrame"]
+position = Vector2(14, 0)
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(49, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(114, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(564, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Bot"]
+position = Vector2(612, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="Left" type="Node2D" parent="MainMenu/MenuFrame"]
+position = Vector2(481, -163)
+rotation = 1.5708
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(564, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Left"]
+position = Vector2(612, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="Right" type="Node2D" parent="MainMenu/MenuFrame"]
+position = Vector2(1086, -163)
+rotation = 1.5708
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(564, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Right"]
+position = Vector2(612, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="CornerLeft" type="Sprite2D" parent="MainMenu/MenuFrame"]
+position = Vector2(21, 460)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_ygpg5")
+
+[node name="CornerRight" type="Sprite2D" parent="MainMenu/MenuFrame"]
+position = Vector2(634, 467)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_tim3t")
+
+[node name="CameraManV2" type="Camera2D" parent="."]
+position = Vector2(321, 240)
+rotation = -0.0592957
+zoom = Vector2(2, 2)
+script = ExtResource("10_7fuoc")
+
+[connection signal="timeout" from="MainMenu/GameCover/Start/SecondTimer" to="MainMenu/GameCover/Start/spacebar" method="_on_second_timer_timeout"]

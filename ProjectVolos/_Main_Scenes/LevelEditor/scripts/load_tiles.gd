@@ -58,7 +58,7 @@ func _ready():
 					tab_content_instance.visible = false
 				self.add_child(tab_content_instance)
 
-			print(us_tab)
+			#print(us_tab)
 			while atlas_count > 0:
 				atlas_count -= 1
 				var coord = atlas.get_tile_id(atlas_count)

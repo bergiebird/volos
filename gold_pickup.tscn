@@ -22,10 +22,12 @@ region = Rect2(32, 96, 16, 16)
 size = Vector2(15, 15)
 
 [node name="Gold" type="Area2D"]
+z_index = 39
 collision_layer = 0
 script = ExtResource("1_erkk7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
 material = SubResource("ShaderMaterial_n0xw7")
 position = Vector2(8, 8)
 texture = SubResource("AtlasTexture_rl81x")
@@ -37,7 +39,7 @@ shape = SubResource("RectangleShape2D_6ntoj")
 [node name="SfxPickup" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_sgpt7")
-volume_db = -5.343
+volume_db = -20.0
 
 [node name="Despawn" type="Timer" parent="."]
 unique_name_in_owner = true

@@ -3,8 +3,9 @@ extends AudioStreamPlayer # music_box.gd
 const SONG_LENGTH: int = 90
 @export var shhhh: bool = false
 
+
+
 func _ready() -> void:
-	# Vrood small tweak, adjust if we don't likey
 	fade_in()
 	if shhhh:
 		playing = false
@@ -29,12 +30,5 @@ func evaluate_song_stats() -> void:
 	print(get_playback_position())
 
 func fade_in() -> void:
-	var fade_in_rate: float = 0.5
 	volume_db -= 5
 	lerp(volume_db, 0.0, 1.0)
-
-'''
-Other scripts that want to interact with this node will most likely:
-	 tell this node to stop playing:
-		collect get_playback_position() before initiating stop()
-'''
