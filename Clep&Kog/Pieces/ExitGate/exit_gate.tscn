@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://7tumcqgfelhu"]
+
+[ext_resource type="Script" uid="uid://ds8fkbvmip7a5" path="res://Clep&Kog/Pieces/ExitGate/exit_gate.gd" id="1_ah5wt"]
+[ext_resource type="PackedScene" uid="uid://cma2xqyhueopf" path="res://Clep&Kog/Gyms/VfxGym/vfx_look_here.tscn" id="2_s74e3"]
+[ext_resource type="AudioStream" uid="uid://bfbj1fmja76dh" path="res://Clep&Kog/Pieces/ExitGate/667844__silverillusionist__confirm-sound-mystic-chimes.wav" id="3_30lwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjgwr"]
+size = Vector2(14, 14)
+
+[node name="ExitGate" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_ah5wt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sjgwr")
+
+[node name="VfxLookHere" parent="." instance=ExtResource("2_s74e3")]
+position = Vector2(0, 0)
+amount = 100
+lifetime = 1.75
+preprocess = 1.0
+explosiveness = 0.25
+
+[node name="Opened" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_30lwe")
+
+[connection signal="finished" from="Opened" to="." method="_on_audio_stream_player_finished"]

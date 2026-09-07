@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bh2svqsal151c"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bh2svqsal151c"]
 
 [ext_resource type="Texture2D" uid="uid://dma0nj2kvo4sg" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_frozen.png" id="1_15hn5"]
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="2_xu5xa"]
@@ -39,7 +39,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8tcf6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Frozen",
 "speed": 5.0
 }, {
@@ -53,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_blpfr")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Original",
 "speed": 5.0
 }]

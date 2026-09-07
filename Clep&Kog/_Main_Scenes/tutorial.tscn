@@ -1,0 +1,264 @@
+[gd_scene format=4 uid="uid://ce8wgj16b6a5a"]
+
+[ext_resource type="PackedScene" uid="uid://b6oejlmh2e5uo" path="res://Clep&Kog/Pieces/Spawner/spawner.tscn" id="1_y3gmk"]
+[ext_resource type="Script" uid="uid://bg8ll7e4h61qa" path="res://Clep&Kog/_Main_Scenes/kontrols.gd" id="2_h6285"]
+[ext_resource type="FontFile" uid="uid://53yvsagn4cwe" path="res://Clep&Kog/UI/fonts_dont_move/Enter_Input_Dark.ttf" id="3_d7sfk"]
+[ext_resource type="Script" uid="uid://d7t3l66t2uh" path="res://Clep&Kog/_Main_Scenes/space_press.gd" id="4_3p3xa"]
+[ext_resource type="FontFile" uid="uid://bv2qy6iakuqg" path="res://Clep&Kog/UI/fonts_dont_move/High_Birth.ttf" id="5_y3gmk"]
+[ext_resource type="FontFile" uid="uid://duaa435o2cwak" path="res://Clep&Kog/UI/fonts_dont_move/Enter_Input_Dark_Pressed.ttf" id="6_h6285"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://Clep&Kog/Pieces/Breakables/jar.tscn" id="7_3p3xa"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="7_y3gmk"]
+[ext_resource type="PackedScene" uid="uid://0py8xhtkwc1j" path="res://Clep&Kog/Pieces/Breakables/breakable_wall.tscn" id="8_y3gmk"]
+
+[node name="TUT" type="Node2D" unique_id=1460745899]
+z_index = 1000
+position = Vector2(1, 5.5)
+
+[node name="ClepSpawn" parent="." unique_id=2059388070 instance=ExtResource("1_y3gmk")]
+position = Vector2(434, 322)
+
+[node name="KogSpawn" parent="." unique_id=1699168662 instance=ExtResource("1_y3gmk")]
+position = Vector2(225, 323)
+who_spawns_here = 1
+
+[node name="Kontrols" type="Node2D" parent="." unique_id=1291582152 node_paths=PackedStringArray("label_w", "label_e", "label_s", "label_a", "label_d", "label_i", "label_j", "label_k", "label_l")]
+position = Vector2(176, 233)
+script = ExtResource("2_h6285")
+label_w = NodePath("w")
+label_e = NodePath("e")
+label_s = NodePath("s")
+label_a = NodePath("a")
+label_d = NodePath("d")
+label_i = NodePath("i")
+label_j = NodePath("j")
+label_k = NodePath("k")
+label_l = NodePath("l")
+
+[node name="w" type="Label" parent="Kontrols" unique_id=797312254]
+modulate = Color(0.91764706, 0.54901963, 0.8862745, 1)
+offset_left = 83.0
+offset_top = -16.0
+offset_right = 115.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "w"
+metadata/_edit_use_anchors_ = true
+
+[node name="e" type="Label" parent="Kontrols" unique_id=1007710330]
+modulate = Color(0.91764706, 0.54901963, 0.8862745, 1)
+offset_left = 99.0
+offset_top = -16.0
+offset_right = 147.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "e"
+metadata/_edit_use_anchors_ = true
+
+[node name="s" type="Label" parent="Kontrols" unique_id=912519024]
+modulate = Color(0.91764706, 0.54901963, 0.8862745, 1)
+offset_left = 88.0
+offset_right = 136.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "s"
+metadata/_edit_use_anchors_ = true
+
+[node name="a" type="Label" parent="Kontrols" unique_id=14766017]
+modulate = Color(0.91764706, 0.54901963, 0.8862745, 1)
+offset_left = 72.0
+offset_right = 120.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "a"
+metadata/_edit_use_anchors_ = true
+
+[node name="d" type="Label" parent="Kontrols" unique_id=687678750]
+modulate = Color(0.91764706, 0.54901963, 0.8862745, 1)
+offset_left = 104.0
+offset_right = 152.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "d"
+metadata/_edit_use_anchors_ = true
+
+[node name="i" type="Label" parent="Kontrols" unique_id=982647248]
+modulate = Color(0.58431375, 0.7137255, 0.4, 1)
+offset_left = 177.0
+offset_top = -17.0
+offset_right = 193.0
+offset_bottom = 7.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "i"
+metadata/_edit_use_anchors_ = true
+
+[node name="j" type="Label" parent="Kontrols" unique_id=1061681134]
+modulate = Color(0.58431375, 0.7137255, 0.4, 1)
+offset_left = 166.0
+offset_top = -1.0
+offset_right = 214.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "j"
+metadata/_edit_use_anchors_ = true
+
+[node name="k" type="Label" parent="Kontrols" unique_id=569888145]
+modulate = Color(0.58431375, 0.7137255, 0.4, 1)
+offset_left = 182.0
+offset_top = -1.0
+offset_right = 230.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "k"
+metadata/_edit_use_anchors_ = true
+
+[node name="l" type="Label" parent="Kontrols" unique_id=1679724467]
+modulate = Color(0.58431375, 0.7137255, 0.4, 1)
+offset_left = 198.0
+offset_top = -1.0
+offset_right = 246.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_d7sfk")
+text = "l"
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Node2D" parent="." unique_id=1971763729]
+position = Vector2(178, 160)
+
+[node name="spacebar" type="Label" parent="Start" unique_id=861076390]
+offset_left = 113.0
+offset_top = 139.0
+offset_right = 161.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("6_h6285")
+text = "Z"
+script = ExtResource("4_3p3xa")
+
+[node name="SecondTimer" type="Timer" parent="Start" unique_id=752009670]
+autostart = true
+
+[node name="spacebar_how" type="Label" parent="Start" unique_id=159637607]
+offset_left = 68.0
+offset_top = 134.0
+offset_right = 212.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("5_y3gmk")
+theme_override_font_sizes/font_size = 8
+text = "Start & Restart Game"
+
+[node name="goal" type="Label" parent="Start" unique_id=1169183639]
+offset_left = 31.0
+offset_top = 106.0
+offset_right = 262.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.937255, 0.619608, 0.305882, 1)
+theme_override_fonts/font = ExtResource("5_y3gmk")
+theme_override_font_sizes/font_size = 8
+text = "Collect all 25 Treasures to escape!"
+
+[node name="Jar" parent="." unique_id=49504387 instance=ExtResource("7_3p3xa")]
+position = Vector2(188, 162)
+
+[node name="Jar2" parent="." unique_id=1240219981 instance=ExtResource("7_3p3xa")]
+position = Vector2(204, 162)
+
+[node name="Jar3" parent="." unique_id=686188950 instance=ExtResource("7_3p3xa")]
+position = Vector2(188, 144)
+
+[node name="Jar4" parent="." unique_id=1485059398 instance=ExtResource("7_3p3xa")]
+position = Vector2(204, 144)
+
+[node name="Jar5" parent="." unique_id=431890795 instance=ExtResource("7_3p3xa")]
+position = Vector2(365, 162)
+
+[node name="Jar6" parent="." unique_id=1176905361 instance=ExtResource("7_3p3xa")]
+position = Vector2(381, 162)
+
+[node name="Jar7" parent="." unique_id=1324521532 instance=ExtResource("7_3p3xa")]
+position = Vector2(365, 176)
+
+[node name="Jar8" parent="." unique_id=1838845010 instance=ExtResource("7_3p3xa")]
+position = Vector2(381, 176)
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1619308767]
+unique_name_in_owner = true
+z_index = 4
+tile_map_data = PackedByteArray("AAATAAgAHAAAAAAAAAAUAAgAHAADAAAAAAAVAAgAHAADAAIAAAALAAgAHAACAAAAAAALAAkAHAAEAAEAAAALAAoAHAAEAAEAAAALAAsAHAAAAAEAAAALAAwAHAAAAAEAAAALAA0AHAAAAAEAAAAMAAgAHAADAAIAAAANAAgAHAADAAAAAAAOAAgAHAAAAAAAAAAPAAgAHAAAAAAAAAAQAAgAHAAAAAAAAAARAAgAHAAAAAAAAAASAAgAHAAAAAAAAAAWAAgAHAADAAIAAAAXAAgAHAADAAAAAAAYAAgAHAADAAAAAAAZAAgAHAADAAAAAAAaAAgAHAADAAIAAAAbAAgAHAADAAAAAAAcAAgAHAAEAAAAAAAcAAkAHAAEAAEAAAAcAAoAHAAEAAEAAAAcAAsAHAAEAAEAAAAcAAwAHAAEAAEAAAAcAA0AHAAEAAEAAAAcAA4AHAAEAAEAAAAcAA8AHAAEAAEAAAAcABAAHAAEAAEAAAAcABEAHAAEAAEAAAAcABIAHAAEAAEAAAAcABMAHAAEAAEAAAAcABQAHAAEAAEAAAAcABUAHAAEAAIAAAAbABUAHAADAAIAAAAaABUAHAADAAIAAAAZABUAHAADAAIAAAAYABUAHAADAAAAAAAXABUAHAADAAAAAAAWABUAHAADAAIAAAAVABUAHAADAAIAAAAUABUAHAADAAIAAAATABUAHAADAAAAAAASABUAHAADAAIAAAARABUAHAADAAAAAAAQABUAHAADAAIAAAAPABUAHAADAAIAAAAOABUAHAADAAAAAAANABUAHAADAAAAAAAMABUAHAADAAAAAAALABUAHAACAAEAAAALABQAHAAEAAEAAAALABMAHAAEAAEAAAALABIAHAAEAAEAAAALABEAHAAEAAEAAAALABAAHAAEAAEAAAALAA8AHAAEAAEAAAALAA4AHAAEAAEAAAAOAAsAHAAFAAAAAAAPAAsAHAABAAEAAAAQAAsAHAABAAEAAAARAAsAHAABAAEAAAASAAsAHAABAAEAAAATAAsAHAAEAAIAAAAOAAwAHAAEAAEAAAAOAA0AHAAEAAIAAAA=")
+tile_set = ExtResource("7_y3gmk")
+
+[node name="BrokenWall" parent="." unique_id=1218700108 instance=ExtResource("8_y3gmk")]
+position = Vector2(220.5, 158.5)
+is_vertical = true
+
+[node name="BrokenWall2" parent="." unique_id=595422054 instance=ExtResource("8_y3gmk")]
+position = Vector2(220.5, 141.5)
+is_vertical = true
+
+[node name="BrokenWall3" parent="." unique_id=37410160 instance=ExtResource("8_y3gmk")]
+position = Vector2(188.5, 174.5)
+
+[node name="BrokenWall4" parent="." unique_id=1937972209 instance=ExtResource("8_y3gmk")]
+position = Vector2(205.5, 174.5)
+
+[node name="BrokenWall5" parent="." unique_id=643512231 instance=ExtResource("8_y3gmk")]
+position = Vector2(239.5, 158.5)
+rotation = -0.0014878701
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall6" parent="." unique_id=2108178589 instance=ExtResource("8_y3gmk")]
+position = Vector2(240.5, 141.5)
+rotation = -0.0014878701
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall7" parent="." unique_id=1699587633 instance=ExtResource("8_y3gmk")]
+position = Vector2(256.5, 158.5)
+is_vertical = true
+
+[node name="BrokenWall8" parent="." unique_id=1544903917 instance=ExtResource("8_y3gmk")]
+position = Vector2(257.5, 141.5)
+is_vertical = true
+
+[node name="BrokenWall9" parent="." unique_id=1247301910 instance=ExtResource("8_y3gmk")]
+position = Vector2(273.5, 158.5)
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall10" parent="." unique_id=1088430609 instance=ExtResource("8_y3gmk")]
+position = Vector2(274.5, 141.5)
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall11" parent="." unique_id=586762552 instance=ExtResource("8_y3gmk")]
+position = Vector2(290.5, 158.5)
+is_vertical = true
+
+[node name="BrokenWall12" parent="." unique_id=990964757 instance=ExtResource("8_y3gmk")]
+position = Vector2(291.5, 141.5)
+is_vertical = true
+
+[node name="BrokenWall13" parent="." unique_id=315451341 instance=ExtResource("8_y3gmk")]
+position = Vector2(307.5, 158.5)
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall14" parent="." unique_id=370988840 instance=ExtResource("8_y3gmk")]
+position = Vector2(308.5, 141.5)
+is_vertical = true
+is_fence = true
+
+[node name="BrokenWall15" parent="." unique_id=753487952 instance=ExtResource("8_y3gmk")]
+position = Vector2(189.5, 190.5)
+is_fence = true
+
+[node name="BrokenWall16" parent="." unique_id=2071881649 instance=ExtResource("8_y3gmk")]
+position = Vector2(206.5, 190.5)
+is_fence = true
+
+[node name="BrokenWall17" parent="." unique_id=1979269944 instance=ExtResource("8_y3gmk")]
+position = Vector2(189.5, 206.5)
+
+[node name="BrokenWall18" parent="." unique_id=1550901478 instance=ExtResource("8_y3gmk")]
+position = Vector2(206.5, 206.5)
+
+[connection signal="timeout" from="Start/SecondTimer" to="Start/spacebar" method="_on_second_timer_timeout"]

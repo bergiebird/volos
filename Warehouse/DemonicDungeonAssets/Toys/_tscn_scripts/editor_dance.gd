@@ -5,13 +5,13 @@ extends Node2D
 	set(value):
 		dance = value
 		if children:
-			for child in children:
+			for child: Node in children:
 				if child is AnimatedSprite2D:
 					if value:
 						child.play()
 					else:
 						child.stop()
-var children
+var children: Array[Node]
 
-func _enter_tree():
+func _enter_tree() -> void:
 	children = get_children()

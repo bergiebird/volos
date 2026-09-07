@@ -1,0 +1,474 @@
+[gd_scene load_steps=32 format=3 uid="uid://c86y6wso3byef"]
+
+[ext_resource type="Script" uid="uid://cpic3hlvcwoof" path="res://Warehouse/LevelEditor/scripts/tile_map_layer_control.gd" id="1_pxjwo"]
+[ext_resource type="TileSet" uid="uid://dtdqo5bc8je3c" path="res://Warehouse/LevelEditor/tilesets/background.tres" id="2_di1iu"]
+[ext_resource type="TileSet" uid="uid://vx7cdumnr8n8" path="res://Warehouse/LevelEditor/tilesets/intractibles.tres" id="3_c4i05"]
+[ext_resource type="Script" uid="uid://dxc7kmyxuhso8" path="res://Warehouse/LevelEditor/scripts/load_tiles.gd" id="4_07gdk"]
+[ext_resource type="TileSet" uid="uid://cucmg2u2xtxtp" path="res://Warehouse/LevelEditor/tilesets/foreground.tres" id="4_tnc41"]
+[ext_resource type="Script" uid="uid://baktarwj4kxe6" path="res://Warehouse/LevelEditor/le_display_tile.gd" id="6_2tnbs"]
+[ext_resource type="PackedScene" uid="uid://c8ruov1ab3lrx" path="res://Warehouse/LevelEditor/tilemap_tab.tscn" id="6_30y2k"]
+[ext_resource type="Script" uid="uid://dbbiuv5jb247f" path="res://Warehouse/LevelEditor/scripts/le_save_and_load.gd" id="6_n1y7t"]
+[ext_resource type="PackedScene" uid="uid://dgsikia4n5k0u" path="res://Warehouse/LevelEditor/tap_content.tscn" id="6_ql2xx"]
+[ext_resource type="Texture2D" uid="uid://ct7ofr26ncprr" path="res://Warehouse/DemonicDungeonAssets/UI_Cutup/green_plus.png" id="7_ouv3f"]
+[ext_resource type="Texture2D" uid="uid://b00neqx0kvctu" path="res://Warehouse/DemonicDungeonAssets/UI_Cutup/red_x.png" id="8_cygwd"]
+[ext_resource type="Texture2D" uid="uid://bhxkwffnanyno" path="res://Warehouse/LevelEditor/Direction_buttons-Sheet.png" id="9_3p5t5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfs7d"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(0, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0pfq"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyt6s"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(9, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpfc4"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(9, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c536"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(18, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edplm"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(18, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evaan"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(27, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd2xv"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(27, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fywnr"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(36, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rbwe"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(36, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmj51"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(45, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgege"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(45, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cgi5"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(54, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efomy"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(54, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrylk"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(63, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ryj"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(63, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxfj7"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(72, 9, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iopbd"]
+atlas = ExtResource("9_3p5t5")
+region = Rect2(72, 0, 8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3k1l"]
+bg_color = Color(0.0618169, 0.0329235, 0.0520804, 1)
+
+[node name="LevelEditor" type="Node2D"]
+
+[node name="Target" type="TextureRect" parent="."]
+modulate = Color(0.726367, 0.6391, 0.77, 0.521569)
+z_index = 100
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+
+[node name="level" type="Node2D" parent="." node_paths=PackedStringArray("info_node")]
+script = ExtResource("1_pxjwo")
+info_node = NodePath("../UI/TextureRect")
+
+[node name="Backgound" type="TileMapLayer" parent="level"]
+tile_set = ExtResource("2_di1iu")
+
+[node name="Intactables" type="TileMapLayer" parent="level"]
+tile_set = ExtResource("3_c4i05")
+
+[node name="Foregound" type="TileMapLayer" parent="level"]
+tile_set = ExtResource("4_tnc41")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -134.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_07gdk")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+
+[node name="Tabs" type="HBoxContainer" parent="UI/Panel/ScrollContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TilemapTab" parent="UI/Panel/ScrollContainer/Tabs" instance=ExtResource("6_30y2k")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "terrains"
+index = 1
+
+[node name="TapContent" parent="UI/Panel" instance=ExtResource("6_ql2xx")]
+layout_mode = 1
+anchor_left = 0.0109375
+anchor_top = 0.0298507
+anchor_right = 0.0109375
+anchor_bottom = 0.0298507
+offset_right = 630.0
+offset_bottom = 130.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+modulate = Color(1, 1, 1, 0.631373)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+script = ExtResource("6_2tnbs")
+
+[node name="lighting" type="Panel" parent="UI/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = 12.0
+offset_right = -5.0
+offset_bottom = 66.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="NButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+texture_normal = SubResource("AtlasTexture_vfs7d")
+texture_pressed = SubResource("AtlasTexture_s0pfq")
+stretch_mode = 0
+
+[node name="NEButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_gyt6s")
+texture_pressed = SubResource("AtlasTexture_fpfc4")
+stretch_mode = 0
+
+[node name="EButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_8c536")
+texture_pressed = SubResource("AtlasTexture_edplm")
+stretch_mode = 0
+
+[node name="SEButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_evaan")
+texture_pressed = SubResource("AtlasTexture_dd2xv")
+stretch_mode = 0
+
+[node name="SButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_fywnr")
+texture_pressed = SubResource("AtlasTexture_6rbwe")
+stretch_mode = 0
+
+[node name="SWButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_right = 16.0
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_vmj51")
+texture_pressed = SubResource("AtlasTexture_wgege")
+stretch_mode = 0
+
+[node name="WButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_1cgi5")
+texture_pressed = SubResource("AtlasTexture_efomy")
+stretch_mode = 0
+
+[node name="NWButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 16.0
+texture_normal = SubResource("AtlasTexture_rrylk")
+texture_pressed = SubResource("AtlasTexture_g5ryj")
+stretch_mode = 0
+
+[node name="OffButton" type="TextureButton" parent="UI/TextureRect/lighting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_yxfj7")
+texture_pressed = SubResource("AtlasTexture_iopbd")
+stretch_mode = 0
+
+[node name="SaveAndLoad" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_n1y7t")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UI/SaveAndLoad"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.01
+anchor_right = 0.008
+anchor_bottom = 0.062
+offset_left = -0.12
+offset_top = 0.2
+offset_right = 57.88
+offset_bottom = 0.239998
+
+[node name="Save" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Save"
+
+[node name="SaveAsMenu" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Save As
+"
+
+[node name="LoadMenu" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Load
+"
+
+[node name="Upload" type="Button" parent="UI/SaveAndLoad/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Upload"
+
+[node name="Control" type="Control" parent="UI/SaveAndLoad"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/SaveAndLoad/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 213.0
+offset_top = 211.0
+offset_right = -214.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/SaveAndLoad/Control/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 64.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 11
+text = "Save As"
+
+[node name="LineEdit" type="LineEdit" parent="UI/SaveAndLoad/Control/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -29.0
+offset_right = 182.0
+offset_bottom = -7.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 11
+placeholder_text = "Unnamed.lvl"
+max_length = 21
+
+[node name="SaveAs" type="TextureButton" parent="UI/SaveAndLoad/Control/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -31.0
+offset_right = -3.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("7_ouv3f")
+stretch_mode = 0
+
+[node name="Load" type="TextureButton" parent="UI/SaveAndLoad/Control/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -31.0
+offset_right = -3.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("7_ouv3f")
+stretch_mode = 0
+
+[node name="Close" type="TextureButton" parent="UI/SaveAndLoad/Control/Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -19.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 19.0
+grow_horizontal = 0
+texture_normal = ExtResource("8_cygwd")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/SaveAndLoad"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
+text = "UNNAMED.lvl"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(128, 156)
+zoom = Vector2(1.331, 1.331)
+
+[node name="Control" type="Panel" parent="."]
+z_index = -1000
+offset_right = 272.0
+offset_bottom = 207.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3k1l")
+
+[connection signal="button_down" from="UI/SaveAndLoad/VBoxContainer/Save" to="UI/SaveAndLoad" method="_save_menu"]
+[connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/SaveAsMenu" to="UI/SaveAndLoad" method="_save_as_menu"]
+[connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/LoadMenu" to="UI/SaveAndLoad" method="_load_menu"]
+[connection signal="button_up" from="UI/SaveAndLoad/VBoxContainer/Upload" to="UI/SaveAndLoad" method="_upload"]
+[connection signal="button_down" from="UI/SaveAndLoad/Control/Panel/SaveAs" to="UI/SaveAndLoad" method="_save_as"]
+[connection signal="button_down" from="UI/SaveAndLoad/Control/Panel/Load" to="UI/SaveAndLoad" method="_load"]
+[connection signal="button_down" from="UI/SaveAndLoad/Control/Panel/Close" to="UI/SaveAndLoad" method="_close_menu"]

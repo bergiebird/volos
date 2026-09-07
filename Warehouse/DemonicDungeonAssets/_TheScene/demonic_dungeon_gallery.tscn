@@ -1,6 +1,6 @@
-[gd_scene load_steps=291 format=3 uid="uid://cr3b3i47dn506"]
+[gd_scene load_steps=287 format=3 uid="uid://cr3b3i47dn506"]
 
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/_tscn_scripts/lights.gd" id="1_pks70"]
+[ext_resource type="Script" uid="uid://db1k6u3oqgal5" path="res://Warehouse/DemonicDungeonAssets/Toys/_tscn_scripts/lights.gd" id="1_pks70"]
 [ext_resource type="Texture2D" uid="uid://yu38a87v1kum" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Original/Monsters-Animated.png" id="2_g4g51"]
 [ext_resource type="Texture2D" uid="uid://mhapbryeob8u" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Original/Monsters.png" id="3_yb11f"]
 [ext_resource type="Texture2D" uid="uid://frr4hmx26yoy" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Original/Heroes-Animated.png" id="4_0x7lf"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cf6locyc7kmk" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Magma/Heroes.png" id="16_4ro7u"]
 [ext_resource type="Texture2D" uid="uid://clxy7fm0rg0s4" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Magma/Monsters-Animated.png" id="17_j6kuc"]
 [ext_resource type="Texture2D" uid="uid://db5f5fomqeqib" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Magma/Monsters.png" id="18_i8lj3"]
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/_tscn_scripts/editor_dance.gd" id="19_v13xc"]
+[ext_resource type="Script" uid="uid://bjmw3en70idc3" path="res://Warehouse/DemonicDungeonAssets/Toys/_tscn_scripts/editor_dance.gd" id="19_v13xc"]
 [ext_resource type="SpriteFrames" uid="uid://bh2svqsal151c" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_bat.tres" id="20_peyxx"]
 [ext_resource type="SpriteFrames" uid="uid://dvedwf8cuxy1v" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_devil.tres" id="21_e7weg"]
 [ext_resource type="SpriteFrames" uid="uid://b4828wnlljrgv" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/Resources/Characters/sf_ghost.tres" id="22_6s1ha"]
@@ -52,7 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://ot0vclsf38dd" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Magma/Mini-Map.png" id="50_kdvr6"]
 [ext_resource type="Texture2D" uid="uid://ffe6fu5bjtpm" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Haunted/Mini-Map.png" id="51_xic6y"]
 [ext_resource type="Texture2D" uid="uid://d1go3x1543g4a" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Frozen/Mini-Map.png" id="52_gextv"]
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/ToMiniMap/to_mini_map.gd" id="53_c701l"]
+[ext_resource type="Script" uid="uid://c4vmn0fjcaigq" path="res://Warehouse/DemonicDungeonAssets/Toys/ToMiniMap/to_mini_map.gd" id="53_c701l"]
 [ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="54_ne05t"]
 [ext_resource type="TileSet" uid="uid://dwkk2bvv4olri" path="res://Warehouse/DemonicDungeonAssets/Art/Minimaps/Resources/ts_minimap.tres" id="55_gjpts"]
 [ext_resource type="Texture2D" uid="uid://bvcoqqf2c85vh" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/Magma/Cave-Magma.png" id="56_dyqqi"]
@@ -83,18 +83,16 @@
 [ext_resource type="Texture2D" uid="uid://dlrmoofnbkwyb" path="res://Warehouse/DemonicDungeonAssets/Art/~Examples/example_ui4.png" id="80_lf7y1"]
 [ext_resource type="Texture2D" uid="uid://c4ctk3dr4x73s" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Banners.png" id="81_l5axh"]
 [ext_resource type="Texture2D" uid="uid://cjxjexb47kxb5" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Bars-Sliders-Scrollbars.png" id="82_olsss"]
-[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://ProjectVolos/UI/Cursors/Cursors.png" id="83_f84dp"]
+[ext_resource type="Texture2D" uid="uid://cki86q0ql07rw" path="res://Clep&Kog/UI/Cursors/Cursors.png" id="83_f84dp"]
 [ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="84_gu1su"]
 [ext_resource type="Texture2D" uid="uid://dvfr3hwrvs7ou" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Icons.png" id="85_4fp5j"]
 [ext_resource type="Texture2D" uid="uid://cbvvleds2780v" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Inputs.png" id="86_ja5ew"]
 [ext_resource type="SpriteFrames" uid="uid://dxu72ctingrre" path="res://Warehouse/DemonicDungeonAssets/Toys/Dice/sf_dice.tres" id="87_uylml"]
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/Dice/six_sided_die.gd" id="88_08ygn"]
-[ext_resource type="Script" path="res://addons/_ToyBox/Components/Node2D/PhysicsVFX/scale_sprite.gd" id="89_mkmdk"]
+[ext_resource type="Script" uid="uid://dum7c74bqeqjy" path="res://Warehouse/DemonicDungeonAssets/Toys/Dice/six_sided_die.gd" id="88_08ygn"]
 [ext_resource type="Texture2D" uid="uid://bdrfeg8y6ch6t" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Icons.png" id="90_0bmyw"]
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/Volume/toggle_volume.gd" id="91_6rwda"]
+[ext_resource type="Script" uid="uid://ddsb828bl4pu" path="res://Warehouse/DemonicDungeonAssets/Toys/Volume/toggle_volume.gd" id="91_6rwda"]
 [ext_resource type="StyleBox" uid="uid://dpqkmimvmthdf" path="res://Warehouse/DemonicDungeonAssets/Toys/StyleBox/stylebox_test1.tres" id="92_rg1hb"]
-[ext_resource type="Shader" path="res://addons/_ToyBox/Resources/Shaders/CanvasItem/dissolve.gdshader" id="93_vw2l2"]
-[ext_resource type="Script" path="res://Warehouse/DemonicDungeonAssets/Toys/Lock_n_Key/key.gd" id="94_widcd"]
+[ext_resource type="Script" uid="uid://cij3nxbx8r5m7" path="res://Warehouse/DemonicDungeonAssets/Toys/Lock_n_Key/key.gd" id="94_widcd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhcte"]
 
@@ -1507,22 +1505,7 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_s48bj"]
-noise_type = 3
-seed = 1
-frequency = 0.0531
-fractal_type = 3
-fractal_weighted_strength = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cwo46"]
-noise = SubResource("FastNoiseLite_s48bj")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x7r4c"]
-shader = ExtResource("93_vw2l2")
-shader_parameter/dissolve_value = 1.0
-shader_parameter/burn_size = 0.02
-shader_parameter/burn_color = Color(0.93845, 0.93845, 0.93845, 1)
-shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_cwo46")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74viq"]
 atlas = ExtResource("85_4fp5j")
@@ -1819,145 +1802,145 @@ dance = true
 position = Vector2(-136, -110)
 sprite_frames = ExtResource("20_peyxx")
 animation = &"Frozen"
-frame_progress = 0.862914
+frame_progress = 0.4137931
 
 [node name="Devil" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -62)
 sprite_frames = ExtResource("21_e7weg")
 animation = &"Original"
 autoplay = "Original"
-frame_progress = 0.862914
+frame_progress = 0.22524236
 
 [node name="Ghost" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-100, -86)
 sprite_frames = ExtResource("22_6s1ha")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.862914
+frame_progress = 0.77767026
 
 [node name="Goblin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-43, -62)
 sprite_frames = ExtResource("23_bx8pq")
-animation = &"Pickaxe"
-frame_progress = 0.862914
+animation = &"Unarmed"
+frame_progress = 0.67149705
 
 [node name="Golem" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-155, -87)
 sprite_frames = ExtResource("24_sh6i5")
 animation = &"Copper"
-frame_progress = 0.862914
+frame_progress = 0.9025846
 
 [node name="Flies" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-154, -111)
 sprite_frames = ExtResource("25_hjy8u")
 animation = &"Haunted"
-frame_progress = 0.862914
+frame_progress = 0.10408264
 
 [node name="Lizard" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-40, -109)
 sprite_frames = ExtResource("26_bmej1")
 animation = &"Frozen"
-frame_progress = 0.862914
+frame_progress = 0.60632205
 
 [node name="Medusa" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-136, -87)
 sprite_frames = ExtResource("27_lpcqr")
 animation = &"Teal_Alt"
-frame_progress = 0.862914
+frame_progress = 0.8919095
 
 [node name="Mimic" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-69, -86)
 sprite_frames = ExtResource("28_yu5fp")
 animation = &"Original"
 autoplay = "Original"
-frame_progress = 0.862914
+frame_progress = 0.9155909
 
 [node name="Pumpkin" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-49, -85)
 sprite_frames = ExtResource("29_vqeoh")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.862914
+frame_progress = 0.79036057
 
 [node name="Rat" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-78, -110)
 sprite_frames = ExtResource("30_pvlmp")
 animation = &"Teal"
-frame_progress = 0.862914
+frame_progress = 0.21582155
 
 [node name="Reaper" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-122, -62)
 sprite_frames = ExtResource("31_a3xju")
 animation = &"Haunted"
 autoplay = "Haunted"
-frame_progress = 0.862914
+frame_progress = 0.37245175
 
 [node name="Skeleton" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-137, -62)
 sprite_frames = ExtResource("32_b7bbh")
-animation = &"Black_Sword"
-frame_progress = 0.862914
+animation = &"Frozen_Spear"
+frame_progress = 0.4441685
 
 [node name="Spider" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-116, -111)
 sprite_frames = ExtResource("33_ms6uh")
 animation = &"Teal"
-frame_progress = 0.862914
+frame_progress = 0.07827689
 
 [node name="Snake" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-96, -110)
 sprite_frames = ExtResource("34_ccl70")
 animation = &"Pink"
-frame_progress = 0.211
+frame_progress = 0.545713
 
 [node name="Snowman" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-118, -87)
 sprite_frames = ExtResource("35_u28hi")
 animation = &"Frozen"
 autoplay = "Frozen"
-frame_progress = 0.862914
+frame_progress = 0.40242708
 
 [node name="Slime" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-31, -84)
 sprite_frames = ExtResource("36_ief0s")
 animation = &"Green"
-frame_progress = 0.862914
+frame_progress = 0.06660826
 
 [node name="Red" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-75, -63)
 sprite_frames = ExtResource("37_c3tm8")
 animation = &"Whip"
-frame_progress = 0.862914
+frame_progress = 0.20549212
 
 [node name="Pink" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-59, -63)
 sprite_frames = ExtResource("38_k2stb")
-animation = &"Axe"
-frame_progress = 0.862914
+animation = &"SwordLong"
+frame_progress = 0.43342912
 
 [node name="Green" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-90, -62)
 sprite_frames = ExtResource("39_1rpwm")
 animation = &"Gloves"
-frame_progress = 0.862914
+frame_progress = 0.79372096
 
 [node name="Black" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-106, -62)
 sprite_frames = ExtResource("40_vw4lk")
 animation = &"Axe"
-frame_progress = 0.862914
+frame_progress = 0.6264174
 
 [node name="Dragon" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-60, -110)
 sprite_frames = ExtResource("41_q5383")
 animation = &"Pink"
-frame_progress = 0.862914
+frame_progress = 0.31488734
 
 [node name="Scarecrow" type="AnimatedSprite2D" parent="Cards/CharCard/Framing for Animation/Animated"]
 position = Vector2(-86, -86)
 sprite_frames = ExtResource("42_w3kh3")
 animation = &"Black"
-frame_progress = 0.862914
+frame_progress = 0.124562256
 
 [node name="ItemCard" type="ColorRect" parent="Cards"]
 layout_mode = 1
@@ -2025,7 +2008,6 @@ position = Vector2(10, 10)
 sprite_frames = ExtResource("47_q13kb")
 animation = &"ALL"
 autoplay = "ALL"
-frame_progress = 0.45137
 
 [node name="Static" type="Sprite2D" parent="Cards/ItemCard/All"]
 position = Vector2(1104, 203)
@@ -2408,14 +2390,8 @@ animation = &"B_2"
 autoplay = "B_1"
 speed_scale = 20.0
 script = ExtResource("88_08ygn")
-start_roll = true
-is_silver = true
 
-[node name="ScaleSpriteComponent_2" type="Node" parent="Cards/UiCard/TOYS/DiceToy/Dice" node_paths=PackedStringArray("sprite")]
-script = ExtResource("89_mkmdk")
-sprite = NodePath("..")
-scale_amount = Vector2(1.1, 1.53)
-scale_duration = 0.2
+[node name="ScaleSpriteComponent_2" type="Node" parent="Cards/UiCard/TOYS/DiceToy/Dice"]
 
 [node name="DiceStand" type="Sprite2D" parent="Cards/UiCard/TOYS/DiceToy"]
 texture = SubResource("AtlasTexture_5805m")
@@ -2427,11 +2403,7 @@ animation = &"B3G"
 autoplay = "S0G"
 script = ExtResource("91_6rwda")
 
-[node name="ScaleSpriteComponent" type="Node" parent="Cards/UiCard/TOYS/VolumeToggle" node_paths=PackedStringArray("sprite")]
-script = ExtResource("89_mkmdk")
-sprite = NodePath("..")
-scale_amount = Vector2(1.1, 1.5)
-scale_duration = 1.0
+[node name="ScaleSpriteComponent" type="Node" parent="Cards/UiCard/TOYS/VolumeToggle"]
 
 [node name="~WIP" type="Control" parent="Cards/UiCard/TOYS"]
 anchors_preset = 0
@@ -2439,7 +2411,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="StyleboxTexture" type="Control" parent="Cards/UiCard/TOYS/~WIP"]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 89.0
 offset_top = 171.0

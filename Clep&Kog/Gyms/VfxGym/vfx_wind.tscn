@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://1jvcisft16s0"]
+
+[sub_resource type="Gradient" id="Gradient_syt8k"]
+offsets = PackedFloat32Array(0.00148148, 0.514074, 1)
+colors = PackedColorArray(0.964706, 0.94902, 0.764706, 0, 0.964706, 0.94902, 0.764706, 1, 0.964706, 0.94902, 0.764706, 0)
+
+[node name="VfxWind" type="CPUParticles2D"]
+editor_description = "Circular Wind Effect"
+position = Vector2(320, 204)
+amount = 1000
+lifetime = 100.0
+speed_scale = 5.0
+explosiveness = 0.8
+emission_shape = 5
+emission_points = PackedVector2Array(8, 0, -8, 0)
+emission_normals = PackedVector2Array()
+emission_colors = PackedColorArray()
+gravity = Vector2(0.5, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 2.0
+orbit_velocity_min = 0.1
+orbit_velocity_max = 1.0
+angle_max = 10.0
+color_ramp = SubResource("Gradient_syt8k")

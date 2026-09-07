@@ -8,29 +8,39 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="volos"
-run/main_scene="res://ProjectVolos/_Main_Scenes/game.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/name="Klep & Kog"
+config/tags=PackedStringArray("main")
+run/main_scene="res://Clep&Kog/_Main_Scenes/game.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0.06, 0.06, 0.06, 1)
-config/icon="res://Warehouse/Icons/misc/V_icon.png"
+config/icon="uid://x6fajdk87ykr"
 
 [audio]
 
-buses/default_bus_layout="res://Warehouse/_users/Ryan/INBOX/AudioBus_ProjectVolo.tres"
+buses/default_bus_layout="res://Warehouse/AudioBus_ProjectVolo.tres"
 
 [autoload]
 
-Signalton="*res://ProjectVolos/Utilities/Singletons/Signalton.gd"
-ScoreManager="*res://ProjectVolos/Utilities/Singletons/score_manager.gd"
-CursorManager="*res://ProjectVolos/UI/Cursors/cursor_manager.gd"
-Supabase="*res://addons/supabase/Supabase/supabase.gd"
+Signalton="*res://Clep&Kog/Utilities/Singletons/Signalton.gd"
+ScoreManager="*res://Clep&Kog/Utilities/Singletons/score_manager.gd"
+CursorManager="*res://Clep&Kog/UI/Cursors/cursor_manager.gd"
+Levelton="*res://Clep&Kog/Utilities/Singletons/Levelton.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=480
+window/size/mode=3
 window/size/always_on_top=true
 window/size/window_width_override=640
 window/size/window_height_override=480
@@ -48,10 +58,9 @@ enabled=PackedStringArray()
 [file_customization]
 
 folder_colors={
-"res://ProjectVolos/": "yellow",
+"res://Clep&Kog/": "yellow",
 "res://Warehouse/": "gray",
-"res://Warehouse/_lost&found/": "gray",
-"res://addons/": "gray"
+"res://Warehouse/_lost&found/": "gray"
 }
 
 [global_group]
@@ -59,6 +68,11 @@ folder_colors={
 Weakling=""
 Strongling=""
 Characters=""
+Walls="Immovable walls for Astar to know about"
+Clep=""
+Murderling=""
+Kog=""
+TorchContainer=""
 
 [gui]
 
@@ -156,14 +170,19 @@ toggle_pickup={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+left_click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(62.503906, 13.4453125),"global_position":Vector2(62.503906, 42.445313),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
-2d_physics/layer_1="player"
-2d_physics/layer_2="Destructable"
-2d_physics/layer_3="wall"
-2d_physics/layer_4="GoblinOnly"
-2d_physics/layer_8="placeable"
+2d_physics/layer_1="Players"
+2d_physics/layer_2="Walls"
+2d_physics/layer_3="Destructibles"
+2d_physics/layer_4="Collectibles"
+2d_physics/layer_5="Enemys"
 
 [physics]
 
@@ -175,6 +194,7 @@ common/physics_jitter_fix=0.0
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+viewport/hdr_2d=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 environment/defaults/default_clear_color=Color(0.0862745, 0.0509804, 0.0745098, 1)
 2d/snap/snap_2d_transforms_to_pixel=true

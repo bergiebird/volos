@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bpayqq81cie2c"]
+
+[ext_resource type="Script" uid="uid://drne3jl34xmi0" path="res://Clep&Kog/Pieces/PlayerChars/clep.gd" id="1_03o71"]
+[ext_resource type="Texture2D" uid="uid://duvh6ymbavv8i" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_magma.png" id="3_aqo5y"]
+[ext_resource type="Texture2D" uid="uid://bxc4a42sq00bd" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/Mage-2.png" id="4_i1qah"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irwsd"]
+atlas = ExtResource("3_aqo5y")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uus0f"]
+atlas = ExtResource("3_aqo5y")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdcp1"]
+atlas = ExtResource("3_aqo5y")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528if"]
+atlas = ExtResource("4_i1qah")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko1ec"]
+atlas = ExtResource("4_i1qah")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cewr6"]
+atlas = ExtResource("4_i1qah")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2l7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irwsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uus0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdcp1")
+}],
+"loop": 1,
+"name": &"Goblin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko1ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cewr6")
+}],
+"loop": 1,
+"name": &"Pharoah",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48lof"]
+size = Vector2(14, 14)
+
+[node name="Clep" type="Area2D" unique_id=1028321950 node_paths=PackedStringArray("north_collider", "south_collider", "east_collider", "west_collider", "treasure_collider", "anim_sprite", "timer_danger") groups=["Clep"]]
+z_index = 40
+collision_layer = 9
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_03o71")
+movement_cooldown = 0.1
+north_collider = NodePath("NorthCollider")
+south_collider = NodePath("SouthCollider")
+east_collider = NodePath("EastCollider")
+west_collider = NodePath("WestCollider")
+treasure_collider = NodePath("TreasureCollider")
+anim_sprite = NodePath("AnimatedSprite2D")
+timer_danger = NodePath("DangerTimer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=855370123]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_i2l7v")
+animation = &"Goblin"
+autoplay = "Goblin"
+frame_progress = 0.13374
+
+[node name="TreasureCollider" type="CollisionShape2D" parent="." unique_id=358894065]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_48lof")
+
+[node name="DangerTimer" type="Timer" parent="." unique_id=1371935861]
+wait_time = 0.5
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=922150285]
+
+[node name="NorthCollider" type="RayCast2D" parent="." unique_id=1448690542]
+position = Vector2(8, 0)
+target_position = Vector2(0, -8)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="EastCollider" type="RayCast2D" parent="." unique_id=1394263586]
+position = Vector2(16, 8)
+target_position = Vector2(8, 0)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="WestCollider" type="RayCast2D" parent="." unique_id=1775916758]
+position = Vector2(0, 8)
+target_position = Vector2(-8, 0)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="SouthCollider" type="RayCast2D" parent="." unique_id=604582214]
+position = Vector2(8, 16)
+target_position = Vector2(0, 8)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true

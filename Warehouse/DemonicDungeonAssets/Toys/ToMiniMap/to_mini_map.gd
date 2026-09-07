@@ -35,7 +35,7 @@
 # 				give_to_minimap(get_node(map_name), atlas_coord, cell)
 
 # # give_to_minimap() currently just checks to see if the cell is a specific ice cell(ASAP 3,26 broken)
-# func give_to_minimap(map_name:Node, atlas_coord:Vector2i, minimap_cell:Vector2i)->void:
+# func give_to_minimap(map_name:Node, atlas_coord:Vector2i, minimap_cell:Vector2i) -> void:
 # 	var atlas_map = 0
 # 	if resource: # TODO: Create resource that reads the atlas coordinates of the MainMap and then tells MiniMap what tile to use.
 # 		pass

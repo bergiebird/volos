@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bl6x46crlvuia" path="res://Warehouse/DemonicDungeonAssets/Art/Entities/PNGs/animated_monster_og.png" id="1_tqbf3"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuddc"]
+atlas = ExtResource("1_tqbf3")
+region = Rect2(160, 16, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwquy"]
 atlas = ExtResource("1_tqbf3")
 region = Rect2(128, 16, 16, 16)
@@ -10,12 +14,16 @@ region = Rect2(128, 16, 16, 16)
 atlas = ExtResource("1_tqbf3")
 region = Rect2(144, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yuddc"]
-atlas = ExtResource("1_tqbf3")
-region = Rect2(160, 16, 16, 16)
-
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuddc")
+}],
+"loop": true,
+"name": &"Closed ",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iwquy")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3qdvhr26dabx"]
+
+[ext_resource type="PackedScene" uid="uid://b4ppb0dcrwe2o" path="res://Clep&Kog/Pieces/~Effects/Mask.tscn" id="2_8qw8c"]
+[ext_resource type="SpriteFrames" uid="uid://duoy5d63yo4a8" path="res://Clep&Kog/Pieces/Breakables/sf_small_breakables.tres" id="2_h6f05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fmwx"]
+size = Vector2(10, 10)
+
+[node name="BreakableObject" type="Area2D"]
+editor_description = "*LU 1/20/15
+=====================================
+Cratese, shelving, tables, sarcophagi, barrels, etc etc. . . Pick your poison
+=====================================
+func play_effects(): #both effects are null atm
+
+func _exit_tree()->void:
+
+func drop_loot():"
+visible = false
+
+[node name="Mask" parent="." instance=ExtResource("2_8qw8c")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 20
+position = Vector2(8, 8)
+sprite_frames = ExtResource("2_h6f05")
+animation = &"ALL"
+autoplay = "Closed_Cb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6fmwx")

@@ -1,9 +1,11 @@
-@icon("res://addons/_ToyBox/Icons/misc/drag.png") extends Node
+@icon("res://addons/_ToyBox/Icons/misc/drag.png")
+extends Node
 class_name GridMovement
+
+static var selected_units: Array[GridMovement] = []
 
 @export var tile_size: int = 16
 @export var moves_per_second: float = .1
-
 @export_group("DEBUG")
 @export var debug_all: bool = false
 @export var debug_ready: bool = false
@@ -11,11 +13,11 @@ class_name GridMovement
 @export var debug_input: bool = false
 @export var debug_movement: bool = false
 @export var debug_selection: bool = false
+
 var can_move: bool = true
 var parent: CharacterBody2D
 var is_selected: bool = false
 var selection_indicator: Node2D
-static var selected_units: Array[GridMovement] = []
 
 func _ready():
 	parent = get_parent()
@@ -23,7 +25,7 @@ func _ready():
 	setup_input_handling()
 	setup_character_group()
 
-func _unhandled_input(event):
+func _unhandled_input(event: InputEvent):
 	if not is_selected or not can_move:
 		return
 	var _direction = Vector2.ZERO

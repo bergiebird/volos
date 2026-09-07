@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bl7e3evmswrme"]
+
+[ext_resource type="Script" uid="uid://cxhfs81qya4bi" path="res://Clep&Kog/Pieces/PlayerChars/kog.gd" id="1_0fjts"]
+[ext_resource type="PackedScene" uid="uid://bj7pc6s333uja" path="res://Clep&Kog/Gyms/VfxGym/vfx_wall.tscn" id="2_wy07s"]
+[ext_resource type="SpriteFrames" uid="uid://1fsva5i615oc" path="res://Clep&Kog/Pieces/PlayerChars/sf_kog.tres" id="3_i0n3q"]
+[ext_resource type="AudioStream" uid="uid://hengmnb3orqr" path="res://Warehouse/_users/BergieBird/Working/SFX/Boar/hit/Monster Groan.wav" id="5_lw30p"]
+[ext_resource type="AudioStream" uid="uid://brv6dkjyk3xll" path="res://Clep&Kog/Audio/sfx_dont_move/thud_cco.wav" id="6_fraqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqqc"]
+size = Vector2(14, 14)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qtjgc"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("5_lw30p")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4uuo2"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("6_fraqc")
+
+[node name="Kog" type="Area2D" unique_id=1730263438 node_paths=PackedStringArray("north_collider", "south_collider", "east_collider", "west_collider", "vfx_wall", "anim", "sfx_charge", "sfx_wall")]
+editor_description = "Our Bull, our main character, our only damaging character. THE WEAPON"
+z_index = 40
+collision_mask = 22
+script = ExtResource("1_0fjts")
+north_collider = NodePath("NorthCollider")
+south_collider = NodePath("SouthCollider")
+east_collider = NodePath("EastCollider")
+west_collider = NodePath("WestCollider")
+vfx_wall = NodePath("VfxWall")
+anim = NodePath("AnimatedSprite2D")
+sfx_charge = NodePath("SfxCharge")
+sfx_wall = NodePath("SfxWall")
+
+[node name="VfxWall" parent="." unique_id=989137225 instance=ExtResource("2_wy07s")]
+z_index = 50
+
+[node name="ContainerCollider" type="CollisionShape2D" parent="." unique_id=208764149]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_5xqqc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=198140375]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("3_i0n3q")
+animation = &"sleep_v"
+autoplay = "charge_u"
+frame_progress = 0.490979
+
+[node name="SfxCharge" type="AudioStreamPlayer2D" parent="." unique_id=112586576]
+stream = SubResource("AudioStreamRandomizer_qtjgc")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="SfxWall" type="AudioStreamPlayer2D" parent="." unique_id=754607698]
+stream = SubResource("AudioStreamRandomizer_4uuo2")
+volume_db = 24.0
+pitch_scale = 0.5
+bus = &"SFX"
+
+[node name="NorthCollider" type="RayCast2D" parent="." unique_id=96803710]
+position = Vector2(8, 0)
+target_position = Vector2(0, -8)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="EastCollider" type="RayCast2D" parent="." unique_id=109701148]
+position = Vector2(16, 8)
+target_position = Vector2(8, 0)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="WestCollider" type="RayCast2D" parent="." unique_id=430787944]
+position = Vector2(0, 8)
+target_position = Vector2(-8, 0)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="SouthCollider" type="RayCast2D" parent="." unique_id=1369079610]
+position = Vector2(8, 16)
+target_position = Vector2(0, 8)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true

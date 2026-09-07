@@ -2,12 +2,12 @@ extends AnimatedSprite2D
 
 signal new_volume_signal(num:int)
 
-@export var is_silver = true
-@onready var number:int = 9
-@onready var pos = global_position
-@onready var index = 0
-var min_pos:Vector2
-var max_pos:Vector2
+@export var is_silver: bool = true
+@onready var number: int = 9
+@onready var pos: Vector2 = global_position
+@onready var index: int = 0
+var min_pos: Vector2
+var max_pos: Vector2
 var prefix
 
 func _ready():
@@ -15,12 +15,13 @@ func _ready():
 	else:                 prefix = "B"
 	min_pos = pos - Vector2(number,number)
 	max_pos = pos + Vector2(1,number)
+@onready var scale_sprite_comp: Node = $ScaleSpriteComponent
 
-func _process(delta:float)->void:
+func _process(_delta:float) -> void:
 	var anim = prefix + str(index)
 	if vec_compare(get_global_mouse_position()):
 		if Input.is_action_just_released("interact"):
-			$ScaleSpriteComponent.tween_scale()
+			scale_sprite_comp.tween_scale()
 			index += 1
 			if index >= 4:
 				index = 0
@@ -29,7 +30,7 @@ func _process(delta:float)->void:
 	else:
 		play(anim+'G')
 
-func vec_compare(main_pos:Vector2)->bool:
+func vec_compare(main_pos:Vector2) -> bool:
 	return main_pos.x >= min_pos.x\
 	   and main_pos.y >= min_pos.y\
 	   and main_pos.x <= max_pos.x\

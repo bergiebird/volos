@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b0b5webj6k1il"]
+[gd_resource type="TileSet" format=3 uid="uid://b0b5webj6k1il"]
 
 [ext_resource type="Texture2D" uid="uid://djnk1ksq5pkvj" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/paths.png" id="1_7cni3"]
 

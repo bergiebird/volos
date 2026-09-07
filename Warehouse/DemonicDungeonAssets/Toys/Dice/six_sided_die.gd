@@ -14,10 +14,10 @@
 # var roll_timer:float
 # var final_result:int
 
-# func _ready()->void:
+# func _ready() -> void:
 # 	stop()
 
-# func roll()->void:
+# func roll() -> void:
 # 	start_roll = false
 # 	rolling = true
 # 	roll_timer = 0.0
@@ -41,7 +41,7 @@
 # 			sf.set_frame("B_ALL", i, other, other_duration)
 # 			sf.set_frame("B_ALL", j, temp, temp_duration)
 
-# func _process(delta:float)->void:
+# func _process(delta:float) -> void:
 # 	if start_roll:
 # 		roll()
 # 	if vec_compare(get_global_mouse_position()):
@@ -60,7 +60,7 @@
 # 		emit_signal("the_results_of_the_dice_roll", final_result)
 # 		stop()
 
-# func vec_compare(main_pos:Vector2)->bool:
+# func vec_compare(main_pos:Vector2) -> bool:
 # 	var min_pos = global_position - Vector2(9,9)
 # 	var max_pos = global_position + Vector2(9,9)
 # 	return main_pos.x >= min_pos.x\

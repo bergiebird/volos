@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0jnyscb4pw17"]
+
+[ext_resource type="Texture2D" uid="uid://diqixg7xiu3x6" path="res://Warehouse/_users/BergieBird/Working/progress_bar.tres" id="1_pqirh"]
+[ext_resource type="Script" uid="uid://itlrndkayid" path="res://Warehouse/_users/BergieBird/Working/treasure_progress.gd" id="2_g6g6l"]
+[ext_resource type="Script" uid="uid://c6j1pk8j4bivu" path="res://Warehouse/_users/BergieBird/Working/mummy_anger.gd" id="3_6n61n"]
+
+[sub_resource type="Gradient" id="Gradient_m3ft2"]
+colors = PackedColorArray(0.937255, 0.619608, 0.305882, 1, 0.964706, 0.94902, 0.764706, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dw0jl"]
+gradient = SubResource("Gradient_m3ft2")
+
+[sub_resource type="Gradient" id="Gradient_vaykp"]
+offsets = PackedFloat32Array(0, 0.891185)
+colors = PackedColorArray(0.678431, 0.25098, 0.188235, 1, 0.337255, 0.129412, 0.164706, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f6s2r"]
+gradient = SubResource("Gradient_vaykp")
+use_hdr = true
+
+[node name="UI" type="Node2D"]
+
+[node name="TreasureProgress" type="TextureProgressBar" parent="."]
+offset_left = 194.0
+offset_top = 137.0
+offset_right = 448.0
+offset_bottom = 144.0
+max_value = 25.0
+step = 0.01
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_over = ExtResource("1_pqirh")
+texture_progress = SubResource("GradientTexture2D_dw0jl")
+script = ExtResource("2_g6g6l")
+
+[node name="MummyAnger" type="TextureProgressBar" parent="."]
+offset_left = 194.0
+offset_top = 336.0
+offset_right = 447.0
+offset_bottom = 343.0
+max_value = 13.0
+step = 0.01
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_over = ExtResource("1_pqirh")
+texture_progress = SubResource("GradientTexture1D_f6s2r")
+script = ExtResource("3_6n61n")

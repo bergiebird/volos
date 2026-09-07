@@ -1,0 +1,750 @@
+[gd_scene format=3 uid="uid://cjythrib2w6i0"]
+
+[ext_resource type="Script" uid="uid://cnqu6ku3bmeu" path="res://Clep&Kog/_Main_Scenes/game_manager.gd" id="1_ad5kq"]
+[ext_resource type="AudioStream" uid="uid://sljxwe78nod" path="res://Clep&Kog/Audio/sfx_dont_move/173859__jivatma07__j1game_over_mono.wav" id="4_ktoqi"]
+[ext_resource type="AudioStream" uid="uid://b4ak2wbqrhyvb" path="res://Clep&Kog/Audio/sfx_dont_move/capture_804.wav" id="5_bxh0o"]
+[ext_resource type="Script" uid="uid://cyu0nebl46c4s" path="res://Clep&Kog/_Main_Scenes/manage_audio.gd" id="5_cu72s"]
+[ext_resource type="AudioStream" uid="uid://ne8khdnmy5ad" path="res://Clep&Kog/Audio/sfx_dont_move/victory.wav" id="6_28c5r"]
+[ext_resource type="Script" uid="uid://pbevxtsuy63h" path="res://Clep&Kog/_Main_Scenes/Non/non_manager.gd" id="6_lk047"]
+[ext_resource type="Texture2D" uid="uid://x6fajdk87ykr" path="res://Warehouse/DemonicDungeonAssets/Art/Mage.png" id="7_qiuiq"]
+[ext_resource type="Texture2D" uid="uid://btv8neb32114l" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Frames.png" id="8_aokq4"]
+[ext_resource type="Texture2D" uid="uid://kb6hidgk3yc2" path="res://Warehouse/DemonicDungeonAssets/Art/~Documented/UI/Frames.png" id="8_mq60e"]
+[ext_resource type="Script" uid="uid://dty7jqa8wx8we" path="res://Clep&Kog/_Main_Scenes/Non/editor_tools.gd" id="8_twdtt"]
+[ext_resource type="AudioStream" uid="uid://cdypk55ixi7ca" path="res://Warehouse/_users/BergieBird/Working/SFX/UISFX/Buttons/Laser_18.wav" id="8_w507f"]
+[ext_resource type="Texture2D" uid="uid://bbiiaungnago7" path="res://Warehouse/DemonicDungeonAssets/Art/Hero.png" id="9_3vxas"]
+[ext_resource type="Script" uid="uid://dyt0eo0eslby5" path="res://Clep&Kog/_Main_Scenes/level_goes_here.gd" id="9_uhtne"]
+[ext_resource type="Script" uid="uid://ccc8ed1tvfanl" path="res://Warehouse/_users/BergieBird/Working/camera_man.gd" id="10_7fuoc"]
+[ext_resource type="PackedScene" uid="uid://ce8wgj16b6a5a" path="res://Clep&Kog/_Main_Scenes/tutorial.tscn" id="10_jngmw"]
+[ext_resource type="PackedScene" uid="uid://cccr6dibhrn1t" path="res://Clep&Kog/_Main_Scenes/Lvl/PharoutHeistOriginal.tscn" id="10_xr1h2"]
+[ext_resource type="FontFile" uid="uid://bv2qy6iakuqg" path="res://Clep&Kog/UI/fonts_dont_move/High_Birth.ttf" id="11_lqds8"]
+[ext_resource type="Script" uid="uid://blb1lmi6iumrk" path="res://Clep&Kog/_Main_Scenes/game_cover.gd" id="13_8nj8b"]
+[ext_resource type="Texture2D" uid="uid://dmq5eolhw7jns" path="res://Clep&Kog/tres/cover.tres" id="15_n82et"]
+[ext_resource type="Script" uid="uid://dnqxa6v2iwsl8" path="res://Clep&Kog/_Main_Scenes/win_loss_label.gd" id="16_8o0ry"]
+[ext_resource type="Script" uid="uid://dv0xvdv1kstlr" path="res://Clep&Kog/_Main_Scenes/main_menu.gd" id="18_vi2el"]
+[ext_resource type="Texture2D" uid="uid://m64og8l8cele" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Inputs.png" id="24_m7ns7"]
+[ext_resource type="Script" uid="uid://qc5kk0xcx24" path="res://Clep&Kog/_Main_Scenes/level_selector.gd" id="25_f3n2f"]
+[ext_resource type="Script" uid="uid://bjeywedhloimd" path="res://Clep&Kog/_Main_Scenes/arrow_buttons.gd" id="25_upive"]
+[ext_resource type="AudioStream" uid="uid://ci72byg40kmvy" path="res://Warehouse/_users/BergieBird/Working/SFX/coins/Coin_15.wav" id="26_1vqo5"]
+[ext_resource type="PackedScene" uid="uid://c1j70i4uusn8m" path="res://Clep&Kog/_Main_Scenes/Lvl/PharoutHeistRemix.tscn" id="26_n08l1"]
+[ext_resource type="PackedScene" uid="uid://dmdxo66jljdnk" path="res://Clep&Kog/_Main_Scenes/Lvl/SecretTomb.tscn" id="27_18vom"]
+[ext_resource type="Theme" uid="uid://cc6gl7qw1ag2n" path="res://Clep&Kog/_Main_Scenes/game_theme.tres" id="28_ympyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdhsx"]
+atlas = ExtResource("8_mq60e")
+region = Rect2(629, 69, 54, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_getfs"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 33, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cljpf"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 20, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eko4s"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(583, 629, 16, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygpg5"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(627, 723, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tim3t"]
+atlas = ExtResource("8_aokq4")
+region = Rect2(659, 724, 23, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7ns7"]
+size = Vector2(14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upive"]
+atlas = ExtResource("24_m7ns7")
+region = Rect2(304, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n82et"]
+atlas = ExtResource("24_m7ns7")
+region = Rect2(336, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vqo5"]
+atlas = ExtResource("24_m7ns7")
+region = Rect2(320, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ympyd"]
+atlas = ExtResource("24_m7ns7")
+region = Rect2(352, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xr1h2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upive")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n82et")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vqo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ympyd")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upive"]
+size = Vector2(14, 16)
+
+[node name="GAME" type="Node" unique_id=2062574303]
+editor_description = "Our main game scene/node.
+
+Use this node's script as your first Singleton to pass information that must be global to the main game scene. "
+script = ExtResource("1_ad5kq")
+
+[node name="Non" type="Node" parent="." unique_id=1519611579]
+editor_description = "Everything that is relevant to the game or making of the game but doesn't cleanly fit in the lvl or ui folders"
+script = ExtResource("6_lk047")
+
+[node name="EditorTools" type="Node" parent="Non" unique_id=1921936457]
+editor_description = "Add tools that will assist editing here. If there is a better location to place them by all means"
+script = ExtResource("8_twdtt")
+
+[node name="LargeView" type="ColorRect" parent="Non/EditorTools" unique_id=244480959]
+editor_description = "An editor only guide so we know how large the camera must be.
+
+Keep Locked.
+transform.size = 400,304"
+visible = false
+offset_right = 640.0
+offset_bottom = 473.0
+mouse_filter = 2
+color = Color(0.901961, 0.901961, 0.901961, 0.196078)
+
+[node name="SmallView" type="ColorRect" parent="Non/EditorTools" unique_id=1344686567]
+editor_description = "An editor only guide so we know how large the camera must be.
+
+Keep Locked.
+transform.size = 400,304"
+visible = false
+offset_left = 161.0
+offset_top = 120.0
+offset_right = 481.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.901961, 0.901961, 0.901961, 0.196078)
+
+[node name="ManageAudio" type="Node" parent="Non" unique_id=1178907103 node_paths=PackedStringArray("capture", "game_over", "victory")]
+script = ExtResource("5_cu72s")
+capture = NodePath("Capture")
+game_over = NodePath("GameOver")
+victory = NodePath("Victory")
+
+[node name="Capture" type="AudioStreamPlayer" parent="Non/ManageAudio" unique_id=1234906318]
+stream = ExtResource("5_bxh0o")
+bus = &"SFX"
+
+[node name="GameOver" type="AudioStreamPlayer" parent="Non/ManageAudio" unique_id=540376641]
+stream = ExtResource("4_ktoqi")
+bus = &"SFX"
+
+[node name="Victory" type="AudioStreamPlayer" parent="Non/ManageAudio" unique_id=5503672]
+stream = ExtResource("6_28c5r")
+volume_db = 8.0
+bus = &"SFX"
+
+[node name="LevelGoesHere" type="Node2D" parent="." unique_id=1906868669]
+unique_name_in_owner = true
+script = ExtResource("9_uhtne")
+choose_your_level = ExtResource("10_xr1h2")
+tutorial_stuff = ExtResource("10_jngmw")
+
+[node name="MainMenu" type="Node2D" parent="." unique_id=1756005174]
+position = Vector2(0, 5)
+script = ExtResource("18_vi2el")
+
+[node name="Decorations" type="Node2D" parent="MainMenu" unique_id=1045635056]
+
+[node name="RedColorRect" type="ColorRect" parent="MainMenu/Decorations" unique_id=2101678820]
+unique_name_in_owner = true
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 625.0
+offset_bottom = 466.0
+mouse_filter = 2
+color = Color(0.337255, 0.129412, 0.164706, 1)
+
+[node name="EngineJamLabel" type="Label" parent="MainMenu/Decorations" unique_id=482656119]
+modulate = Color(1, 1, 1, 0.13725491)
+offset_left = 476.0
+offset_top = 441.0
+offset_right = 617.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.129412, 0.164706, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "MADE IN: Godot 4.7.2"
+
+[node name="GameFrame" type="NinePatchRect" parent="MainMenu" unique_id=235567359]
+z_index = 5
+offset_left = 170.0
+offset_top = 121.0
+offset_right = 472.0
+offset_bottom = 360.0
+texture = SubResource("AtlasTexture_vdhsx")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="GameCover" type="NinePatchRect" parent="MainMenu/GameFrame" unique_id=1930265758]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 295.0
+offset_bottom = 232.0
+texture = ExtResource("15_n82et")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+script = ExtResource("13_8nj8b")
+
+[node name="MenuFrame" type="Node2D" parent="MainMenu" unique_id=1916599037]
+position = Vector2(0, 2)
+
+[node name="WinLossLabel" type="Label" parent="MainMenu/MenuFrame" unique_id=268083822]
+visible = false
+modulate = Color(0.937255, 0.619608, 0.305882, 1)
+z_index = 1
+offset_left = 30.0
+offset_top = 374.0
+offset_right = 148.0
+offset_bottom = 441.0
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Certified
+LOSER"
+script = ExtResource("16_8o0ry")
+
+[node name="Title" type="Node2D" parent="MainMenu/MenuFrame" unique_id=107998539]
+position = Vector2(141, 25)
+
+[node name="and2" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=415854690]
+modulate = Color(0.9372549, 0.61960787, 0.30588236, 0.3372549)
+z_index = 1
+offset_left = 167.0
+offset_top = 10.0
+offset_right = 459.0
+offset_bottom = 42.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "&"
+
+[node name="Clep2" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=1295549080]
+modulate = Color(0.9372549, 0.61960787, 0.30588236, 0.3372549)
+z_index = 1
+offset_left = 102.0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 42.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Clep"
+
+[node name="Kogs2" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=1219080030]
+modulate = Color(0.9372549, 0.61960787, 0.30588236, 0.3372549)
+z_index = 1
+offset_left = 195.0
+offset_top = 10.0
+offset_right = 267.0
+offset_bottom = 42.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Kog"
+
+[node name="and" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=2116390596]
+modulate = Color(0.937255, 0.619608, 0.305882, 1)
+z_index = 1
+offset_left = 165.0
+offset_top = 11.0
+offset_right = 457.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "& "
+
+[node name="Clep" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=1915153321]
+modulate = Color(0.584314, 0.713726, 0.4, 1)
+z_index = 1
+offset_left = 100.0
+offset_top = 11.0
+offset_right = 158.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Clep"
+
+[node name="Kogs" type="Label" parent="MainMenu/MenuFrame/Title" unique_id=1384566711]
+modulate = Color(0.917647, 0.54902, 0.886275, 1)
+z_index = 1
+offset_left = 193.0
+offset_top = 11.0
+offset_right = 265.0
+offset_bottom = 43.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 16
+text = "Kog"
+
+[node name="BlackColorRect" type="ColorRect" parent="MainMenu/MenuFrame/Title" unique_id=577811895]
+offset_left = -71.0
+offset_top = -9.0
+offset_right = 420.0
+offset_bottom = 61.0
+color = Color(0.0862745, 0.0509804, 0.0745098, 1)
+
+[node name="KogPic" type="Sprite2D" parent="MainMenu/MenuFrame/Title" unique_id=1632643603]
+z_index = 1
+position = Vector2(436, 24)
+texture = ExtResource("9_3vxas")
+
+[node name="PharoahPic" type="Sprite2D" parent="MainMenu/MenuFrame/Title" unique_id=2038399267]
+z_index = 1
+position = Vector2(-81, 20)
+texture = ExtResource("7_qiuiq")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title" unique_id=968535908]
+position = Vector2(-71, 23)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title" unique_id=749393482]
+position = Vector2(418, 23)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="Bot" type="Node2D" parent="MainMenu/MenuFrame/Title" unique_id=1805529084]
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=1463109292]
+position = Vector2(-38, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=1163128971]
+position = Vector2(91, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=406328269]
+position = Vector2(27, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=1321308956]
+position = Vector2(155, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=2118464029]
+position = Vector2(284, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=189381759]
+position = Vector2(220, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=565389030]
+position = Vector2(348, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Bot" unique_id=1955155646]
+position = Vector2(399, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_cljpf")
+
+[node name="Top" type="Node2D" parent="MainMenu/MenuFrame/Title" unique_id=1256166381]
+position = Vector2(0, -68)
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=1041227322]
+position = Vector2(-38, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=54846236]
+position = Vector2(91, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=1119141954]
+position = Vector2(27, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=987621959]
+position = Vector2(155, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=815067997]
+position = Vector2(284, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=1626148]
+position = Vector2(220, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=755522109]
+position = Vector2(348, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top" unique_id=270083624]
+position = Vector2(399, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_cljpf")
+
+[node name="Top2" type="Node2D" parent="MainMenu/MenuFrame/Title" unique_id=328703088]
+position = Vector2(-56, -83)
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=838650416]
+position = Vector2(-38, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=2012840678]
+position = Vector2(91, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=417247931]
+position = Vector2(27, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=826381279]
+position = Vector2(155, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=1004391014]
+position = Vector2(284, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=1784476936]
+position = Vector2(220, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=1241624596]
+position = Vector2(348, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=1321410740]
+position = Vector2(399, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_cljpf")
+
+[node name="ArrowStaff8" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=748172247]
+position = Vector2(508, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Title/Top2" unique_id=253956878]
+position = Vector2(444, 60)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="Bot" type="Node2D" parent="MainMenu/MenuFrame" unique_id=15514299]
+position = Vector2(14, 0)
+
+[node name="ArrowStaff" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=508500639]
+position = Vector2(49, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=2040388069]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff2" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=1241004873]
+position = Vector2(114, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=1162689650]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=303317607]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=1583853580]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=580252723]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=2057045541]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=234923426]
+position = Vector2(564, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Bot" unique_id=288698038]
+position = Vector2(612, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="Left" type="Node2D" parent="MainMenu/MenuFrame" unique_id=325058374]
+position = Vector2(481, -163)
+rotation = 1.5708
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1492283461]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1616231778]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1959543080]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1445148807]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=636722803]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1259400075]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=749107382]
+position = Vector2(564, 462.998)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Left" unique_id=1423468445]
+position = Vector2(612, 462.998)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="Right" type="Node2D" parent="MainMenu/MenuFrame" unique_id=1541761535]
+position = Vector2(1086, -163)
+rotation = 1.5708
+
+[node name="ArrowStaff3" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=1042048133]
+position = Vector2(178, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff4" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=1726320429]
+position = Vector2(242, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff5" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=2073848090]
+position = Vector2(371, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff6" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=878614012]
+position = Vector2(307, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff7" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=1673526084]
+position = Vector2(435, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff9" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=341432215]
+position = Vector2(500, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff10" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=1445885090]
+position = Vector2(564, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_getfs")
+
+[node name="ArrowStaff11" type="Sprite2D" parent="MainMenu/MenuFrame/Right" unique_id=92895049]
+position = Vector2(612, 463)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_eko4s")
+
+[node name="CornerLeft" type="Sprite2D" parent="MainMenu/MenuFrame" unique_id=107862141]
+position = Vector2(20, 460)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_ygpg5")
+
+[node name="CornerRight" type="Sprite2D" parent="MainMenu/MenuFrame" unique_id=450089892]
+position = Vector2(634, 467)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_tim3t")
+
+[node name="CornerRight2" type="Sprite2D" parent="MainMenu/MenuFrame" unique_id=1193973514]
+position = Vector2(630, -8)
+rotation = 4.712389
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_tim3t")
+
+[node name="CornerRight3" type="Sprite2D" parent="MainMenu/MenuFrame" unique_id=359129100]
+position = Vector2(7, -4)
+rotation = 3.1415927
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_tim3t")
+
+[node name="CameraManV2" type="Camera2D" parent="." unique_id=581986255]
+position = Vector2(321, 240)
+rotation = -0.0592957
+zoom = Vector2(2, 2)
+script = ExtResource("10_7fuoc")
+
+[node name="NonSpacebar" type="AudioStreamPlayer" parent="CameraManV2" unique_id=98166297]
+stream = ExtResource("8_w507f")
+volume_db = -35.0
+pitch_scale = 0.4
+
+[node name="LevelSelector" type="Node2D" parent="." unique_id=1045106772 node_paths=PackedStringArray("level_label")]
+unique_name_in_owner = true
+position = Vector2(321, 240)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("25_f3n2f")
+levels = Array[PackedScene]([ExtResource("10_xr1h2"), ExtResource("26_n08l1"), ExtResource("27_18vom")])
+level_label = NodePath("NinePatchRect/MarginContainer/LevelLabel")
+
+[node name="LeftArrow" type="Area2D" parent="LevelSelector" unique_id=573873792 node_paths=PackedStringArray("sprite", "sfx")]
+position = Vector2(177.00003, 69)
+scale = Vector2(2, 2)
+script = ExtResource("25_upive")
+sprite = NodePath("AnimatedSprite2D")
+sfx = NodePath("AudioStreamPlayer")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelSelector/LeftArrow" unique_id=1348477032]
+shape = SubResource("RectangleShape2D_m7ns7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelSelector/LeftArrow" unique_id=1262930836]
+sprite_frames = SubResource("SpriteFrames_xr1h2")
+animation = &"left"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LevelSelector/LeftArrow" unique_id=656784302]
+stream = ExtResource("26_1vqo5")
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="RightArrow" type="Area2D" parent="LevelSelector" unique_id=586687362 node_paths=PackedStringArray("sprite", "sfx")]
+position = Vector2(275, 69)
+scale = Vector2(2, 2)
+script = ExtResource("25_upive")
+which_direction = 1
+sprite = NodePath("AnimatedSprite2D")
+sfx = NodePath("AudioStreamPlayer")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelSelector/RightArrow" unique_id=474049618]
+shape = SubResource("RectangleShape2D_upive")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelSelector/RightArrow" unique_id=1682561445]
+sprite_frames = SubResource("SpriteFrames_xr1h2")
+animation = &"right"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LevelSelector/RightArrow" unique_id=1008997615]
+stream = ExtResource("26_1vqo5")
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LevelSelector" unique_id=2089972189]
+offset_left = 155.0
+offset_top = -56.0
+offset_right = 295.0
+offset_bottom = 48.536224
+texture = ExtResource("15_n82et")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelSelector/NinePatchRect" unique_id=1150156697]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 134.0
+offset_bottom = 100.0
+
+[node name="LevelLabel" type="Label" parent="LevelSelector/NinePatchRect/MarginContainer" unique_id=702042350]
+unique_name_in_owner = true
+modulate = Color(0.607843, 0.298039, 0.388235, 1)
+layout_mode = 2
+theme = ExtResource("28_ympyd")
+text = "Pharout Heist"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LevelSelectorLabel" type="Label" parent="LevelSelector" unique_id=1659833855]
+offset_left = 191.0
+offset_top = 51.0
+offset_right = 261.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.964706, 0.94902, 0.764706, 1)
+theme_override_colors/font_shadow_color = Color(0.0862745, 0.0509804, 0.0745098, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = ExtResource("11_lqds8")
+theme_override_font_sizes/font_size = 8
+text = "Level Selector"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="end_level" from="CameraManV2" to="LevelGoesHere" method="_on_camera_man_v_2_end_level"]
+[connection signal="end_level" from="CameraManV2" to="LevelSelector" method="_on_camera_man_v_2_end_level"]
+[connection signal="start_level" from="CameraManV2" to="LevelGoesHere" method="_on_camera_man_v_2_start_level"]
+[connection signal="start_level" from="CameraManV2" to="LevelSelector" method="_on_camera_man_v_2_start_level"]
+[connection signal="new_level" from="LevelSelector" to="LevelGoesHere" method="_on_level_selector_new_level"]

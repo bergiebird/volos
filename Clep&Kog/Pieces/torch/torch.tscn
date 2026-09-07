@@ -1,0 +1,160 @@
+[gd_scene load_steps=19 format=3 uid="uid://bwdgysuylt7nq"]
+
+[ext_resource type="Script" uid="uid://coctybj6n0271" path="res://Clep&Kog/Pieces/torch/torch.gd" id="1_8lulo"]
+[ext_resource type="Texture2D" uid="uid://dc0fptxc58lh4" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/flames.png" id="1_60wj5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eevpt"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rdsc"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7nck"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tc5y"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq01d"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdqj0"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5qk8"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx10g"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn1g1"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0ppv"]
+atlas = ExtResource("1_60wj5")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtiy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eevpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rdsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7nck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tc5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq01d")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdqj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5qk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx10g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn1g1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0ppv")
+}],
+"loop": true,
+"name": &"wall",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_aw1m7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_d0cvo"]
+resource_name = "flicker"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.8, 1.2, 0.9, 1.1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ccrj"]
+_data = {
+&"RESET": SubResource("Animation_aw1m7"),
+&"flicker": SubResource("Animation_d0cvo")
+}
+
+[sub_resource type="Gradient" id="Gradient_err7b"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.125, 0.24541825, 0.49337697, 1)
+colors = PackedColorArray(0.9647059, 0.9490196, 0.7647059, 1, 0.418478, 0.418478, 0.418478, 1, 0.201912, 0.201912, 0.201912, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o7hsy"]
+gradient = SubResource("Gradient_err7b")
+width = 128
+height = 128
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[node name="Torch" type="Node2D"]
+script = ExtResource("1_8lulo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.784314, 0.784314, 0.784314, 1)
+sprite_frames = SubResource("SpriteFrames_wtiy3")
+animation = &"standing"
+autoplay = "standing"
+offset = Vector2(8, 8)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6ccrj")
+}
+autoplay = "flicker"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(7.53813, 5.99219)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_o7hsy")

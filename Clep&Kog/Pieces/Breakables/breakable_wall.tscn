@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://0py8xhtkwc1j"]
+
+[ext_resource type="Script" uid="uid://5itxebibxrwe" path="res://Clep&Kog/Pieces/Breakables/breakable_wall.gd" id="1_otusg"]
+[ext_resource type="Texture2D" uid="uid://jhwrc412u7jp" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Desert.png" id="2_4ja80"]
+[ext_resource type="Texture2D" uid="uid://6k1g8ya4ftg5" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/_magma-walls-light.png" id="2_xl2i5"]
+[ext_resource type="AudioStream" uid="uid://jkrct2khavlp" path="res://Clep&Kog/Audio/sfx_dont_move/metal_smash_attr_wjoojoo.wav" id="4_cxjtn"]
+[ext_resource type="AudioStream" uid="uid://dfxql78nnryvp" path="res://Clep&Kog/Audio/sfx_dont_move/concrete_smash_cco.wav" id="5_r3bmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj61q"]
+size = Vector2(11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ictfp"]
+atlas = ExtResource("2_xl2i5")
+region = Rect2(208, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chrys"]
+atlas = ExtResource("2_xl2i5")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oltyg"]
+atlas = ExtResource("2_4ja80")
+region = Rect2(0, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npwb7"]
+atlas = ExtResource("2_4ja80")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odi7q"]
+atlas = ExtResource("2_xl2i5")
+region = Rect2(96, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmwht"]
+atlas = ExtResource("2_xl2i5")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sigh1"]
+atlas = ExtResource("2_4ja80")
+region = Rect2(96, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om64j"]
+atlas = ExtResource("2_4ja80")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfswn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ictfp")
+}],
+"loop": 1,
+"name": &"hfr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chrys")
+}],
+"loop": 1,
+"name": &"hfs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oltyg")
+}],
+"loop": 1,
+"name": &"hwr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npwb7")
+}],
+"loop": 1,
+"name": &"hws",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"null",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odi7q")
+}],
+"loop": 1,
+"name": &"vfr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmwht")
+}],
+"loop": 1,
+"name": &"vfs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sigh1")
+}],
+"loop": 1,
+"name": &"vwr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om64j")
+}],
+"loop": 1,
+"name": &"vws",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyg5i"]
+size = Vector2(16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kptoq"]
+polygon = PackedVector2Array(2, 16, 14, 16, 14, 0, 2, 0)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ge724"]
+polygon = PackedVector2Array(2, 4, 2, 6, 3, 6, 3, 15, 4, 15, 4, 6, 5, 6, 5, 4, 4, 4, 4, 2, 3, 2, 3, 4)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bpy0s"]
+polygon = PackedVector2Array(6, 3, 6, 5, 7, 5, 7, 13, 8, 13, 8, 5, 9, 5, 9, 3, 8, 3, 8, 1, 7, 1, 7, 3)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6e5xe"]
+polygon = PackedVector2Array(10, 4, 10, 6, 11, 6, 11, 15, 12, 15, 12, 6, 13, 6, 13, 4, 12, 4, 12, 2, 11, 2, 11, 4)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_giwtn"]
+polygon = PackedVector2Array(15, 3, 14, 3, 14, 5, 15, 5, 15, 13, 16, 13, 16, 1, 15, 1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_a7qq1"]
+polygon = PackedVector2Array(0, 1, 16, 1, 16, 15, 0, 15, 0, 4)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bq73i"]
+polygon = PackedVector2Array(12, 4, 9, 4, 9, 2, 12, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dc2yf"]
+polygon = PackedVector2Array(12, 4, 9, 4, 9, 2, 12, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yu22b"]
+polygon = PackedVector2Array(12, 4, 9, 4, 9, 2, 12, 2)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gcynd"]
+polygon = PackedVector2Array(12, 4, 9, 4, 9, 2, 12, 2)
+
+[node name="BrokenWall" type="Area2D" unique_id=453268260 node_paths=PackedStringArray("sprite", "sfx_wall_concrete", "sfx_wall_metal", "staticb", "hwoc", "vwoc", "vfoc", "hfoc")]
+editor_description = "*LU 1/20/25
+=====================================
+null script
+=====================================
+contains:
+Collision Shape
+Color Rect
+Animation"
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_otusg")
+sprite = NodePath("AnimatedSprite2D")
+sfx_wall_concrete = NodePath("Audio/SfxWallConcrete")
+sfx_wall_metal = NodePath("Audio/SfxWallMetal")
+staticb = NodePath("StaticStopper")
+hwoc = NodePath("Hwocc")
+vwoc = NodePath("Vwocc")
+vfoc = NodePath("Vfocc")
+hfoc = NodePath("Hfocc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=635375143]
+visible = false
+z_index = 1
+position = Vector2(7.5, 7.5)
+shape = SubResource("RectangleShape2D_aj61q")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1134428832]
+z_index = 20
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_sfswn")
+animation = &"hws"
+autoplay = "hws"
+metadata/_edit_lock_ = true
+
+[node name="StaticStopper" type="StaticBody2D" parent="." unique_id=1180520362]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="WallStopper" type="CollisionShape2D" parent="StaticStopper" unique_id=1730012577]
+unique_name_in_owner = true
+visible = false
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_hyg5i")
+
+[node name="Vwocc" type="LightOccluder2D" parent="." unique_id=476380348]
+unique_name_in_owner = true
+visible = false
+occluder = SubResource("OccluderPolygon2D_kptoq")
+
+[node name="Hfocc" type="Node2D" parent="." unique_id=1574700631]
+unique_name_in_owner = true
+visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Hfocc" unique_id=93002862]
+occluder = SubResource("OccluderPolygon2D_ge724")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Hfocc" unique_id=33079746]
+occluder = SubResource("OccluderPolygon2D_bpy0s")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Hfocc" unique_id=2018269158]
+occluder = SubResource("OccluderPolygon2D_6e5xe")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Hfocc" unique_id=263160485]
+occluder = SubResource("OccluderPolygon2D_giwtn")
+
+[node name="Hwocc" type="LightOccluder2D" parent="." unique_id=951168138]
+unique_name_in_owner = true
+visible = false
+occluder = SubResource("OccluderPolygon2D_a7qq1")
+
+[node name="Vfocc" type="Node2D" parent="." unique_id=2104478993]
+unique_name_in_owner = true
+visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Vfocc" unique_id=1146561802]
+occluder = SubResource("OccluderPolygon2D_bq73i")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Vfocc" unique_id=1238840284]
+position = Vector2(-5, 3)
+occluder = SubResource("OccluderPolygon2D_dc2yf")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Vfocc" unique_id=480980011]
+position = Vector2(0, 8)
+occluder = SubResource("OccluderPolygon2D_yu22b")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Vfocc" unique_id=1831352124]
+position = Vector2(-5, 11)
+occluder = SubResource("OccluderPolygon2D_gcynd")
+
+[node name="Audio" type="Node2D" parent="." unique_id=1033014074]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="SfxWallMetal" type="AudioStreamPlayer2D" parent="Audio" unique_id=1290249809]
+unique_name_in_owner = true
+stream = ExtResource("4_cxjtn")
+volume_db = -8.0
+pitch_scale = 0.9
+
+[node name="SfxWallConcrete" type="AudioStreamPlayer2D" parent="Audio" unique_id=1123662632]
+unique_name_in_owner = true
+stream = ExtResource("5_r3bmi")
+volume_db = -12.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

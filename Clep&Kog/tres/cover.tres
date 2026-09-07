@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dmq5eolhw7jns"]
+
+[ext_resource type="Texture2D" uid="uid://btv8neb32114l" path="res://Warehouse/DemonicDungeonAssets/Art/UI/PNGs/Frames.png" id="1_bxyvw"]
+
+[resource]
+atlas = ExtResource("1_bxyvw")
+region = Rect2(439, 231, 34, 34)

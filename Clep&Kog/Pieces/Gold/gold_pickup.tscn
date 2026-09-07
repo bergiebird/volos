@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://frd2sfct1h25"]
+
+[ext_resource type="Shader" uid="uid://bhgp08bxslmnk" path="res://Clep&Kog/Pieces/Gold/gold_shine.gdshader" id="1_7ae2m"]
+[ext_resource type="Script" uid="uid://l3eaev1fy7hg" path="res://Clep&Kog/Pieces/Gold/gold_pickup.gd" id="1_erkk7"]
+[ext_resource type="Texture2D" uid="uid://fe4v6wowcvp3" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/PNGs/Containers.png" id="2_lxayb"]
+[ext_resource type="AudioStream" uid="uid://biylnabbm140r" path="res://Warehouse/_users/BergieBird/Working/SFX/coins/good/Swoosh_5.wav" id="4_sgpt7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0xw7"]
+shader = ExtResource("1_7ae2m")
+shader_parameter/default_color = Color(1, 1, 0.619608, 1)
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_angle = -45.0
+shader_parameter/shine_duration = 5.0
+shader_parameter/shine_speed = 1000.0
+shader_parameter/shine_width = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl81x"]
+atlas = ExtResource("2_lxayb")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ntoj"]
+size = Vector2(15, 15)
+
+[sub_resource type="Gradient" id="Gradient_ct2o3"]
+offsets = PackedFloat32Array(0, 0.777368)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_10jyg"]
+gradient = SubResource("Gradient_ct2o3")
+width = 48
+height = 48
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[node name="Gold" type="Area2D" unique_id=1103674908 node_paths=PackedStringArray("sfx_pickup", "despawn_timer", "light")]
+z_index = 39
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+script = ExtResource("1_erkk7")
+sfx_pickup = NodePath("SfxPickup")
+despawn_timer = NodePath("DespawnTimer")
+light = NodePath("PointLight2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1245635042]
+z_index = 5
+material = SubResource("ShaderMaterial_n0xw7")
+position = Vector2(8, 8)
+texture = SubResource("AtlasTexture_rl81x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1100455457]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6ntoj")
+
+[node name="SfxPickup" type="AudioStreamPlayer2D" parent="." unique_id=1659907964]
+stream = ExtResource("4_sgpt7")
+volume_db = -20.0
+
+[node name="DespawnTimer" type="Timer" parent="." unique_id=630723907]
+wait_time = 0.1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1982590638]
+position = Vector2(8, 8)
+color = Color(0.937255, 0.619608, 0.305882, 1)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_10jyg")

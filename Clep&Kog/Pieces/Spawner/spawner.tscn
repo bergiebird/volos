@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6oejlmh2e5uo"]
+
+[ext_resource type="Script" uid="uid://cmsk1xnlq32di" path="res://Clep&Kog/Pieces/Spawner/spawner.gd" id="1_3yadp"]
+[ext_resource type="Texture2D" uid="uid://uxnlslitomld" path="res://Warehouse/Icons/node_2D/icon_circle.png" id="1_i5ce4"]
+
+[node name="Spawner" type="Sprite2D"]
+texture = ExtResource("1_i5ce4")
+script = ExtResource("1_3yadp")

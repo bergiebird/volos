@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cc6gl7qw1ag2n"]
+
+[ext_resource type="FontFile" uid="uid://bv2qy6iakuqg" path="res://Clep&Kog/UI/fonts_dont_move/High_Birth.ttf" id="1_altid"]
+
+[resource]
+default_font = ExtResource("1_altid")
+default_font_size = 12
+RichTextLabel/font_sizes/mono_font_size = 14
+RichTextLabel/font_sizes/normal_font_size = 14

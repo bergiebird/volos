@@ -1,0 +1,225 @@
+[gd_scene format=4 uid="uid://cccr6dibhrn1t"]
+
+[ext_resource type="Script" uid="uid://dibeffuy5agie" path="res://Clep&Kog/_Main_Scenes/the_board.gd" id="1_eh0mq"]
+[ext_resource type="TileSet" uid="uid://b0b5webj6k1il" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_paths.tres" id="3_m7bkh"]
+[ext_resource type="Script" uid="uid://2h4d6rfvbxgb" path="res://Clep&Kog/_Main_Scenes/pieces.gd" id="4_y7c65"]
+[ext_resource type="PackedScene" uid="uid://dj6xbcy8wvkjx" path="res://Clep&Kog/Pieces/Breakables/jar.tscn" id="8_3i1ig"]
+[ext_resource type="PackedScene" uid="uid://b6oejlmh2e5uo" path="res://Clep&Kog/Pieces/Spawner/spawner.tscn" id="8_ooph5"]
+[ext_resource type="PackedScene" uid="uid://0py8xhtkwc1j" path="res://Clep&Kog/Pieces/Breakables/breakable_wall.tscn" id="9_ujbut"]
+[ext_resource type="PackedScene" uid="uid://btinf1sg3gbwk" path="res://Clep&Kog/Pieces/Breakables/sarc.tscn" id="10_aww38"]
+[ext_resource type="PackedScene" uid="uid://frd2sfct1h25" path="res://Clep&Kog/Pieces/Gold/gold_pickup.tscn" id="11_jqcb1"]
+[ext_resource type="PackedScene" uid="uid://7tumcqgfelhu" path="res://Clep&Kog/Pieces/ExitGate/exit_gate.tscn" id="12_qvs5d"]
+[ext_resource type="TileSet" uid="uid://nvwhbal1sd70" path="res://Warehouse/DemonicDungeonAssets/Art/Tiles/Resources/ts_AllTiles.tres" id="14_a3x54"]
+[ext_resource type="PackedScene" uid="uid://d0jnyscb4pw17" path="res://Clep&Kog/_Main_Scenes/Ui/ui.tscn" id="16_up3kh"]
+[ext_resource type="AudioStream" uid="uid://dgwygsc4ttpxl" path="res://Clep&Kog/Audio/sfx_dont_move/19-1-25-2.mp3" id="19_7ebpa"]
+[ext_resource type="Script" uid="uid://dqxbln36ypkfa" path="res://Clep&Kog/_Main_Scenes/Non/level_music.gd" id="20_2m70i"]
+
+[node name="Pharout Heist Original" type="Node2D" unique_id=1900752159]
+z_index = 2
+script = ExtResource("1_eh0mq")
+level_name = &"Pharout_Heist"
+
+[node name="DarknessModulator" type="CanvasModulate" parent="." unique_id=825480859]
+editor_description = "Keep R, G, & B values the exact same values to preserve the color palette."
+color = Color(0.964706, 0.94902, 0.764706, 1)
+
+[node name="Map" type="Node2D" parent="DarknessModulator" unique_id=1839136420]
+
+[node name="BlackColorRect" type="ColorRect" parent="DarknessModulator/Map" unique_id=613247470]
+offset_left = 176.0
+offset_top = 128.0
+offset_right = 464.0
+offset_bottom = 352.0
+color = Color(0.0862745, 0.0509804, 0.0745098, 1)
+
+[node name="Floor" type="TileMapLayer" parent="DarknessModulator/Map" unique_id=198292711]
+tile_map_data = PackedByteArray("AAAZABEAAAAGABEAAAAZABIAAAAFABAAAAAZABMAAAAFABEAAAAaABEAAAAGABEAAAAaABIAAAAGABEAAAAaABMAAAAFABAAAAANAA8AAAAHABEAAAANABAAAAAGABAAAAANABEAAAAGABAAAAANABIAAAAHABAAAAANABMAAAAFABEAAAAYABEAAAAGAA8AAAAYABIAAAAGAA8AAAAYABMAAAAHABAAAAA=")
+tile_set = ExtResource("3_m7bkh")
+
+[node name="Pieces" type="Node2D" parent="DarknessModulator/Map" unique_id=1415557808]
+script = ExtResource("4_y7c65")
+
+[node name="Characters" type="Node2D" parent="DarknessModulator/Map/Pieces" unique_id=2096400895]
+z_index = 99
+
+[node name="SpawnClep" parent="DarknessModulator/Map/Pieces/Characters" unique_id=1646740680 instance=ExtResource("8_ooph5")]
+position = Vector2(232, 184)
+
+[node name="SpawnKog" parent="DarknessModulator/Map/Pieces/Characters" unique_id=657240706 instance=ExtResource("8_ooph5")]
+position = Vector2(328, 312)
+who_spawns_here = 1
+
+[node name="SpawnMurderling" parent="DarknessModulator/Map/Pieces/Characters" unique_id=541785176 instance=ExtResource("8_ooph5")]
+position = Vector2(400, 304)
+who_spawns_here = 2
+enemy_difficulty = 2
+
+[node name="Breakables" type="Node2D" parent="DarknessModulator/Map/Pieces" unique_id=312909120]
+
+[node name="Jar7" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=660255433 instance=ExtResource("8_3i1ig")]
+position = Vector2(416, 192)
+
+[node name="Jar9" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1546677271 instance=ExtResource("8_3i1ig")]
+position = Vector2(416, 224)
+
+[node name="Jar10" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=51978624 instance=ExtResource("8_3i1ig")]
+position = Vector2(352, 195)
+
+[node name="Jar11" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1332442177 instance=ExtResource("8_3i1ig")]
+position = Vector2(416, 208)
+
+[node name="Jar12" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=193979553 instance=ExtResource("8_3i1ig")]
+position = Vector2(304, 160)
+
+[node name="Jar13" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=2052974868 instance=ExtResource("8_3i1ig")]
+position = Vector2(208, 160)
+
+[node name="Jar" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1109843568 instance=ExtResource("8_3i1ig")]
+position = Vector2(352, 288)
+input_pickable = false
+
+[node name="Jar2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1983687422 instance=ExtResource("8_3i1ig")]
+position = Vector2(272, 240)
+input_pickable = false
+
+[node name="Jar5" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1732987140 instance=ExtResource("8_3i1ig")]
+position = Vector2(288, 240)
+input_pickable = false
+
+[node name="Jar19" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1784007683 instance=ExtResource("8_3i1ig")]
+position = Vector2(208, 272)
+input_pickable = false
+
+[node name="Jar16" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=2133205489 instance=ExtResource("8_3i1ig")]
+position = Vector2(208, 256)
+input_pickable = false
+
+[node name="Jar8" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=521757363 instance=ExtResource("8_3i1ig")]
+position = Vector2(208, 240)
+input_pickable = false
+
+[node name="Jar14" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=664805448 instance=ExtResource("8_3i1ig")]
+position = Vector2(304, 240)
+input_pickable = false
+
+[node name="Jar15" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1523168059 instance=ExtResource("8_3i1ig")]
+position = Vector2(320, 240)
+input_pickable = false
+
+[node name="Jar17" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=923493597 instance=ExtResource("8_3i1ig")]
+position = Vector2(320, 224)
+input_pickable = false
+
+[node name="Jar18" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=160438272 instance=ExtResource("8_3i1ig")]
+position = Vector2(320, 208)
+input_pickable = false
+
+[node name="Jar3" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1509297799 instance=ExtResource("8_3i1ig")]
+position = Vector2(352, 272)
+input_pickable = false
+
+[node name="Jar4" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=2140931729 instance=ExtResource("8_3i1ig")]
+position = Vector2(240, 288)
+input_pickable = false
+
+[node name="Jar6" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1893923330 instance=ExtResource("8_3i1ig")]
+position = Vector2(416, 240)
+input_pickable = false
+
+[node name="HFence" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=430796046 instance=ExtResource("9_ujbut")]
+position = Vector2(240, 224)
+is_fence = true
+
+[node name="HFence2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1122945040 instance=ExtResource("9_ujbut")]
+position = Vector2(208, 224)
+
+[node name="VFence2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=214103420 instance=ExtResource("9_ujbut")]
+position = Vector2(288, 160)
+is_vertical = true
+is_fence = true
+
+[node name="ExitWall" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1174230258 instance=ExtResource("9_ujbut")]
+position = Vector2(336, 240)
+is_vertical = true
+
+[node name="VWall" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1307465502 instance=ExtResource("9_ujbut")]
+position = Vector2(257, 240)
+is_vertical = true
+
+[node name="VWall4" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1655068090 instance=ExtResource("9_ujbut")]
+position = Vector2(384, 256)
+
+[node name="VWall5" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1819752354 instance=ExtResource("9_ujbut")]
+position = Vector2(368, 272)
+is_vertical = true
+
+[node name="VWall2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1022023991 instance=ExtResource("9_ujbut")]
+position = Vector2(224, 288)
+is_vertical = true
+
+[node name="VWall3" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=961119774 instance=ExtResource("9_ujbut")]
+position = Vector2(368, 288)
+is_vertical = true
+
+[node name="HWall" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1265208224 instance=ExtResource("9_ujbut")]
+position = Vector2(319, 192)
+
+[node name="HWall2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1856652560 instance=ExtResource("9_ujbut")]
+position = Vector2(351, 257)
+
+[node name="HWall4" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1918444236 instance=ExtResource("9_ujbut")]
+position = Vector2(400, 256)
+
+[node name="HWall3" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=914227050 instance=ExtResource("9_ujbut")]
+position = Vector2(320, 256)
+
+[node name="HWall5" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=2003527545 instance=ExtResource("9_ujbut")]
+position = Vector2(416, 256)
+
+[node name="Sarc" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=1897608631 instance=ExtResource("10_aww38")]
+position = Vector2(416, 272)
+cargo = ExtResource("11_jqcb1")
+is_top = true
+
+[node name="Sarc2" parent="DarknessModulator/Map/Pieces/Breakables" unique_id=339192376 instance=ExtResource("10_aww38")]
+position = Vector2(416, 287)
+cargo = ExtResource("11_jqcb1")
+
+[node name="Collectables" type="Node2D" parent="DarknessModulator/Map/Pieces" unique_id=2139936598]
+
+[node name="Gold" parent="DarknessModulator/Map/Pieces/Collectables" unique_id=246525563 instance=ExtResource("11_jqcb1")]
+position = Vector2(224, 192)
+
+[node name="Gold2" parent="DarknessModulator/Map/Pieces/Collectables" unique_id=1009735907 instance=ExtResource("11_jqcb1")]
+position = Vector2(239, 176)
+
+[node name="Gold3" parent="DarknessModulator/Map/Pieces/Collectables" unique_id=1456120378 instance=ExtResource("11_jqcb1")]
+position = Vector2(224, 160)
+
+[node name="Gold4" parent="DarknessModulator/Map/Pieces/Collectables" unique_id=1703876349 instance=ExtResource("11_jqcb1")]
+position = Vector2(207, 175)
+
+[node name="EventTiles" type="Node2D" parent="DarknessModulator/Map/Pieces" unique_id=189039190]
+
+[node name="ExitGate" parent="DarknessModulator/Map/Pieces/EventTiles" unique_id=1780836852 instance=ExtResource("12_qvs5d")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(328, 312)
+
+[node name="Walls" type="TileMapLayer" parent="DarknessModulator/Map" unique_id=78061237 groups=["Walls"]]
+unique_name_in_owner = true
+z_index = 4
+tile_map_data = PackedByteArray("AAAMABQAHAACAAEAAAANABQAHAADAAIAAAAOABQAHAABAAEAAAAPABQAHAADAAAAAAAQABQAHAADAAAAAAARABQAHAADAAAAAAASABQAHAADAAAAAAATABQAHAADAAAAAAAVABQAHAADAAIAAAAWABQAHAADAAIAAAAXABQAHAABAAEAAAAYABQAHAADAAIAAAAZABQAHAADAAIAAAAaABQAHAADAAIAAAAbABQAHAAEAAIAAAAbAAoAHAAEAAEAAAAbAAsAHAAEAAEAAAAbAAwAHAAEAAEAAAAbAA0AHAAEAAEAAAAbAA4AHAAEAAEAAAAbAA8AHAAEAAEAAAAbABAAHAABAAAAAAAbABEAHAAEAAEAAAAbABIAHAAEAAEAAAAbABMAHAAEAAEAAAAbAAkAHAAEAAAAAAANAAkAHAADAAAAAAAOAAkAHAADAAIAAAAPAAkAHAADAAAAAAAQAAkAHAADAAIAAAARAAkAHAADAAIAAAASAAkAHAAAAAAAAAAWAAkAHAADAAAAAAAXAAkAHAADAAAAAAAYAAkAHAADAAAAAAAZAAkAHAADAAIAAAAaAAkAHAADAAAAAAAMAAkAHAACAAAAAAAMAAoAHAAEAAEAAAAMAAsAHAAEAAEAAAAMAAwAHAAEAAEAAAAMAA0AHAAEAAEAAAAMAA4AHAAAAAEAAAAMAA8AHAAEAAEAAAAMABAAHAAEAAEAAAAMABEAHAAEAAEAAAAMABIAHAAEAAEAAAAMABMAHAAEAAEAAAAVAA4AHAAEAAEAAAAOAA4AHAAAAAAAAAATAAkAHAADAAIAAAASAAsAHAAEAAEAAAAVAAkAHAADAAAAAAATAAgAAAAPAAAAAAAUAAgAAAAPAAAAAAAVAAgAAAAPAAAAAAATABAAHAADAAIAAAAVABAAHAABAAEAAAAUAAkAHAADAAAAAAASAAwAHAABAAEAAAAVAAwAHAAEAAAAAAAVAA0AHAAEAAEAAAAOAA8AHAAEAAEAAAAOABAAHAAEAAEAAAAOABMAHAAEAAEAAAAOABEAHAAEAAEAAAAUABQAHAAHAAIAAAAXABMAHAAEAAEAAAAXABAAHAAAAAAAAAATAAwAHAADAAAAAAASABAAHAADAAIAAAAQAA4AHAABAAAAAAARABAAHAADAAAAAAAQABAAHAACAAEAAAAQAA0AHAAEAAEAAAAQAAwAHAACAAAAAAARAAwAHAADAAAAAAA=")
+tile_set = ExtResource("14_a3x54")
+
+[node name="UI" parent="." unique_id=1204281637 instance=ExtResource("16_up3kh")]
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=947439727]
+editor_description = "This is where the Ptrack will sit. Lots of calls will come in and out of this track throughout the course of the game. Keep this nice and pretty."
+stream = ExtResource("19_7ebpa")
+volume_db = -15.0
+autoplay = true
+bus = &"Music"
+script = ExtResource("20_2m70i")
+
+[connection signal="finished" from="LevelMusic" to="LevelMusic" method="_on_finished"]
